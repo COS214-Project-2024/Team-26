@@ -3,7 +3,7 @@
 
 #include "CityCommand.h"
 
-class TaxCommand : CityCommand {
+class TaxCommand : public CityCommand {
 
 public:
 	int tax;

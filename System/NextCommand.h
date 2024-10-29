@@ -2,7 +2,7 @@
 #define NEXTCOMMAND_H
 
 #include "CityCommand.h"
-class NextCommand : CityCommand {
+class NextCommand : public CityCommand {
 
 
 public:

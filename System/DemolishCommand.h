@@ -4,7 +4,7 @@
 
 #include "CityCommand.h"
 
-class DemolishCommand : CityCommand {
+class DemolishCommand : public CityCommand {
 
 private:
 	

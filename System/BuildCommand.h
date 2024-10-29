@@ -4,7 +4,7 @@
 #include "CityCommand.h"
 #include<iostream>
 
-class BuildCommand : CityCommand {
+class BuildCommand : public CityCommand {
 
 private:
 	std::string buildingType;
