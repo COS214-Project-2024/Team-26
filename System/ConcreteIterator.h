@@ -113,6 +113,13 @@ class ConcreteIterator : Iterator {
 		 * @return Building* 
 		 */
 		Building* getHouse();
+
+		/**
+		 * @brief Get the random job
+		 * 
+		 * @return Building* 
+		 */
+		Building* getJob();
 };
 
 #endif //CONCRETEITERATOR_H
