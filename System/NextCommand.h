@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 #ifndef NEXTCOMMAND_H
 #define NEXTCOMMAND_H
 
@@ -11,3 +12,18 @@ public:
 };
 
 #endif
+=======
+#ifndef NEXTCOMMAND_H
+#define NEXTCOMMAND_H
+
+#include "CityCommand.h"
+class NextCommand : CityCommand {
+
+
+public:
+	NextCommand(CityMediator* mediator);
+	void execute();
+};
+
+#endif
+>>>>>>> Stashed changes

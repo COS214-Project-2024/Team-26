@@ -1,3 +1,4 @@
+
 #ifndef DEMOLISHCOMMAND_H
 #define DEMOLISHCOMMAND_H
 

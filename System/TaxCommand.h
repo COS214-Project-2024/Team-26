@@ -1,3 +1,4 @@
+
 #ifndef TAXCOMMAND_H
 #define TAXCOMMAND_H
 
@@ -14,3 +15,4 @@ public:
 };
 
 #endif
+
