@@ -8,7 +8,7 @@ class DeathRateStrategy : public PopulationStrategy {
 public:
     DeathRateStrategy(CityMediator* med);
 
-	int execute();
+	int execute() override;
 
 	virtual ~DeathRateStrategy() override;
 };

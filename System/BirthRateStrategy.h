@@ -8,7 +8,7 @@ class BirthRateStrategy : public PopulationStrategy {
 public:
     BirthRateStrategy(CityMediator* med);
 
-	int execute();
+	int execute() override;
 
 	virtual ~BirthRateStrategy() override;
 };
