@@ -1,7 +1,7 @@
 #include "CityManager.h"
 
 void CityManager::registerCommand(std::string input, CityCommand *command) {
-	// TODO - implement CityManager::registerCommand
+	
 	//throw "Not yet implemented";
 
 	commandsList[input] = command;
@@ -10,7 +10,7 @@ void CityManager::registerCommand(std::string input, CityCommand *command) {
 }
 
 std::string CityManager::handleUserInput(std::string input) {
-	// TODO - implement CityManager::handleUserInput
+	
 	//throw "Not yet implemented";
 
 	auto it = commandsList.find(input);
