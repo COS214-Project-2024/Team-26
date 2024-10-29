@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #include "BirthRateStrategy.h"
 
 #include <iostream>
@@ -56,17 +55,3 @@ int BirthRateStrategy::execute()
 BirthRateStrategy::~BirthRateStrategy()
 {
 }
-=======
-#include "BirthRateStrategy.h"
-
-BirthRateStrategy:: BirthRateStrategy(CityMediator* med) : PopulationStrategy(med) {
-}
-
-int BirthRateStrategy::execute() {
-	// TODO - implement BirthRateStrategy::execute
-	throw "Not yet implemented";
-}
-
-BirthRateStrategy:: ~BirthRateStrategy() {
-}
->>>>>>> f1b5fbc8cef36708df2474be115502894c849295
