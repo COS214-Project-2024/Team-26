@@ -106,6 +106,13 @@ class ConcreteIterator : Iterator {
 		 * @return BuildingState* 
 		 */
 		BuildingState* getAndSetNextState() override;
+
+		/**
+		 * @brief Get a random house object
+		 * 
+		 * @return Building* 
+		 */
+		Building* getHouse();
 };
 
 #endif //CONCRETEITERATOR_H
