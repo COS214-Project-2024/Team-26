@@ -9,15 +9,19 @@ using namespace std;
 // class Building;
 class CommercialBuilding;
 
-__abstract class CommercialBuilding: public Building
+class CommercialBuilding : public Building
 {
-	private: int _revenue;
+private:
+	int _revenue;
 
-	public: virtual double getRevenue() = 0;
+public:
+	virtual double getRevenue() = 0;
 
-	public: virtual int getJobCapacity() = 0;
+public:
+	virtual int getJobCapacity() = 0;
 
-	public: void setRevenue(int aRevenue);
+public:
+	void setRevenue(int aRevenue);
 };
 
 #endif

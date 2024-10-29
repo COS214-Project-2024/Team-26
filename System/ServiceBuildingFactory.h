@@ -1,11 +1,17 @@
 #ifndef SERVICEBUILDINGFACTORY_H
 #define SERVICEBUILDINGFACTORY_H
 
-class ServiceBuildingFactory : BuildingFactory {
+#include "BuildingFactory.h"
+#include "Building.h"
+#include "Police.h"
+#include "Hospital.h"
+#include "FireDepartment.h"
 
+class ServiceBuildingFactory : BuildingFactory
+{
 
 public:
-	Building* createBuilding();
+	Building *createBuilding();
 };
 
 #endif

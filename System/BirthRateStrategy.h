@@ -1,11 +1,16 @@
 #ifndef BIRTHRATESTRATEGY_H
 #define BIRTHRATESTRATEGY_H
 
-class BirthRateStrategy : PopulationStrategy {
+#include "PopulationStrategy.h"
 
+class BirthRateStrategy : public PopulationStrategy {
 
 public:
+    BirthRateStrategy(CityMediator* med);
+
 	int execute();
+
+	virtual ~BirthRateStrategy() override;
 };
 
 #endif

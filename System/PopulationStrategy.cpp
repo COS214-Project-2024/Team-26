@@ -1,5 +1,9 @@
 #include "PopulationStrategy.h"
 
+PopulationStrategy:: PopulationStrategy(CityMediator* mediator) {
+	this->mediator = mediator;
+}
+
 int PopulationStrategy::getPopulation() {
 	// TODO - implement PopulationStrategy::getPopulation
 	throw "Not yet implemented";
@@ -23,4 +27,11 @@ int PopulationStrategy::getAverageAge() {
 int PopulationStrategy::getImmigrationLimit() {
 	// TODO - implement PopulationStrategy::getImmigrationLimit
 	throw "Not yet implemented";
+}
+
+PopulationStrategy:: ~PopulationStrategy() {
+	if (this->mediator == NULL) {
+		return;
+	}
+	delete this->mediator;
 }

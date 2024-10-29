@@ -5,31 +5,40 @@ using namespace std;
 #include "House.h"
 #include "ResidentialBuilding.h"
 
-void House::construct() {
+House::House()
+{
+}
+void House::construct()
+{
 	throw "Not yet implemented";
 }
 
-void House::maintain() {
+void House::maintain()
+{
 	throw "Not yet implemented";
 }
 
-double House::getMaintenanceCost() {
+double House::getMaintenanceCost()
+{
 	throw "Not yet implemented";
 }
 
-int House::getSize() {
+int House::getSize()
+{
 	throw "Not yet implemented";
 }
 
-string House::getBuildingType() {
+string House::getBuildingType()
+{
 	throw "Not yet implemented";
 }
 
-int House::getResidentCapacity() {
+int House::getResidentCapacity()
+{
 	throw "Not yet implemented";
 }
 
-double House::getHappinessContribution() {
+double House::getHappinessContribution()
+{
 	throw "Not yet implemented";
 }
-

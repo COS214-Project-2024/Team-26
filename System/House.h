@@ -10,22 +10,30 @@ using namespace std;
 // class ResidentialBuilding;
 class House;
 
-class House: public ResidentialBuilding
+class House : public ResidentialBuilding
 {
 
-	public: void construct();
+public:
+	House();
+	void construct();
 
-	public: void maintain();
+public:
+	void maintain();
 
-	public: double getMaintenanceCost();
+public:
+	double getMaintenanceCost();
 
-	public: int getSize();
+public:
+	int getSize();
 
-	public: string getBuildingType();
+public:
+	string getBuildingType();
 
-	public: int getResidentCapacity();
+public:
+	int getResidentCapacity();
 
-	public: double getHappinessContribution();
+public:
+	double getHappinessContribution();
 };
 
 #endif
