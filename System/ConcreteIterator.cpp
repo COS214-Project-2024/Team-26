@@ -64,3 +64,7 @@ BuildingState* ConcreteIterator::getAndSetNextState() {
 	// TODO - implement ConcreteIterator::getAndSetNextState
 	throw "Not yet implemented";
 }
+
+Building* ConcreteIterator::getHouse() {
+	return nullptr;
+}
