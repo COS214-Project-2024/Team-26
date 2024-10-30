@@ -3,8 +3,12 @@
 
 #include <string>
 
-class CityMediator {
+#include "Iterator.h"
+	#include "ConcreteIterator.h"
 
+class CityMediator {
+protected:
+	static Iterator* buildings;
 
 public:
 	CityMediator() =default;
@@ -13,13 +17,19 @@ public:
 
 	virtual bool demolish(int locationX, int locationY) = 0;
 
-	// virtual void assignCitizenBuildings(Citizen citizen) = 0;
-
 	virtual void nextRound() = 0;
 
 	virtual void changeTaxRates(int newTaxRates) = 0;
 
-	virtual ~CityMediator() = default;
+	static Iterator* getBuildings() {
+		if (!buildings)
+			buildings = new ConcreteIterator();
+		return buildings;
+	}
+
+	virtual ~CityMediator() {if (buildings) delete buildings;}
 };
+
+	Iterator* CityMediator::buildings = nullptr;
 
 #endif

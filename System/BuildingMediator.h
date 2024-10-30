@@ -12,18 +12,18 @@
 	#include "IndustrialBuildingFactory.h"
 	#include "PlantBuildingFactory.cpp"
 
+#include "Iterator.h"
+	#include "ConcreteIterator.h"
+
 class BuildingMediator : public CityMediator {
 
 private:
 	BuildingFactory* factory;
-	// BuildingIterator buildings;
 
 public:
 	BuildingMediator();
 
 	bool build(std::string& buildingName, int locationX, int locationY) override;
-
-	// void assignCitizenBuildings(Citizen citizen);
 
 	bool demolish(int locationX, int locationY) override;
 
