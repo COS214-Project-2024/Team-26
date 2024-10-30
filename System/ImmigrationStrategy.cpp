@@ -4,8 +4,7 @@ ImmigrationStrategy:: ImmigrationStrategy(CityMediator* med) : PopulationStrateg
 }
 
 int ImmigrationStrategy::execute() {
-	// TODO - implement ImmigrationStrategy::execute
-	throw "Not yet implemented";
+	float housingPercentage = (this->getAvailableHousingSpace() / this->getTotalHousingSpace()) * 100;
 }
 
 ImmigrationStrategy:: ~ImmigrationStrategy() {

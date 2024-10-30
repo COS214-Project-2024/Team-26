@@ -26,13 +26,8 @@ bool BuildingMediator::build(std::string& buildingName, int locationX, int locat
 
 
 	// add to composite structure
-	return false;
+	return getBuildings()->add(factory->createBuilding());
 }
-
-// void BuildingMediator::assignCitizenBuildings(Citizen* citizen) {
-// 	// TODO - implement BuildingMediator::assignCitizenBuildings
-// 	throw "Not yet implemented";
-// }
 
 bool BuildingMediator::demolish(int locationX, int locationY) {
 	// TODO - implement BuildingMediator::demolish
