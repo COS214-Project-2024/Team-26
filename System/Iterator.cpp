@@ -1,6 +1,6 @@
 #include "Iterator.h"
 
-Iterator::Iterator(Composite* composite){
+Iterator::Iterator(Composite* composite) {
 	this->composite = composite;
 	this->currentX = 0;
 	this->currentY = 0;
