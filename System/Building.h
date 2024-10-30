@@ -3,12 +3,11 @@
 
 #include "BuildingState.h"
 
-
-
-class Building {
+class Building
+{
 
 private:
-	BuildingState* state;
+	BuildingState *state;
 	int LOCATION_X;
 	int LOCATION_Y;
 	int space;
@@ -19,9 +18,9 @@ private:
 	int buildCostResources;
 
 public:
-	BuildingState* getState();
+	BuildingState *getState();
 
-	void setState(BuildingState* state);
+	void setState(BuildingState *state);
 
 	BuildingState getAndSetNextState();
 
@@ -39,15 +38,17 @@ public:
 
 	int getWaterConsumption();
 
+	virtual bool updateOccupancy(int i);
+
 	virtual int getCostConsumption() = 0;
 
 	virtual int getResourceConsumption() = 0;
 
+	virtual int getRevenue() = 0;
+
 	virtual int getSewageProduction() = 0;
 
 	virtual int getWasteProduction() = 0;
-
-	virtual int getRevenue() = 0;
 };
 
 #endif

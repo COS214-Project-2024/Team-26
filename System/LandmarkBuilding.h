@@ -9,13 +9,13 @@ using namespace std;
 // class Building;
 class LandmarkBuilding;
 
-__abstract class LandmarkBuilding: public Building
+class LandmarkBuilding : public Building
 {
-	private: int _statisfaction;
+private:
+	int wasteProduction;
 
-	public: virtual double getCultureContribution() = 0;
-
-	public: virtual double getTourismValue() = 0;
+public:
+	virtual int getWasteProduction();
 };
 
 #endif

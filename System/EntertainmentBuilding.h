@@ -10,7 +10,7 @@ private:
 
 public:
     virtual int getConsumption() = 0;
-    virtual int getRevenue() = 0;
+    virtual int getRevenue();
     virtual int getSewageProduction() = 0;
     virtual int getWasteProduction() = 0;
 };

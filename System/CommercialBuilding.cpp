@@ -4,9 +4,12 @@ using namespace std;
 #include "CommercialBuilding.h"
 #include "Building.h"
 
-
-
-void CommercialBuilding::setRevenue(int aRevenue) {
-	this->_revenue = aRevenue;
+int CommercialBuilding::getRevenue()
+{
+	return revenue;
 }
 
+void CommercialBuilding::setRevenue(int aRevenue)
+{
+	this->revenue = aRevenue;
+}

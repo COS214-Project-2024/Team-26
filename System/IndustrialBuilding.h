@@ -9,13 +9,13 @@ using namespace std;
 // class Building;
 class IndustrialBuilding;
 
-__abstract class IndustrialBuilding: public Building
+class IndustrialBuilding : public Building
 {
-	private: int _wasteProduction;
+private:
+	int wasteProduction;
 
-	public: virtual int getJobCapacity() = 0;
-
-	public: virtual double getPollutionLevel() = 0;
+public:
+	virtual int getWasteProduction();
 };
 
 #endif

@@ -5,17 +5,14 @@
 
 class ServiceBuilding : public Building
 {
+private:
+    int costConsumption;
 
 public:
-    ServiceBuilding();
-    ~ServiceBuilding();
-    virtual int getCostConsumption() = 0;
+    virtual int getCostConsumption();
     virtual int getRevenue() = 0;
     virtual int getSewageProduction() = 0;
     virtual int getWasteProduction() = 0;
-
-private:
-    int costConsumption;
 };
 
 #endif

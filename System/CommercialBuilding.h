@@ -12,15 +12,11 @@ class CommercialBuilding;
 class CommercialBuilding : public Building
 {
 private:
-	int _revenue;
+	int revenue;
 
 public:
-	virtual double getRevenue() = 0;
-
-public:
+	virtual int getRevenue();
 	virtual int getJobCapacity() = 0;
-
-public:
 	void setRevenue(int aRevenue);
 };
 

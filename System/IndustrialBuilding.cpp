@@ -4,5 +4,7 @@ using namespace std;
 #include "IndustrialBuilding.h"
 #include "Building.h"
 
-
-
+int IndustrialBuilding::getWasteProduction()
+{
+    return wasteProduction;
+}
