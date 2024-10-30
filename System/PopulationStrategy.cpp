@@ -24,6 +24,10 @@ int PopulationStrategy::getImmigrationLimit() {
 	// return mediator->getImmigrationLimit();
 }
 
+int PopulationStrategy:: getTotalHousingSpace() {
+	// return mediator->getTotalHousingSpace();
+}
+
 PopulationStrategy:: ~PopulationStrategy() {
 	if (this->mediator == NULL) {
 		return;

@@ -18,6 +18,7 @@ public:
 	int getAvailableHousingSpace();
 	int getAverageAge();
 	int getImmigrationLimit();
+	int getTotalHousingSpace();
 
 	virtual ~PopulationStrategy();
 };
