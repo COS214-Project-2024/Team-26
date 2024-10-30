@@ -1,15 +1,14 @@
 #include "Composite.h"
 
 Composite::Composite() : Component(){
-	this->components = std::vector<std::vector<Component*>>();
+	this->components = std::vector<std::vector<Building*>>();
 }
 
 Iterator* Composite::createIterator() {
-	// TODO - implement Composite::createIterator
-	throw "Not yet implemented";
+	return new ConcreteIterator(this);
 }
 
-void Composite::add(Component* component, int x, int y) {
+void Composite::add(Building* component, int x, int y) {
     if (x >= components.size()) {
         components.resize(x + 1); // Resize
     }
@@ -19,7 +18,7 @@ void Composite::add(Component* component, int x, int y) {
     components[x][y] = component;
 }
 
-void Composite::remove(Component* component, int x, int y) {
+void Composite::remove(Building* component, int x, int y) {
     if (x < components.size() && y < components[x].size()) {
         if (components[x][y] == component) {
             components[x][y] = nullptr;
@@ -27,7 +26,7 @@ void Composite::remove(Component* component, int x, int y) {
     }
 }
 
-Component* Composite::getComponent(int x, int y) {
+Building* Composite::getComponent(int x, int y) {
     if (x < components.size() && y < components[x].size()) {
         return components[x][y];
     }
@@ -35,53 +34,125 @@ Component* Composite::getComponent(int x, int y) {
 }
 
 int Composite::getTotalPowerConsumption() {
-	// TODO - implement Composite::getTotalPowerConsumption
-	throw "Not yet implemented";
+	int totalPowerConsumption = 0;
+	for (int i = 0; i < components.size(); i++) {
+		for (int j = 0; j < components[i].size(); j++) {
+			if (components[i][j] != nullptr) {
+				totalPowerConsumption += components[i][j]->getPowerConsumption();
+			}
+		}
+	}
+
+	return totalPowerConsumption;
 }
 
 int Composite::getTotalWaterConsumption() {
-	// TODO - implement Composite::getTotalWaterConsumption
-	throw "Not yet implemented";
+	int totalWaterConsumption = 0;
+	for (int i = 0; i < components.size(); i++) {
+		for (int j = 0; j < components[i].size(); j++) {
+			if (components[i][j] != nullptr) {
+				totalWaterConsumption += components[i][j]->getWaterConsumption();
+			}
+		}
+	}
+	return totalWaterConsumption;
 }
 
 int Composite::getTotalCostConsumption() {
-	// TODO - implement Composite::getTotalCostConsumption
-	throw "Not yet implemented";
+	int totalCostConsumption = 0;
+	for (int i = 0; i < components.size(); i++) {
+		for (int j = 0; j < components[i].size(); j++) {
+			if (components[i][j] != nullptr) {
+				totalCostConsumption += components[i][j]->getCostConsumption();
+			}
+		}
+	}
+	return totalCostConsumption;
 }
 
 int Composite::getTotalSewageConsumption() {
-	// TODO - implement Composite::getTotalSewageConsumption
-	throw "Not yet implemented";
+	// HOW DOES A BUILDING USE SEWAGE CONSUMPTION, MAYBE PERSISTANT 0, UNLESS SPECIAL BUILDING?
+	/*int totalSewageConsumption = 0;
+	for (int i = 0; i < components.size(); i++) {
+		for (int j = 0; j < components[i].size(); j++) {
+			if (components[i][j] != nullptr) {
+				totalSewageConsumption += components[i][j]->getSewageConsumption();
+			}
+		}
+	}
+	return totalSewageConsumption;*/
 }
 
 int Composite::getTotalWasteConsumption() {
-	// TODO - implement Composite::getTotalWasteConsumption
-	throw "Not yet implemented";
+	/*int totalWasteConsumption = 0;
+	for (int i = 0; i < components.size(); i++) {
+		for (int j = 0; j < components[i].size(); j++) {
+			if (components[i][j] != nullptr) {
+				totalWasteConsumption += components[i][j]->getWasteConsumption();
+			}
+		}
+	}
+	return totalWasteConsumption;*/
 }
 
 int Composite::getTotalPowerProduction() {
-	// TODO - implement Composite::getTotalPowerProduction
-	throw "Not yet implemented";
+	/*int totalPowerProduction = 0;
+	for (int i = 0; i < components.size(); i++) {
+		for (int j = 0; j < components[i].size(); j++) {
+			if (components[i][j] != nullptr) {
+				totalPowerProduction += components[i][j]->getPowerProduction();
+			}
+		}
+	}
+	return totalPowerProduction;*/
 }
 
 int Composite::getTotalWaterProduction() {
-	// TODO - implement Composite::getTotalWaterProduction
-	throw "Not yet implemented";
+	/*int totalWaterProduction = 0;
+	for (int i = 0; i < components.size(); i++) {
+		for (int j = 0; j < components[i].size(); j++) {
+			if (components[i][j] != nullptr) {
+				totalWaterProduction += components[i][j]->getWaterProduction();
+			}
+		}
+	}
+	return totalWaterProduction;*/
 }
 
 int Composite::getTotalRevenue() {
-	// TODO - implement Composite::getTotalRevenue
-	throw "Not yet implemented";
+	int totalRevenue = 0;
+	for (int i = 0; i < components.size(); i++) {
+		for (int j = 0; j < components[i].size(); j++) {
+			if (components[i][j] != nullptr) {
+				totalRevenue += components[i][j]->getRevenue();
+			}
+		}
+	}
+	return totalRevenue;
 }
 
 int Composite::getTotalSewageProduction() {
-	// TODO - implement Composite::getTotalSewageProduction
-	throw "Not yet implemented";
+	int totalSewageProduction = 0;
+	for (int i = 0; i < components.size(); i++) {
+		for (int j = 0; j < components[i].size(); j++) {
+			if (components[i][j] != nullptr) {
+				totalSewageProduction += components[i][j]->getSewageProduction();
+			}
+		}
+	}
+	return totalSewageProduction;
 }
 
 int Composite::getTotalWasteProduction() {
-	// TODO - implement Composite::getTotalWasteProduction
-	throw "Not yet implemented";
+	int totalWasteProduction = 0;
+	for (int i = 0; i < components.size(); i++) {
+		for (int j = 0; j < components[i].size(); j++) {
+			if (components[i][j] != nullptr) {
+				totalWasteProduction += components[i][j]->getWasteProduction();
+			}
+		}
+	}
+	return totalWasteProduction;
 }
 
 BuildingState* Composite::getAndSetNextState() {

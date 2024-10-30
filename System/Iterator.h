@@ -5,29 +5,24 @@
 
 class Iterator {
 
-	protected:
-		Composite* composite;
-		int currentX;
-		int currentY;
-
 	public:
-		virtual Component* first() = 0;
+		virtual Building* first() = 0;
 
-		virtual Component* next() = 0;
+		virtual Building* next() = 0;
 
 		virtual bool hasNext() = 0;
 
-		virtual Component* previous() = 0;
+		virtual Building* previous() = 0;
 
-		virtual Component* current() = 0;
+		virtual Building* current() = 0;
 
 		virtual int length() = 0;
 
-		virtual Component* get(int locationX, int locationY) = 0;
+		virtual Building* get(int locationX, int locationY) = 0;
 
 		virtual bool slotAvailable(int locationX, int locationY) = 0;
 
-		virtual bool add(Building* building) = 0;
+		virtual bool add(Building* building, int x, int y) = 0;
 
 		virtual bool remove(int locationX, int locationY) = 0;
 

@@ -6,6 +6,10 @@
 #include "Iterator.h"
 
 class ConcreteIterator : public Iterator {
+	protected:
+		Composite* composite;
+		int currentX;
+		int currentY;
 
 	public:
 		/**
@@ -16,25 +20,27 @@ class ConcreteIterator : public Iterator {
 		/**
 		 * @brief Adds a building to the list
 		 * 
-		 * @param building 
+		 * @param building
+		 * @param x x-coordinate
+		 * @param y y-coordinate
 		 * @return true 
 		 * @return false 
 		 */
-		bool add(Building* building) override;
+		bool add(Building* building, int x, int y) override;
 
 		/**
 		 * @brief Returns the current component
 		 * 
 		 * @return Component* 
 		 */
-		Component* current() override;
+		Building* current() override;
 
 		/**
 		 * @brief Returns the first component in the list
 		 * 
 		 * @return Component* 
 		 */
-		Component* first() override;
+		Building* first() override;
 
 		/**
 		 * @brief Gets the Component at the specific location
@@ -43,7 +49,7 @@ class ConcreteIterator : public Iterator {
 		 * @param locationY 
 		 * @return Component* 
 		 */
-		Component* get(int locationX, int locationY) override;
+		Building* get(int locationX, int locationY) override;
 
 		/**
 		 * @brief Checks if there is a component after the current one
@@ -73,14 +79,14 @@ class ConcreteIterator : public Iterator {
 		 * 
 		 * @return Component* 
 		 */
-		Component* next() override;
+		Building* next() override;
 
 		/**
 		 * @brief Returns the previous component
 		 * 
 		 * @return Component* 
 		 */
-		Component* previous() override;
+		Building* previous() override;
 
 		/**
 		 * @brief Removes the object at that specific point
