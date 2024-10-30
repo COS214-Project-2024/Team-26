@@ -4,11 +4,12 @@
 #include <vector>
 
 #include "Component.h"
+#include "ConcreteIterator.h"
 
-class Composite : Component{
+class Composite : public Component{
 
 	public:
-		std::vector<std::vector<Component*>> components;
+		std::vector<std::vector<Building*>> components;
 
 		/**
 		 * Not abstract since leaf does not implement createIterator
@@ -26,14 +27,14 @@ class Composite : Component{
 		 * 
 		 * @param component 
 		 */
-		void add(Component* component, int x, int y);
+		void add(Building* component, int x, int y);
 
 		/**
 		 * @brief Removes a Component from the Composite structure
 		 * 
 		 * @param component 
 		 */
-		void remove(Component* component, int x, int y);
+		void remove(Building* component, int x, int y);
 
 		/**
 		 * @brief Get the Component object
@@ -42,7 +43,7 @@ class Composite : Component{
 		 * @param y 
 		 * @return Component* 
 		 */
-		Component* getComponent(int x, int y);
+		Building* getComponent(int x, int y);
 
 		/**
 		 * @brief Get the Total Power Consumption

@@ -6,21 +6,28 @@ ConcreteIterator::ConcreteIterator(Composite* composite) : Iterator(){
 	this->currentY = 0;
 }
 
-bool ConcreteIterator::add(Building* building) {
-	// TODO - implement ConcreteIterator::add
-	throw "Not yet implemented";
+bool ConcreteIterator::add(Building* building, int x, int y) {
+	if (x >= this->composite->lengthX() || y >= this->composite->lengthY()) {
+		return false;
+	}
+	if (this->composite->getComponent(x, y) == nullptr) {
+		this->composite->add(building, x, y);
+		return true;
+	} else {
+		return false;
+	}
 }
 
-Component* ConcreteIterator::current() {
+Building* ConcreteIterator::current() {
 	return composite->getComponent(currentX, currentY);
 }
 
-Component* ConcreteIterator::first() {
+Building* ConcreteIterator::first() {
 	// TODO - implement ConcreteIterator::first
 	throw "Not yet implemented";
 }
 
-Component* ConcreteIterator::get(int locationX, int locationY) {
+Building* ConcreteIterator::get(int locationX, int locationY) {
 	// TODO - implement ConcreteIterator::get
 	throw "Not yet implemented";
 }
@@ -40,12 +47,12 @@ int ConcreteIterator::length() {
 	throw "Not yet implemented";
 }
 
-Component* ConcreteIterator::next() {
+Building* ConcreteIterator::next() {
 	// TODO - implement ConcreteIterator::next
 	throw "Not yet implemented";
 }
 
-Component* ConcreteIterator::previous() {
+Building* ConcreteIterator::previous() {
 	// TODO - implement ConcreteIterator::previous
 	throw "Not yet implemented";
 }
@@ -69,8 +76,8 @@ Building* ConcreteIterator::getHouse() {
     std::random_device rd;
     std::mt19937 eng(rd());
 
-    int x = std::uniform_int_distribution<>(0, this->composite->lengthX() - 1)(eng); // Assuming you have a lengthX method
-    int y = std::uniform_int_distribution<>(0, this->composite->lengthY() - 1)(eng); // Assuming you have a lengthY method
+    int x = std::uniform_int_distribution<>(0, this->composite->lengthX() - 1)(eng);
+    int y = std::uniform_int_distribution<>(0, this->composite->lengthY() - 1)(eng);
 
     return dynamic_cast<Building*>(this->composite->getComponent(x, y));
 }
