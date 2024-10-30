@@ -5,7 +5,7 @@ Composite::Composite() : Component(){
 }
 
 Iterator* Composite::createIterator() {
-	return new ConcreteIterator(this);
+	return new Iterator(this);
 }
 
 void Composite::add(Building* component, int x, int y) {
