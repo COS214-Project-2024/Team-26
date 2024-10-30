@@ -35,7 +35,6 @@ int BirthRateStrategy::execute()
 		avgAgeFactor = 2;
 	}
 
-	// NOTE: ASSUME SATISFACTION IS A SCORE OUT OF 100
 	// calculate the birth rate per year.
 	fBirthRate = (this->getPopulation() / 1000 * avgAgeFactor) * (this->getSatisfaction() / 50);
 	iBirthRate = round(fBirthRate); // number of babies
@@ -45,8 +44,7 @@ int BirthRateStrategy::execute()
 	// if there isn't enough housing space for all the new babies.
 	if (newRemainingSpace < 0)
 	{
-		iBirthRate = remainingSpace;
-		return iBirthRate;
+		iBirthRate = remainingSpace; // kill the babies
 	}
 
 	return iBirthRate;
