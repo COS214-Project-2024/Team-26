@@ -71,12 +71,14 @@ int Composite::getTotalCostConsumption() {
 }
 
 int Composite::getTotalSewageConsumption() {
-	// HOW DOES A BUILDING USE SEWAGE CONSUMPTION, MAYBE PERSISTANT 0, UNLESS SPECIAL BUILDING?
 	/*int totalSewageConsumption = 0;
 	for (int i = 0; i < components.size(); i++) {
 		for (int j = 0; j < components[i].size(); j++) {
-			if (components[i][j] != nullptr) {
-				totalSewageConsumption += components[i][j]->getSewageConsumption();
+			Building* building = components[i][j];
+			if (building != nullptr) {
+				if (Sewage* sewageBuilding = dynamic_cast<Sewage*>(building)) {
+                    totalSewageConsumption += sewageBuilding->getSewageProduction();
+                }
 			}
 		}
 	}
@@ -87,8 +89,11 @@ int Composite::getTotalWasteConsumption() {
 	/*int totalWasteConsumption = 0;
 	for (int i = 0; i < components.size(); i++) {
 		for (int j = 0; j < components[i].size(); j++) {
-			if (components[i][j] != nullptr) {
-				totalWasteConsumption += components[i][j]->getWasteConsumption();
+			Building* building = components[i][j];
+			if (building != nullptr) {
+				if (Waste* wasteBuilding = dynamic_cast<Waste*>(building)) {
+                    totalWasteConsumption += wasteBuilding->getSewageProduction();
+                }
 			}
 		}
 	}
@@ -99,8 +104,11 @@ int Composite::getTotalPowerProduction() {
 	/*int totalPowerProduction = 0;
 	for (int i = 0; i < components.size(); i++) {
 		for (int j = 0; j < components[i].size(); j++) {
-			if (components[i][j] != nullptr) {
-				totalPowerProduction += components[i][j]->getPowerProduction();
+			Building* building = components[i][j];
+			if (building != nullptr) {
+				if (Power* powerBuilding = dynamic_cast<Power*>(building)) {
+					totalPowerProduction += powerBuilding->getPowerProduction();
+				}
 			}
 		}
 	}
@@ -111,8 +119,11 @@ int Composite::getTotalWaterProduction() {
 	/*int totalWaterProduction = 0;
 	for (int i = 0; i < components.size(); i++) {
 		for (int j = 0; j < components[i].size(); j++) {
-			if (components[i][j] != nullptr) {
-				totalWaterProduction += components[i][j]->getWaterProduction();
+			Building* building = components[i][j];
+			if (building != nullptr) {
+				if (Water* waterBuilding = dynamic_cast<Water*>(building)) {
+					totalWaterProduction += waterBuilding->getWaterProduction();
+				}
 			}
 		}
 	}

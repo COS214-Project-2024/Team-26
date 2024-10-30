@@ -5,6 +5,10 @@
 
 #include "Component.h"
 #include "ConcreteIterator.h"
+/*#include "Sewage.h"
+#include "Water.h"
+#include "Waste.h"
+#include "Power.h"*/
 
 class Composite : public Component{
 
