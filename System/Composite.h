@@ -8,7 +8,7 @@
 class Composite : Component{
 
 	public:
-		std::vector<Component*> components;
+		std::vector<std::vector<Component*>> components;
 
 		/**
 		 * Not abstract since leaf does not implement createIterator
@@ -26,14 +26,23 @@ class Composite : Component{
 		 * 
 		 * @param component 
 		 */
-		void add(Component* component) override;
+		void add(Component* component, int x, int y);
 
 		/**
 		 * @brief Removes a Component from the Composite structure
 		 * 
 		 * @param component 
 		 */
-		void remove(Component* component) override;
+		void remove(Component* component, int x, int y);
+
+		/**
+		 * @brief Get the Component object
+		 * 
+		 * @param x 
+		 * @param y 
+		 * @return Component* 
+		 */
+		Component* getComponent(int x, int y);
 
 		/**
 		 * @brief Get the Total Power Consumption
@@ -111,6 +120,20 @@ class Composite : Component{
 		 * @return BuildingState 
 		 */
 		BuildingState* getAndSetNextState() override;
+
+		/**
+		 * @brief Gets the length of the X axis
+		 * 
+		 * @return int 
+		 */
+		int lengthX() const;
+
+		/**
+		 * @brief Gets the length of the Y axis
+		 * 
+		 * @return int 
+		 */
+		int lengthY() const;
 	};
 
 #endif // COMPOSITE_H

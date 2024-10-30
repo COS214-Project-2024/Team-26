@@ -1,7 +1,7 @@
 #include "Composite.h"
 
 Composite::Composite() : Component(){
-	this->components = std::vector<Component*>();
+	this->components = std::vector<std::vector<Component*>>();
 }
 
 Iterator* Composite::createIterator() {
@@ -9,22 +9,29 @@ Iterator* Composite::createIterator() {
 	throw "Not yet implemented";
 }
 
-void Composite::add(Component* component) {
-	for (int i = 0; i < this->components.size(); i++){
-		if (this->components.at(i) == component){
-			return;
-		}
-	}
-	this->components.push_back(component);
+void Composite::add(Component* component, int x, int y) {
+    if (x >= components.size()) {
+        components.resize(x + 1); // Resize
+    }
+    if (y >= components[x].size()) {
+        components[x].resize(y + 1); // Resize
+    }
+    components[x][y] = component;
 }
 
-void Composite::remove(Component* component) {
-	for (int i = 0; i < this->components.size(); i++){
-		if (this->components.at(i) == component){
-			this->components.erase(this->components.begin() + i);
-			break;
-		}
+void Composite::remove(Component* component, int x, int y) {
+    if (x < components.size() && y < components[x].size()) {
+        if (components[x][y] == component) {
+            components[x][y] = nullptr;
+        }
     }
+}
+
+Component* Composite::getComponent(int x, int y) {
+    if (x < components.size() && y < components[x].size()) {
+        return components[x][y];
+    }
+    return nullptr;
 }
 
 int Composite::getTotalPowerConsumption() {
@@ -80,4 +87,12 @@ int Composite::getTotalWasteProduction() {
 BuildingState* Composite::getAndSetNextState() {
 	// TODO - implement Composite::getAndSetNextState
 	throw "Not yet implemented";
+}
+
+int Composite::lengthX() const{
+	return components.size();
+}
+
+int Composite::lengthY() const{
+	return components[0].size();
 }

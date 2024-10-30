@@ -6,8 +6,9 @@
 class Iterator {
 
 	protected:
-		Component* composite;
-		int index;
+		Composite* composite;
+		int currentX;
+		int currentY;
 
 	public:
 		virtual Component* first() = 0;

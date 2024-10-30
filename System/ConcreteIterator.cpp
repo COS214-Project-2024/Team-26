@@ -1,8 +1,9 @@
 #include "ConcreteIterator.h"
 
-ConcreteIterator::ConcreteIterator() : Iterator(){
-	// TODO - implement ConcreteIterator::ConcreteIterator
-	throw "Not yet implemented";
+ConcreteIterator::ConcreteIterator(Composite* composite) : Iterator(){
+	this->composite = composite;
+	this->currentX = 0;
+	this->currentY = 0;
 }
 
 bool ConcreteIterator::add(Building* building) {
@@ -11,8 +12,7 @@ bool ConcreteIterator::add(Building* building) {
 }
 
 Component* ConcreteIterator::current() {
-	// TODO - implement ConcreteIterator::current
-	throw "Not yet implemented";
+	return composite->getComponent(currentX, currentY);
 }
 
 Component* ConcreteIterator::first() {
@@ -66,5 +66,11 @@ BuildingState* ConcreteIterator::getAndSetNextState() {
 }
 
 Building* ConcreteIterator::getHouse() {
-	return nullptr;
+    std::random_device rd;
+    std::mt19937 eng(rd());
+
+    int x = std::uniform_int_distribution<>(0, this->composite->lengthX() - 1)(eng); // Assuming you have a lengthX method
+    int y = std::uniform_int_distribution<>(0, this->composite->lengthY() - 1)(eng); // Assuming you have a lengthY method
+
+    return dynamic_cast<Building*>(this->composite->getComponent(x, y));
 }

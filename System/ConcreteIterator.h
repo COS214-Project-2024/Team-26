@@ -1,16 +1,18 @@
 #ifndef CONCRETEITERATOR_H
 #define CONCRETEITERATOR_H
 
+#include <random>
+
 #include "Iterator.h"
 
-class ConcreteIterator : Iterator {
+class ConcreteIterator : public Iterator {
 
 	public:
 		/**
 		 * @brief Construct a new Concrete Iterator object
 		 * 
 		 */
-		ConcreteIterator();
+		ConcreteIterator(Composite* composite);
 		/**
 		 * @brief Adds a building to the list
 		 * 
