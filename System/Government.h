@@ -4,7 +4,7 @@
 #include <vector>
 class Government
 {
-
+//testing
 private:
 	double oldIncomeTaxRate;
 	double oldPropertyTaxRate;
