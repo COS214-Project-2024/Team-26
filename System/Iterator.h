@@ -52,12 +52,20 @@ class Iterator{
 		Building* get(int locationX, int locationY);
 
 		/**
-		 * @brief Checks if there is a component after the current one
+		 * @brief Checks if there is a component after the current one in the x axis
 		 * 
 		 * @return true 
 		 * @return false 
 		 */
-		bool hasNext();
+		bool hasNextX();
+
+		/**
+		 * @brief Checks if there is a component after the current one in the y axis
+		 * 
+		 * @return true 
+		 * @return false 
+		 */
+		bool hasNextY();
 
 		/**
 		 * @brief Checks if it is a leaf (singular object), if false it means it is a Composite object

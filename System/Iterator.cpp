@@ -23,18 +23,27 @@ Building* Iterator::current() {
 }
 
 Building* Iterator::first() {
-	// TODO - implement ConcreteIterator::first
-	throw "Not yet implemented";
+	return composite->getComponent(0, 0);
 }
 
 Building* Iterator::get(int locationX, int locationY) {
-	// TODO - implement ConcreteIterator::get
-	throw "Not yet implemented";
+	return composite->getComponent(locationX, locationY);
 }
 
-bool Iterator::hasNext() {
-	// TODO - implement ConcreteIterator::hasNext
-	throw "Not yet implemented";
+bool Iterator::hasNextX() {
+	if (this->composite->getComponent(this->currentX + 1, this->currentY) != nullptr) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+bool Iterator::hasNextY() {
+	if (this->composite->getComponent(this->currentX, this->currentY + 1) != nullptr) {
+		return true;
+	} else {
+		return false;
+	}
 }
 
 bool Iterator::isLeaf() {
