@@ -74,14 +74,40 @@ Citizen *Citizen::cloneUnrelated(Building *job, Building *house)
 
 void Citizen::assignHouse(Building *house)
 {
+
+	
+	if (house==nullptr)//meaning we want to leave the house
+	{
+		if (this->house!=nullptr)//check if the Citizen currently lives in a house
+		{
+			this->house->updateOccupancy(-1);
+			this->house=nullptr;
+		}
+	}
+	
 	this->house = house;
-	house->updateOccupancy(1);
+	if (house->getSpace() > house->getOccupancy())
+	{
+		house->updateOccupancy(1);
+	}
 }
 
 void Citizen::assignJob(Building *building)
 {
+	if (building==nullptr)//meaning we want to leave the job
+	{
+		if (this->job!=nullptr)//check if the Citizen currently has a job
+		{
+			this->job->updateOccupancy(-1);
+			this->job=nullptr;
+		}
+	}
+
 	this->job = building;
-	job->updateOccupancy(1);
+	if (job->getSpace() > job->getOccupancy())
+	{
+		job->updateOccupancy(1);
+	}
 }
 
 int Citizen::increaseAge(int increaseAmount)

@@ -11,11 +11,6 @@ Government::Government(double incomeTaxRate, double propertyTaxRate)
 	this->taxFundsCollected = 0;
 }
 
-Citizen* Government::getRandomCitizen()
-{
-	return nullptr;
-}
-
 void Government::addCitizen(Citizen *citizen)
 {
 	if (citizen == nullptr)
@@ -26,14 +21,15 @@ void Government::addCitizen(Citizen *citizen)
 	this->citizens.push_back(citizen);
 }
 
-double Government::getIncomeTaxRate()
+void Government::removeCitizen(Citizen *citizen)
 {
-	return this->incomeTaxRate;
-}
+	if (citizen == nullptr)
+	{
+		return;
+	}
 
-double Government::getPropertyTaxRate()
-{
-	return this->propertyTaxRate;
+	// Use std::remove to shift matching elements to the end, then erase them
+	citizens.erase(std::remove(citizens.begin(), citizens.end(), citizen), citizens.end());
 }
 
 void Government::setIncomeTaxRate(double taxRate)
@@ -67,11 +63,6 @@ void Government::notifyTaxChange()
 	}
 }
 
-void Government::allocateTaxFunds()
-{
-	// do something here
-}
-
 void Government::collectIncomeTax()
 {
 	double totalTaxCollected = 0;
@@ -88,13 +79,53 @@ void Government::collectPropertyTax()
 	// Emil must do PropertyTax with mediator
 }
 
-void Government::removeCitizen(Citizen *citizen)
+double Government::getIncomeTaxRate()
 {
-	if (citizen == nullptr)
-	{
-		return;
-	}
+	return this->incomeTaxRate;
+}
 
-	// Use std::remove to shift matching elements to the end, then erase them
-	citizens.erase(std::remove(citizens.begin(), citizens.end(), citizen), citizens.end());
+double Government::getPropertyTaxRate()
+{
+	return this->propertyTaxRate;
+}
+
+void Government::allocateTaxFunds()
+{
+	// do something here with mediator
+}
+
+Citizen *Government::getRandomCitizen()
+{
+	return nullptr;
+}
+
+void Government::evictCitizens(Building *building)
+{
+	for (int i = 0; i < citizens.size(); i++) // go thourgh all the citizens to see which one the Building is assigned to
+	{
+		if (citizens.at(i)->getHouse() == building)
+		{
+			citizens.at(i)->assignHouse(nullptr); // we want to leave the house
+		}
+
+		if (citizens.at(i)->getJob() == building)
+		{
+			citizens.at(i)->assignJob(nullptr); // we want to leave the job
+		}
+	}
+}
+
+void Government::eliminateCitizens(int numberOfCitizensToEvict)
+{
+	// implemnt-Ulrich
+}
+int Government::getPopulation()
+{
+	// implemnt-Ulrich
+	return 0;
+}
+double Government::getAverageSatisfaction()
+{
+	// implemnt-Ulrich
+	return 0;
 }

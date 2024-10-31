@@ -19,11 +19,6 @@ ConcreteGovernment *ConcreteGovernment::instance()
 	return instancePtr;
 }
 
-// void ConcreteGovernment::setTaxStrategy(Tax* tax) {
-// 	// TODO - implement tax strategy logic
-// 	throw "Not yet implemented";
-// }
-
 ConcreteGovernment::~ConcreteGovernment()
 {
 	

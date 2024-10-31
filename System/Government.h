@@ -4,7 +4,6 @@
 #include <vector>
 class Government
 {
-//testing
 private:
 	double oldIncomeTaxRate;
 	double oldPropertyTaxRate;
@@ -14,7 +13,7 @@ private:
 	std::vector<Citizen *> citizens; // Vector to store Citizens
 public:
 	Government(double incomeTaxRate, double propertyTaxRate);
-	
+
 	void addCitizen(Citizen *citizen);
 	void removeCitizen(Citizen *citizen);
 
@@ -22,21 +21,18 @@ public:
 	void setPropertyTaxRate(double taxRate);
 	void notifyTaxChange();
 
-	
 	void collectIncomeTax();
-	void collectPropertyTax();
+	void collectPropertyTax(); // Emil implement here with mediator
 	double getIncomeTaxRate();
 	double getPropertyTaxRate();
-	void allocateTaxFunds();
+	void allocateTaxFunds(); // do something here with mediator
 
-	void evictCitizens(Building*building);
-	void eliminateCitizens(int numberOfCitizensToEvict);
-	int getPopulation();
-	double getAverageSatisfaction();
+	Citizen *getRandomCitizen(); // a bit unlcear on what to do here?
 
-	
-
-	Citizen* getRandomCitizen();
+	void evictCitizens(Building *building);
+	void eliminateCitizens(int numberOfCitizensToEvict); // implemnt-Ulrich
+	int getPopulation();								 // implemnt-Ulrich
+	double getAverageSatisfaction();					 // implemnt-Ulrich
 };
 
 #endif
