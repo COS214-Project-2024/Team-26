@@ -1,8 +1,8 @@
-#include "CitizenPrototype.h"
+#include "Citizen.h"
 #include <iostream>
 #include <cstdlib> // For rand()
 #include <ctime>   // For time()
-CitizenPrototype::CitizenPrototype(double income, int age)
+Citizen::Citizen(double income, int age)
 {
 	// this->government=gov;
 	this->income = income;
@@ -10,7 +10,7 @@ CitizenPrototype::CitizenPrototype(double income, int age)
 	this->satisfaction = 100;
 }
 
-void CitizenPrototype::taxChange(double newTaxRate, double CurrentTaxRate)
+void Citizen::taxChange(double newTaxRate, double CurrentTaxRate)
 {
 	if (newTaxRate >= 0 && newTaxRate <= 1)
 	{
@@ -38,53 +38,53 @@ void CitizenPrototype::taxChange(double newTaxRate, double CurrentTaxRate)
 	}
 }
 
-CitizenPrototype *CitizenPrototype::cloneChild()
+Citizen *Citizen::cloneChild()
 {
-	CitizenPrototype *child = new CitizenPrototype(0, 0);
+	Citizen *child = new Citizen(0, 0);
 	child->assignHouse(this->house);
 	child->assignJob(nullptr);
 	return child;
 }
 
-CitizenPrototype *CitizenPrototype::cloneRelated(Building *job)
+Citizen *Citizen::cloneRelated(Building *job)
 {
 	// Seed the random number generator
 	std::srand(static_cast<unsigned int>(std::time(nullptr)));
 	// Generate a random income value between 1000 and 10000
 	int randomIncome = 1000 + rand() % (10000 - 1000 + 1);
-	// Create a new CitizenPrototype with the random income and current age
-	CitizenPrototype *related = new CitizenPrototype(randomIncome, this->age);
+	// Create a new Citizen with the random income and current age
+	Citizen *related = new Citizen(randomIncome, this->age);
 	related->assignHouse(this->house);
 	related->assignJob(job);
 	return related;
 }
 
-CitizenPrototype *CitizenPrototype::cloneUnrelated(Building *job, Building *house)
+Citizen *Citizen::cloneUnrelated(Building *job, Building *house)
 {
 	// Seed the random number generator
 	std::srand(static_cast<unsigned int>(std::time(nullptr)));
 	// Generate a random income value between 1000 and 10000
 	int randomIncome = 1000 + rand() % (10000 - 1000 + 1);
-	// Create a new CitizenPrototype with the random income and current age
-	CitizenPrototype *unrelated = new CitizenPrototype(randomIncome, this->age);
+	// Create a new Citizen with the random income and current age
+	Citizen *unrelated = new Citizen(randomIncome, this->age);
 	unrelated->assignHouse(house);
 	unrelated->assignJob(job);
 	return unrelated;
 }
 
-void CitizenPrototype::assignHouse(Building *house)
+void Citizen::assignHouse(Building *house)
 {
 	this->house = house;
 	house->updateOccupancy(1);
 }
 
-void CitizenPrototype::assignJob(Building *building)
+void Citizen::assignJob(Building *building)
 {
 	this->job = building;
 	job->updateOccupancy(1);
 }
 
-int CitizenPrototype::increaseAge(int increaseAmount)
+int Citizen::increaseAge(int increaseAmount)
 {
 	if (increaseAmount < 0)
 	{
@@ -96,7 +96,7 @@ int CitizenPrototype::increaseAge(int increaseAmount)
 	return age;
 }
 
-void CitizenPrototype::setIncome(int income)
+void Citizen::setIncome(int income)
 {
 	if (income < 0)
 	{
@@ -107,7 +107,7 @@ void CitizenPrototype::setIncome(int income)
 	this->income = income;
 }
 
-double CitizenPrototype::getIncome()
+double Citizen::getIncome()
 {
 	return this->income;
 }

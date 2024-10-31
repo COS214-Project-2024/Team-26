@@ -11,19 +11,19 @@ Government::Government(double incomeTaxRate, double propertyTaxRate)
 	this->taxFundsCollected = 0;
 }
 
-CitizenPrototype* Government::getRandomCitizen()
+Citizen* Government::getRandomCitizen()
 {
 	return nullptr;
 }
 
-void Government::addOberver(CitizenPrototype *citizen)
+void Government::addCitizen(Citizen *citizen)
 {
 	if (citizen == nullptr)
 	{
 		return;
 	}
 
-	this->observers.push_back(citizen);
+	this->citizens.push_back(citizen);
 }
 
 double Government::getIncomeTaxRate()
@@ -60,10 +60,10 @@ void Government::setPropertyTaxRate(double taxRate)
 
 void Government::notifyTaxChange()
 {
-	for (int i = 0; i < this->observers.size(); i++)
+	for (int i = 0; i < this->citizens.size(); i++)
 	{
-		observers.at(i)->taxChange(incomeTaxRate, oldIncomeTaxRate);
-		observers.at(i)->taxChange(propertyTaxRate, oldPropertyTaxRate);
+		citizens.at(i)->taxChange(incomeTaxRate, oldIncomeTaxRate);
+		citizens.at(i)->taxChange(propertyTaxRate, oldPropertyTaxRate);
 	}
 }
 
@@ -75,9 +75,9 @@ void Government::allocateTaxFunds()
 void Government::collectIncomeTax()
 {
 	double totalTaxCollected = 0;
-	for (int i = 0; i < this->observers.size(); i++)
+	for (int i = 0; i < this->citizens.size(); i++)
 	{
-		totalTaxCollected += observers.at(i)->getIncome() * getIncomeTaxRate();
+		totalTaxCollected += citizens.at(i)->getIncome() * getIncomeTaxRate();
 	}
 
 	this->taxFundsCollected += totalTaxCollected;
@@ -88,7 +88,7 @@ void Government::collectPropertyTax()
 	// Emil must do PropertyTax with mediator
 }
 
-void Government::removeObserver(CitizenPrototype *citizen)
+void Government::removeCitizen(Citizen *citizen)
 {
 	if (citizen == nullptr)
 	{
@@ -96,5 +96,5 @@ void Government::removeObserver(CitizenPrototype *citizen)
 	}
 
 	// Use std::remove to shift matching elements to the end, then erase them
-	observers.erase(std::remove(observers.begin(), observers.end(), citizen), observers.end());
+	citizens.erase(std::remove(citizens.begin(), citizens.end(), citizen), citizens.end());
 }

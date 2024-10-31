@@ -1,6 +1,6 @@
 #ifndef GOVERNMENT_H
 #define GOVERNMENT_H
-#include "CitizenPrototype.h"
+#include "Citizen.h"
 #include <vector>
 class Government
 {
@@ -11,24 +11,32 @@ private:
 	double incomeTaxRate;
 	double propertyTaxRate;
 	double taxFundsCollected;
-	std::vector<CitizenPrototype *> observers; // Vector to store observers
+	std::vector<Citizen *> citizens; // Vector to store Citizens
 public:
 	Government(double incomeTaxRate, double propertyTaxRate);
-	CitizenPrototype*getRandomCitizen();
-	void addOberver(CitizenPrototype *citizen);
-	double getIncomeTaxRate();
-	double getPropertyTaxRate();
+	
+	void addCitizen(Citizen *citizen);
+	void removeCitizen(Citizen *citizen);
 
 	void setIncomeTaxRate(double taxRate);
 	void setPropertyTaxRate(double taxRate);
 	void notifyTaxChange();
 
-	void allocateTaxFunds();
-
+	
 	void collectIncomeTax();
 	void collectPropertyTax();
+	double getIncomeTaxRate();
+	double getPropertyTaxRate();
+	void allocateTaxFunds();
 
-	void removeObserver(CitizenPrototype *citizen);
+	void evictCitizens(Building*building);
+	void eliminateCitizens(int numberOfCitizensToEvict);
+	int getPopulation();
+	double getAverageSatisfaction();
+
+	
+
+	Citizen* getRandomCitizen();
 };
 
 #endif
