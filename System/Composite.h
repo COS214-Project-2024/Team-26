@@ -4,13 +4,13 @@
 #include <vector>
 
 #include "Component.h"
-#include "Iterator.h"
+// #include "Iterator.h"
 /*#include "Sewage.h"
 #include "Water.h"
 #include "Waste.h"
 #include "Power.h"*/
 
-class Composite : public Component{
+class Composite : public Component {
 
 	public:
 		std::vector<std::vector<Building*>> components;
@@ -24,14 +24,14 @@ class Composite : public Component{
 		 * 
 		 * @return Iterator* 
 		 */
-		Iterator* createIterator() override;
+		// Iterator* createIterator() override;
 
 		/**
 		 * @brief Adds a Component to the Composite structure
 		 * 
 		 * @param component 
 		 */
-		void add(Building* component, int x, int y) override;
+		void add(Building* building, int x, int y) override;
 
 		/**
 		 * @brief Removes a Component from the Composite structure

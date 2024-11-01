@@ -9,10 +9,6 @@ private:
     int revenue;
 
 public:
-    Theater(int revenue, int consumption);
-    virtual int getRevenue();
-    virtual int getConsumption();
-    virtual int getSewageProduction();
-    virtual int getWasteProduction();
+    Bowling(int revenue, int consumption);
 };
 #endif

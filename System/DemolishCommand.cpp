@@ -2,7 +2,7 @@
 #include <iostream>
 
 
-DemolishCommand::DemolishCommand(int x, int y, CityMediator* mediator) {
+DemolishCommand::DemolishCommand(int x, int y, BuildingMediator* mediator) {
 	this->LOCATION_X = x;
 	this->LOCATION_Y = y;
     this->mediator = mediator;

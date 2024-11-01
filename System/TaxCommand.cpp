@@ -1,7 +1,7 @@
 #include "TaxCommand.h"
 #include<iostream>
 
-TaxCommand::TaxCommand(int tax, CityMediator* mediator) {
+TaxCommand::TaxCommand(int tax, TurnMediator* mediator) {
 	this->tax = tax;
     this->mediator = mediator;
 }

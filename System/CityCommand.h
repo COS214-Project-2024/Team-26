@@ -6,7 +6,7 @@
 class CityCommand {
 
 protected:
-	CityMediator* mediator;
+	// CityMediator* mediator;
 
 public:
 	virtual void execute() = 0;

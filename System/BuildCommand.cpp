@@ -3,7 +3,7 @@
 
 
 
-BuildCommand::BuildCommand(const std::string& buildingType, int x, int y, CityMediator* mediator){
+BuildCommand::BuildCommand(const std::string& buildingType, int x, int y, BuildingMediator* mediator) : CityCommand() {
 	this->buildingType = buildingType;
 	this->LOCATION_X = x;
 	this->LOCATION_Y = y;
@@ -15,7 +15,6 @@ BuildCommand::BuildCommand(const std::string& buildingType, int x, int y, CityMe
 void BuildCommand::execute() {
 	// TODO - implement BuildCommand::execute
 	//throw "Not yet implemented";
-
 	if (mediator) {
 
 		if (mediator->build(buildingType, LOCATION_X, LOCATION_Y)) {

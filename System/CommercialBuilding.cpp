@@ -1,15 +1,17 @@
-#include <exception>
-using namespace std;
-
 #include "CommercialBuilding.h"
-#include "Building.h"
 
-int CommercialBuilding::getRevenue()
-{
-	return revenue;
+int CommercialBuilding::getCostConsumption() {
+	return 0;
 }
 
-void CommercialBuilding::setRevenue(int aRevenue)
-{
-	this->revenue = aRevenue;
+int CommercialBuilding::getRevenue() {
+	return 0;
+}
+
+int CommercialBuilding::getSewageProduction() {
+	return 0;
+}
+
+int CommercialBuilding::getWasteProduction() {
+	return 0;
 }

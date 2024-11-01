@@ -4,18 +4,18 @@ Leaf::Leaf(Building* building){
 	this->building = building;
 }
 
-Iterator* Leaf::createIterator() {
-	throw "Leaf does not support this";
-}
+// Iterator* Leaf::createIterator() {
+// 	throw "Leaf does not support this";
+// }
 
-void Leaf::add(Component* component) {
+void Leaf::add(Building* building, int x, int y) {
 	// TODO - implement Leaf::add
-	throw "Not yet implemented";
+	// throw "Not yet implemented";
 }
 
-void Leaf::remove(Component* component) {
+void Leaf::remove(int x, int y) {
 	// TODO - implement Leaf::remove
-	throw "Not yet implemented";
+	// throw "Not yet implemented";
 }
 
 int Leaf::getTotalPowerConsumption() {
@@ -36,22 +36,26 @@ int Leaf::getTotalSewageConsumption() {
 
 int Leaf::getTotalWasteConsumption() {
 	// TODO - implement Leaf::getWasteConsumption
-	throw "Not yet implemented";
+	// throw "Not yet implemented";
+	return 0;
 }
 
 int Leaf::getTotalPowerProduction() {
 	// TODO - implement Leaf::getTotalPowerProduction
-	throw "Not yet implemented";
+	// throw "Not yet implemented";
+	return 0;
 }
 
 int Leaf::getTotalWaterProduction() {
 	// TODO - implement Leaf::getTotalWaterProduction
-	throw "Not yet implemented";
+	// throw "Not yet implemented";
+	return 0;
 }
 
 int Leaf::getTotalRevenue() {
 	// TODO - implement Leaf::getTotalRevenue
-	throw "Not yet implemented";
+	// throw "Not yet implemented";
+	return 0;
 }
 
 int Leaf::getTotalSewageProduction() {
@@ -64,5 +68,6 @@ int Leaf::getTotalWasteProduction() {
 
 BuildingState* Leaf::getAndSetNextState() {
 	// TODO - implement Leaf::getAndSetNextState still waiting
-	throw "Not yet implemented";
+	// throw "Not yet implemented";
+	return nullptr;
 }

@@ -14,6 +14,15 @@ BuildingState *Building::getState()
     return state;
 }
 
+BuildingState *Building::getAndSetNextState()
+{
+    return state;
+}
+
+int Building::getSpace() {
+    return SPACE;
+}
+
 int Building::getCostConsumption()
 {
     return state->getMoneyCost(this);
@@ -44,7 +53,7 @@ bool Building::updateOccupancy(int i)
     int newOccupancy = occupancy + i;
 
     // Check if new occupancy would be valid
-    if (newOccupancy < 0 || newOccupancy > space)
+    if (newOccupancy < 0 || newOccupancy > SPACE)
     {
         return false; // Cannot update occupancy - would exceed limits
     }

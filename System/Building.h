@@ -10,19 +10,19 @@ private:
 	BuildingState *state;
 	int LOCATION_X;
 	int LOCATION_Y;
-	int space;
+	int SPACE;
 	int occupancy;
-	int powerConsumption;
-	int waterConsumption;
-	int buildCostMoney;
-	int buildCostResources;
+	int POWER_CONSUMPTION;
+	int WATER_CONSUMPTION;
+	int BUILD_COST_MONEY;
+	int BUILD_COST_RESOURCES;
 
 public:
 	BuildingState *getState();
 
 	void setState(BuildingState *state);
 
-	BuildingState getAndSetNextState();
+	BuildingState* getAndSetNextState();
 
 	int getXCoordinate();
 
@@ -32,17 +32,17 @@ public:
 
 	int getOccupancy();
 
+	virtual bool updateOccupancy(int i);
+
 	int getAvailableSpace();
 
 	int getPowerConsumption();
 
 	int getWaterConsumption();
 
-	virtual bool updateOccupancy(int i);
-
 	virtual int getCostConsumption() = 0;
 
-	virtual int getResourceConsumption() = 0;
+	virtual int getResourceConsumption();
 
 	virtual int getRevenue() = 0;
 

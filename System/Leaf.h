@@ -18,20 +18,20 @@ class Leaf : public Component {
 		 * @brief Destroy the Leaf object
 		 * 
 		 */
-		~Leaf();
+		~Leaf() = default;
 		/**
 		 * @brief 
 		 * 
 		 * @return Iterator* 
 		 */
-		Iterator* createIterator() override;
+		// Iterator* createIterator() override;
 		
 		/**
 		 * @brief 
 		 * 
 		 * @param component 
 		 */
-		void add(Component* component) override;
+		void add(Building* building, int x, int y) override;
 
 		/**
 		 * @brief Get the Total Power Consumption of the component
@@ -108,7 +108,7 @@ class Leaf : public Component {
 		 * 
 		 * @param component 
 		 */
-		void remove(Component* component) override;
+		void remove(int x, int y) override;
 
 		/**
 		 * @brief Get the and set Next State object

@@ -1,13 +1,7 @@
-#include <exception>
-using namespace std;
-
-#ifndef __LandmarkBuilding_h__
-#define __LandmarkBuilding_h__
+#ifndef LANDMARKBUILDING_H
+#define LANDMARKBUILDING_H
 
 #include "Building.h"
-
-// class Building;
-class LandmarkBuilding;
 
 class LandmarkBuilding : public Building
 {
@@ -15,7 +9,15 @@ private:
 	int wasteProduction;
 
 public:
-	virtual int getWasteProduction();
+	LandmarkBuilding() = default;
+
+	virtual int getCostConsumption() override;
+
+	virtual int getRevenue() override;
+
+	virtual int getSewageProduction() override;
+
+	virtual int getWasteProduction() override;
 };
 
 #endif

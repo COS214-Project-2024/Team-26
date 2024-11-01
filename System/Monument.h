@@ -1,31 +1,10 @@
-#include <exception>
-#include <string>
-using namespace std;
-
-#ifndef __Monument_h__
-#define __Monument_h__
+#ifndef MONUMNET_H
+#define MONUMNET_H
 
 #include "LandmarkBuilding.h"
 
-// class LandmarkBuilding;
-class Monument;
+class Monument: public LandmarkBuilding {
 
-class Monument: public LandmarkBuilding
-{
-
-	public: void construct();
-
-	public: void maintain();
-
-	public: double getMaintenanceCost();
-
-	public: int getSize();
-
-	public: string getBuildingType();
-
-	public: double getCultureContribution();
-
-	public: double getTourismValue();
 };
 
 #endif

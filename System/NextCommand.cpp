@@ -1,7 +1,7 @@
 #include "NextCommand.h"
 #include<iostream>
 
-NextCommand::NextCommand(CityMediator* mediator) {
+NextCommand::NextCommand(TurnMediator* mediator) {
     this->mediator = mediator;
 }
 

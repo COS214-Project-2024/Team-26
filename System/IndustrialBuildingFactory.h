@@ -6,8 +6,7 @@
 #include "Warehouse.h"
 #include "Factory.h"
 
-class IndustrialBuildingFactory : public BuildingFactory
-{
+class IndustrialBuildingFactory : public BuildingFactory {
 
 public:
 	Building *createBuilding();

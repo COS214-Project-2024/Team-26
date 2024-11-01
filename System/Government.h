@@ -1,6 +1,7 @@
 #ifndef GOVERNMENT_H
 #define GOVERNMENT_H
 #include "Citizen.h"
+#include "Building.h"
 #include <vector>
 class Government
 {

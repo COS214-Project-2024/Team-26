@@ -1,15 +1,13 @@
-#ifndef SERVICEBUILDING_H
-#define SERVICEBUILDING_H
+#ifndef PLANTBUILDING_H
+#define PLANTBUILDING_H
 
 #include "Building.h"
 
-class ServiceBuilding : public Building
-{
+class PlantBuilding : public Building {
 private:
-    int costConsumption;
-
+    int wasteProduction;
 public:
-    ServiceBuilding() = default;
+    PlantBuilding() = default;
 
     virtual int getCostConsumption() override;
 

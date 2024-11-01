@@ -1,10 +1,17 @@
-#include <exception>
-using namespace std;
-
 #include "LandmarkBuilding.h"
-#include "Building.h"
 
-int LandmarkBuilding::getWasteProduction()
-{
-    return wasteProduction;
+int LandmarkBuilding::getCostConsumption() {
+	return 0;
+}
+
+int LandmarkBuilding::getRevenue() {
+	return 0;
+}
+
+int LandmarkBuilding::getSewageProduction() {
+	return 0;
+}
+
+int LandmarkBuilding::getWasteProduction() {
+	return 0;
 }

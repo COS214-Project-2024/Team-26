@@ -1,13 +1,7 @@
-#include <exception>
-using namespace std;
-
-#ifndef __CommercialBuilding_h__
-#define __CommercialBuilding_h__
+#ifndef COMMERCIALBUILDING_H
+#define COMMERCIALBUILDING_H
 
 #include "Building.h"
-
-// class Building;
-class CommercialBuilding;
 
 class CommercialBuilding : public Building
 {
@@ -15,9 +9,13 @@ private:
 	int revenue;
 
 public:
-	virtual int getRevenue();
-	virtual int getJobCapacity() = 0;
-	void setRevenue(int aRevenue);
+	virtual int getCostConsumption() override;
+
+	virtual int getRevenue() override;
+
+	virtual int getSewageProduction() override;
+
+	virtual int getWasteProduction() override;
 };
 
 #endif

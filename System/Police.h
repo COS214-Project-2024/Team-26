@@ -6,14 +6,6 @@
 class Police : public ServiceBuilding
 {
 
-public:
-    Police();
-    ~Police();
-    int getCostConsumption();
-    int getRevenue();
-    int getSewageProduction();
-    int getWasteProduction();
-
 private:
     int costConsumption;
 };

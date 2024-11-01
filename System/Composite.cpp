@@ -4,15 +4,15 @@ Composite::Composite() : Component(){
 	this->components = std::vector<std::vector<Building*>>();
 }
 
-Iterator* Composite::createIterator() {
-	Iterator* it = new Iterator();
-	for (int i = 0; i < components.size(); i++) {
-		for (int j = 0; j < components[i].size(); j++) {
-			it->add(components[i][j], i, j);
-		}
-	}
-	return it;
-}
+// Iterator* Composite::createIterator() {
+// 	Iterator* it = new Iterator();
+// 	for (int i = 0; i < components.size(); i++) {
+// 		for (int j = 0; j < components[i].size(); j++) {
+// 			it->add(components[i][j], i, j);
+// 		}
+// 	}
+// 	return it;
+// }
 
 void Composite::add(Building* component, int x, int y) {
     if (x >= components.size()) {
@@ -172,7 +172,8 @@ int Composite::getTotalWasteProduction() {
 
 BuildingState* Composite::getAndSetNextState() {
 	// TODO - implement Composite::getAndSetNextState
-	throw "Not yet implemented";
+	// throw "Not yet implemented";
+	return nullptr;
 }
 
 int Composite::lengthX() const{

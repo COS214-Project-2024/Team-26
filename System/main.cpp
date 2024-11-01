@@ -1,11 +1,13 @@
 #include <iostream>
-#include "Government.h"
-#include "ConcreteGovernment.h"
-#include "CitizenPrototype.h"
-#include "Observer.h"
+#include "CityManager.h"
 
-int main()
-{
-    // std::cout<<"Awe"<<std::endl;
-    ConcreteGovernment* government = ConcreteGovernment::instance();
+#include "CityCommand.h"
+    #include "BuildCommand.h"
+
+#include "CityMediator.h"
+    #include "BuildingMediator.h"
+int main() {
+    std::cout << "COMPILED!!" << std::endl;
+    
+    return 0;
 }

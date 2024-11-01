@@ -1,19 +1,19 @@
 #ifndef COMPONENT_H
 #define COMPONENT_H
 
-#include "Iterator.h"
-#include "BuildingState.h"
+// #include "Iterator.h"
 #include "Building.h"
+	#include "BuildingState.h"
 
 class Component {
 	public:
 		Component();
 
-		virtual ~Component() {};
+		virtual ~Component() = default;
 
-		virtual Iterator* createIterator() = 0;
+		// virtual Iterator* createIterator() = 0;
 
-		virtual void add(Building* component, int x, int y) = 0;
+		virtual void add(Building* building, int x, int y) = 0;
 
 		virtual void remove(int x, int y) = 0;
 

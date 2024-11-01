@@ -1,7 +1,7 @@
 #ifndef Citizen_H
 #define Citizen_H
-#include "Government.h"
-#include "ConcreteGovernment.h"
+// #include "Government.h"
+// #include "ConcreteGovernment.h"
 #include "Building.h"
 class Citizen
 {

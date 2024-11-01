@@ -3,12 +3,12 @@
 
 #include "CityMediator.h"
 
-#include "Government.h"
-	#include "ConcreteGovernment.h"
+// #include "Government.h"
+	// #include "ConcreteGovernment.h"
 
 class StatsMediator : public CityMediator {
 private:
-    ConcreteGovernment* government;
+    // ConcreteGovernment* government;
 
 public:
 	StatsMediator();

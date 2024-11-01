@@ -1,15 +1,17 @@
-#include <exception>
-using namespace std;
-
 #include "ResidentialBuilding.h"
-#include "Building.h"
 
-int ResidentialBuilding::getSewageProduction()
-{
-    return sewageProduction;
+int ResidentialBuilding::getCostConsumption() {
+	return 0;
 }
 
-int ResidentialBuilding::getWasteProduction()
-{
-    return wasteProduction;
+int ResidentialBuilding::getRevenue() {
+	return 0;
+}
+
+int ResidentialBuilding::getSewageProduction() {
+	return 0;
+}
+
+int ResidentialBuilding::getWasteProduction() {
+	return 0;
 }

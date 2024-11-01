@@ -1,13 +1,7 @@
-#include <exception>
-using namespace std;
-
-#ifndef __ResidentialBuilding_h__
-#define __ResidentialBuilding_h__
+#ifndef RESIDENTIALBUILDING_H
+#define RESIDENTIALBUILDING_H
 
 #include "Building.h"
-
-// class Building;
-class ResidentialBuilding;
 
 class ResidentialBuilding : public Building
 {
@@ -16,13 +10,15 @@ private:
 	int wasteProduction;
 
 public:
-	virtual int getRevenue() = 0;
-	virtual int getSewageProduction();
-	virtual int getWasteProduction();
-	virtual int getCostConsumption() = 0;
-	// I think the methods below are from the old mdel, I'll leave them in case they were needed
-	// virtual int getResidentCapacity() = 0;
-	// virtual double getHappinessContribution() = 0;
+	ResidentialBuilding() = default;
+
+	virtual int getCostConsumption() override;
+
+	virtual int getRevenue() override;
+
+	virtual int getSewageProduction() override;
+
+	virtual int getWasteProduction() override;
 };
 
 #endif
