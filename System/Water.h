@@ -8,6 +8,7 @@ private:
 	int waterProduction;
 
 public:
+	int getWaterProduction() {return waterProduction;}
 };
 
 #endif

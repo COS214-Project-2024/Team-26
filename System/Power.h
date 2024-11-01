@@ -7,6 +7,7 @@ class Power : public PlantBuilding {
 private:
     int powerProduction;
 public:
+    int getPowerProduction() {return powerProduction;}
     
 };
 

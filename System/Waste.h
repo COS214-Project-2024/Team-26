@@ -3,7 +3,7 @@
 
 #include "PlantBuilding.h"
 
-class WASTE : public PlantBuilding {
+class Waste : public PlantBuilding {
 private: 
 	int wasteConsumption;
 
