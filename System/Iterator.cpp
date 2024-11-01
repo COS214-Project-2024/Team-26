@@ -6,15 +6,12 @@ Iterator::Iterator() {
 	this->currentY = 0;
 }
 
-bool Iterator::add(Building* building, int x, int y) {
+void Iterator::add(Building* building, int x, int y) {
 	if (x >= this->composite->lengthX() || y >= this->composite->lengthY()) {
-		return false;
+		return; // Out of bounds
 	}
 	if (this->composite->getComponent(x, y) == nullptr) {
 		this->composite->add(building, x, y);
-		return true;
-	} else {
-		return false;
 	}
 }
 
