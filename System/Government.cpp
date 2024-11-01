@@ -115,17 +115,40 @@ void Government::evictCitizens(Building *building)
 	}
 }
 
-void Government::eliminateCitizens(int numberOfCitizensToEvict)
+void Government::eliminateCitizens(int numberOfCitizens)
 {
-	// implemnt-Ulrich
+	// Ensure we do not try to remove more citizens than available
+	if (numberOfCitizens <= 0)
+	{
+		return;
+	}
+
+	if (numberOfCitizens > this->citizens.size())
+	{
+		numberOfCitizens = this->citizens.size();
+	}
+
+	// Remove citizens from the end of the list
+	for (int i = 0; i < numberOfCitizens; ++i)
+	{
+		// Assuming citizens vector holds pointers to dynamically allocated Citizen objects
+		delete this->citizens.back(); // Call destructor
+		this->citizens.pop_back();	  // Remove from vector
+	}
 }
+
 int Government::getPopulation()
 {
-	// implemnt-Ulrich
-	return 0;
+
+	return citizens.size();
 }
 double Government::getAverageSatisfaction()
 {
-	// implemnt-Ulrich
-	return 0;
+	double averageSatisfaction = 0;
+	for (int i = 0; i < this->citizens.size(); i++)
+	{
+		averageSatisfaction += this->citizens.at(i)->getSatisfaction();
+	}
+	averageSatisfaction=averageSatisfaction/citizens.size();
+	return averageSatisfaction;
 }
