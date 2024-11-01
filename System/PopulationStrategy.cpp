@@ -5,15 +5,15 @@ PopulationStrategy:: PopulationStrategy() {
 }
 
 int PopulationStrategy::getPopulation() {
-	// return mediator->getPopulation();
+	return mediator->getPopulation();
 }
 
 int PopulationStrategy::getSatisfaction() {
-	// return mediator->getSatisfaction();
+	return mediator->getSatisfaction();
 }
 
 int PopulationStrategy::getAvailableHousingSpace() {
-	// return mediator->getAvailableHousingSpace();
+	return mediator->getAvailableHousingSpace();
 }
 
 int PopulationStrategy::getAverageAge() {
@@ -21,11 +21,11 @@ int PopulationStrategy::getAverageAge() {
 }
 
 int PopulationStrategy::getImmigrationLimit() {
-	// return mediator->getImmigrationLimit();
+	return mediator->getImmigrationLimit();
 }
 
 int PopulationStrategy:: getTotalHousingSpace() {
-	// return mediator->getTotalHousingSpace();
+	return mediator->getTotalHousingSpace();
 }
 
 PopulationStrategy:: ~PopulationStrategy() {
