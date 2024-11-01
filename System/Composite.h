@@ -31,14 +31,14 @@ class Composite : public Component{
 		 * 
 		 * @param component 
 		 */
-		void add(Building* component, int x, int y);
+		void add(Building* component, int x, int y) override;
 
 		/**
 		 * @brief Removes a Component from the Composite structure
 		 * 
 		 * @param component 
 		 */
-		void remove(Building* component, int x, int y);
+		void remove(Building* component, int x, int y) override;
 
 		/**
 		 * @brief Get the Component object

@@ -1,7 +1,7 @@
 #include "Iterator.h"
 
-Iterator::Iterator(Composite* composite) {
-	this->composite = composite;
+Iterator::Iterator() {
+	this->composite = new Composite();
 	this->currentX = 0;
 	this->currentY = 0;
 }
@@ -81,7 +81,17 @@ BuildingState* Iterator::getAndSetNextState() {
 	throw "Not yet implemented";
 }
 
-Building* Iterator::getHouse() {
+Building* Iterator::getHouse() {//NOT FINISHED, NEED FUNCTION TO MAKE SURE IT HAS OPEN SPOT
+    std::random_device rd;
+    std::mt19937 eng(rd());
+
+    int x = std::uniform_int_distribution<>(0, this->composite->lengthX() - 1)(eng);
+    int y = std::uniform_int_distribution<>(0, this->composite->lengthY() - 1)(eng);
+
+    return dynamic_cast<Building*>(this->composite->getComponent(x, y));
+}
+
+Building* Iterator::getJob() { //NOT FINISHED, NEED FUNCTION TO MAKE SURE IT HAS JOB
     std::random_device rd;
     std::mt19937 eng(rd());
 

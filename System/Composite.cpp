@@ -5,7 +5,13 @@ Composite::Composite() : Component(){
 }
 
 Iterator* Composite::createIterator() {
-	return new Iterator(this);
+	Iterator* it = new Iterator();
+	for (int i = 0; i < components.size(); i++) {
+		for (int j = 0; j < components[i].size(); j++) {
+			it->add(components[i][j], i, j);
+		}
+	}
+	return it;
 }
 
 void Composite::add(Building* component, int x, int y) {

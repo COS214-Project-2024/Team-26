@@ -16,7 +16,7 @@ class Iterator{
 		 * @brief Construct a new Concrete Iterator object
 		 * 
 		 */
-		Iterator(Composite* composite);
+		Iterator();
 		/**
 		 * @brief Adds a building to the list
 		 * 

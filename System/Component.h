@@ -13,9 +13,9 @@ class Component {
 
 		virtual Iterator* createIterator() = 0;
 
-		virtual void add(Component* component) = 0;
+		virtual void add(Building* component, int x, int y) = 0;
 
-		virtual void remove(Component* component) = 0;
+		virtual void remove(Building* component, int x, int y) = 0;
 
 		virtual int getTotalPowerConsumption() = 0;
 
