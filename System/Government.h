@@ -1,34 +1,38 @@
 #ifndef GOVERNMENT_H
 #define GOVERNMENT_H
-#include "CitizenPrototype.h"
+#include "Citizen.h"
 #include <vector>
 class Government
 {
-//testing
 private:
 	double oldIncomeTaxRate;
 	double oldPropertyTaxRate;
 	double incomeTaxRate;
 	double propertyTaxRate;
 	double taxFundsCollected;
-	std::vector<CitizenPrototype *> observers; // Vector to store observers
+	std::vector<Citizen *> citizens; // Vector to store Citizens
 public:
 	Government(double incomeTaxRate, double propertyTaxRate);
-	CitizenPrototype*getRandomCitizen();
-	void addOberver(CitizenPrototype *citizen);
-	double getIncomeTaxRate();
-	double getPropertyTaxRate();
+
+	void addCitizen(Citizen *citizen);
+	void removeCitizen(Citizen *citizen);
 
 	void setIncomeTaxRate(double taxRate);
 	void setPropertyTaxRate(double taxRate);
 	void notifyTaxChange();
 
-	void allocateTaxFunds();
-
 	void collectIncomeTax();
-	void collectPropertyTax();
+	void collectPropertyTax(); // Emil implement here with mediator
+	double getIncomeTaxRate();
+	double getPropertyTaxRate();
+	void allocateTaxFunds(); // do something here with mediator
 
-	void removeObserver(CitizenPrototype *citizen);
+	Citizen *getRandomCitizen(); // a bit unlcear on what to do here?
+
+	void evictCitizens(Building *building);
+	void eliminateCitizens(int numberOfCitizens); // implemnt-Ulrich
+	int getPopulation();						  // implemnt-Ulrich
+	double getAverageSatisfaction();			  // implemnt-Ulrich
 };
 
 #endif

@@ -11,29 +11,25 @@ Government::Government(double incomeTaxRate, double propertyTaxRate)
 	this->taxFundsCollected = 0;
 }
 
-CitizenPrototype* Government::getRandomCitizen()
-{
-	return nullptr;
-}
-
-void Government::addOberver(CitizenPrototype *citizen)
+void Government::addCitizen(Citizen *citizen)
 {
 	if (citizen == nullptr)
 	{
 		return;
 	}
 
-	this->observers.push_back(citizen);
+	this->citizens.push_back(citizen);
 }
 
-double Government::getIncomeTaxRate()
+void Government::removeCitizen(Citizen *citizen)
 {
-	return this->incomeTaxRate;
-}
+	if (citizen == nullptr)
+	{
+		return;
+	}
 
-double Government::getPropertyTaxRate()
-{
-	return this->propertyTaxRate;
+	// Use std::remove to shift matching elements to the end, then erase them
+	citizens.erase(std::remove(citizens.begin(), citizens.end(), citizen), citizens.end());
 }
 
 void Government::setIncomeTaxRate(double taxRate)
@@ -60,24 +56,19 @@ void Government::setPropertyTaxRate(double taxRate)
 
 void Government::notifyTaxChange()
 {
-	for (int i = 0; i < this->observers.size(); i++)
+	for (int i = 0; i < this->citizens.size(); i++)
 	{
-		observers.at(i)->taxChange(incomeTaxRate, oldIncomeTaxRate);
-		observers.at(i)->taxChange(propertyTaxRate, oldPropertyTaxRate);
+		citizens.at(i)->taxChange(incomeTaxRate, oldIncomeTaxRate);
+		citizens.at(i)->taxChange(propertyTaxRate, oldPropertyTaxRate);
 	}
-}
-
-void Government::allocateTaxFunds()
-{
-	// do something here
 }
 
 void Government::collectIncomeTax()
 {
 	double totalTaxCollected = 0;
-	for (int i = 0; i < this->observers.size(); i++)
+	for (int i = 0; i < this->citizens.size(); i++)
 	{
-		totalTaxCollected += observers.at(i)->getIncome() * getIncomeTaxRate();
+		totalTaxCollected += citizens.at(i)->getIncome() * getIncomeTaxRate();
 	}
 
 	this->taxFundsCollected += totalTaxCollected;
@@ -88,13 +79,76 @@ void Government::collectPropertyTax()
 	// Emil must do PropertyTax with mediator
 }
 
-void Government::removeObserver(CitizenPrototype *citizen)
+double Government::getIncomeTaxRate()
 {
-	if (citizen == nullptr)
+	return this->incomeTaxRate;
+}
+
+double Government::getPropertyTaxRate()
+{
+	return this->propertyTaxRate;
+}
+
+void Government::allocateTaxFunds()
+{
+	// do something here with mediator
+}
+
+Citizen *Government::getRandomCitizen()
+{
+	return nullptr;
+}
+
+void Government::evictCitizens(Building *building)
+{
+	for (int i = 0; i < citizens.size(); i++) // go thourgh all the citizens to see which one the Building is assigned to
+	{
+		if (citizens.at(i)->getHouse() == building)
+		{
+			citizens.at(i)->assignHouse(nullptr); // we want to leave the house
+		}
+
+		if (citizens.at(i)->getJob() == building)
+		{
+			citizens.at(i)->assignJob(nullptr); // we want to leave the job
+		}
+	}
+}
+
+void Government::eliminateCitizens(int numberOfCitizens)
+{
+	// Ensure we do not try to remove more citizens than available
+	if (numberOfCitizens <= 0)
 	{
 		return;
 	}
 
-	// Use std::remove to shift matching elements to the end, then erase them
-	observers.erase(std::remove(observers.begin(), observers.end(), citizen), observers.end());
+	if (numberOfCitizens > this->citizens.size())
+	{
+		numberOfCitizens = this->citizens.size();
+	}
+
+	// Remove citizens from the end of the list
+	for (int i = 0; i < numberOfCitizens; ++i)
+	{
+		// Assuming citizens vector holds pointers to dynamically allocated Citizen objects
+		delete this->citizens.back(); // Call destructor
+		this->citizens.pop_back();	  // Remove from vector
+	}
+}
+
+int Government::getPopulation()
+{
+
+	return citizens.size();
+}
+double Government::getAverageSatisfaction()
+{
+	double averageSatisfaction = 0;
+	for (int i = 0; i < this->citizens.size(); i++)
+	{
+		averageSatisfaction += this->citizens.at(i)->getSatisfaction();
+	}
+	averageSatisfaction=averageSatisfaction/citizens.size();
+	return averageSatisfaction;
 }

@@ -4,19 +4,22 @@
 #include <random>
 #include "Building.h"
 #include "Composite.h"
+#include "Leaf.h"
 
 class Iterator{
 	protected:
 		Composite* composite;
 		int currentX;
 		int currentY;
+		const int MAXX = 50;
+		const int MAXY = 50;
 
 	public:
 		/**
 		 * @brief Construct a new Concrete Iterator object
 		 * 
 		 */
-		Iterator(Composite* composite);
+		Iterator();
 		/**
 		 * @brief Adds a building to the list
 		 * 
@@ -76,11 +79,18 @@ class Iterator{
 		bool isLeaf();
 
 		/**
-		 * @brief Returns the length of the list
+		 * @brief Returns the length of the list (X)
 		 * 
 		 * @return int 
 		 */
-		int length();
+		int lengthX();
+
+		/**
+		 * @brief Returns the length of the list (Y)
+		 * 
+		 * @return int 
+		 */
+		int lengthY();
 
 		/**
 		 * @brief Returns the next component
