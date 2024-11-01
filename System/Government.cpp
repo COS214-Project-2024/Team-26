@@ -96,7 +96,21 @@ void Government::allocateTaxFunds()
 
 Citizen *Government::getRandomCitizen()
 {
-	return nullptr;
+	Citizen*result;
+
+	for (int i=0;i<citizens.size();i++)
+	{
+		if (citizens.at(i)->getHouse()!=nullptr)//firts check if they even have a house
+		{
+			if (citizens.at(i)->getHouse()->getAvailableSpace()>=1)//check the space of the house
+			{
+				result=citizens.at(i);
+				break;
+			}
+		}
+	}
+
+	return result;
 }
 
 void Government::evictCitizens(Building *building)
