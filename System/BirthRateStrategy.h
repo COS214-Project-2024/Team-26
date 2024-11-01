@@ -6,7 +6,7 @@
 class BirthRateStrategy : public PopulationStrategy {
 
 public:
-    BirthRateStrategy(CityMediator* med);
+    BirthRateStrategy();
 
 	int execute() override;
 

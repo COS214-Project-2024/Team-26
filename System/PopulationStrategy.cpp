@@ -1,7 +1,7 @@
 #include "PopulationStrategy.h"
 
-PopulationStrategy:: PopulationStrategy(CityMediator* mediator) {
-	this->mediator = mediator;
+PopulationStrategy:: PopulationStrategy() {
+	this->mediator = new StatsMediator();
 }
 
 int PopulationStrategy::getPopulation() {

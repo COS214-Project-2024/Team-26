@@ -4,7 +4,6 @@
 #include <string>
 
 #include "Iterator.h"
-	#include "ConcreteIterator.h"
 
 class CityMediator {
 protected:
@@ -13,17 +12,9 @@ protected:
 public:
 	CityMediator() =default;
 
-	virtual bool build(std::string& buildingName, int locationX, int locationY) = 0;
-
-	virtual bool demolish(int locationX, int locationY) = 0;
-
-	virtual void nextRound() = 0;
-
-	virtual void changeTaxRates(int newTaxRates) = 0;
-
 	static Iterator* getBuildings() {
 		if (!buildings)
-			buildings = new ConcreteIterator();
+			buildings = new Iterator();
 		return buildings;
 	}
 

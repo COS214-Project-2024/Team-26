@@ -2,14 +2,14 @@
 #define POPULATIONSTRATEGY_H
 
 #include "CityMediator.h" // change to StatsMediator ?
-
+	#include "StatsMediator.h"
 class PopulationStrategy {
 
 protected:
-	CityMediator* mediator;
+	StatsMediator* mediator;
 
 public:
-    PopulationStrategy(CityMediator* mediator);
+    PopulationStrategy();
 
 	virtual int execute() = 0;
 

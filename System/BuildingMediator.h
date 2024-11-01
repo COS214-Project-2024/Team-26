@@ -7,18 +7,22 @@
 	#include "ResidentialBuildingFactory.h"
 	#include "CommercialBuildingFactory.h"
 	#include "ServiceBuildingFactory.h"
-	#include "EntertainmentBuildingFactory.cpp"
+	#include "EntertainmentBuildingFactory.h"
 	#include "LandmarkBuildingFactory.h"
 	#include "IndustrialBuildingFactory.h"
-	#include "PlantBuildingFactory.cpp"
+	#include "PlantBuildingFactory.h"
 
 #include "Iterator.h"
-	#include "ConcreteIterator.h"
+
+#include "Government.h"
+	#include "ConcreteGovernment.h"
 
 class BuildingMediator : public CityMediator {
 
 private:
 	BuildingFactory* factory;
+
+	ConcreteGovernment* governemnt;
 
 public:
 	BuildingMediator();

@@ -6,7 +6,7 @@
 class ImmigrationStrategy : public PopulationStrategy {
 
 public:
-    ImmigrationStrategy(CityMediator* med);
+    ImmigrationStrategy();
 
 	int execute() override;
 

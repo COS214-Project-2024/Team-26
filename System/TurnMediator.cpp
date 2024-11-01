@@ -39,7 +39,7 @@ int TurnMediator::handlePopulation() {
 	for (int i = 0; i < immigrations; i++) {
 		int randVal = rand() % 101;
 		if (randVal < 20) {
-			Building* job = getBuildings()->getJob():
+			Building* job = getBuildings()->getJob();
 			(government->getRandomCitizen())->cloneRelated(job);
 		} else {
 			Building* house = getBuildings()->getHouse();
@@ -52,8 +52,4 @@ int TurnMediator::handlePopulation() {
 }
 
 TurnMediator::~TurnMediator() {
-	if (government) {
-		delete government;
-		government = nullptr;
-	}
 }

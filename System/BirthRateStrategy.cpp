@@ -3,7 +3,7 @@
 #include <iostream>
 #include <cmath>
 
-BirthRateStrategy::BirthRateStrategy(CityMediator *med) : PopulationStrategy(med)
+BirthRateStrategy::BirthRateStrategy() : PopulationStrategy()
 {
 }
 

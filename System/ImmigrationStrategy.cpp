@@ -3,7 +3,7 @@
 #include <iostream>
 #include <cmath>
 
-ImmigrationStrategy:: ImmigrationStrategy(CityMediator* med) : PopulationStrategy(med) {
+ImmigrationStrategy:: ImmigrationStrategy() : PopulationStrategy() {
 }
 
 int ImmigrationStrategy::execute() {

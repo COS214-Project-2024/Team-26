@@ -3,7 +3,7 @@
 #include <iostream>
 #include <cmath>
 
-DeathRateStrategy:: DeathRateStrategy(CityMediator* med) : PopulationStrategy(med) {
+DeathRateStrategy:: DeathRateStrategy() : PopulationStrategy() {
 }
 
 int DeathRateStrategy::execute() {
