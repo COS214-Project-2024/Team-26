@@ -47,33 +47,58 @@ bool Iterator::hasNextY() {
 }
 
 bool Iterator::isLeaf() {
-	// TODO - implement ConcreteIterator::isLeaf
-	throw "Not yet implemented";
+	return dynamic_cast<Leaf*>(composite->getComponent(currentX, currentY));
 }
 
-int Iterator::length() {
-	// TODO - implement ConcreteIterator::length
-	throw "Not yet implemented";
+int Iterator::lengthX() {
+	return composite->lengthX();
+}
+
+int Iterator::lengthY() {
+	return composite->lengthY();
 }
 
 Building* Iterator::next() {
-	// TODO - implement ConcreteIterator::next
-	throw "Not yet implemented";
+	if (currentX + 1 <= MAXX){
+		return composite->getComponent(currentX + 1, currentY);
+	} else {
+		if (currentY + 1 <= MAXY) {
+			return composite->getComponent(currentX, currentY + 1);
+		} else {
+			return nullptr;
+		}
+	}
 }
 
 Building* Iterator::previous() {
-	// TODO - implement ConcreteIterator::previous
-	throw "Not yet implemented";
+	if (currentX == 0 && currentY == 0) {
+		return nullptr;
+	} else {
+		if (currentX > 0) {
+			return composite->getComponent(currentX - 1, currentY);
+		} else {
+			if (currentY > 0) {
+				return composite->getComponent(currentX, currentY - 1);
+			}
+		}
+	}
 }
 
 bool Iterator::remove(int locationX, int locationY) {
-	// TODO - implement ConcreteIterator::remove
-	throw "Not yet implemented";
+	if (composite->getComponent(locationX, locationY) != nullptr) {
+		composite->remove(locationX, locationY);
+		return true;
+	} else {
+		return false;
+	}
 }
 
 bool Iterator::slotAvailable(int locationX, int locationY) {
-	// TODO - implement ConcreteIterator::slotAvailable
-	throw "Not yet implemented";
+	if (composite->getComponent(locationX, locationY) == nullptr) {
+		return true;
+	} else {
+		return false;
+	}
 }
 
 BuildingState* Iterator::getAndSetNextState() {

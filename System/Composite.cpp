@@ -24,11 +24,9 @@ void Composite::add(Building* component, int x, int y) {
     components[x][y] = component;
 }
 
-void Composite::remove(Building* component, int x, int y) {
+void Composite::remove(int x, int y) {
     if (x < components.size() && y < components[x].size()) {
-        if (components[x][y] == component) {
-            components[x][y] = nullptr;
-        }
+        components[x][y] = nullptr;
     }
 }
 

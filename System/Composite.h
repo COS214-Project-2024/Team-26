@@ -38,7 +38,7 @@ class Composite : public Component{
 		 * 
 		 * @param component 
 		 */
-		void remove(Building* component, int x, int y) override;
+		void remove(int x, int y) override;
 
 		/**
 		 * @brief Get the Component object

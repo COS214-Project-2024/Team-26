@@ -15,7 +15,7 @@ class Component {
 
 		virtual void add(Building* component, int x, int y) = 0;
 
-		virtual void remove(Building* component, int x, int y) = 0;
+		virtual void remove(int x, int y) = 0;
 
 		virtual int getTotalPowerConsumption() = 0;
 
