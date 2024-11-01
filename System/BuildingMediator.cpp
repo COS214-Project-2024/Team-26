@@ -27,7 +27,11 @@ bool BuildingMediator::build(std::string& buildingName, int locationX, int locat
 
 
 	// add to composite structure
-	return getBuildings()->add(factory->createBuilding(), locationX, locationY);
+	if (getBuildings()->slotAvailable(locationX, locationY)) {
+		getBuildings()->add(factory->createBuilding(), locationX, locationY);
+		return true;
+	} else 
+		return false;
 }
 
 bool BuildingMediator::demolish(int locationX, int locationY) {
