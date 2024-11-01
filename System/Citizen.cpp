@@ -75,16 +75,15 @@ Citizen *Citizen::cloneUnrelated(Building *job, Building *house)
 void Citizen::assignHouse(Building *house)
 {
 
-	
-	if (house==nullptr)//meaning we want to leave the house
+	if (house == nullptr) // meaning we want to leave the house
 	{
-		if (this->house!=nullptr)//check if the Citizen currently lives in a house
+		if (this->house != nullptr) // check if the Citizen currently lives in a house
 		{
 			this->house->updateOccupancy(-1);
-			this->house=nullptr;
+			this->house = nullptr;
 		}
 	}
-	
+
 	this->house = house;
 	if (house->getSpace() > house->getOccupancy())
 	{
@@ -94,12 +93,12 @@ void Citizen::assignHouse(Building *house)
 
 void Citizen::assignJob(Building *building)
 {
-	if (building==nullptr)//meaning we want to leave the job
+	if (building == nullptr) // meaning we want to leave the job
 	{
-		if (this->job!=nullptr)//check if the Citizen currently has a job
+		if (this->job != nullptr) // check if the Citizen currently has a job
 		{
 			this->job->updateOccupancy(-1);
-			this->job=nullptr;
+			this->job = nullptr;
 		}
 	}
 
@@ -132,8 +131,45 @@ void Citizen::setIncome(int income)
 
 	this->income = income;
 }
+int Citizen::getSatisfaction()
+{
+	return satisfaction;
+}
+
+Building *Citizen::getHouse()
+{
+	return house;
+}
+
+Building *Citizen::getJob()
+{
+	return job;
+}
 
 double Citizen::getIncome()
 {
 	return this->income;
+}
+
+int Citizen::getAge()
+{
+	return age;
+}
+
+Citizen::~Citizen()
+{
+	if (this->house!=nullptr)
+	{
+		this->house->updateOccupancy(-1);
+		// delete house; //do not delete house because the house will still be there but the citizen won't
+		this->house=nullptr;
+	}
+
+	if (this->job!=nullptr)
+	{
+		this->job->updateOccupancy(-1);
+		// delete this->job; //do not delete job because the job will still be there but the citizen won't
+		this->job=nullptr;
+	
+	}
 }

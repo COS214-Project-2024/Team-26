@@ -30,9 +30,9 @@ public:
 	Citizen *getRandomCitizen(); // a bit unlcear on what to do here?
 
 	void evictCitizens(Building *building);
-	void eliminateCitizens(int numberOfCitizensToEvict); // implemnt-Ulrich
-	int getPopulation();								 // implemnt-Ulrich
-	double getAverageSatisfaction();					 // implemnt-Ulrich
+	void eliminateCitizens(int numberOfCitizens); // implemnt-Ulrich
+	int getPopulation();						  // implemnt-Ulrich
+	double getAverageSatisfaction();			  // implemnt-Ulrich
 };
 
 #endif
