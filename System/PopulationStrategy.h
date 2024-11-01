@@ -1,7 +1,7 @@
 #ifndef POPULATIONSTRATEGY_H
 #define POPULATIONSTRATEGY_H
 
-#include "CityMediator.h" // change to StatsMediator ?
+#include "CityMediator.h"
 	#include "StatsMediator.h"
 class PopulationStrategy {
 

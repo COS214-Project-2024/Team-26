@@ -4,11 +4,11 @@
 #include <vector>
 
 #include "Component.h"
-// #include "Iterator.h"
-/*#include "Sewage.h"
-#include "Water.h"
+
+#include "Sewage.h"
 #include "Waste.h"
-#include "Power.h"*/
+#include "Power.h"
+#include "Water.h"
 
 class Composite : public Component {
 

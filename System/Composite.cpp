@@ -75,7 +75,7 @@ int Composite::getTotalCostConsumption() {
 }
 
 int Composite::getTotalSewageConsumption() {
-	/*int totalSewageConsumption = 0;
+	int totalSewageConsumption = 0;
 	for (int i = 0; i < components.size(); i++) {
 		for (int j = 0; j < components[i].size(); j++) {
 			Building* building = components[i][j];
@@ -86,11 +86,11 @@ int Composite::getTotalSewageConsumption() {
 			}
 		}
 	}
-	return totalSewageConsumption;*/
+	return totalSewageConsumption;
 }
 
 int Composite::getTotalWasteConsumption() {
-	/*int totalWasteConsumption = 0;
+	int totalWasteConsumption = 0;
 	for (int i = 0; i < components.size(); i++) {
 		for (int j = 0; j < components[i].size(); j++) {
 			Building* building = components[i][j];
@@ -101,11 +101,11 @@ int Composite::getTotalWasteConsumption() {
 			}
 		}
 	}
-	return totalWasteConsumption;*/
+	return totalWasteConsumption;
 }
 
 int Composite::getTotalPowerProduction() {
-	/*int totalPowerProduction = 0;
+	int totalPowerProduction = 0;
 	for (int i = 0; i < components.size(); i++) {
 		for (int j = 0; j < components[i].size(); j++) {
 			Building* building = components[i][j];
@@ -116,11 +116,11 @@ int Composite::getTotalPowerProduction() {
 			}
 		}
 	}
-	return totalPowerProduction;*/
+	return totalPowerProduction;
 }
 
 int Composite::getTotalWaterProduction() {
-	/*int totalWaterProduction = 0;
+	int totalWaterProduction = 0;
 	for (int i = 0; i < components.size(); i++) {
 		for (int j = 0; j < components[i].size(); j++) {
 			Building* building = components[i][j];
@@ -131,7 +131,7 @@ int Composite::getTotalWaterProduction() {
 			}
 		}
 	}
-	return totalWaterProduction;*/
+	return totalWaterProduction;
 }
 
 int Composite::getTotalRevenue() {

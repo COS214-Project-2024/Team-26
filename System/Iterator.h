@@ -29,7 +29,7 @@ class Iterator{
 		 * @return true 
 		 * @return false 
 		 */
-		bool add(Building* building, int x, int y);
+		void add(Building* building, int x, int y);
 
 		/**
 		 * @brief Returns the current component
