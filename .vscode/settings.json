@@ -3,5 +3,6 @@
         "new": "cpp",
         "string": "cpp",
         "xlocale": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "C:/Users/ericb/Desktop/2nd year/Semester 2/COS 214/Project/The_7/System"
 }
