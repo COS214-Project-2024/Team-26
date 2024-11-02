@@ -58,7 +58,7 @@ void Government::setPropertyTaxRate(double taxRate)
 
 void Government::notifyTaxChange()
 {
-	for (int i = 0; i < this->citizens.size(); i++)
+	for (size_t i = 0; i < this->citizens.size(); i++)
 	{
 		citizens.at(i)->taxChange(incomeTaxRate, oldIncomeTaxRate);
 		citizens.at(i)->taxChange(propertyTaxRate, oldPropertyTaxRate);
@@ -68,7 +68,7 @@ void Government::notifyTaxChange()
 void Government::collectIncomeTax()
 {
 	double totalTaxCollected = 0;
-	for (int i = 0; i < this->citizens.size(); i++)
+	for (size_t i = 0; i < this->citizens.size(); i++)
 	{
 		totalTaxCollected += citizens.at(i)->getIncome() * getIncomeTaxRate();
 	}
@@ -100,7 +100,7 @@ Citizen *Government::getRandomCitizen()
 {
 	Citizen*result;
 
-	for (int i=0;i<citizens.size();i++)
+	for (size_t i=0;i<citizens.size();i++)
 	{
 		if (citizens.at(i)->getHouse()!=nullptr)//firts check if they even have a house
 		{
@@ -117,7 +117,7 @@ Citizen *Government::getRandomCitizen()
 
 void Government::evictCitizens(Building *building)
 {
-	for (int i = 0; i < citizens.size(); i++) // go thourgh all the citizens to see which one the Building is assigned to
+	for (size_t i = 0; i < citizens.size(); i++) // go thourgh all the citizens to see which one the Building is assigned to
 	{
 		if (citizens.at(i)->getHouse() == building)
 		{
@@ -139,10 +139,10 @@ void Government::eliminateCitizens(int numberOfCitizens)
 		return;
 	}
 
-	if (numberOfCitizens > this->citizens.size())
-	{
-		numberOfCitizens = this->citizens.size();
-	}
+	if (static_cast<size_t>(numberOfCitizens) > this->citizens.size())
+    {
+        numberOfCitizens = this->citizens.size();
+    }
 
 	// Remove citizens from the end of the list
 	for (int i = 0; i < numberOfCitizens; ++i)
@@ -161,7 +161,7 @@ int Government::getPopulation()
 double Government::getAverageSatisfaction()
 {
 	double averageSatisfaction = 0;
-	for (int i = 0; i < this->citizens.size(); i++)
+	for (size_t i = 0; i < this->citizens.size(); i++)
 	{
 		averageSatisfaction += this->citizens.at(i)->getSatisfaction();
 	}

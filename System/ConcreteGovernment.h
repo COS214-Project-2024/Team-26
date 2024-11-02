@@ -1,20 +1,38 @@
-// ConcreteGovernment.h
 #ifndef CONCRETEGOVERNMENT_H
 #define CONCRETEGOVERNMENT_H
 
 #include "Government.h"
 
+/**
+ * @class ConcreteGovernment
+ * @brief Singleton class that represents a specific type of Government.
+ *
+ * ConcreteGovernment is a subclass of Government, enforcing a singleton pattern to ensure only one instance exists.
+ */
 class ConcreteGovernment : public Government
 {
 private:
-	static ConcreteGovernment *instancePtr;
-	ConcreteGovernment(double incomeTaxRate,double propertyTaxRate); // Private constructor for singleton
+    static ConcreteGovernment *instancePtr; /**< Pointer to the single instance of ConcreteGovernment. */
+
+    /**
+     * @brief Private constructor for the singleton instance of ConcreteGovernment.
+     * @param incomeTaxRate Initial income tax rate.
+     * @param propertyTaxRate Initial property tax rate.
+     */
+    ConcreteGovernment(double incomeTaxRate, double propertyTaxRate);
 
 public:
-	static ConcreteGovernment *instance(); // Accessor for singleton instance
+    /**
+     * @brief Provides access to the singleton instance of ConcreteGovernment.
+     * @return Pointer to the singleton instance of ConcreteGovernment.
+     */
+    static ConcreteGovernment *instance();
 
 protected:
-	~ConcreteGovernment(); // Protected destructor
+    /**
+     * @brief Protected destructor for the singleton instance of ConcreteGovernment.
+     */
+    ~ConcreteGovernment();
 };
 
 #endif
