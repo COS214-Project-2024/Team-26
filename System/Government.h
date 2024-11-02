@@ -28,12 +28,12 @@ public:
 	double getPropertyTaxRate();
 	void allocateTaxFunds(); // do something here with mediator
 
-	Citizen *getRandomCitizen(); // a bit unlcear on what to do here?
+	Citizen *getRandomCitizen();
 
 	void evictCitizens(Building *building);
-	void eliminateCitizens(int numberOfCitizens); // implemnt-Ulrich
-	int getPopulation();						  // implemnt-Ulrich
-	double getAverageSatisfaction();			  // implemnt-Ulrich
+	void eliminateCitizens(int numberOfCitizens); 
+	int getPopulation();						  
+	double getAverageSatisfaction();			  
 };
 
 #endif

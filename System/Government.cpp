@@ -23,6 +23,7 @@ void Government::addCitizen(Citizen *citizen)
 
 void Government::removeCitizen(Citizen *citizen)
 {
+	//this is to delete specific citizen
 	if (citizen == nullptr)
 	{
 		return;
@@ -30,6 +31,7 @@ void Government::removeCitizen(Citizen *citizen)
 
 	// Use std::remove to shift matching elements to the end, then erase them
 	citizens.erase(std::remove(citizens.begin(), citizens.end(), citizen), citizens.end());
+	delete citizen;
 }
 
 void Government::setIncomeTaxRate(double taxRate)
