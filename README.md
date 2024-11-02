@@ -1,2 +1,11 @@
 # The-7
-The-7's description.
+For Unit testing:
+    Configure the project using:
+        cmake -S System -B build
+
+    Build the project using:
+        cmake --build build
+
+    Run the tests using:
+        cd build
+        ctest
