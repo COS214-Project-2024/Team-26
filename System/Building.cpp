@@ -62,3 +62,8 @@ bool Building::updateOccupancy(int i)
     occupancy = newOccupancy;
     return true;
 }
+
+int Building::getAvailableSpace()
+{
+
+}
