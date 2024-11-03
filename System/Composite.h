@@ -10,6 +10,10 @@ class Iterator;
 
 class Composite : public Component {
 
+	private:
+		const int MAXX = 50;
+		const int MAXY = 50;
+
 	public:
 		std::vector<std::vector<Building*>> components;
 
