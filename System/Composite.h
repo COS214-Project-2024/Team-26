@@ -4,11 +4,9 @@
 #include <vector>
 
 #include "Component.h"
+#include "Iterator.h"
 
-#include "Sewage.h"
-#include "Waste.h"
-#include "Power.h"
-#include "Water.h"
+class Iterator;
 
 class Composite : public Component {
 
@@ -24,21 +22,21 @@ class Composite : public Component {
 		 * 
 		 * @return Iterator* 
 		 */
-		// Iterator* createIterator() override;
+		Iterator* createIterator();
 
 		/**
 		 * @brief Adds a Component to the Composite structure
 		 * 
 		 * @param component 
 		 */
-		void add(Building* building, int x, int y) override;
+		void add(Building* building, int x, int y);
 
 		/**
 		 * @brief Removes a Component from the Composite structure
 		 * 
 		 * @param component 
 		 */
-		void remove(int x, int y) override;
+		void remove(int x, int y);
 
 		/**
 		 * @brief Get the Component object

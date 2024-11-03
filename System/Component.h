@@ -1,21 +1,19 @@
 #ifndef COMPONENT_H
 #define COMPONENT_H
 
-// #include "Iterator.h"
 #include "Building.h"
-	#include "BuildingState.h"
+#include "BuildingState.h"
+
+#include "Sewage.h"
+#include "Waste.h"
+#include "Power.h"
+#include "Water.h"
 
 class Component {
 	public:
 		Component();
 
 		virtual ~Component() = default;
-
-		// virtual Iterator* createIterator() = 0;
-
-		virtual void add(Building* building, int x, int y) = 0;
-
-		virtual void remove(int x, int y) = 0;
 
 		virtual int getTotalPowerConsumption() = 0;
 

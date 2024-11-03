@@ -6,6 +6,8 @@
 #include "Composite.h"
 #include "Leaf.h"
 
+class Composite;
+
 class Iterator{
 	protected:
 		Composite* composite;

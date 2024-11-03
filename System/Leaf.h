@@ -19,19 +19,6 @@ class Leaf : public Component {
 		 * 
 		 */
 		~Leaf() = default;
-		/**
-		 * @brief 
-		 * 
-		 * @return Iterator* 
-		 */
-		// Iterator* createIterator() override;
-		
-		/**
-		 * @brief 
-		 * 
-		 * @param component 
-		 */
-		void add(Building* building, int x, int y) override;
 
 		/**
 		 * @brief Get the Total Power Consumption of the component
@@ -102,13 +89,6 @@ class Leaf : public Component {
 		 * @return int 
 		 */
 		int getTotalWasteProduction() override;
-
-		/**
-		 * @brief Removes the Component from the Composite structure
-		 * 
-		 * @param component 
-		 */
-		void remove(int x, int y) override;
 
 		/**
 		 * @brief Get the and set Next State object
