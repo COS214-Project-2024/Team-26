@@ -164,6 +164,12 @@ class Iterator{
 		void setNextStateAll();
 
 		/**
+		 * @brief Clears the entire block
+		 * 
+		 */
+		void clear();
+
+		/**
 		 * @brief Get a random house object
 		 * 
 		 * @return Building* 

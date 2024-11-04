@@ -24,6 +24,12 @@ class Composite : public Component {
 		Composite();
 
 		/**
+		 * @brief Clears the composite function
+		 * 
+		 */
+		void clear();
+
+		/**
 		 * @brief Destroy the Composite object
 		 * 
 		 */

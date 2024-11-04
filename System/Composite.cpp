@@ -1,4 +1,5 @@
 #include "Composite.h"
+#include <iostream>
 
 Composite::Composite() : Component() {
     this->components = std::vector<std::vector<Leaf*>>();
@@ -36,18 +37,13 @@ Iterator* Composite::createIterator() {
 }
 
 void Composite::add(Building* component, int x, int y) {
-    if (x > MAXX || y > MAXY) {
+    if (x >= MAXX || y >= MAXY || x < 0 || y < 0) {
         return;
     } else {
-        components[x][y] = new Leaf(component);
+        if (this->components[x][y] == nullptr) {
+            this->components[x][y] = new Leaf(component);
+        }
     }
-    if (x >= static_cast<int>(components.size())) {
-        components.resize(x + 1); // Resize
-    }
-    if (y >= static_cast<int>(components[x].size())) {
-        components[x].resize(y + 1, nullptr); // Resize
-    }
-    components[x][y] = new Leaf(component);
 }
 
 void Composite::remove(int x, int y) {
@@ -59,7 +55,7 @@ void Composite::remove(int x, int y) {
 Building* Composite::getComponent(int x, int y) {
     if (components.empty()) {
         return nullptr;
-    } else if (x < static_cast<int>(components.size()) && y < static_cast<int>(components[x].size())) {
+    } else if (x < static_cast<int>(components.size()) && y < static_cast<int>(components[x].size()) && components[x][y] != nullptr) {
         return components[x][y]->building;
     } else {
         return nullptr;
@@ -207,6 +203,14 @@ int Composite::lengthX() const {
     return static_cast<int>(components.size());
 }
 
+void Composite::clear(){
+    for (int i = 0; i < static_cast<int>(components.size()); i++) {
+        for (int j = 0; j < static_cast<int>(components[i].size()); j++) {
+            components[i][j] = nullptr;
+        }
+    }
+}
+
 int Composite::lengthY() const {
     return static_cast<int>(components[0].size());
 }
@@ -215,12 +219,11 @@ std::vector<Building*> Composite::getAllBuildings() const {
     std::vector<Building*> allBuildings;
     
     for (const auto& row : components) {
-        for (Leaf* building : row) {
-            if (building != nullptr) {
-                allBuildings.push_back(building->building);
+        for (Leaf* build : row) {
+            if (build != nullptr) {
+                allBuildings.push_back(build->building);
             }
         }
     }
-
     return allBuildings;
 }

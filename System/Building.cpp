@@ -23,6 +23,10 @@ Building::Building(std::string name, int x, int y) {
     }
 }
 
+Building::~Building() {
+    delete state;
+}
+
 void Building::setState(BuildingState *newState)
 {
     state = newState;
