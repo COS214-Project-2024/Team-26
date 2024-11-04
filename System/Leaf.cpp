@@ -65,9 +65,8 @@ int Leaf::getTotalWasteProduction() {
 }
 
 BuildingState* Leaf::getAndSetNextState() {
-	// TODO - implement Leaf::getAndSetNextState still waiting
-	throw "Not yet implemented";
-	return nullptr;
+    // Call Building's getAndSetNextState and return the new state
+    return building->getAndSetNextState();
 }
 
 Building* Leaf::getBuilding(){
