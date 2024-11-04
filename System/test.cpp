@@ -32,6 +32,12 @@ void testGovernment()
     CHECK(government->getAverageSatisfaction() == 100);
     government->setIncomeTaxRate(0.65);
     CHECK(government->getAverageSatisfaction() == 90);
+
+    CHECK(government->getPopulation()==6);
+    government->eliminateCitizens(3);
+    
+   
+    
     // CHECK(government->getTaxFundsCollected()==?);
 
     // Example usage of government instance

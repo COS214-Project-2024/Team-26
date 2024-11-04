@@ -35,7 +35,7 @@ void Composite::add(Building* component, int x, int y) {
     // } else {
     //     components[x][y] = new Leaf(component);
     // }
-    if (x >= components.size()) {
+    if (x >= static_cast<int>(components.size())) {
         components.resize(x + 1); // Resize
     }
     if (y >= static_cast<int>(components[x].size())) {
