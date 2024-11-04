@@ -143,14 +143,7 @@ void Iterator::setNextStateAll() {
     }
 }
 
-Building* Iterator::getHouse() {//NOT FINISHED, NEED FUNCTION TO MAKE SURE IT HAS OPEN SPOT
-    // std::random_device rd;
-    // std::mt19937 eng(rd());
-
-    // int x = std::uniform_int_distribution<>(0, this->composite->lengthX() - 1)(eng);
-    // int y = std::uniform_int_distribution<>(0, this->composite->lengthY() - 1)(eng);
-
-    // return dynamic_cast<Building*>(this->composite->getComponent(x, y));
+Building* Iterator::getHouse() {
 	std::vector<Building*> buildings = composite->getAllBuildings();
     for (size_t i = 0; i < buildings.size(); i++) {
         Building* building = buildings[i];
@@ -162,15 +155,7 @@ Building* Iterator::getHouse() {//NOT FINISHED, NEED FUNCTION TO MAKE SURE IT HA
 	return nullptr;
 }
 
-Building* Iterator::getJob() { //NOT FINISHED, NEED FUNCTION TO MAKE SURE IT HAS JOB
-    // std::random_device rd;
-    // std::mt19937 eng(rd());
-
-    // int x = std::uniform_int_distribution<>(0, this->composite->lengthX() - 1)(eng);
-    // int y = std::uniform_int_distribution<>(0, this->composite->lengthY() - 1)(eng);
-
-    // return dynamic_cast<Building*>(this->composite->getComponent(x, y));
-
+Building* Iterator::getJob() {
 	std::vector<Building*> buildings = composite->getAllBuildings();
     for (size_t i = 0; i < buildings.size(); i++) {
         Building* building = buildings[i];

@@ -65,7 +65,6 @@ int Leaf::getTotalWasteProduction() {
 }
 
 BuildingState* Leaf::getAndSetNextState() {
-    // Call Building's getAndSetNextState and return the new state
     return building->getAndSetNextState();
 }
 
