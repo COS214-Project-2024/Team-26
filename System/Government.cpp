@@ -11,14 +11,15 @@ Government::Government(double incomeTaxRate, double propertyTaxRate)
 	this->taxFundsCollected = 0;
 }
 
-void Government::addCitizen(Citizen *citizen)
+void Government::addCitizen(Citizen *citizen, Building* house, Building* job)
 {
-	if (citizen == nullptr)
-	{
+	if (citizen == nullptr) {
 		return;
 	}
 
 	this->citizens.push_back(citizen);
+	citizen->assignHouse(house);
+	citizen->assignJob(job);
 }
 
 void Government::removeCitizen(Citizen *citizen)
@@ -167,4 +168,14 @@ double Government::getAverageSatisfaction()
 	}
 	averageSatisfaction=averageSatisfaction/citizens.size();
 	return averageSatisfaction;
+}
+int Government::getAverageAge()
+{
+	double averageAge = 0;
+	for (size_t i = 0; i < this->citizens.size(); i++)
+	{
+		averageAge += this->citizens.at(i)->getAge();
+	}
+	averageAge=averageAge/citizens.size();
+	return averageAge;
 }

@@ -7,7 +7,7 @@ class PlantBuilding : public Building {
 private:
     int wasteProduction;
 public:
-    PlantBuilding() = default;
+    PlantBuilding(std::string name, int x, int y) : Building(name, x, y) {}
 
     virtual int getCostConsumption() override;
 

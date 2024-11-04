@@ -1,14 +1,16 @@
 #ifndef STATSMEDIATOR_H
 #define STATSMEDIATOR_H
 
+#include <iostream>
+
 #include "CityMediator.h"
 
-// #include "Government.h"
-	// #include "ConcreteGovernment.h"
+#include "Government.h"
+	#include "ConcreteGovernment.h"
 
 class StatsMediator : public CityMediator {
 private:
-    // ConcreteGovernment* government;
+    ConcreteGovernment* government;
 
 public:
 	StatsMediator();
@@ -17,11 +19,15 @@ public:
     
     int getSatisfaction();
 
+    int getAverageAge();
+
     int getAvailableHousingSpace();
 
     int getImmigrationLimit();
 
     int getTotalHousingSpace();
+
+    void printBuildings();
 
 	virtual ~StatsMediator() = default;
 };

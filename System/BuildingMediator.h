@@ -5,12 +5,12 @@
 
 #include "BuildingFactory.h"
 	#include "ResidentialBuildingFactory.h"
-	// #include "CommercialBuildingFactory.h"
-	// #include "ServiceBuildingFactory.h"
-	// #include "EntertainmentBuildingFactory.h"
-	// #include "LandmarkBuildingFactory.h"
-	// #include "IndustrialBuildingFactory.h"
-	// #include "PlantBuildingFactory.h"
+	#include "CommercialBuildingFactory.h"
+	#include "ServiceBuildingFactory.h"
+	#include "EntertainmentBuildingFactory.h"
+	#include "LandmarkBuildingFactory.h"
+	#include "IndustrialBuildingFactory.h"
+	#include "PlantBuildingFactory.h"
 
 #include "Iterator.h"
 
@@ -27,9 +27,9 @@ private:
 public:
 	BuildingMediator();
 
-	bool build(std::string& buildingName, int locationX, int locationY);
+	std::string build(std::string& buildingName, int locationX, int locationY);
 
-	bool demolish(int locationX, int locationY);
+	std::string demolish(int locationX, int locationY);
 
 	~BuildingMediator();
 };

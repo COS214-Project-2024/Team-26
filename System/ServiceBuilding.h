@@ -9,7 +9,7 @@ private:
     int costConsumption;
 
 public:
-    ServiceBuilding() = default;
+    ServiceBuilding(std::string name,int x, int y) : Building(name, x, y) {}
 
     virtual int getCostConsumption() override;
 

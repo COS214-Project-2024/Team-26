@@ -17,7 +17,7 @@ int PopulationStrategy::getAvailableHousingSpace() {
 }
 
 int PopulationStrategy::getAverageAge() {
-	// return mediator->getAverageAge();
+	return mediator->getAverageAge();
 }
 
 int PopulationStrategy::getImmigrationLimit() {

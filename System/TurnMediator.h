@@ -20,7 +20,7 @@ private:
 public:
 	TurnMediator();
 
-	void nextRound();
+	int nextRound();
 
 	int handlePopulation();
 

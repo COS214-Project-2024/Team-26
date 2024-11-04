@@ -7,10 +7,12 @@
 #include "Hospital.h"
 #include "FireDepartment.h"
 
-class ServiceBuildingFactory : BuildingFactory
+class ServiceBuildingFactory : public BuildingFactory
 {
 
 public:
+	ServiceBuildingFactory(std::string buildingName, int x, int y) : BuildingFactory(buildingName, x, y) {}
+
 	Building *createBuilding();
 };
 

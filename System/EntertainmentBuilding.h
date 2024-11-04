@@ -9,7 +9,7 @@ private:
     int revenue;
 
 public:
-	EntertainmentBuilding() = default;
+	EntertainmentBuilding(std::string name, int x, int y) : Building(name, x, y) {}
 
     virtual int getCostConsumption() override;
 

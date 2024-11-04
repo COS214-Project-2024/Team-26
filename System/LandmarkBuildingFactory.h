@@ -6,10 +6,11 @@
 #include "Park.h"
 #include "Monument.h"
 
-class LandmarkBuildingFactory : BuildingFactory
+class LandmarkBuildingFactory : public BuildingFactory
 {
 
 public:
+	LandmarkBuildingFactory(std::string buildingName, int x, int y) : BuildingFactory(buildingName, x, y) {}
 	Building *createBuilding();
 };
 

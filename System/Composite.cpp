@@ -1,6 +1,8 @@
 #include "Composite.h"
 
 Composite::Composite() : Component() {
+    // Initialize components as a 50x50 grid with nullptrs
+    // this->components = std::vector<std::vector<Building*>>(50, std::vector<Building*>(50, nullptr));
     this->components = std::vector<std::vector<Building*>>();
 }
 
@@ -19,7 +21,7 @@ void Composite::add(Building* component, int x, int y) {
         components.resize(x + 1); // Resize
     }
     if (y >= components[x].size()) {
-        components[x].resize(y + 1); // Resize
+        components[x].resize(y + 1, nullptr); // Resize
     }
     components[x][y] = component;
 }
@@ -31,10 +33,13 @@ void Composite::remove(int x, int y) {
 }
 
 Building* Composite::getComponent(int x, int y) {
-    if (x < components.size() && y < components[x].size()) {
+    if (components.empty()) {
+        return nullptr;
+    } else if (x < components.size() && y < components[x].size()) {
         return components[x][y];
+    } else {
+        return nullptr;
     }
-    return nullptr;
 }
 
 int Composite::getTotalPowerConsumption() {
@@ -167,4 +172,31 @@ int Composite::getTotalWasteProduction() {
         }
     }
     return totalWasteProduction;
+}
+
+/* IMPLEMENT */
+BuildingState* Composite::getAndSetNextState() {
+    return nullptr;
+}
+
+int Composite::lengthX() const {
+    return 0;
+}
+
+int Composite::lengthY() const {
+    return 0;
+}
+
+std::vector<Building*> Composite::getAllBuildings() const {
+    std::vector<Building*> allBuildings;
+    
+    for (const auto& row : components) {
+        for (Building* building : row) {
+            if (building != nullptr) {
+                allBuildings.push_back(building);
+            }
+        }
+    }
+
+    return allBuildings;
 }

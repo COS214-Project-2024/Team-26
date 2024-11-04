@@ -17,11 +17,12 @@ public:
     virtual int getResourceCost(Building *building) = 0;
     virtual int getPowerConsumption(Building *building) = 0;
     virtual int getWaterConsumption(Building *building) = 0;
-    virtual int getOccupancy(Building *building) = 0;
+    
+    // virtual int getOccupancy(Building *building) = 0;
 
-    virtual int getSewageProduction(Building *building) = 0;
+    // virtual int getSewageProduction(Building *building) = 0;
 
-    virtual int getWasteProduction(Building *building) = 0;
+    // virtual int getWasteProduction(Building *building) = 0;
 };
 
 #endif

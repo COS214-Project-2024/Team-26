@@ -9,6 +9,8 @@ private:
 	int revenue;
 
 public:
+	CommercialBuilding(std::string name, int x, int y) : Building(name, x, y) {}
+
 	virtual int getCostConsumption() override;
 
 	virtual int getRevenue() override;

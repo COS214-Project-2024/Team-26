@@ -1,9 +1,27 @@
 #include <exception>
 #include <string>
-using namespace std;
+#include <cstdlib>
+#include <iostream>
 
 #include "Building.h"
-#include "Client.h"
+
+Building::Building(std::string name, int x, int y) {
+    this->name = name;
+    LOCATION_X = x;
+    LOCATION_Y = y;
+    state = new PlacedState();
+
+    if (name == "House") {
+        SPACE = rand() % 9 + 2;
+    } else if (name == "TownHouse") {
+        SPACE = rand() % 13 + 2;
+    } else if (name == "Apartment") {
+        SPACE = rand() % 31 + 2;
+    } else {
+        SPACE = 0;
+    }
+}
+
 void Building::setState(BuildingState *newState)
 {
     state = newState;
@@ -16,7 +34,11 @@ BuildingState *Building::getState()
 
 BuildingState *Building::getAndSetNextState()
 {
-    return state;
+    if (state->getStateName() == "Placed") {
+        state = new UnderConstructionState();
+    } else if (state->getStateName() == "Under Construction") {
+        state = new CompletedState();
+    }
 }
 
 int Building::getSpace() {
@@ -45,7 +67,7 @@ int Building::getWaterConsumption()
 
 int Building::getOccupancy()
 {
-    return state->getOccupancy(this);
+    return occupancy;
 }
 
 bool Building::updateOccupancy(int i)
@@ -65,5 +87,21 @@ bool Building::updateOccupancy(int i)
 
 int Building::getAvailableSpace()
 {
+    if (state->getStateName() == "Completed")
+        return SPACE - occupancy;
+    else 
+        return 0;
+}
 
+std::string Building::getInfo() {
+    std::string out = "";
+    out += name;
+    out += " at (" + std::to_string(LOCATION_X) + ", " + std::to_string(LOCATION_Y) + ") ";
+    out += "[" + std::to_string(SPACE) + ", " + std::to_string(occupancy) + "] : ";
+    out += state->getStateName();
+    return out; 
+}
+
+std::string Building::getName() {
+    return name;
 }

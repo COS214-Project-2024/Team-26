@@ -14,7 +14,7 @@ private:
 	BuildingMediator* mediator;
 
 public:
-	BuildCommand(const std::string& buildingType, int x, int y, BuildingMediator* mediator = new BuildingMediator());
+	BuildCommand(const std::string& buildingType = "", int x = 0, int y = 0, BuildingMediator* mediator = new BuildingMediator());
 	void execute();
 };
 

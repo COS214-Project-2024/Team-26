@@ -9,6 +9,6 @@ private:
     int revenue;
 
 public:
-    Bowling(int revenue, int consumption);
+    Bowling(int revenue, int consumption, int x, int y) : EntertainmentBuilding("Bowling", x, y) {}
 };
 #endif

@@ -8,7 +8,7 @@ private:
 	int resourceProduction;
 
 public:
-	Factory() = default;
+	Factory(int x, int y) : IndustrialBuilding("Factory", x, y) {}
 	int getResourceProduction();
 };
 

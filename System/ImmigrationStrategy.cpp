@@ -7,6 +7,10 @@ ImmigrationStrategy:: ImmigrationStrategy() : PopulationStrategy() {
 }
 
 int ImmigrationStrategy::execute() {
+	if (getPopulation() == 0) {
+		return getAvailableHousingSpace()/2;
+	}
+	
 	float fImmig;
 	int iImmig;
 

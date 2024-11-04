@@ -137,6 +137,13 @@ class Composite : public Component {
 		 * @return int 
 		 */
 		int lengthY() const;
+
+		/**
+		 * @brief Returns an array of buildings in structure
+		 * 
+		 * @return std::vector<Building*>
+		 */
+		std::vector<Building*> getAllBuildings() const;
 	};
 
 #endif // COMPOSITE_H

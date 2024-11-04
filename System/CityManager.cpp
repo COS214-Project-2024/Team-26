@@ -10,20 +10,23 @@ void CityManager::registerCommand(std::string input, CityCommand *command) {
 }
 
 std::string CityManager::handleUserInput(std::string input) {
-	
-	//throw "Not yet implemented";
+	// help - provide list of available commands
+	if (input == "h" || input == "help") {
+		std::string commands = "";
+		for (const auto& command : commandsList)
+			commands += command.first + "\n";
 
-	auto it = commandsList.find(input);
+		return commands;
+	} else {
+		auto it = commandsList.find(input);
 
-	if (it != commandsList.end()) {
-        // Command found -  execute it
-        executeCommand(it->second);
-        return "Command executed: " + input;
-    }
-	else {
-        return "Command not found: " + input;
-    
-
+		if (it != commandsList.end()) {
+			// Command found -  execute it
+			executeCommand(it->second);
+			return "";
+		} else {
+			return "Command not found: " + input;
+		}
 	}
 }
 

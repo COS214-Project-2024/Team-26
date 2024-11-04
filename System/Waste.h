@@ -8,9 +8,9 @@ private:
 	int wasteConsumption;
 
 public:
-	Waste();
-	int getWasteProduction();
-	int getWasteConsumption();
+	Waste(int x, int y) : PlantBuilding("Waste", x, y) {}
+
+	int getWasteConsumption() {return wasteConsumption;}
 };
 
 #endif

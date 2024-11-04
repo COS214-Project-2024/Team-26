@@ -14,7 +14,7 @@ private:
 	int LOCATION_Y;
 
 public:
-	DemolishCommand(int x, int y, BuildingMediator* mediator = new BuildingMediator());
+	DemolishCommand(int x = 0, int y = 0, BuildingMediator* mediator = new BuildingMediator());
 	void execute();
 };
 

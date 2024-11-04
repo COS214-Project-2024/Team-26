@@ -10,7 +10,7 @@ private:
 	int wasteProduction;
 
 public:
-	ResidentialBuilding() = default;
+	ResidentialBuilding(std::string name, int x, int y) : Building(name, x, y) {}
 
 	virtual int getCostConsumption() override;
 

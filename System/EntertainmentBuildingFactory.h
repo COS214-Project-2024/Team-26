@@ -7,10 +7,10 @@
 #include "Bowling.h"
 #include "Bar.h"
 
-class EntertainmentBuildingFactory : public BuildingFactory
-{
-
+class EntertainmentBuildingFactory : public BuildingFactory {
 public:
+	EntertainmentBuildingFactory(std::string buildingName, int x, int y) : BuildingFactory(buildingName, x, y) {}
+
 	Building *createBuilding();
 };
 

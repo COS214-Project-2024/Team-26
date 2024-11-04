@@ -8,6 +8,7 @@ private:
 	int sewageConsumption;
 
 public:
+	Sewage(int x, int y) : PlantBuilding("Sewage", x, y) {}
 };
 
 #endif

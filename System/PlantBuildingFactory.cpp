@@ -2,25 +2,20 @@
 
 Building *PlantBuildingFactory::createBuilding()
 {
-	return nullptr;
 	if (this->BUILDING_TYPE == "Power")
 	{
-		// return new Power();
+		return new Power(LOCATION_X, LOCATION_Y);
 	}
 	else if (this->BUILDING_TYPE == "Water")
 	{
-		// return new Water();
+		return new Water(LOCATION_X, LOCATION_Y);
 	}
 	else if (this->BUILDING_TYPE == "Sewage")
 	{
-		// return new Sewage();
+		return new Sewage(LOCATION_X, LOCATION_Y);
 	}
-	else if (this->BUILDING_TYPE == "Waste.h")
+	else if (this->BUILDING_TYPE == "Waste")
 	{
-		// return new Waste();
-	}
-	else
-	{
-		throw "Invalid BUILDING_TYPE";
+		return new Waste(LOCATION_X, LOCATION_Y);
 	}
 }

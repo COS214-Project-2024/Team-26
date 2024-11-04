@@ -2,31 +2,38 @@
 #define BUILDING_H
 
 #include "BuildingState.h"
+	#include "PlacedState.h"
+	#include "UnderConstructionState.h"
+	#include "CompleteState.h"
+	#include "DemolishedState.h"
 
 class Building
 {
 
-private:
+protected:
 	BuildingState *state;
+	std::string name;
 	int LOCATION_X;
 	int LOCATION_Y;
 	int SPACE;
-	int occupancy;
+	int occupancy = 0;
 	int POWER_CONSUMPTION;
 	int WATER_CONSUMPTION;
 	int BUILD_COST_MONEY;
 	int BUILD_COST_RESOURCES;
 
 public:
+	Building(std::string name, int x, int y);
+
 	BuildingState *getState();
 
 	void setState(BuildingState *state);
 
 	BuildingState* getAndSetNextState();
 
-	int getXCoordinate();
+	int getXCoordinate() {return LOCATION_X;}
 
-	int getYCoordinate();
+	int getYCoordinate() {return LOCATION_Y;}
 
 	int getSpace();
 
@@ -49,6 +56,10 @@ public:
 	virtual int getSewageProduction() = 0;
 
 	virtual int getWasteProduction() = 0;
+
+	std::string getInfo();
+
+	std::string getName();
 };
 
 #endif

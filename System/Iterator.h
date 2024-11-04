@@ -136,6 +136,13 @@ class Iterator{
 		BuildingState* getAndSetNextState();
 
 		/**
+		 * @brief Sets Next State for all buildings
+		 * 
+		 * @return BuildingState* 
+		 */
+		void setNextStateAll();
+
+		/**
 		 * @brief Get a random house object
 		 * 
 		 * @return Building* 
@@ -148,6 +155,13 @@ class Iterator{
 		 * @return Building* 
 		 */
 		Building* getJob();
+
+		/**
+		 * @brief Returns an array of buildings in structure
+		 * 
+		 * @return std::vector<Building*>
+		 */
+		std::vector<Building*> getAllBuildings() const;
 };
 
 #endif //CONCRETEITERATOR_H

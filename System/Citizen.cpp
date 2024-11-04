@@ -8,6 +8,9 @@ Citizen::Citizen(double income, int age)
 	this->income = income;
 	this->age = age;
 	this->satisfaction = 100;
+
+	this->house = nullptr;
+	this->job = nullptr;
 }
 
 void Citizen::taxChange(double newTaxRate, double CurrentTaxRate)
@@ -82,6 +85,7 @@ void Citizen::assignHouse(Building *house)
 			this->house->updateOccupancy(-1);
 			this->house = nullptr;
 		}
+		return;
 	}
 
 	this->house = house;
@@ -100,6 +104,7 @@ void Citizen::assignJob(Building *building)
 			this->job->updateOccupancy(-1);
 			this->job = nullptr;
 		}
+		return;
 	}
 
 	this->job = building;

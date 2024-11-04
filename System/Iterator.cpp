@@ -7,9 +7,6 @@ Iterator::Iterator() {
 }
 
 void Iterator::add(Building* building, int x, int y) {
-	if (x >= this->composite->lengthX() || y >= this->composite->lengthY()) {
-		return; // Out of bounds
-	}
 	if (this->composite->getComponent(x, y) == nullptr) {
 		this->composite->add(building, x, y);
 	}
@@ -104,22 +101,55 @@ BuildingState* Iterator::getAndSetNextState() {
 	throw "Not yet implemented";
 }
 
+void Iterator::setNextStateAll() {
+	std::vector<Building*> buildings = composite->getAllBuildings();
+    for (size_t i = 0; i < buildings.size(); i++) {
+        Building* building = buildings[i];
+        if (building) {
+            building->getAndSetNextState();
+        }
+    }
+}
+
 Building* Iterator::getHouse() {//NOT FINISHED, NEED FUNCTION TO MAKE SURE IT HAS OPEN SPOT
-    std::random_device rd;
-    std::mt19937 eng(rd());
+    // std::random_device rd;
+    // std::mt19937 eng(rd());
 
-    int x = std::uniform_int_distribution<>(0, this->composite->lengthX() - 1)(eng);
-    int y = std::uniform_int_distribution<>(0, this->composite->lengthY() - 1)(eng);
+    // int x = std::uniform_int_distribution<>(0, this->composite->lengthX() - 1)(eng);
+    // int y = std::uniform_int_distribution<>(0, this->composite->lengthY() - 1)(eng);
 
-    return dynamic_cast<Building*>(this->composite->getComponent(x, y));
+    // return dynamic_cast<Building*>(this->composite->getComponent(x, y));
+	std::vector<Building*> buildings = composite->getAllBuildings();
+    for (size_t i = 0; i < buildings.size(); i++) {
+        Building* building = buildings[i];
+        if (building && building->getAvailableSpace() > 0) {
+            if (building->getName() == "House" || building->getName() == "TownHouse" || building->getName() == "Apartment")
+				return building;
+        }
+    }
+	return nullptr;
 }
 
 Building* Iterator::getJob() { //NOT FINISHED, NEED FUNCTION TO MAKE SURE IT HAS JOB
-    std::random_device rd;
-    std::mt19937 eng(rd());
+    // std::random_device rd;
+    // std::mt19937 eng(rd());
 
-    int x = std::uniform_int_distribution<>(0, this->composite->lengthX() - 1)(eng);
-    int y = std::uniform_int_distribution<>(0, this->composite->lengthY() - 1)(eng);
+    // int x = std::uniform_int_distribution<>(0, this->composite->lengthX() - 1)(eng);
+    // int y = std::uniform_int_distribution<>(0, this->composite->lengthY() - 1)(eng);
 
-    return dynamic_cast<Building*>(this->composite->getComponent(x, y));
+    // return dynamic_cast<Building*>(this->composite->getComponent(x, y));
+
+	std::vector<Building*> buildings = composite->getAllBuildings();
+    for (size_t i = 0; i < buildings.size(); i++) {
+        Building* building = buildings[i];
+        if (building && building->getAvailableSpace() > 0) {
+            if (building->getName() == "Shop" || building->getName() == "Office")
+				return building;
+        }
+    }
+	return nullptr;
+}
+
+std::vector<Building*> Iterator::getAllBuildings() const {
+	return composite->getAllBuildings();
 }

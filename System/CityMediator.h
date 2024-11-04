@@ -4,6 +4,7 @@
 #include <string>
 
 #include "Iterator.h"
+#include "Composite.h"
 
 class CityMediator {
 protected:

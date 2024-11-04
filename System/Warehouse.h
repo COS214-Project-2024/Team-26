@@ -9,6 +9,7 @@ private:
 	int resourceCapacity;
 
 public:
+	Warehouse(int x, int y) : IndustrialBuilding("Warehouse", x, y) {}
 };
 
 #endif

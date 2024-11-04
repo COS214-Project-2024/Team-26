@@ -8,6 +8,7 @@ private:
 	int waterProduction;
 
 public:
+	Water(int x, int y) : PlantBuilding("Water", x, y) {}
 	int getWaterProduction() {return waterProduction;}
 };
 

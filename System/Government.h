@@ -31,7 +31,7 @@ public:
      * @brief Adds a citizen to the government's jurisdiction.
      * @param citizen Pointer to the citizen to be added.
      */
-    void addCitizen(Citizen *citizen);
+    void addCitizen(Citizen *citizen, Building* house = nullptr, Building* job = nullptr);
 
     /**
      * @brief Removes a citizen from the government's jurisdiction.
@@ -112,6 +112,12 @@ public:
      * @return The average satisfaction level of citizens.
      */
     double getAverageSatisfaction();
+
+    /**
+     * @brief Calculates the average age of all citizens.
+     * @return The average age of citizens.
+     */
+    int getAverageAge();
 };
 
 #endif

@@ -6,7 +6,7 @@
 class FireDepartment : public ServiceBuilding {
 
 public:
-
+    FireDepartment(int x, int y) : ServiceBuilding("FireDepartment", x, y) {}
 
 private:
     int costConsumption;
