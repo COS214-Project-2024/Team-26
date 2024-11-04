@@ -6,18 +6,22 @@
 #include "Building.h"
 #include <iostream>
 
-
 void testGovernment()
 {
     // Get the singleton instance
     // ConcreteGovernment *government = new ConcreteGovernment(100,23);
-    Citizen*firts=new Citizen(100,56);
-
-    // government->getAverageAge();
-    
-    // Example usage of government instance
+    ConcreteGovernment *government = ConcreteGovernment::instance();
     std::cout << "Government instance created." << std::endl;
 
+    government->getAverageAge();
+
+    // Example usage of government instance
+}
+
+void testCitizen()
+{
+    Citizen *firts = new Citizen(100, 56);
+    CHECK(firts->getAge()==56);
 }
 
 TEST_CASE("Testing GovernMent")
@@ -28,5 +32,5 @@ TEST_CASE("Testing GovernMent")
 TEST_CASE("Testing Citizens")
 {
     // testCommands();
+    testCitizen();
 }
-
