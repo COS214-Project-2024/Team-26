@@ -6,9 +6,37 @@ Iterator::Iterator() {
 	this->currentY = 0;
 }
 
+Iterator::~Iterator() {
+	delete this->composite;
+}
+
 void Iterator::add(Building* building, int x, int y) {
+	if (x >= this->composite->lengthX() || y >= this->composite->lengthY() || x < 0 || y < 0) {
+		return; // Out of bounds
+	}
 	if (this->composite->getComponent(x, y) == nullptr) {
 		this->composite->add(building, x, y);
+	}
+}
+
+void Iterator::add(Iterator* otherIt){
+	for (int i = 0; i < otherIt->lengthX(); i++){
+		for (int j = 0; j < otherIt->lengthY(); j++){
+			if (this->get(i, j) == nullptr){
+				this->add(otherIt->get(i,j), i, j);
+			}
+		}
+	}
+}
+
+void Iterator::addWithReplace(Iterator* otherIt) {
+	for (int i = 0; i < otherIt->lengthX(); i++) {
+		for (int j = 0; j < otherIt->lengthY(); j++) {
+			if (this->get(i, j) != nullptr){
+				delete otherIt->get(i, j);
+				this->add(otherIt->get(i,j), i, j);
+			}
+		}
 	}
 }
 
@@ -40,10 +68,6 @@ bool Iterator::hasNextY() {
 	}
 }
 
-bool Iterator::isLeaf() {
-	return dynamic_cast<Leaf*>(composite->getComponent(currentX, currentY));
-}
-
 int Iterator::lengthX() {
 	return composite->lengthX();
 }
@@ -53,15 +77,23 @@ int Iterator::lengthY() {
 }
 
 Building* Iterator::next() {
-	if (currentX + 1 <= MAXX){
-		return composite->getComponent(currentX + 1, currentY);
+	if (currentX + 1 < MAXX){
+		currentX++;
+		return composite->getComponent(currentX, currentY);
 	} else {
-		if (currentY + 1 <= MAXY) {
-			return composite->getComponent(currentX, currentY + 1);
+		if (currentY + 1 < MAXY) {
+			currentY++;
+			currentX = 0;
+			return composite->getComponent(currentX, currentY);
 		} else {
 			return nullptr;
 		}
 	}
+}
+
+void Iterator::reset(){
+	currentX = 0;
+	currentY = 0;
 }
 
 Building* Iterator::previous() {

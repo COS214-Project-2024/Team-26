@@ -3,9 +3,18 @@
 
 #include "ServiceBuilding.h"
 
-class Hospital : public ServiceBuilding {
-public:
-    Hospital(int x, int y) : ServiceBuilding("Hospital", x, y) {}
+/**
+ * @class Hospital
+ * @brief Represents a hospital building in the city
+ *
+ * The Hospital class is a specialized type of ServiceBuilding that provides
+ * healthcare services to the citizens. It inherits basic service building
+ * functionality and extends it with hospital-specific features.
+ */
+class Hospital : public ServiceBuilding
+{
+    public:
+        Hospital(int x, int y) : ServiceBuilding("Hospital", x, y) {}
 };
 
 #endif

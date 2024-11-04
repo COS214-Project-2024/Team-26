@@ -4,6 +4,10 @@ Leaf::Leaf(Building* building){
 	this->building = building;
 }
 
+Leaf::~Leaf() {
+	delete this->building;
+}
+
 int Leaf::getTotalPowerConsumption() {
 	return this->building->getPowerConsumption();
 }
@@ -64,4 +68,8 @@ BuildingState* Leaf::getAndSetNextState() {
 	// TODO - implement Leaf::getAndSetNextState still waiting
 	throw "Not yet implemented";
 	return nullptr;
+}
+
+Building* Leaf::getBuilding(){
+	return this->building;
 }

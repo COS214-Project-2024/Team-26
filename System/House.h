@@ -3,7 +3,16 @@
 
 #include "ResidentialBuilding.h"
 
-class House : public ResidentialBuilding {
+/**
+ * @class House
+ * @brief Represents a residential house in the city
+ *
+ * The House class is a specialized type of ResidentialBuilding that provides
+ * living space for citizens. It implements basic residential functionality
+ * inherited from ResidentialBuilding.
+ */
+class House : public ResidentialBuilding
+{
     public:
         House(int x, int y) : ResidentialBuilding("House", x, y) {}
 };

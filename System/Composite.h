@@ -5,18 +5,30 @@
 
 #include "Component.h"
 #include "Iterator.h"
+#include "Leaf.h"
 
 class Iterator;
 
 class Composite : public Component {
 
+	private:
+		const int MAXX = 50;
+		const int MAXY = 50;
+
 	public:
-		std::vector<std::vector<Building*>> components;
+		std::vector<std::vector<Leaf*>> components;
 
 		/**
 		 * Not abstract since leaf does not implement createIterator
 		 */
 		Composite();
+
+		/**
+		 * @brief Destroy the Composite object
+		 * 
+		 */
+		~Composite();
+
 		/**
 		 * @brief Create a Iterator object
 		 * 

@@ -1,5 +1,6 @@
 #include <exception>
 #include <string>
+#include <typeinfo>
 #include <cstdlib>
 #include <iostream>
 
@@ -27,49 +28,105 @@ void Building::setState(BuildingState *newState)
     state = newState;
 }
 
+/**
+ * @brief Get the current state of the building
+ * @return Pointer to the current state object
+ */
 BuildingState *Building::getState()
 {
     return state;
 }
 
-BuildingState *Building::getAndSetNextState()
-{
-    if (state->getStateName() == "Placed") {
-        state = new UnderConstructionState();
-    } else if (state->getStateName() == "Under Construction") {
-        state = new CompletedState();
+/**
+ * @brief Get and transition to the next state
+ * @return Pointer to the new state object
+ */
+BuildingState* Building::getAndSetNextState() {
+    BuildingState* nextState = nullptr;
+    
+    // Determine next state based on current state
+    if (typeid(*state) == typeid(PlacedState)) {
+        nextState = new UnderConstructionState();
     }
+    else if (typeid(*state) == typeid(UnderConstructionState)) {
+        nextState = new CompleteState();
+    }
+    else if (typeid(*state) == typeid(CompleteState)) {
+        nextState = new DemolishedState();
+    }
+    else if (typeid(*state) == typeid(DemolishedState)) {
+        // No next state after demolished
+        return state;
+    }
+    
+    // Clean up old state and set new state
+    if (nextState != nullptr) {
+        delete state;
+        state = nextState;
+    }
+    
+    return state;
 }
 
+
+/**
+ * @brief Get the total space capacity
+ * @return Maximum space capacity constant
+ */
 int Building::getSpace() {
     return SPACE;
 }
 
+/**
+ * @brief Calculate current monetary cost consumption
+ * @return Cost based on current state
+ */
 int Building::getCostConsumption()
 {
     return state->getMoneyCost(this);
 }
 
+/**
+ * @brief Calculate current resource consumption
+ * @return Resource units based on current state
+ */
 int Building::getResourceConsumption()
 {
     return state->getResourceCost(this);
 }
 
+/**
+ * @brief Calculate current power consumption
+ * @return Power units based on current state
+ */
 int Building::getPowerConsumption()
 {
     return state->getPowerConsumption(this);
 }
 
+/**
+ * @brief Calculate current water consumption
+ * @return Water units based on current state
+ */
 int Building::getWaterConsumption()
 {
     return state->getWaterConsumption(this);
 }
 
+/**
+ * @brief Get current occupancy level
+ * @return Number of current occupants
+ */
 int Building::getOccupancy()
 {
     return occupancy;
 }
 
+/**
+ * @brief Update building occupancy if within valid range
+ * @param i Change in occupancy (positive or negative)
+ * @return true if update successful, false if would exceed limits
+ */
 bool Building::updateOccupancy(int i)
 {
     int newOccupancy = occupancy + i;
@@ -85,6 +142,10 @@ bool Building::updateOccupancy(int i)
     return true;
 }
 
+/**
+ * @brief Calculate available space remaining
+ * @return Amount of unoccupied space
+ */
 int Building::getAvailableSpace()
 {
     if (state->getStateName() == "Completed")

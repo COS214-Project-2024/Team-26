@@ -18,7 +18,7 @@ class Leaf : public Component {
 		 * @brief Destroy the Leaf object
 		 * 
 		 */
-		~Leaf() = default;
+		~Leaf();
 
 		/**
 		 * @brief Get the Total Power Consumption of the component
@@ -96,6 +96,13 @@ class Leaf : public Component {
 		 * @return BuildingState 
 		 */
 		BuildingState* getAndSetNextState() override;
+
+		/**
+		 * @brief Get the Building object
+		 * 
+		 * @return Building* 
+		 */
+		Building* getBuilding();
 };
 
 #endif // LEAF_H
