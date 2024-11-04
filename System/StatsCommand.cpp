@@ -11,7 +11,7 @@ void StatsCommand::execute() {
         std::getline(std::cin, input);
 
         if (input == "buildings") {
-            mediator->printBuildings();
+            mediator->buildingDetails();
         } else {
             std::cout << "unkown stats command: " + input << std::endl;
         }
