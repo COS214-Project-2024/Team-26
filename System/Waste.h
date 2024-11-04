@@ -23,16 +23,10 @@ public:
 	Waste(int x, int y) : PlantBuilding("Waste", x, y) {}
 
 	/**
-	 * @brief Gets the current waste production rate from the facility
-	 * @return The amount of processed waste output (e.g., recycled materials or energy)
-	 */
-	int getWasteProduction();
-
-	/**
 	 * @brief Gets the current waste processing capacity
 	 * @return The amount of waste the facility can process
 	 */
-	int getWasteConsumption();
+	int getWasteConsumption() {return wasteConsumption;}
 };
 
 #endif

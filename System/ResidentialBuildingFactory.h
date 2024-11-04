@@ -2,6 +2,7 @@
 #define RESIDENTIALBUILDINGFACTORY_H
 
 #include "BuildingFactory.h"
+#include "ResidentialBuilding.h"
 #include "House.h"
 #include "TownHouse.h"
 #include "Apartment.h"
