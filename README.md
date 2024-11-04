@@ -1,2 +1,2 @@
 # The-7
-The-7's README
+The-7's description.
