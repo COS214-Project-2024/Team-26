@@ -3,13 +3,23 @@
 
 #include "ServiceBuilding.h"
 
-class FireDepartment : public ServiceBuilding {
+/**
+ * @class FireDepartment
+ * @brief Represents a fire department building in the city
+ *
+ * The FireDepartment class is a specialized type of ServiceBuilding that provides
+ * emergency services to the city and has associated operational costs.
+ */
+class FireDepartment : public ServiceBuilding
+{
 
 public:
-
+    /**
+     * @note Public interface to be implemented
+     */
 
 private:
-    int costConsumption;
+    int costConsumption; /**< The operational costs of running the fire department */
 };
 
 #endif
