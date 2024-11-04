@@ -49,7 +49,7 @@ private:
 public:
 	Building(std::string name, int x, int y);
 
-	virtual ~Building(){};
+	virtual ~Building();
 
 	BuildingState *getState();
 
