@@ -11,9 +11,6 @@
 class ResidentialBuilding : public Building
 {
 private:
-	/** @brief The amount of sewage produced by the residential building */
-	int sewageProduction;
-
 	/** @brief The amount of waste produced by the residential building */
 	int wasteProduction;
 
@@ -31,12 +28,6 @@ public:
 	 * @return The revenue value as an integer
 	 */
 	virtual int getRevenue() override;
-
-	/**
-	 * @brief Gets the sewage production of the residential building
-	 * @return The sewage production value as an integer
-	 */
-	virtual int getSewageProduction() override;
 
 	/**
 	 * @brief Gets the waste production of the residential building

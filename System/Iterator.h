@@ -189,6 +189,22 @@ class Iterator{
 		 * @return std::vector<Building*>
 		 */
 		std::vector<Building*> getAllBuildings() const;
+
+		int getPowerConsumption();
+
+		int getPowerProduction();
+
+		int getWaterConsumption();
+
+		int getWaterProduction();
+
+		int getSewageConsumption();
+
+		int getSewageProduction();
+
+		int getWasteConsumption();
+
+		int getWasteProduction();
 };
 
 #endif //CONCRETEITERATOR_H

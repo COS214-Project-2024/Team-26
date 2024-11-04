@@ -10,6 +10,7 @@
     #include "StatsCommand.h"
     #include "BuildCommand.h"
     #include "DemolishCommand.h"
+    #include "TaxCommand.h"
 
 #include "CityMediator.h"
     #include "BuildingMediator.h"
@@ -30,6 +31,8 @@ int main() {
     CityCommand* demolish = new DemolishCommand();
     manager->registerCommand("demolish", demolish);
         // tax
+    CityCommand* tax = new TaxCommand(0.1);
+    manager->registerCommand("tax", tax);
 
     // set up
     BuildingMediator* building = new BuildingMediator();    

@@ -17,16 +17,16 @@ class Building
 {
 private:
 	/** #brief Name of type of building */
-	std::string name;
+	const std::string name;
 
 	/** @brief Current state of the building */
 	BuildingState *state;
 
 	/** @brief X-coordinate of building location */
-	int LOCATION_X;
+	const int LOCATION_X;
 
 	/** @brief Y-coordinate of building location */
-	int LOCATION_Y;
+	const int LOCATION_Y;
 
 	/** @brief Maximum space capacity of the building */
 	int SPACE;
@@ -45,6 +45,8 @@ private:
 
 	/** @brief Initial resource cost to build */
 	int BUILD_COST_RESOURCES;
+
+	int SEWAGE_PRODUCTION;
 
 public:
 	Building(std::string name, int x, int y);
@@ -108,13 +110,13 @@ public:
 	 * @brief Get current power consumption
 	 * @return Power consumption units based on current state
 	 */
-	int getPowerConsumption();
+	int getPowerConsumption(bool s = true);
 
 	/**
 	 * @brief Get current water consumption
 	 * @return Water consumption units based on current state
 	 */
-	int getWaterConsumption();
+	int getWaterConsumption(bool s = true);
 
 	/**
 	 * @brief Get monetary cost consumption
@@ -138,7 +140,7 @@ public:
 	 * @brief Get sewage production rate
 	 * @return Sewage units produced
 	 */
-	virtual int getSewageProduction() = 0;
+	int getSewageProduction(bool s = true);
 
 	/**
 	 * @brief Get waste production rate

@@ -6,16 +6,19 @@
 class ServiceBuilding : public Building
 {
 private:
-    int costConsumption;
+    int costConsumption = rand() % 500;
 
 public:
     ServiceBuilding(std::string name,int x, int y) : Building(name, x, y) {}
 
-    virtual int getCostConsumption() override;
+    virtual int getCostConsumption() override {
+        if (getState()->getStateName() == "Complete")
+            return costConsumption;
+        else
+            return 0;
+    }
 
 	virtual int getRevenue() override;
-
-	virtual int getSewageProduction() override;
 
 	virtual int getWasteProduction() override;
 };

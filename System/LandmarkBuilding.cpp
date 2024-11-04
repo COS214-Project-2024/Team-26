@@ -8,10 +8,6 @@ int LandmarkBuilding::getRevenue() {
 	return 0;
 }
 
-int LandmarkBuilding::getSewageProduction() {
-	return 0;
-}
-
 int LandmarkBuilding::getWasteProduction() {
 	return 0;
 }

@@ -31,12 +31,6 @@ public:
 	virtual int getRevenue() override;
 
 	/**
-	 * @brief Gets the sewage production of the landmark building
-	 * @return The sewage production value as an integer
-	 */
-	virtual int getSewageProduction() override;
-
-	/**
 	 * @brief Gets the waste production of the landmark building
 	 * @return The waste production value as an integer
 	 */

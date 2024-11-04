@@ -45,7 +45,6 @@ void Government::setIncomeTaxRate(double taxRate)
 		this->incomeTaxRate = taxRate;
 	}
 
-	std::cout << "taxRate should be between 0 and 1" << std::endl;
 	notifyTaxChange();
 }
 
@@ -121,7 +120,7 @@ Citizen *Government::getRandomCitizen(bool related)
 					return result;
 				}
 			} else {
-				
+				return citizens.at(i);
 			}
 		}
 	}

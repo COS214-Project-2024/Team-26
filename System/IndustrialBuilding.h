@@ -2,6 +2,7 @@
 #define INDUSTRIALBUILDING_H
 
 #include "Building.h"
+#include <cstdlib>
 
 /**
  * @brief Class representing an industrial building in the simulation
@@ -13,7 +14,7 @@
 class IndustrialBuilding : public Building
 {
 private:
-	int wasteProduction; ///< Rate of waste production
+	int wasteProduction = rand() % 100; ///< Rate of waste production
 
 public:
 	IndustrialBuilding(std::string name, int x, int y) : Building(name, x, y) {}
@@ -31,16 +32,15 @@ public:
 	virtual int getRevenue() override;
 
 	/**
-	 * @brief Get sewage production for industrial building
-	 * @return Sewage production value
-	 */
-	virtual int getSewageProduction() override;
-
-	/**
 	 * @brief Get waste production for industrial building
 	 * @return Waste production value
 	 */
-	virtual int getWasteProduction() override;
+	virtual int getWasteProduction() override {
+		if (getState()->getStateName() == "Complete")
+			return wasteProduction;
+		else
+			return 0;
+	}
 };
 
 #endif

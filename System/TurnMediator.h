@@ -54,7 +54,7 @@ public:
      * @param newRate The new tax rate to be applied.
      * @return The updated tax rate.
      */
-	int changeTaxRates(int newRate);
+	int changeTaxRates(double newRate);
 
 	virtual ~TurnMediator();
 };

@@ -98,6 +98,8 @@ public:
      */
     std::string resourceDetails();
 
+    double getTax();
+
     /**
      * @brief Default destructor for StatsMediator.
      */

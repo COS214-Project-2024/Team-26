@@ -14,13 +14,20 @@
 class Sewage : public PlantBuilding
 {
 private:
-	int sewageConsumption; /**< The amount of sewage the plant can process */
+	int sewageConsumption = 250; /**< The amount of sewage the plant can process */
 
 public:
 	Sewage(int x, int y) : PlantBuilding("Sewage", x, y) {}
 	/**
 	 * @note Public interface to be implemented
 	 */
+
+	int getSewageConsumption() {
+		if (getState()->getStateName() == "Complete")
+			return sewageConsumption;
+		else
+			return 0;
+	}
 };
 
 #endif

@@ -5,11 +5,7 @@ int EntertainmentBuilding::getCostConsumption() {
 }
 
 int EntertainmentBuilding::getRevenue() {
-	return 0;
-}
-
-int EntertainmentBuilding::getSewageProduction() {
-	return 0;
+	return revenue;
 }
 
 int EntertainmentBuilding::getWasteProduction() {

@@ -16,7 +16,11 @@ void StatsCommand::execute() {
             std::cout << "Buildings:\n" << mediator->buildingDetails();
         } else if (input == "population") {
             std::cout << "Total housing space:\t" << mediator->getTotalHousingSpace() << std::endl;
-        } else {
+        } else if (input == "resources") {
+            std::cout << "Resource (Consumption vs Production):\n" << mediator->resourceDetails() << std::endl;
+        } else if (input == "tax") {
+            std::cout << "Current tax rate:\t" << std::to_string(mediator->getTax()) << std::endl;
+        } else { 
             std::cout << "Invalid stats command:\t" << input << std::endl;
         }
         
