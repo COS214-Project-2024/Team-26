@@ -1,4 +1,3 @@
-// TownHouse.h
 #ifndef TOWNHOUSE_H
 #define TOWNHOUSE_H
 
@@ -12,10 +11,9 @@
  * medium-density housing for citizens. It represents a specific style of urban
  * residential architecture, typically featuring multiple floors and shared walls.
  */
-class TownHouse : public ResidentialBuilding
-{
-    public:
-        TownHouse(int x, int y) : ResidentialBuilding("TownHouse", x, y) {}
+class TownHouse: public ResidentialBuilding {
+public:
+    TownHouse(int x, int y) : ResidentialBuilding("TownHouse", x, y) {}
 };
 
 #endif

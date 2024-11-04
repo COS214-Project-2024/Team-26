@@ -16,6 +16,9 @@
 class Building
 {
 private:
+	/** #brief Name of type of building */
+	std::string name;
+
 	/** @brief Current state of the building */
 	BuildingState *state;
 

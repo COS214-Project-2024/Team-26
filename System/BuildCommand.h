@@ -29,7 +29,22 @@ private:
     BuildingMediator* mediator;
 
 public:
-	BuildCommand(const std::string& buildingType, int x, int y, BuildingMediator* mediator = new BuildingMediator());
+    /**
+     * @brief Constructs a BuildCommand object.
+     * @param buildingType The type of building to construct.
+     * @param x The X coordinate of the location.
+     * @param y The Y coordinate of the location.
+     * @param mediator Pointer to a BuildingMediator to facilitate the command.
+     *        Defaults to a new instance of BuildingMediator
+     */
+    BuildCommand(const std::string& buildingType = "", int x = 0, int y = 0, BuildingMediator* mediator = new BuildingMediator());
+
+    /**
+     * @brief Executes the build command.
+     *
+     * This method invokes the mediator to construct the specified building at the 
+     * provided location.
+     */
 	void execute();
 };
 
