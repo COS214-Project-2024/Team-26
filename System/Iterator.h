@@ -22,6 +22,13 @@ class Iterator{
 		 * 
 		 */
 		Iterator();
+
+		/**
+		 * @brief Destroy the Iterator object
+		 * 
+		 */
+		~Iterator();
+
 		/**
 		 * @brief Adds a building to the list
 		 * 
@@ -48,6 +55,12 @@ class Iterator{
 		 * @param otherIt The iterator that should be merged
 		 */
 		void addWithReplace(Iterator* otherIt);
+
+		/**
+		 * @brief Resets the current back to the first component
+		 * 
+		 */
+		void reset();
 
 		/**
 		 * @brief Returns the current component
@@ -87,14 +100,6 @@ class Iterator{
 		 * @return false 
 		 */
 		bool hasNextY();
-
-		/**
-		 * @brief Checks if it is a leaf (singular object), if false it means it is a Composite object
-		 * 
-		 * @return true 
-		 * @return false 
-		 */
-		bool isLeaf();
 
 		/**
 		 * @brief Returns the length of the list (X)

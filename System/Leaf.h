@@ -18,7 +18,7 @@ class Leaf : public Component {
 		 * @brief Destroy the Leaf object
 		 * 
 		 */
-		~Leaf() = default;
+		~Leaf();
 
 		/**
 		 * @brief Get the Total Power Consumption of the component

@@ -4,6 +4,10 @@ Leaf::Leaf(Building* building){
 	this->building = building;
 }
 
+Leaf::~Leaf() {
+	delete this->building;
+}
+
 int Leaf::getTotalPowerConsumption() {
 	return this->building->getPowerConsumption();
 }

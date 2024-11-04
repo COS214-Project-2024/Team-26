@@ -22,6 +22,13 @@ class Composite : public Component {
 		 * Not abstract since leaf does not implement createIterator
 		 */
 		Composite();
+
+		/**
+		 * @brief Destroy the Composite object
+		 * 
+		 */
+		~Composite();
+
 		/**
 		 * @brief Create a Iterator object
 		 * 

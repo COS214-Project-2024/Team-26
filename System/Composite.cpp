@@ -8,6 +8,17 @@ Composite::Composite() : Component() {
     }
 }
 
+Composite::~Composite() {
+    for (auto& row : this->components) {
+        for (auto& leaf : row) {
+            if (leaf != nullptr) {
+                delete leaf;
+                leaf = nullptr;
+            }
+        }  
+    }
+}
+
 Iterator* Composite::createIterator() {
     Iterator* it = new Iterator();
     for (int i = 0; i < static_cast<int>(components.size()); i++) {
