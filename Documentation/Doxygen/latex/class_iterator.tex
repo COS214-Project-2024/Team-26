@@ -1,0 +1,374 @@
+\doxysection{Iterator Class Reference}
+\hypertarget{class_iterator}{}\label{class_iterator}\index{Iterator@{Iterator}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_iterator_a30f4489aebb0ea1a56da6925d03eecfb}\label{class_iterator_a30f4489aebb0ea1a56da6925d03eecfb} 
+{\bfseries Iterator} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Concrete \doxylink{class_iterator}{Iterator} object. \end{DoxyCompactList}\item 
+\Hypertarget{class_iterator_aab6716f5bdecb49e9cdd754359408ab6}\label{class_iterator_aab6716f5bdecb49e9cdd754359408ab6} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Iterator} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_iterator}{Iterator} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_iterator_aa7e134d9b282e87db7af2b4535de71b9}{add}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}building, int x, int y)
+\begin{DoxyCompactList}\small\item\em Adds a building to the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_iterator_a581cb597c622f1714d51d09ff0633f0e}{add}} (\mbox{\hyperlink{class_iterator}{Iterator}} \texorpdfstring{$\ast$}{*}other\+It)
+\begin{DoxyCompactList}\small\item\em Adds another iterator to the list, i.\+e. merging the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_iterator_ad7fd381acabd6a4b0b9124f0132ca8ef}{add\+With\+Replace}} (\mbox{\hyperlink{class_iterator}{Iterator}} \texorpdfstring{$\ast$}{*}other\+It)
+\begin{DoxyCompactList}\small\item\em Adds another iterator to the list, i.\+e. merging the list. \end{DoxyCompactList}\item 
+\Hypertarget{class_iterator_aeabaf495717f07146a888e50d99e6b4c}\label{class_iterator_aeabaf495717f07146a888e50d99e6b4c} 
+void {\bfseries reset} ()
+\begin{DoxyCompactList}\small\item\em Resets the current back to the first component. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_iterator_a0b0f30c29f31fe018b8732c35bb5669d}{current}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current component. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_iterator_a9ee322fb32978e47546bccab0a8f1674}{first}} ()
+\begin{DoxyCompactList}\small\item\em Returns the first component in the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_iterator_a26a724bee515a20d9c3c0db64491b8eb}{get}} (int locationX, int locationY)
+\begin{DoxyCompactList}\small\item\em Gets the \doxylink{class_component}{Component} at the specific location. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_iterator_aad0235d9704456acc07fa4e9260f2cf9}{has\+NextX}} ()
+\begin{DoxyCompactList}\small\item\em Checks if there is a component after the current one in the x axis. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_iterator_a0ec0f4a3132bdd537002c8b02f13a626}{has\+NextY}} ()
+\begin{DoxyCompactList}\small\item\em Checks if there is a component after the current one in the y axis. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_iterator_af304860c1a677f086aff03769b345cce}{lengthX}} ()
+\begin{DoxyCompactList}\small\item\em Returns the length of the list (X) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_iterator_af8d1a005ecd69008c64f052fd3295622}{lengthY}} ()
+\begin{DoxyCompactList}\small\item\em Returns the length of the list (Y) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_iterator_a0f69a09ebb1935f57eec6855d029496a}{next}} ()
+\begin{DoxyCompactList}\small\item\em Returns the next component. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_iterator_a4f4c1a8db20ce6163d5b1e58c7063c22}{previous}} ()
+\begin{DoxyCompactList}\small\item\em Returns the previous component. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_iterator_aae9e8ca7baac2e830936d30409961733}{remove}} (int locationX, int locationY)
+\begin{DoxyCompactList}\small\item\em Removes the object at that specific point. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_iterator_ad767d4ddcde98cdd6970434fa7e95ab8}{slot\+Available}} (int locationX, int locationY)
+\begin{DoxyCompactList}\small\item\em Returns if the slot is open to be used at the location. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_building_state}{Building\+State}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_iterator_a278b33614d81dba2cd029547843cfa51}{get\+And\+Set\+Next\+State}} ()
+\begin{DoxyCompactList}\small\item\em Get the And Set Next State. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_iterator_af884e14661620336b2b6ca31c8e03b02}{set\+Next\+State\+All}} ()
+\begin{DoxyCompactList}\small\item\em Sets Next State for all buildings. \end{DoxyCompactList}\item 
+\Hypertarget{class_iterator_a4b4fcb541560f7cde44ce19d37493778}\label{class_iterator_a4b4fcb541560f7cde44ce19d37493778} 
+void {\bfseries clear} ()
+\begin{DoxyCompactList}\small\item\em Clears the entire block. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_iterator_aa7614f10e62eed8efe394aa39dda1260}{get\+House}} ()
+\begin{DoxyCompactList}\small\item\em Get a random house object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_iterator_ac990f76eddf0ccc287f7f3845eaec90d}{get\+Job}} ()
+\begin{DoxyCompactList}\small\item\em Get the random job. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_iterator_ad93c7c165c2766d2792e9c26141655e4}{get\+All\+Buildings}} () const
+\begin{DoxyCompactList}\small\item\em Returns an array of buildings in structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_iterator_ac57112bbbd28387ab3eb42c02fab7375}\label{class_iterator_ac57112bbbd28387ab3eb42c02fab7375} 
+\mbox{\hyperlink{class_composite}{Composite}} \texorpdfstring{$\ast$}{*} {\bfseries composite}
+\item 
+\Hypertarget{class_iterator_abd9354d2f118177771dcd2161ccaf2fe}\label{class_iterator_abd9354d2f118177771dcd2161ccaf2fe} 
+int {\bfseries currentX}
+\item 
+\Hypertarget{class_iterator_aefb55121ff6ee7821bec1dda05bbdead}\label{class_iterator_aefb55121ff6ee7821bec1dda05bbdead} 
+int {\bfseries currentY}
+\item 
+\Hypertarget{class_iterator_acb9e0789f6774748a866222c57988a2c}\label{class_iterator_acb9e0789f6774748a866222c57988a2c} 
+const int {\bfseries MAXX} = 50
+\item 
+\Hypertarget{class_iterator_aec45c409ae2f66110fc382b2c8e713a6}\label{class_iterator_aec45c409ae2f66110fc382b2c8e713a6} 
+const int {\bfseries MAXY} = 50
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_iterator_aa7e134d9b282e87db7af2b4535de71b9}\index{Iterator@{Iterator}!add@{add}}
+\index{add@{add}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_iterator_aa7e134d9b282e87db7af2b4535de71b9} 
+void Iterator\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{building}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Adds a building to the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Object to be added \\
+\hline
+{\em x} & x-\/coordinate \\
+\hline
+{\em y} & y-\/coordinate \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_iterator_a581cb597c622f1714d51d09ff0633f0e}\index{Iterator@{Iterator}!add@{add}}
+\index{add@{add}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_iterator_a581cb597c622f1714d51d09ff0633f0e} 
+void Iterator\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_iterator}{Iterator}} \texorpdfstring{$\ast$}{*}}]{other\+It}{}\end{DoxyParamCaption})}
+
+
+
+Adds another iterator to the list, i.\+e. merging the list. 
+
+\begin{DoxyAttention}{Attention}
+If the space if already filled, it WILL NOT be replaced
+\end{DoxyAttention}
+
+\begin{DoxyParams}{Parameters}
+{\em other\+It} & The iterator that should be merged \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_iterator_ad7fd381acabd6a4b0b9124f0132ca8ef}\index{Iterator@{Iterator}!addWithReplace@{addWithReplace}}
+\index{addWithReplace@{addWithReplace}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{addWithReplace()}{addWithReplace()}}
+{\footnotesize\ttfamily \label{class_iterator_ad7fd381acabd6a4b0b9124f0132ca8ef} 
+void Iterator\+::add\+With\+Replace (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_iterator}{Iterator}} \texorpdfstring{$\ast$}{*}}]{other\+It}{}\end{DoxyParamCaption})}
+
+
+
+Adds another iterator to the list, i.\+e. merging the list. 
+
+\begin{DoxyAttention}{Attention}
+If the space if already filled, it WILL BE REPLACED
+\end{DoxyAttention}
+
+\begin{DoxyParams}{Parameters}
+{\em other\+It} & The iterator that should be merged \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_iterator_a0b0f30c29f31fe018b8732c35bb5669d}\index{Iterator@{Iterator}!current@{current}}
+\index{current@{current}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{current()}{current()}}
+{\footnotesize\ttfamily \label{class_iterator_a0b0f30c29f31fe018b8732c35bb5669d} 
+\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*} Iterator\+::current (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns the current component. 
+
+\begin{DoxyReturn}{Returns}
+Component\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+\Hypertarget{class_iterator_a9ee322fb32978e47546bccab0a8f1674}\index{Iterator@{Iterator}!first@{first}}
+\index{first@{first}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{first()}{first()}}
+{\footnotesize\ttfamily \label{class_iterator_a9ee322fb32978e47546bccab0a8f1674} 
+\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*} Iterator\+::first (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns the first component in the list. 
+
+\begin{DoxyReturn}{Returns}
+Component\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+\Hypertarget{class_iterator_a26a724bee515a20d9c3c0db64491b8eb}\index{Iterator@{Iterator}!get@{get}}
+\index{get@{get}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{class_iterator_a26a724bee515a20d9c3c0db64491b8eb} 
+\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*} Iterator\+::get (\begin{DoxyParamCaption}\item[{int}]{locationX}{, }\item[{int}]{locationY}{}\end{DoxyParamCaption})}
+
+
+
+Gets the \doxylink{class_component}{Component} at the specific location. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em locationX} & \\
+\hline
+{\em locationY} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Component\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+\Hypertarget{class_iterator_ad93c7c165c2766d2792e9c26141655e4}\index{Iterator@{Iterator}!getAllBuildings@{getAllBuildings}}
+\index{getAllBuildings@{getAllBuildings}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{getAllBuildings()}{getAllBuildings()}}
+{\footnotesize\ttfamily \label{class_iterator_ad93c7c165c2766d2792e9c26141655e4} 
+std\+::vector$<$ \mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*} $>$ Iterator\+::get\+All\+Buildings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns an array of buildings in structure. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Building\texorpdfstring{$\ast$}{*}$>$ 
+\end{DoxyReturn}
+\Hypertarget{class_iterator_a278b33614d81dba2cd029547843cfa51}\index{Iterator@{Iterator}!getAndSetNextState@{getAndSetNextState}}
+\index{getAndSetNextState@{getAndSetNextState}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{getAndSetNextState()}{getAndSetNextState()}}
+{\footnotesize\ttfamily \label{class_iterator_a278b33614d81dba2cd029547843cfa51} 
+\mbox{\hyperlink{class_building_state}{Building\+State}} \texorpdfstring{$\ast$}{*} Iterator\+::get\+And\+Set\+Next\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the And Set Next State. 
+
+\begin{DoxyReturn}{Returns}
+Building\+State\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+\Hypertarget{class_iterator_aa7614f10e62eed8efe394aa39dda1260}\index{Iterator@{Iterator}!getHouse@{getHouse}}
+\index{getHouse@{getHouse}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{getHouse()}{getHouse()}}
+{\footnotesize\ttfamily \label{class_iterator_aa7614f10e62eed8efe394aa39dda1260} 
+\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*} Iterator\+::get\+House (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get a random house object. 
+
+\begin{DoxyReturn}{Returns}
+Building\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+\Hypertarget{class_iterator_ac990f76eddf0ccc287f7f3845eaec90d}\index{Iterator@{Iterator}!getJob@{getJob}}
+\index{getJob@{getJob}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{getJob()}{getJob()}}
+{\footnotesize\ttfamily \label{class_iterator_ac990f76eddf0ccc287f7f3845eaec90d} 
+\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*} Iterator\+::get\+Job (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the random job. 
+
+\begin{DoxyReturn}{Returns}
+Building\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+\Hypertarget{class_iterator_aad0235d9704456acc07fa4e9260f2cf9}\index{Iterator@{Iterator}!hasNextX@{hasNextX}}
+\index{hasNextX@{hasNextX}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{hasNextX()}{hasNextX()}}
+{\footnotesize\ttfamily \label{class_iterator_aad0235d9704456acc07fa4e9260f2cf9} 
+bool Iterator\+::has\+NextX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if there is a component after the current one in the x axis. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\Hypertarget{class_iterator_a0ec0f4a3132bdd537002c8b02f13a626}\index{Iterator@{Iterator}!hasNextY@{hasNextY}}
+\index{hasNextY@{hasNextY}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{hasNextY()}{hasNextY()}}
+{\footnotesize\ttfamily \label{class_iterator_a0ec0f4a3132bdd537002c8b02f13a626} 
+bool Iterator\+::has\+NextY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if there is a component after the current one in the y axis. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\Hypertarget{class_iterator_af304860c1a677f086aff03769b345cce}\index{Iterator@{Iterator}!lengthX@{lengthX}}
+\index{lengthX@{lengthX}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{lengthX()}{lengthX()}}
+{\footnotesize\ttfamily \label{class_iterator_af304860c1a677f086aff03769b345cce} 
+int Iterator\+::lengthX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns the length of the list (X) 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\Hypertarget{class_iterator_af8d1a005ecd69008c64f052fd3295622}\index{Iterator@{Iterator}!lengthY@{lengthY}}
+\index{lengthY@{lengthY}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{lengthY()}{lengthY()}}
+{\footnotesize\ttfamily \label{class_iterator_af8d1a005ecd69008c64f052fd3295622} 
+int Iterator\+::lengthY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns the length of the list (Y) 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\Hypertarget{class_iterator_a0f69a09ebb1935f57eec6855d029496a}\index{Iterator@{Iterator}!next@{next}}
+\index{next@{next}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily \label{class_iterator_a0f69a09ebb1935f57eec6855d029496a} 
+\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*} Iterator\+::next (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns the next component. 
+
+\begin{DoxyReturn}{Returns}
+Component\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+\Hypertarget{class_iterator_a4f4c1a8db20ce6163d5b1e58c7063c22}\index{Iterator@{Iterator}!previous@{previous}}
+\index{previous@{previous}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{previous()}{previous()}}
+{\footnotesize\ttfamily \label{class_iterator_a4f4c1a8db20ce6163d5b1e58c7063c22} 
+\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*} Iterator\+::previous (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns the previous component. 
+
+\begin{DoxyReturn}{Returns}
+Component\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+\Hypertarget{class_iterator_aae9e8ca7baac2e830936d30409961733}\index{Iterator@{Iterator}!remove@{remove}}
+\index{remove@{remove}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \label{class_iterator_aae9e8ca7baac2e830936d30409961733} 
+bool Iterator\+::remove (\begin{DoxyParamCaption}\item[{int}]{locationX}{, }\item[{int}]{locationY}{}\end{DoxyParamCaption})}
+
+
+
+Removes the object at that specific point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em locationX} & \\
+\hline
+{\em locationY} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\Hypertarget{class_iterator_af884e14661620336b2b6ca31c8e03b02}\index{Iterator@{Iterator}!setNextStateAll@{setNextStateAll}}
+\index{setNextStateAll@{setNextStateAll}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{setNextStateAll()}{setNextStateAll()}}
+{\footnotesize\ttfamily \label{class_iterator_af884e14661620336b2b6ca31c8e03b02} 
+void Iterator\+::set\+Next\+State\+All (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Sets Next State for all buildings. 
+
+\begin{DoxyReturn}{Returns}
+Building\+State\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+\Hypertarget{class_iterator_ad767d4ddcde98cdd6970434fa7e95ab8}\index{Iterator@{Iterator}!slotAvailable@{slotAvailable}}
+\index{slotAvailable@{slotAvailable}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{slotAvailable()}{slotAvailable()}}
+{\footnotesize\ttfamily \label{class_iterator_ad767d4ddcde98cdd6970434fa7e95ab8} 
+bool Iterator\+::slot\+Available (\begin{DoxyParamCaption}\item[{int}]{locationX}{, }\item[{int}]{locationY}{}\end{DoxyParamCaption})}
+
+
+
+Returns if the slot is open to be used at the location. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em locationX} & \\
+\hline
+{\em locationY} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Iterator.\+h\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Iterator.\+cpp\end{DoxyCompactItemize}

@@ -61,15 +61,15 @@ int TurnMediator::handlePopulation() {
 		} else {
 			Building* house = getBuildings()->getHouse();
 			Building* job = getBuildings()->getJob();
-			government->addCitizen((government->getRandomCitizen())->cloneUnrelated(house, job));
+			government->addCitizen((government->getRandomCitizen(false))->cloneUnrelated(house, job));
 		}
 	}
-
+	
 	return births + immigrations - deaths;
 }
 
-int TurnMediator::changeTaxRates(int newRate) {
-	return 0;
+int TurnMediator::changeTaxRates(double newRate) {
+	government->setIncomeTaxRate(newRate);
 }
 
 TurnMediator::~TurnMediator() {

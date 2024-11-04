@@ -27,7 +27,7 @@ public:
      * @param mediator Pointer to a TurnMediator to facilitate the command.
      *        Defaults to a new instance of TurnMediator.
      */
-    TaxCommand(int tax, TurnMediator* mediator = new TurnMediator());
+    TaxCommand(double tax, TurnMediator* mediator = new TurnMediator());
 
     /**
      * @brief Executes the tax command.

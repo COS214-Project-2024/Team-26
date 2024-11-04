@@ -79,5 +79,14 @@ std::string StatsMediator::populationDetails() {
 }
 
 std::string StatsMediator::resourceDetails() {
-    std::string result = "Total Power Consumption:\t";
+    std::string result = "Power:\t" + std::to_string(getBuildings()->getPowerConsumption()) + " - " + std::to_string(getBuildings()->getPowerProduction()) + "\n";
+    result += "Water:\t" + std::to_string(getBuildings()->getWaterConsumption()) + " - " + std::to_string(getBuildings()->getWaterProduction()) + "\n";
+    result += "Sewage:\t" + std::to_string(getBuildings()->getSewageConsumption()) + " - " + std::to_string(getBuildings()->getSewageProduction()) + "\n";
+    // result += "Waste:\t" + std::to_string(getBuildings()->getWasteConsumption()) + " - " + std::to_string(getBuildings()->getWasteProduction()) + "\n";
+
+    return result;
+}
+
+double StatsMediator::getTax() {
+    return government->getIncomeTaxRate();
 }

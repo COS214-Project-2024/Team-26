@@ -17,44 +17,63 @@
 #include "ConcreteGovernment.h"
 
 #include "BuildingState.h"
-	#include"PlacedState.h"
+	#include "PlacedState.h"
 	#include "UnderConstructionState.h"
 	#include "CompleteState.h"
 	#include "DemolishedState.h"
 
+/**
+ * @class BuildingMediator
+ * @brief Manages building creation, modification, and demolition within the city.
+ * 
+ * The BuildingMediator class serves as an intermediary for handling building-related
+ * operations, such as construction and demolition, utilizing various building factories.
+ */
 class BuildingMediator : public CityMediator {
 
 private:
-	BuildingFactory* factory;
+    /**
+     * @brief Factory used to create different types of buildings.
+     */
+    BuildingFactory* factory;
 
-	ConcreteGovernment* government;
+    /**
+     * @brief Pointer to the government instance for managing government-related operations.
+     */
+    ConcreteGovernment* government;
 
 public:
-	BuildingMediator();
+    /**
+     * @brief Constructs a BuildingMediator object.
+     */
+    BuildingMediator();
 
-	/**
-	 * @brief Builds a new building with the specified parameters.
-	 * 
-	 * @param buildingName The name of the building to be created.
-	 * @param locationX The X-coordinate of the building's location.
-	 * @param locationY The Y-coordinate of the building's location.
-	 * @param state Optional pointer to the initial state of the building. Defaults to nullptr.
-	 * 
-	 * @return A string representing the building's details.
-	 */
-	std::string build(std::string buildingName, int locationX, int locationY, BuildingState* state = nullptr);
+    /**
+     * @brief Builds a new building with the specified parameters.
+     * 
+     * @param buildingName The name of the building to be created.
+     * @param locationX The X-coordinate of the building's location.
+     * @param locationY The Y-coordinate of the building's location.
+     * @param state Optional pointer to the initial state of the building. Defaults to nullptr.
+     * 
+     * @return A string representing the building's details.
+     */
+    std::string build(std::string buildingName, int locationX, int locationY, BuildingState* state = nullptr);
 
-	/**
-	 * @brief Demolishes a building with the specified location if there is one.
-	 * 
-	 * @param locationX The X-coordinate of the building's location.
-	 * @param locationY The Y-coordinate of the building's location.
-	 * 
-	 * @return A string representing the building's details.
-	 */
-	std::string demolish(int locationX, int locationY);
+    /**
+     * @brief Demolishes a building at the specified location if one exists.
+     * 
+     * @param locationX The X-coordinate of the building's location.
+     * @param locationY The Y-coordinate of the building's location.
+     * 
+     * @return A string indicating the status of the demolition process or the building's details.
+     */
+    std::string demolish(int locationX, int locationY);
 
-	~BuildingMediator();
+    /**
+     * @brief Destructor for BuildingMediator.
+     */
+    ~BuildingMediator();
 };
 
 #endif

@@ -6,12 +6,51 @@
 
 #include "Building.h"
 
-Building::Building(std::string name, int x, int y) {
-    this->name = name;
-    LOCATION_X = x;
-    LOCATION_Y = y;
+Building::Building(std::string name, int x, int y) : name(name), LOCATION_X(x), LOCATION_Y(y) {
     state = new PlacedState();
 
+    // assign non-constructor values
+    // create relevant factory
+	if (name == "House" || name == "TownHouse" || name == "Apartment") {
+		POWER_CONSUMPTION = rand() % 10;
+        WATER_CONSUMPTION = rand() % 10;
+        SEWAGE_PRODUCTION = rand() % 10;
+	} else if (name == "Shop" || name == "Office") {
+		POWER_CONSUMPTION = rand() % 20;
+        WATER_CONSUMPTION = rand() % 20;
+        SEWAGE_PRODUCTION = rand() % 20;
+	} else if (name == "Hospital" || name == "Police" || name == "FireDepartment") {
+        POWER_CONSUMPTION = rand() % 20;
+        WATER_CONSUMPTION = rand() % 20;
+        SEWAGE_PRODUCTION = rand() % 20;
+	} else if (name == "Theater" || name == "Bowling" || name == "Bar") {
+		POWER_CONSUMPTION = rand() % 10;
+        WATER_CONSUMPTION = rand() % 10;
+        SEWAGE_PRODUCTION = rand() % 10;
+	} else if (name == "Park" || name == "Monument") {
+        POWER_CONSUMPTION = 0; 
+        WATER_CONSUMPTION = 0; 
+        SEWAGE_PRODUCTION = 0; 
+	} else if (name == "Warehouse" || name == "Factory") {
+		POWER_CONSUMPTION = rand() % 20;
+        WATER_CONSUMPTION = rand() % 20;
+        SEWAGE_PRODUCTION = rand() % 20;
+	} else {
+        POWER_CONSUMPTION = rand() % 10;
+        WATER_CONSUMPTION = rand() % 10;
+        SEWAGE_PRODUCTION = rand() % 10;
+
+		if (name == "Power")
+            POWER_CONSUMPTION = 0;
+
+        if (name == "Water")
+            WATER_CONSUMPTION = 0;
+
+        if (name == "Sewage")
+            SEWAGE_PRODUCTION = 0;
+
+        // if (name == "Waste")
+	}
     occupancy = 0; // default value
 
     if (name == "House") {
@@ -25,9 +64,9 @@ Building::Building(std::string name, int x, int y) {
     }
 }
 
-Building::~Building() {
-    delete state;
-}
+// Building::~Building() {
+//     delete state;
+// }
 
 void Building::setState(BuildingState *newState)
 {
@@ -105,18 +144,32 @@ int Building::getResourceConsumption()
  * @brief Calculate current power consumption
  * @return Power units based on current state
  */
-int Building::getPowerConsumption()
+int Building::getPowerConsumption(bool s)
 {
-    return state->getPowerConsumption(this);
+    if (s)
+        return POWER_CONSUMPTION;
+    else
+        return state->getPowerConsumption(this);
 }
 
 /**
  * @brief Calculate current water consumption
  * @return Water units based on current state
  */
-int Building::getWaterConsumption()
+int Building::getWaterConsumption(bool s)
 {
-    return state->getWaterConsumption(this);
+    if (s)
+        return WATER_CONSUMPTION;
+    else
+        return state->getWaterConsumption(this);
+}
+
+int Building::getSewageProduction(bool s)
+{
+    if (s)
+        return SEWAGE_PRODUCTION;
+    else
+        return state->getSewageProduction(this);
 }
 
 /**

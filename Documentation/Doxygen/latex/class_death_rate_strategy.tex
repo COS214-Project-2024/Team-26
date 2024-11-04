@@ -1,0 +1,107 @@
+\doxysection{Death\+Rate\+Strategy Class Reference}
+\hypertarget{class_death_rate_strategy}{}\label{class_death_rate_strategy}\index{DeathRateStrategy@{DeathRateStrategy}}
+
+
+Concrete strategy class for handling deaths in the city.  
+
+
+
+
+{\ttfamily \#include $<$Death\+Rate\+Strategy.\+h$>$}
+
+Inheritance diagram for Death\+Rate\+Strategy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_death_rate_strategy}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_death_rate_strategy_a6f580f8fb4e6877721ed0e7ded728c9f}{Death\+Rate\+Strategy}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_death_rate_strategy}{Death\+Rate\+Strategy}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_death_rate_strategy_a83ebd0c86412ee7fe5468846e033d80c}{execute}} () override
+\begin{DoxyCompactList}\small\item\em Executes the death rate strategy. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_death_rate_strategy_a06f6d91e002a96dcd73d021e6f5acd02}{\texorpdfstring{$\sim$}{\string~}\+Death\+Rate\+Strategy}} () override
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_death_rate_strategy}{Death\+Rate\+Strategy}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_population_strategy}{Population\+Strategy}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_population_strategy_ab142536bd33b4ba367ec34153b02639d}{Population\+Strategy}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_population_strategy}{Population\+Strategy}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_population_strategy_ac7cbe19097e98fe494639cc58ac9e627}{get\+Population}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current population of the city. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_population_strategy_a09da9082e760b5ea49a56dc070d3e8b2}{get\+Satisfaction}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current satisfaction level of the city\textquotesingle{}s residents. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_population_strategy_a24ba9e1257fcde03d0ebb12aaa0d44cd}{get\+Available\+Housing\+Space}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the amount of available housing space in the city. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_population_strategy_a3ad68914807caa4f70d876259af5b636}{get\+Average\+Age}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the average age of the city\textquotesingle{}s population. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_population_strategy_af579f9547cb5bc788df6c2033308e790}{get\+Immigration\+Limit}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the immigration limit set for the city. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_population_strategy_ab597d742c80c87307c9bea35ba3bc2a0}{get\+Total\+Housing\+Space}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the total housing capacity of the city. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_population_strategy_a9f6f36219ae13fe75b2baf04f7c7a52f}{\texorpdfstring{$\sim$}{\string~}\+Population\+Strategy}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_population_strategy}{Population\+Strategy}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_population_strategy}{Population\+Strategy}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_stats_mediator}{Stats\+Mediator}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_population_strategy_ab0712f3f35a60610c1ea6179d92c5282}{mediator}}
+\begin{DoxyCompactList}\small\item\em Pointer to a \doxylink{class_stats_mediator}{Stats\+Mediator} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Concrete strategy class for handling deaths in the city. 
+
+The \doxylink{class_death_rate_strategy}{Death\+Rate\+Strategy} class is derived from \doxylink{class_population_strategy}{Population\+Strategy} and implements the \doxylink{class_death_rate_strategy_a83ebd0c86412ee7fe5468846e033d80c}{execute()} method to define how deaths should be handled in the context of population management. It calculates and returns the number of deaths based on satisfaction, and average age of the population. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_death_rate_strategy_a6f580f8fb4e6877721ed0e7ded728c9f}\index{DeathRateStrategy@{DeathRateStrategy}!DeathRateStrategy@{DeathRateStrategy}}
+\index{DeathRateStrategy@{DeathRateStrategy}!DeathRateStrategy@{DeathRateStrategy}}
+\doxysubsubsection{\texorpdfstring{DeathRateStrategy()}{DeathRateStrategy()}}
+{\footnotesize\ttfamily \label{class_death_rate_strategy_a6f580f8fb4e6877721ed0e7ded728c9f} 
+Death\+Rate\+Strategy\+::\+Death\+Rate\+Strategy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor for \doxylink{class_death_rate_strategy}{Death\+Rate\+Strategy}. 
+
+Initializes a new \doxylink{class_death_rate_strategy}{Death\+Rate\+Strategy} instance to calculate and manage death related population changes in the city. \Hypertarget{class_death_rate_strategy_a06f6d91e002a96dcd73d021e6f5acd02}\index{DeathRateStrategy@{DeathRateStrategy}!````~DeathRateStrategy@{\texorpdfstring{$\sim$}{\string~}DeathRateStrategy}}
+\index{````~DeathRateStrategy@{\texorpdfstring{$\sim$}{\string~}DeathRateStrategy}!DeathRateStrategy@{DeathRateStrategy}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}DeathRateStrategy()}{\string~DeathRateStrategy()}}
+{\footnotesize\ttfamily \label{class_death_rate_strategy_a06f6d91e002a96dcd73d021e6f5acd02} 
+Death\+Rate\+Strategy\+::\texorpdfstring{$\sim$}{\string~}\+Death\+Rate\+Strategy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Destructor for \doxylink{class_death_rate_strategy}{Death\+Rate\+Strategy}. 
+
+As this class overrides a virtual destructor, it ensures safe deletion of resources in derived classes. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_death_rate_strategy_a83ebd0c86412ee7fe5468846e033d80c}\index{DeathRateStrategy@{DeathRateStrategy}!execute@{execute}}
+\index{execute@{execute}!DeathRateStrategy@{DeathRateStrategy}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily \label{class_death_rate_strategy_a83ebd0c86412ee7fe5468846e033d80c} 
+int Death\+Rate\+Strategy\+::execute (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Executes the death rate strategy. 
+
+This method determines the number of deaths in the population. It uses factors such as satisfaction levels, and average age of the population.
+
+\begin{DoxyReturn}{Returns}
+int -\/ The number of deaths in the city. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_population_strategy_ae2fdfc4da2dfa60d524459d66c48ba17}{Population\+Strategy}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Death\+Rate\+Strategy.\+h\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Death\+Rate\+Strategy.\+cpp\end{DoxyCompactItemize}

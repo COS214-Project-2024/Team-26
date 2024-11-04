@@ -1,0 +1,32 @@
+\doxysection{City\+Mediator.\+h}
+\hypertarget{_city_mediator_8h_source}{}\label{_city_mediator_8h_source}\index{C:/Users/ericb/Desktop/2nd year/Semester 2/COS 214/Project/The\_7/System/CityMediator.h@{C:/Users/ericb/Desktop/2nd year/Semester 2/COS 214/Project/The\_7/System/CityMediator.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CITYMEDIATOR\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CITYMEDIATOR\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Iterator.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Composite.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_city_mediator}{CityMediator}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_iterator}{Iterator}}*\ \mbox{\hyperlink{class_city_mediator_a24b970b5de484c7ec8de4232f3b5a4c3}{buildings}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_city_mediator_a8c038e29423b39c39eda086fc2595e21}{CityMediator}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_iterator}{Iterator}}*\ \mbox{\hyperlink{class_city_mediator_ab0bd607b2172fa1bfa541e1940c02247}{getBuildings}}()\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_city_mediator_a24b970b5de484c7ec8de4232f3b5a4c3}{buildings}})}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_city_mediator_a24b970b5de484c7ec8de4232f3b5a4c3}{buildings}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_iterator}{Iterator}}();}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_city_mediator_a24b970b5de484c7ec8de4232f3b5a4c3}{buildings}};}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_city_mediator_ab29aed1040f17636a3b6014c17eb309f}{\string~CityMediator}}()\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_city_mediator_a24b970b5de484c7ec8de4232f3b5a4c3}{buildings}})\ \textcolor{keyword}{delete}\ \mbox{\hyperlink{class_city_mediator_a24b970b5de484c7ec8de4232f3b5a4c3}{buildings}};}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

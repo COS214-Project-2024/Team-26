@@ -10,13 +10,13 @@
     #include "StatsCommand.h"
     #include "BuildCommand.h"
     #include "DemolishCommand.h"
+    #include "TaxCommand.h"
 
 #include "CityMediator.h"
     #include "BuildingMediator.h"
 int main() {
     // input manager
     CityManager* manager = new CityManager();
-
     // commands
         // next
     CityCommand* next = new NextCommand();
@@ -31,10 +31,11 @@ int main() {
     CityCommand* demolish = new DemolishCommand();
     manager->registerCommand("demolish", demolish);
         // tax
-
+    CityCommand* tax = new TaxCommand(0.1);
+    manager->registerCommand("tax", tax);
 
     // set up
-    BuildingMediator* building = new BuildingMediator();
+    BuildingMediator* building = new BuildingMediator();    
     building->build("House", 0, 0, new CompleteState());
 
     building = new BuildingMediator();
@@ -54,7 +55,7 @@ int main() {
         std::string input;
         std::getline(std::cin, input);
         std::transform(input.begin(), input.end(), input.begin(), [](unsigned char c){ return std::tolower(c); });
-
+        
         if (input == "q" || input == "quit") {
             break;
         } else if (input == "") {

@@ -26,7 +26,6 @@ std::string BuildingMediator::build(std::string buildingName, int locationX, int
 		return "Invalid building type";
 	}
 
-
 	// add to composite structure
 	if (locationX >= 50 || locationX < 0) {
 		return "X co-ordinate out of city bounds";

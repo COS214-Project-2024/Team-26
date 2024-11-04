@@ -1,0 +1,236 @@
+\doxysection{Demolished\+State Class Reference}
+\hypertarget{class_demolished_state}{}\label{class_demolished_state}\index{DemolishedState@{DemolishedState}}
+
+
+Represents a building that has been demolished.  
+
+
+
+
+{\ttfamily \#include $<$Demolished\+State.\+h$>$}
+
+Inheritance diagram for Demolished\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_demolished_state}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_demolished_state_aec1b1e4765d40ae1ee07a897fd54358e}{get\+State\+Name}} () override
+\begin{DoxyCompactList}\small\item\em Gets the name of the state. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_demolished_state_a4d7e4dd758ee4ff88c909e45b63623c2}{get\+Money\+Cost}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}building) override
+\begin{DoxyCompactList}\small\item\em Gets the monetary cost of the building in this state. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_demolished_state_a80c9f25d446624ed12533cf649a0543d}{get\+Resource\+Cost}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}building) override
+\begin{DoxyCompactList}\small\item\em Gets the resource cost of the building in this state. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_demolished_state_a2202a427f5ee7404027bec530c0d141d}{get\+Power\+Consumption}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}building) override
+\begin{DoxyCompactList}\small\item\em Gets the power consumption of the building in this state. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_demolished_state_aa4cbd31483ad87150608b6eef4c3bc67}{get\+Water\+Consumption}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}building) override
+\begin{DoxyCompactList}\small\item\em Gets the water consumption of the building in this state. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_demolished_state_a45b50a82e0e3eb166070bdc6109de9ea}{get\+Occupancy}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}building) override
+\begin{DoxyCompactList}\small\item\em Gets the occupancy of the building in this state. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_demolished_state_a9a60ec67cb52e8733ac90339cae744a9}{get\+Sewage\+Production}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}building) override
+\begin{DoxyCompactList}\small\item\em Gets the sewage production of the building in this state. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_demolished_state_a71d5c99dd77775db147942fcc4313b61}{get\+Waste\+Production}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}building) override
+\begin{DoxyCompactList}\small\item\em Gets the waste production of the building in this state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_building_state}{Building\+State}}}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_building_state}{Building\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries state\+Name}
+\begin{DoxyCompactList}\small\item\em Name identifier for the current state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a building that has been demolished. 
+
+The \doxylink{class_demolished_state}{Demolished\+State} class implements the \doxylink{class_building_state}{Building\+State} interface, defining the characteristics of a building when it is in a demolished state. All costs, consumption, and production values are set to zero, as the building is not operational. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_demolished_state_a4d7e4dd758ee4ff88c909e45b63623c2}\index{DemolishedState@{DemolishedState}!getMoneyCost@{getMoneyCost}}
+\index{getMoneyCost@{getMoneyCost}!DemolishedState@{DemolishedState}}
+\doxysubsubsection{\texorpdfstring{getMoneyCost()}{getMoneyCost()}}
+{\footnotesize\ttfamily \label{class_demolished_state_a4d7e4dd758ee4ff88c909e45b63623c2} 
+int Demolished\+State\+::get\+Money\+Cost (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{building}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the monetary cost of the building in this state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the building instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Monetary cost, which is zero in the demolished state. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_building_state_ab5d844279c9eaf9f0cd39e7aa9482293}{Building\+State}}.
+
+\Hypertarget{class_demolished_state_a45b50a82e0e3eb166070bdc6109de9ea}\index{DemolishedState@{DemolishedState}!getOccupancy@{getOccupancy}}
+\index{getOccupancy@{getOccupancy}!DemolishedState@{DemolishedState}}
+\doxysubsubsection{\texorpdfstring{getOccupancy()}{getOccupancy()}}
+{\footnotesize\ttfamily \label{class_demolished_state_a45b50a82e0e3eb166070bdc6109de9ea} 
+int Demolished\+State\+::get\+Occupancy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{building}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the occupancy of the building in this state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the building instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Occupancy, which is zero in the demolished state. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_building_state_a7d7049ccef7a0aa20fe78f15c31bc918}{Building\+State}}.
+
+\Hypertarget{class_demolished_state_a2202a427f5ee7404027bec530c0d141d}\index{DemolishedState@{DemolishedState}!getPowerConsumption@{getPowerConsumption}}
+\index{getPowerConsumption@{getPowerConsumption}!DemolishedState@{DemolishedState}}
+\doxysubsubsection{\texorpdfstring{getPowerConsumption()}{getPowerConsumption()}}
+{\footnotesize\ttfamily \label{class_demolished_state_a2202a427f5ee7404027bec530c0d141d} 
+int Demolished\+State\+::get\+Power\+Consumption (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{building}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the power consumption of the building in this state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the building instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{class_power}{Power} consumption, which is zero in the demolished state. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_building_state_a1d10579e75a29b636653f883edc96e4d}{Building\+State}}.
+
+\Hypertarget{class_demolished_state_a80c9f25d446624ed12533cf649a0543d}\index{DemolishedState@{DemolishedState}!getResourceCost@{getResourceCost}}
+\index{getResourceCost@{getResourceCost}!DemolishedState@{DemolishedState}}
+\doxysubsubsection{\texorpdfstring{getResourceCost()}{getResourceCost()}}
+{\footnotesize\ttfamily \label{class_demolished_state_a80c9f25d446624ed12533cf649a0543d} 
+int Demolished\+State\+::get\+Resource\+Cost (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{building}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the resource cost of the building in this state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the building instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Resource cost, which is zero in the demolished state. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_building_state_a0037827fbc9375a397e014226b9c83da}{Building\+State}}.
+
+\Hypertarget{class_demolished_state_a9a60ec67cb52e8733ac90339cae744a9}\index{DemolishedState@{DemolishedState}!getSewageProduction@{getSewageProduction}}
+\index{getSewageProduction@{getSewageProduction}!DemolishedState@{DemolishedState}}
+\doxysubsubsection{\texorpdfstring{getSewageProduction()}{getSewageProduction()}}
+{\footnotesize\ttfamily \label{class_demolished_state_a9a60ec67cb52e8733ac90339cae744a9} 
+int Demolished\+State\+::get\+Sewage\+Production (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{building}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the sewage production of the building in this state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the building instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{class_sewage}{Sewage} production, which is zero in the demolished state. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_building_state_a260627b2e6a32b68bb8f157e0ff2f2d5}{Building\+State}}.
+
+\Hypertarget{class_demolished_state_aec1b1e4765d40ae1ee07a897fd54358e}\index{DemolishedState@{DemolishedState}!getStateName@{getStateName}}
+\index{getStateName@{getStateName}!DemolishedState@{DemolishedState}}
+\doxysubsubsection{\texorpdfstring{getStateName()}{getStateName()}}
+{\footnotesize\ttfamily \label{class_demolished_state_aec1b1e4765d40ae1ee07a897fd54358e} 
+std\+::string Demolished\+State\+::get\+State\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the name of the state. 
+
+\begin{DoxyReturn}{Returns}
+The name of the state as "{}\+Demolished"{}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_building_state_aa20dff8fd6e1b913d88cebac79318faf}{Building\+State}}.
+
+\Hypertarget{class_demolished_state_a71d5c99dd77775db147942fcc4313b61}\index{DemolishedState@{DemolishedState}!getWasteProduction@{getWasteProduction}}
+\index{getWasteProduction@{getWasteProduction}!DemolishedState@{DemolishedState}}
+\doxysubsubsection{\texorpdfstring{getWasteProduction()}{getWasteProduction()}}
+{\footnotesize\ttfamily \label{class_demolished_state_a71d5c99dd77775db147942fcc4313b61} 
+int Demolished\+State\+::get\+Waste\+Production (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{building}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the waste production of the building in this state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the building instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{class_waste}{Waste} production, which is zero in the demolished state.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the building instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{class_waste}{Waste} production, which is 20 to be demolished 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_building_state_ac9dd72e59636c8b89f452c97ff25941a}{Building\+State}}.
+
+\Hypertarget{class_demolished_state_aa4cbd31483ad87150608b6eef4c3bc67}\index{DemolishedState@{DemolishedState}!getWaterConsumption@{getWaterConsumption}}
+\index{getWaterConsumption@{getWaterConsumption}!DemolishedState@{DemolishedState}}
+\doxysubsubsection{\texorpdfstring{getWaterConsumption()}{getWaterConsumption()}}
+{\footnotesize\ttfamily \label{class_demolished_state_aa4cbd31483ad87150608b6eef4c3bc67} 
+int Demolished\+State\+::get\+Water\+Consumption (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{building}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the water consumption of the building in this state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the building instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{class_water}{Water} consumption, which is zero in the demolished state. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_building_state_a7eb831a140143d08e491d8fca3dec0a7}{Building\+State}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/\mbox{\hyperlink{_demolished_state_8h}{Demolished\+State.\+h}}\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/\mbox{\hyperlink{_demolished_state_8cpp}{Demolished\+State.\+cpp}}\end{DoxyCompactItemize}

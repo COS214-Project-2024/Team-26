@@ -1,0 +1,28 @@
+\doxysection{City\+Manager.\+h}
+\hypertarget{_city_manager_8h_source}{}\label{_city_manager_8h_source}\index{C:/Users/ericb/Desktop/2nd year/Semester 2/COS 214/Project/The\_7/System/CityManager.h@{C:/Users/ericb/Desktop/2nd year/Semester 2/COS 214/Project/The\_7/System/CityManager.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CITYMANAGER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CITYMANAGER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include<iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include<map>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}CityCommand.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_city_manager}{CityManager}}\ \{}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00012\ \ \ \ \ std::map<std::string,\ CityCommand*>\ commandsList;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ registerCommand(std::string\ input,\ \mbox{\hyperlink{class_city_command}{CityCommand}}*\ command);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ std::string\ handleUserInput(std::string\ input);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ executeCommand(\mbox{\hyperlink{class_city_command}{CityCommand}}*\ command);}
+\DoxyCodeLine{00020\ \};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

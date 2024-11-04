@@ -71,7 +71,11 @@
         "semaphore": "cpp",
         "sstream": "cpp",
         "stop_token": "cpp",
-        "thread": "cpp"
+        "thread": "cpp",
+        "list": "cpp",
+        "xhash": "cpp",
+        "xlocmon": "cpp",
+        "xloctime": "cpp"
     },
     "cmake.sourceDirectory": "C:/Users/ericb/Desktop/2nd year/Semester 2/COS 214/Project/The_7/System"
 }

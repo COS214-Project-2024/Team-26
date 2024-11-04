@@ -162,7 +162,6 @@ Building* Iterator::getHouse() {
 
 Building* Iterator::getJob() {
 	std::vector<Building*> buildings = composite->getAllBuildings();
-	std::cout << buildings.size() << std::endl;
     for (size_t i = 0; i < buildings.size(); i++) {
         Building* building = buildings[i];
         if (building && building->getAvailableSpace() > 0) {
@@ -175,4 +174,36 @@ Building* Iterator::getJob() {
 
 std::vector<Building*> Iterator::getAllBuildings() const {
 	return composite->getAllBuildings();
+}
+
+int Iterator::getPowerConsumption() {
+	return composite->getTotalPowerConsumption();
+}
+
+int Iterator::getPowerProduction() {
+	return composite->getTotalPowerProduction();
+}
+
+int Iterator::getWaterConsumption() {
+	return composite->getTotalWaterConsumption();
+}
+
+int Iterator::getWaterProduction() {
+	return composite->getTotalWaterProduction();
+}
+
+int Iterator::getWasteConsumption() {
+	return composite->getTotalWasteConsumption();
+}
+
+int Iterator::getWasteProduction() {
+	return composite->getTotalWasteProduction();
+}
+
+int Iterator::getSewageConsumption() {
+	return composite->getTotalSewageConsumption();
+}
+
+int Iterator::getSewageProduction() {
+	return composite->getTotalSewageProduction();
 }

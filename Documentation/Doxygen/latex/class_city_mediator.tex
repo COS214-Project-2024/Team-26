@@ -1,0 +1,64 @@
+\doxysection{City\+Mediator Class Reference}
+\hypertarget{class_city_mediator}{}\label{class_city_mediator}\index{CityMediator@{CityMediator}}
+
+
+A base mediator class that provides access to building-\/related operations in the city.  
+
+
+
+
+{\ttfamily \#include $<$City\+Mediator.\+h$>$}
+
+Inheritance diagram for City\+Mediator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_city_mediator}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_city_mediator_a8c038e29423b39c39eda086fc2595e21}\label{class_city_mediator_a8c038e29423b39c39eda086fc2595e21} 
+{\bfseries City\+Mediator} ()=default
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_city_mediator}{City\+Mediator} object. \end{DoxyCompactList}\item 
+\Hypertarget{class_city_mediator_ab29aed1040f17636a3b6014c17eb309f}\label{class_city_mediator_ab29aed1040f17636a3b6014c17eb309f} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+City\+Mediator} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_city_mediator}{City\+Mediator}, cleans up the buildings iterator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_iterator}{Iterator}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_city_mediator_ab0bd607b2172fa1bfa541e1940c02247}{get\+Buildings}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the buildings iterator, initializing it if necessary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_city_mediator_a24b970b5de484c7ec8de4232f3b5a4c3}\label{class_city_mediator_a24b970b5de484c7ec8de4232f3b5a4c3} 
+static \mbox{\hyperlink{class_iterator}{Iterator}} \texorpdfstring{$\ast$}{*} {\bfseries buildings} = nullptr
+\begin{DoxyCompactList}\small\item\em Static iterator for accessing buildings within the city. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A base mediator class that provides access to building-\/related operations in the city. 
+
+The \doxylink{class_city_mediator}{City\+Mediator} class serves as a base for various mediators that facilitate interactions with city buildings through an iterator. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_city_mediator_ab0bd607b2172fa1bfa541e1940c02247}\index{CityMediator@{CityMediator}!getBuildings@{getBuildings}}
+\index{getBuildings@{getBuildings}!CityMediator@{CityMediator}}
+\doxysubsubsection{\texorpdfstring{getBuildings()}{getBuildings()}}
+{\footnotesize\ttfamily \label{class_city_mediator_ab0bd607b2172fa1bfa541e1940c02247} 
+static \mbox{\hyperlink{class_iterator}{Iterator}} \texorpdfstring{$\ast$}{*} City\+Mediator\+::get\+Buildings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Retrieves the buildings iterator, initializing it if necessary. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the buildings iterator. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/City\+Mediator.\+h\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/City\+Mediator.\+cpp\end{DoxyCompactItemize}

@@ -14,7 +14,7 @@
 class Waste : public PlantBuilding
 {
 private:
-	int wasteConsumption; /**< The amount of waste the facility can process per time unit */
+	int wasteConsumption = 250; /**< The amount of waste the facility can process per time unit */
 
 public:
 	/**
@@ -26,7 +26,12 @@ public:
 	 * @brief Gets the current waste processing capacity
 	 * @return The amount of waste the facility can process
 	 */
-	int getWasteConsumption() {return wasteConsumption;}
+	int getWasteConsumption() {
+		if (getState()->getStateName() == "Complete")
+			return wasteConsumption;
+		else
+			return 0;
+	}
 };
 
 #endif

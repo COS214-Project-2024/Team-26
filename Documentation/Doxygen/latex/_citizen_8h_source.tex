@@ -1,0 +1,52 @@
+\doxysection{Citizen.\+h}
+\hypertarget{_citizen_8h_source}{}\label{_citizen_8h_source}\index{C:/Users/ericb/Desktop/2nd year/Semester 2/COS 214/Project/The\_7/System/Citizen.h@{C:/Users/ericb/Desktop/2nd year/Semester 2/COS 214/Project/The\_7/System/Citizen.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ Citizen\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ Citizen\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Building.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_citizen}{Citizen}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_citizen_a88f2baf1386474a2216360f253951e39}{satisfaction}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_building}{Building}}\ *\mbox{\hyperlink{class_citizen_ac8e2f05e7e765c9489493ffacabef49d}{house}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_building}{Building}}\ *\mbox{\hyperlink{class_citizen_ad8809b5264187ac0d20a71635b47179a}{job}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_citizen_ab3ae36c5add549a298a51717a35b9908}{income}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_citizen_a9906c606bdbac44dcf4dc384c3a9d211}{age}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_citizen_a98b2a0447aa909e7374382afbfd7d30d}{Citizen}}(\textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_citizen_ab3ae36c5add549a298a51717a35b9908}{income}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_citizen_a9906c606bdbac44dcf4dc384c3a9d211}{age}});}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_citizen}{Citizen}}\ *\mbox{\hyperlink{class_citizen_ad00e4cbfacb8dab563b224c65722bf0f}{cloneChild}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_citizen}{Citizen}}\ *\mbox{\hyperlink{class_citizen_a411147bdf154704c57dc9935b1c29bf3}{cloneRelated}}(\mbox{\hyperlink{class_building}{Building}}\ *\mbox{\hyperlink{class_citizen_ad8809b5264187ac0d20a71635b47179a}{job}});}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{class_citizen}{Citizen}}\ *\mbox{\hyperlink{class_citizen_a9b2d5d7360efdda8a42561137540261b}{cloneUnrelated}}(\mbox{\hyperlink{class_building}{Building}}\ *\mbox{\hyperlink{class_citizen_ad8809b5264187ac0d20a71635b47179a}{job}},\ \mbox{\hyperlink{class_building}{Building}}\ *\mbox{\hyperlink{class_citizen_ac8e2f05e7e765c9489493ffacabef49d}{house}});}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_citizen_a01e5fd48ea807c7116513204e7f2e364}{taxChange}}(\textcolor{keywordtype}{double}\ newTaxRate,\ \textcolor{keywordtype}{double}\ CurrentTaxRate);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_citizen_ad8980e18ff4dfeb24fef7b5194446d65}{assignHouse}}(\mbox{\hyperlink{class_building}{Building}}\ *\mbox{\hyperlink{class_citizen_ac8e2f05e7e765c9489493ffacabef49d}{house}});}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_citizen_a9a3143302577bbbe52cdf7196dc8b0b9}{assignJob}}(\mbox{\hyperlink{class_building}{Building}}\ *building);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_citizen_ae9149d78637f54c1405cc3ab78d96500}{increaseAge}}(\textcolor{keywordtype}{int}\ increaseAmount);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_citizen_abe019a89b344b463a66981d484bcf732}{setIncome}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_citizen_ab3ae36c5add549a298a51717a35b9908}{income}});}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_citizen_a09f842da6371891c1aa70e330f2674ec}{getSatisfaction}}();}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00090\ \ \ \ \ \mbox{\hyperlink{class_building}{Building}}*\ \mbox{\hyperlink{class_citizen_ac3b7c4cf6587b6bab86fb5097f857818}{getHouse}}();}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00096\ \ \ \ \ \mbox{\hyperlink{class_building}{Building}}*\ \mbox{\hyperlink{class_citizen_a2ca95e3a3e956a67c5078fd2c772dad3}{getJob}}();}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_citizen_a5cacff992b6e1ebf98cac3742839254d}{getIncome}}();}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_citizen_a96e445dc5c4468d9c85faa49475c329a}{getAge}}();}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00113\ \ \ \ \ \mbox{\hyperlink{class_citizen_a5232bf42d9a211d81ce3e5e3cefcf04c}{\string~Citizen}}();}
+\DoxyCodeLine{00114\ \};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

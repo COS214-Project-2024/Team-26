@@ -1,0 +1,79 @@
+\doxysection{Tax\+Command Class Reference}
+\hypertarget{class_tax_command}{}\label{class_tax_command}\index{TaxCommand@{TaxCommand}}
+
+
+A command to change taxes in the city.  
+
+
+
+
+{\ttfamily \#include $<$Tax\+Command.\+h$>$}
+
+Inheritance diagram for Tax\+Command\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tax_command}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tax_command_a0640827da6996f71e1260e2a537f7ddd}{Tax\+Command}} (int \mbox{\hyperlink{class_tax_command_a868dae7735d145137f028bee41520394}{tax}}, \mbox{\hyperlink{class_turn_mediator}{Turn\+Mediator}} \texorpdfstring{$\ast$}{*}mediator=new \mbox{\hyperlink{class_turn_mediator}{Turn\+Mediator}}())
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_tax_command}{Tax\+Command} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tax_command_a1f6236d06e5c445e51283744efb50f79}{execute}} ()
+\begin{DoxyCompactList}\small\item\em Executes the tax command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_city_command}{City\+Command}}}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_tax_command_a868dae7735d145137f028bee41520394}\label{class_tax_command_a868dae7735d145137f028bee41520394} 
+int {\bfseries tax}
+\begin{DoxyCompactList}\small\item\em The tax amount to be levied. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A command to change taxes in the city. 
+
+The \doxylink{class_tax_command}{Tax\+Command} class is responsible for executing tax related operations in the city. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_tax_command_a0640827da6996f71e1260e2a537f7ddd}\index{TaxCommand@{TaxCommand}!TaxCommand@{TaxCommand}}
+\index{TaxCommand@{TaxCommand}!TaxCommand@{TaxCommand}}
+\doxysubsubsection{\texorpdfstring{TaxCommand()}{TaxCommand()}}
+{\footnotesize\ttfamily \label{class_tax_command_a0640827da6996f71e1260e2a537f7ddd} 
+Tax\+Command\+::\+Tax\+Command (\begin{DoxyParamCaption}\item[{int}]{tax}{, }\item[{\mbox{\hyperlink{class_turn_mediator}{Turn\+Mediator}} \texorpdfstring{$\ast$}{*}}]{mediator}{ = {\ttfamily new~\mbox{\hyperlink{class_turn_mediator}{Turn\+Mediator}}()}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_tax_command}{Tax\+Command} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tax} & The amount of tax to be levied. \\
+\hline
+{\em mediator} & Pointer to a \doxylink{class_turn_mediator}{Turn\+Mediator} to facilitate the command. Defaults to a new instance of \doxylink{class_turn_mediator}{Turn\+Mediator}. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_tax_command_a1f6236d06e5c445e51283744efb50f79}\index{TaxCommand@{TaxCommand}!execute@{execute}}
+\index{execute@{execute}!TaxCommand@{TaxCommand}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily \label{class_tax_command_a1f6236d06e5c445e51283744efb50f79} 
+void Tax\+Command\+::execute (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Executes the tax command. 
+
+This function interacts with the mediator to apply the specified tax amount. 
+
+Implements \mbox{\hyperlink{class_city_command_a05653ee3400ca15b7c06d300b78f5005}{City\+Command}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Tax\+Command.\+h\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Tax\+Command.\+cpp\end{DoxyCompactItemize}

@@ -22,7 +22,12 @@ public:
 	 * @brief Gets the current water production rate
 	 * @return The amount of water being produced by the plant
 	 */
-	int getWaterProduction() { return waterProduction; }
+	int getWaterProduction() {
+		if (getState()->getStateName() == "Complete")
+			return waterProduction;
+		else
+			return 0;
+	}
 };
 
 #endif

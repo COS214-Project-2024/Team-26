@@ -1,0 +1,208 @@
+\doxysection{Stats\+Mediator Class Reference}
+\hypertarget{class_stats_mediator}{}\label{class_stats_mediator}\index{StatsMediator@{StatsMediator}}
+
+
+Provides statistical data and detailed information for the city simulation.  
+
+
+
+
+{\ttfamily \#include $<$Stats\+Mediator.\+h$>$}
+
+Inheritance diagram for Stats\+Mediator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_stats_mediator}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_stats_mediator_a4c66897cfaa1a972fa1b3c8c063d054b}\label{class_stats_mediator_a4c66897cfaa1a972fa1b3c8c063d054b} 
+{\bfseries Stats\+Mediator} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_stats_mediator}{Stats\+Mediator} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_stats_mediator_afb9eeac2571b8066f84ddb3349994f65}{get\+Population}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current population of the city. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_stats_mediator_a159d5b380320300f5ec63b45f09a74b2}{get\+Satisfaction}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current satisfaction level of the population. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_stats_mediator_a6d1c431800a4640f8e01fe1552a12d82}{get\+Average\+Age}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the average age of the population. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_stats_mediator_a077955cd1e5331c5ef0cfbae7e8e6c9c}{get\+Available\+Housing\+Space}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the amount of available housing space in the city. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_stats_mediator_af9da41ace7090ce2221c8b207a101d3f}{get\+Immigration\+Limit}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the immigration limit set by the government. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_stats_mediator_ad878e86d03e20a46c600096d0cff2a21}{get\+Total\+Housing\+Space}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the total housing space in the city. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_stats_mediator_a0edc375526b5691c8122a8ed870699d7}{get\+All\+Stats}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves all statistical data about the city as a single string. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_stats_mediator_a5ac32fd6e2a7f956025b3b8d89e35019}{building\+Details}} ()
+\begin{DoxyCompactList}\small\item\em Provides detailed information about the buildings in the city. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_stats_mediator_aec690081191235326fa364bcc29ace78}{population\+Details}} ()
+\begin{DoxyCompactList}\small\item\em Provides detailed information about the city\textquotesingle{}s population. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_stats_mediator_a5c6a25785d7af5209fb9639a5b4acd32}{resource\+Details}} ()
+\begin{DoxyCompactList}\small\item\em Provides detailed information about the resources available in the city. \end{DoxyCompactList}\item 
+\Hypertarget{class_stats_mediator_a75e9de37814e65e077464e42e964bc12}\label{class_stats_mediator_a75e9de37814e65e077464e42e964bc12} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Stats\+Mediator} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor for \doxylink{class_stats_mediator}{Stats\+Mediator}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_city_mediator}{City\+Mediator}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries City\+Mediator} ()=default
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_city_mediator}{City\+Mediator} object. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+City\+Mediator} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_city_mediator}{City\+Mediator}, cleans up the buildings iterator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_city_mediator}{City\+Mediator}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_iterator}{Iterator}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_city_mediator_ab0bd607b2172fa1bfa541e1940c02247}{get\+Buildings}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the buildings iterator, initializing it if necessary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_city_mediator}{City\+Mediator}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_iterator}{Iterator}} \texorpdfstring{$\ast$}{*} {\bfseries buildings} = nullptr
+\begin{DoxyCompactList}\small\item\em Static iterator for accessing buildings within the city. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides statistical data and detailed information for the city simulation. 
+
+The \doxylink{class_stats_mediator}{Stats\+Mediator} class retrieves various statistics related to population, housing, and resources, as well as comprehensive city details, from government data. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_stats_mediator_a5ac32fd6e2a7f956025b3b8d89e35019}\index{StatsMediator@{StatsMediator}!buildingDetails@{buildingDetails}}
+\index{buildingDetails@{buildingDetails}!StatsMediator@{StatsMediator}}
+\doxysubsubsection{\texorpdfstring{buildingDetails()}{buildingDetails()}}
+{\footnotesize\ttfamily \label{class_stats_mediator_a5ac32fd6e2a7f956025b3b8d89e35019} 
+std\+::string Stats\+Mediator\+::building\+Details (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Provides detailed information about the buildings in the city. 
+
+\begin{DoxyReturn}{Returns}
+A string containing building details. 
+\end{DoxyReturn}
+\Hypertarget{class_stats_mediator_a0edc375526b5691c8122a8ed870699d7}\index{StatsMediator@{StatsMediator}!getAllStats@{getAllStats}}
+\index{getAllStats@{getAllStats}!StatsMediator@{StatsMediator}}
+\doxysubsubsection{\texorpdfstring{getAllStats()}{getAllStats()}}
+{\footnotesize\ttfamily \label{class_stats_mediator_a0edc375526b5691c8122a8ed870699d7} 
+std\+::string Stats\+Mediator\+::get\+All\+Stats (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves all statistical data about the city as a single string. 
+
+\begin{DoxyReturn}{Returns}
+A string containing all city statistics. 
+\end{DoxyReturn}
+\Hypertarget{class_stats_mediator_a077955cd1e5331c5ef0cfbae7e8e6c9c}\index{StatsMediator@{StatsMediator}!getAvailableHousingSpace@{getAvailableHousingSpace}}
+\index{getAvailableHousingSpace@{getAvailableHousingSpace}!StatsMediator@{StatsMediator}}
+\doxysubsubsection{\texorpdfstring{getAvailableHousingSpace()}{getAvailableHousingSpace()}}
+{\footnotesize\ttfamily \label{class_stats_mediator_a077955cd1e5331c5ef0cfbae7e8e6c9c} 
+int Stats\+Mediator\+::get\+Available\+Housing\+Space (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the amount of available housing space in the city. 
+
+\begin{DoxyReturn}{Returns}
+The available housing space as an integer. 
+\end{DoxyReturn}
+\Hypertarget{class_stats_mediator_a6d1c431800a4640f8e01fe1552a12d82}\index{StatsMediator@{StatsMediator}!getAverageAge@{getAverageAge}}
+\index{getAverageAge@{getAverageAge}!StatsMediator@{StatsMediator}}
+\doxysubsubsection{\texorpdfstring{getAverageAge()}{getAverageAge()}}
+{\footnotesize\ttfamily \label{class_stats_mediator_a6d1c431800a4640f8e01fe1552a12d82} 
+int Stats\+Mediator\+::get\+Average\+Age (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the average age of the population. 
+
+\begin{DoxyReturn}{Returns}
+The average age as an integer. 
+\end{DoxyReturn}
+\Hypertarget{class_stats_mediator_af9da41ace7090ce2221c8b207a101d3f}\index{StatsMediator@{StatsMediator}!getImmigrationLimit@{getImmigrationLimit}}
+\index{getImmigrationLimit@{getImmigrationLimit}!StatsMediator@{StatsMediator}}
+\doxysubsubsection{\texorpdfstring{getImmigrationLimit()}{getImmigrationLimit()}}
+{\footnotesize\ttfamily \label{class_stats_mediator_af9da41ace7090ce2221c8b207a101d3f} 
+int Stats\+Mediator\+::get\+Immigration\+Limit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the immigration limit set by the government. 
+
+\begin{DoxyReturn}{Returns}
+The immigration limit as an integer. 
+\end{DoxyReturn}
+\Hypertarget{class_stats_mediator_afb9eeac2571b8066f84ddb3349994f65}\index{StatsMediator@{StatsMediator}!getPopulation@{getPopulation}}
+\index{getPopulation@{getPopulation}!StatsMediator@{StatsMediator}}
+\doxysubsubsection{\texorpdfstring{getPopulation()}{getPopulation()}}
+{\footnotesize\ttfamily \label{class_stats_mediator_afb9eeac2571b8066f84ddb3349994f65} 
+int Stats\+Mediator\+::get\+Population (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the current population of the city. 
+
+\begin{DoxyReturn}{Returns}
+The population count as an integer. 
+\end{DoxyReturn}
+\Hypertarget{class_stats_mediator_a159d5b380320300f5ec63b45f09a74b2}\index{StatsMediator@{StatsMediator}!getSatisfaction@{getSatisfaction}}
+\index{getSatisfaction@{getSatisfaction}!StatsMediator@{StatsMediator}}
+\doxysubsubsection{\texorpdfstring{getSatisfaction()}{getSatisfaction()}}
+{\footnotesize\ttfamily \label{class_stats_mediator_a159d5b380320300f5ec63b45f09a74b2} 
+int Stats\+Mediator\+::get\+Satisfaction (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the current satisfaction level of the population. 
+
+\begin{DoxyReturn}{Returns}
+The satisfaction level as an integer. 
+\end{DoxyReturn}
+\Hypertarget{class_stats_mediator_ad878e86d03e20a46c600096d0cff2a21}\index{StatsMediator@{StatsMediator}!getTotalHousingSpace@{getTotalHousingSpace}}
+\index{getTotalHousingSpace@{getTotalHousingSpace}!StatsMediator@{StatsMediator}}
+\doxysubsubsection{\texorpdfstring{getTotalHousingSpace()}{getTotalHousingSpace()}}
+{\footnotesize\ttfamily \label{class_stats_mediator_ad878e86d03e20a46c600096d0cff2a21} 
+int Stats\+Mediator\+::get\+Total\+Housing\+Space (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the total housing space in the city. 
+
+\begin{DoxyReturn}{Returns}
+The total housing space as an integer. 
+\end{DoxyReturn}
+\Hypertarget{class_stats_mediator_aec690081191235326fa364bcc29ace78}\index{StatsMediator@{StatsMediator}!populationDetails@{populationDetails}}
+\index{populationDetails@{populationDetails}!StatsMediator@{StatsMediator}}
+\doxysubsubsection{\texorpdfstring{populationDetails()}{populationDetails()}}
+{\footnotesize\ttfamily \label{class_stats_mediator_aec690081191235326fa364bcc29ace78} 
+std\+::string Stats\+Mediator\+::population\+Details (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Provides detailed information about the city\textquotesingle{}s population. 
+
+\begin{DoxyReturn}{Returns}
+A string containing population details. 
+\end{DoxyReturn}
+\Hypertarget{class_stats_mediator_a5c6a25785d7af5209fb9639a5b4acd32}\index{StatsMediator@{StatsMediator}!resourceDetails@{resourceDetails}}
+\index{resourceDetails@{resourceDetails}!StatsMediator@{StatsMediator}}
+\doxysubsubsection{\texorpdfstring{resourceDetails()}{resourceDetails()}}
+{\footnotesize\ttfamily \label{class_stats_mediator_a5c6a25785d7af5209fb9639a5b4acd32} 
+std\+::string Stats\+Mediator\+::resource\+Details (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Provides detailed information about the resources available in the city. 
+
+\begin{DoxyReturn}{Returns}
+A string containing resource details. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Stats\+Mediator.\+h\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Stats\+Mediator.\+cpp\end{DoxyCompactItemize}

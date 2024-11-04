@@ -1,0 +1,63 @@
+\doxysection{Government.\+h}
+\hypertarget{_government_8h_source}{}\label{_government_8h_source}\index{C:/Users/ericb/Desktop/2nd year/Semester 2/COS 214/Project/The\_7/System/Government.h@{C:/Users/ericb/Desktop/2nd year/Semester 2/COS 214/Project/The\_7/System/Government.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GOVERNMENT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GOVERNMENT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Citizen.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Building.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_government}{Government}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{double}\ oldIncomeTaxRate;\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{double}\ oldPropertyTaxRate;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{double}\ incomeTaxRate;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{double}\ propertyTaxRate;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{double}\ taxFundsCollected;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ std::vector<Citizen\ *>\ citizens;\ \ \ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_government_a2fad59b7195a8b3286928f4be18499b3}{Government}}(\textcolor{keywordtype}{double}\ incomeTaxRate,\ \textcolor{keywordtype}{double}\ propertyTaxRate);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_government_ad53b4d0caeeb1e70d0e437a06f1c5de4}{addCitizen}}(\mbox{\hyperlink{class_citizen}{Citizen}}\ *citizen,\ \mbox{\hyperlink{class_building}{Building}}*\ house\ =\ \textcolor{keyword}{nullptr},\ \mbox{\hyperlink{class_building}{Building}}*\ job\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_government_a7068f19941a93a596f699270acb178d9}{removeCitizen}}(\mbox{\hyperlink{class_citizen}{Citizen}}\ *citizen);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_government_a723bbd5ba0f73025e6d3e4f738aa335d}{setIncomeTaxRate}}(\textcolor{keywordtype}{double}\ taxRate);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_government_a6b3b25a412b1673519fe4a74e6e4115b}{setPropertyTaxRate}}(\textcolor{keywordtype}{double}\ taxRate);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_government_aa53f796cf02ee53b833b45ecf03a5f51}{notifyTaxChange}}();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_government_acb1597f9f9a04ff27724d92c5553e3ad}{collectIncomeTax}}();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_government_a58acf8b66dc0a9c3f9e66fde6af13826}{collectPropertyTax}}();\ \textcolor{comment}{//\ Implement\ with\ mediator}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_government_ab90b240ef281170e68cd4849339f3b39}{getTaxFundsCollected}}();}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_government_aa0500d2a69bb145fed8321a90ebdcf4a}{getIncomeTaxRate}}();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_government_a21df80afa816b7f3b70a94885c8da49a}{getPropertyTaxRate}}();}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_government_a7ead184adb1f9151b714cffd9e946c90}{allocateTaxFunds}}();\ \textcolor{comment}{//\ Implement\ with\ mediator}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00096\ \ \ \ \ \mbox{\hyperlink{class_citizen}{Citizen}}\ *\mbox{\hyperlink{class_government_a502273087abddd435c304e6e20b9ce14}{getRandomCitizen}}(\textcolor{keywordtype}{bool}\ related\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_government_aa05f6e09d9712c9b1c5e9a0260dd062f}{evictCitizens}}(\mbox{\hyperlink{class_building}{Building}}\ *building);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_government_ae398c5429a064202821daa1b4a64a122}{eliminateCitizens}}(\textcolor{keywordtype}{int}\ numberOfCitizens);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_government_a30fd949be24f19808b3efe49b463b99e}{getPopulation}}();}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_government_a120af5af563c57bf9f868f77e19bcbe3}{getAverageSatisfaction}}();}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_government_a6d3b92c3929ffdeecf457bab6ff7e7ed}{getAverageAge}}();}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_government_a0a66492ad78cd55401ef40ff13e2097f}{ageAll}}(\textcolor{keywordtype}{int}\ amount\ =\ 1);}
+\DoxyCodeLine{00137\ \};}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
