@@ -20,7 +20,7 @@ std::string PlacedState::getStateName() {
  * @return The monetary cost based on placement, typically lower than operational costs.
  */
 int PlacedState::getMoneyCost(Building* building) {
-    return building->getCostConsumption() / 2; // Placeholder logic, can be adjusted
+    return building->getCostConsumption() /2; // Placeholder logic, can be adjusted
 }
 
 /**
@@ -29,7 +29,7 @@ int PlacedState::getMoneyCost(Building* building) {
  * @return The resource cost, could be minimal as the building is not operational.
  */
 int PlacedState::getResourceCost(Building* building) {
-    return building->getResourceConsumption() / 2; // Placeholder logic, can be adjusted
+    return building->getResourceConsumption() /2; // Placeholder logic, can be adjusted
 }
 
 /**
@@ -38,7 +38,7 @@ int PlacedState::getResourceCost(Building* building) {
  * @return Returns zero as the building is not yet operational.
  */
 int PlacedState::getPowerConsumption(Building* building) {
-    return 0; // No power consumption until the building is operational
+    return 0; // No power consumption 
 }
 
 /**
@@ -47,7 +47,7 @@ int PlacedState::getPowerConsumption(Building* building) {
  * @return Returns zero as the building is not yet operational.
  */
 int PlacedState::getWaterConsumption(Building* building) {
-    return 0; // No water consumption until the building is operational
+    return 0; // No water consumption 
 }
 
 /**
@@ -56,7 +56,7 @@ int PlacedState::getWaterConsumption(Building* building) {
  * @return Returns zero as there are no occupants yet.
  */
 int PlacedState::getOccupancy(Building* building) {
-    return 0; // No occupancy until the building is fully constructed and operational
+    return 0; // No occupancy 
 }
 
 /**
@@ -65,7 +65,7 @@ int PlacedState::getOccupancy(Building* building) {
  * @return Returns zero as the building is not yet operational.
  */
 int PlacedState::getSewageProduction(Building* building) {
-    return 0; // No sewage production until the building is operational
+    return 0; // No sewage 
 }
 
 /**
@@ -74,5 +74,5 @@ int PlacedState::getSewageProduction(Building* building) {
  * @return Returns zero as the building is not yet operational.
  */
 int PlacedState::getWasteProduction(Building* building) {
-    return 0; // No waste production until the building is operational
+    return 0; // No waste 
 }
