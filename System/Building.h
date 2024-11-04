@@ -41,11 +41,16 @@ private:
 	int BUILD_COST_RESOURCES;
 
 public:
+
+
+  Building(int x, int y, int space);
 	/**
 	 * @brief Get the current state of the building
 	 * @return Pointer to the current BuildingState
 	 */
 	BuildingState *getState();
+
+
 
 	/**
 	 * @brief Set the building to a new state

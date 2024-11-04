@@ -1,10 +1,14 @@
 #include <exception>
 #include <string>
+#include <typeinfo>
 using namespace std;
 
 #include "Building.h"
+#include "PlacedState.h"
+#include "UnderConstructionState.h"
+#include "CompleteState.h"
+#include "DemolishedState.h"
 #include "Client.h"
-
 /**
  * @brief Set the building to a new state
  * @param newState Pointer to the new state object
@@ -27,10 +31,33 @@ BuildingState *Building::getState()
  * @brief Get and transition to the next state
  * @return Pointer to the new state object
  */
-BuildingState *Building::getAndSetNextState()
-{
+BuildingState* Building::getAndSetNextState() {
+    BuildingState* nextState = nullptr;
+    
+    // Determine next state based on current state
+    if (typeid(*state) == typeid(PlacedState)) {
+        nextState = new UnderConstructionState();
+    }
+    else if (typeid(*state) == typeid(UnderConstructionState)) {
+        nextState = new CompleteState();
+    }
+    else if (typeid(*state) == typeid(CompleteState)) {
+        nextState = new DemolishedState();
+    }
+    else if (typeid(*state) == typeid(DemolishedState)) {
+        // No next state after demolished
+        return state;
+    }
+    
+    // Clean up old state and set new state
+    if (nextState != nullptr) {
+        delete state;
+        state = nextState;
+    }
+    
     return state;
 }
+
 
 /**
  * @brief Get the total space capacity

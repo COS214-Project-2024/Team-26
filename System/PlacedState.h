@@ -1,52 +1,73 @@
+/**
+ * @file PlacedState.h
+ * @brief Header file for the PlacedState class, representing an active building state.
+ */
+
 #ifndef PLACED_STATE_H
 #define PLACED_STATE_H
 
 #include "BuildingState.h"
 
 /**
- * @brief Represents the initial state of a building after placement
- *
- * In the PlacedState, the building:
- * - Incurs initial construction costs (money and resources)
- * - Has no power or water consumption yet
- * - Cannot be occupied
- * This is the first state in the building lifecycle before construction begins.
+ * @class PlacedState
+ * @brief Represents a building in an active, operational state.
  */
 class PlacedState : public BuildingState {
 public:
     /**
-     * @brief Get the name of this state
-     * @return String "Placed"
+     * @brief Gets the name of the state.
+     * @return The name of the state as a string.
      */
     std::string getStateName() override;
 
     /**
-     * @brief Calculate initial monetary cost for placing the building
-     * @param building Pointer to the Building object
-     * @return Initial construction cost in monetary units
+     * @brief Gets the monetary cost associated with the building in its active state.
+     * @param building Pointer to the Building object.
+     * @return The monetary cost.
      */
     int getMoneyCost(Building* building) override;
 
     /**
-     * @brief Calculate initial resource cost for placing the building
-     * @param building Pointer to the Building object
-     * @return Initial resource cost
+     * @brief Gets the resource cost associated with the building in its active state.
+     * @param building Pointer to the Building object.
+     * @return The resource cost.
      */
     int getResourceCost(Building* building) override;
 
     /**
-     * @brief Get power consumption in placed state
-     * @param building Pointer to the Building object
-     * @return 0 (no power consumption in placed state)
+     * @brief Gets the power consumption of the building in its active state.
+     * @param building Pointer to the Building object.
+     * @return The power consumption.
      */
     int getPowerConsumption(Building* building) override;
 
     /**
-     * @brief Get water consumption in placed state
-     * @param building Pointer to the Building object
-     * @return 0 (no water consumption in placed state)
+     * @brief Gets the water consumption of the building in its active state.
+     * @param building Pointer to the Building object.
+     * @return The water consumption.
      */
     int getWaterConsumption(Building* building) override;
+
+    /**
+     * @brief Gets the occupancy level of the building in its active state.
+     * @param building Pointer to the Building object.
+     * @return The occupancy level.
+     */
+    int getOccupancy(Building* building) override;
+
+    /**
+     * @brief Gets the sewage production of the building in its active state.
+     * @param building Pointer to the Building object.
+     * @return The sewage production.
+     */
+    int getSewageProduction(Building* building) override;
+
+    /**
+     * @brief Gets the waste production of the building in its active state.
+     * @param building Pointer to the Building object.
+     * @return The waste production.
+     */
+    int getWasteProduction(Building* building) override;
 };
 
 #endif // PLACED_STATE_H
