@@ -65,3 +65,7 @@ BuildingState* Leaf::getAndSetNextState() {
 	throw "Not yet implemented";
 	return nullptr;
 }
+
+Building* Leaf::getBuilding(){
+	return this->building;
+}

@@ -15,6 +15,24 @@ void Iterator::add(Building* building, int x, int y) {
 	}
 }
 
+void Iterator::add(Iterator* otherIt){
+	for (int i = 0; i < otherIt->lengthX(); i++){
+		for (int j = 0; j < otherIt->lengthY(); j++){
+			if (this->get(i, j) == nullptr){
+				this->add(otherIt->get(i,j), i, j);
+			}
+		}
+	}
+}
+
+void Iterator::addWithReplace(Iterator* otherIt) {
+	for (int i = 0; i < otherIt->lengthX(); i++) {
+		for (int j = 0; j < otherIt->lengthY(); j++) {
+			this->add(otherIt->get(i, j), i, j);
+		}
+	}
+}
+
 Building* Iterator::current() {
 	return composite->getComponent(currentX, currentY);
 }

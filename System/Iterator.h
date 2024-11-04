@@ -25,13 +25,29 @@ class Iterator{
 		/**
 		 * @brief Adds a building to the list
 		 * 
-		 * @param building
+		 * @param building Object to be added
 		 * @param x x-coordinate
 		 * @param y y-coordinate
-		 * @return true 
-		 * @return false 
 		 */
 		void add(Building* building, int x, int y);
+
+		/**
+		 * @brief Adds another iterator to the list, i.e. merging the list
+		 * 
+		 * @attention If the space if already filled, it WILL NOT be replaced
+		 * 
+		 * @param otherIt The iterator that should be merged
+		 */
+		void add(Iterator* otherIt);
+		
+		/**
+		 * @brief Adds another iterator to the list, i.e. merging the list
+		 * 
+		 * @attention If the space if already filled, it WILL BE REPLACED
+		 * 
+		 * @param otherIt The iterator that should be merged
+		 */
+		void addWithReplace(Iterator* otherIt);
 
 		/**
 		 * @brief Returns the current component
