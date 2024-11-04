@@ -1,0 +1,226 @@
+\doxysection{Building\+State Class Reference}
+\hypertarget{class_building_state}{}\label{class_building_state}\index{BuildingState@{BuildingState}}
+
+
+Abstract base class for the \doxylink{class_building}{Building} State Pattern.  
+
+
+
+
+{\ttfamily \#include $<$Building\+State.\+h$>$}
+
+Inheritance diagram for Building\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.830065cm]{class_building_state}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual string \mbox{\hyperlink{class_building_state_aa20dff8fd6e1b913d88cebac79318faf}{get\+State\+Name}} ()=0
+\begin{DoxyCompactList}\small\item\em Get the name of the current state. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_building_state_ab5d844279c9eaf9f0cd39e7aa9482293}{get\+Money\+Cost}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}building)=0
+\begin{DoxyCompactList}\small\item\em Calculate monetary cost for the building in current state. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_building_state_a0037827fbc9375a397e014226b9c83da}{get\+Resource\+Cost}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}building)=0
+\begin{DoxyCompactList}\small\item\em Calculate resource cost for the building in current state. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_building_state_a1d10579e75a29b636653f883edc96e4d}{get\+Power\+Consumption}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}building)=0
+\begin{DoxyCompactList}\small\item\em Calculate power consumption in current state. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_building_state_a7eb831a140143d08e491d8fca3dec0a7}{get\+Water\+Consumption}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}building)=0
+\begin{DoxyCompactList}\small\item\em Calculate water consumption in current state. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_building_state_a7d7049ccef7a0aa20fe78f15c31bc918}{get\+Occupancy}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}building)=0
+\begin{DoxyCompactList}\small\item\em Get current occupancy level allowed in this state. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_building_state_a260627b2e6a32b68bb8f157e0ff2f2d5}{get\+Sewage\+Production}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}building)=0
+\begin{DoxyCompactList}\small\item\em Calculate sewage production in current state. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_building_state_ac9dd72e59636c8b89f452c97ff25941a}{get\+Waste\+Production}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}building)=0
+\begin{DoxyCompactList}\small\item\em Calculate waste production in current state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_building_state_ac835177aded45f4158dfcfdd53dba480}\label{class_building_state_ac835177aded45f4158dfcfdd53dba480} 
+string {\bfseries state\+Name}
+\begin{DoxyCompactList}\small\item\em Name identifier for the current state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for the \doxylink{class_building}{Building} State Pattern. 
+
+\doxylink{class_building_state}{Building\+State} defines the interface for all concrete building states (Placed, Under\+Construction, Complete, Demolished). Each state implements different behavior for resource consumption and building metrics based on the current phase of the building\textquotesingle{}s lifecycle. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_building_state_ab5d844279c9eaf9f0cd39e7aa9482293}\index{BuildingState@{BuildingState}!getMoneyCost@{getMoneyCost}}
+\index{getMoneyCost@{getMoneyCost}!BuildingState@{BuildingState}}
+\doxysubsubsection{\texorpdfstring{getMoneyCost()}{getMoneyCost()}}
+{\footnotesize\ttfamily \label{class_building_state_ab5d844279c9eaf9f0cd39e7aa9482293} 
+virtual int Building\+State\+::get\+Money\+Cost (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{building}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Calculate monetary cost for the building in current state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the \doxylink{class_building}{Building} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Monetary cost based on current state 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_complete_state_aa5b2841d4b7eec5489b87a221def5de8}{Complete\+State}}, \mbox{\hyperlink{class_demolished_state_a4d7e4dd758ee4ff88c909e45b63623c2}{Demolished\+State}}, \mbox{\hyperlink{class_placed_state_aeb39c3c60ae95dd1926593edf05ecd90}{Placed\+State}}, and \mbox{\hyperlink{class_under_construction_state_ab7139e8dbaf38d94ff0ce462d8dc3914}{Under\+Construction\+State}}.
+
+\Hypertarget{class_building_state_a7d7049ccef7a0aa20fe78f15c31bc918}\index{BuildingState@{BuildingState}!getOccupancy@{getOccupancy}}
+\index{getOccupancy@{getOccupancy}!BuildingState@{BuildingState}}
+\doxysubsubsection{\texorpdfstring{getOccupancy()}{getOccupancy()}}
+{\footnotesize\ttfamily \label{class_building_state_a7d7049ccef7a0aa20fe78f15c31bc918} 
+virtual int Building\+State\+::get\+Occupancy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{building}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get current occupancy level allowed in this state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the \doxylink{class_building}{Building} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current occupancy level (may be 0 in some states) 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_complete_state_a2dbfb1010b2cc03662e6bcea5c6144d3}{Complete\+State}}, \mbox{\hyperlink{class_demolished_state_a45b50a82e0e3eb166070bdc6109de9ea}{Demolished\+State}}, \mbox{\hyperlink{class_placed_state_a67e9d383b441ce56c230d47b42287769}{Placed\+State}}, and \mbox{\hyperlink{class_under_construction_state_a1ca39f448bfa890adc7a9ccbec2fd3af}{Under\+Construction\+State}}.
+
+\Hypertarget{class_building_state_a1d10579e75a29b636653f883edc96e4d}\index{BuildingState@{BuildingState}!getPowerConsumption@{getPowerConsumption}}
+\index{getPowerConsumption@{getPowerConsumption}!BuildingState@{BuildingState}}
+\doxysubsubsection{\texorpdfstring{getPowerConsumption()}{getPowerConsumption()}}
+{\footnotesize\ttfamily \label{class_building_state_a1d10579e75a29b636653f883edc96e4d} 
+virtual int Building\+State\+::get\+Power\+Consumption (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{building}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Calculate power consumption in current state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the \doxylink{class_building}{Building} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{class_power}{Power} consumption units for current state 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_complete_state_ae25a0562ff8f72f3aa7f8ebc1a93be30}{Complete\+State}}, \mbox{\hyperlink{class_demolished_state_a2202a427f5ee7404027bec530c0d141d}{Demolished\+State}}, \mbox{\hyperlink{class_placed_state_a583a86025070b2ef0353862e3fb0b315}{Placed\+State}}, and \mbox{\hyperlink{class_under_construction_state_a7e31326489ce7e777dcb1f284f00120b}{Under\+Construction\+State}}.
+
+\Hypertarget{class_building_state_a0037827fbc9375a397e014226b9c83da}\index{BuildingState@{BuildingState}!getResourceCost@{getResourceCost}}
+\index{getResourceCost@{getResourceCost}!BuildingState@{BuildingState}}
+\doxysubsubsection{\texorpdfstring{getResourceCost()}{getResourceCost()}}
+{\footnotesize\ttfamily \label{class_building_state_a0037827fbc9375a397e014226b9c83da} 
+virtual int Building\+State\+::get\+Resource\+Cost (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{building}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Calculate resource cost for the building in current state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the \doxylink{class_building}{Building} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Resource cost based on current state 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_complete_state_ade71f26d74326645e5d765020f47e0cb}{Complete\+State}}, \mbox{\hyperlink{class_demolished_state_a80c9f25d446624ed12533cf649a0543d}{Demolished\+State}}, \mbox{\hyperlink{class_placed_state_a4a04d73e4911dcf2101ade368ea699c0}{Placed\+State}}, and \mbox{\hyperlink{class_under_construction_state_a46ca11653e7a1067b11d46029379806a}{Under\+Construction\+State}}.
+
+\Hypertarget{class_building_state_a260627b2e6a32b68bb8f157e0ff2f2d5}\index{BuildingState@{BuildingState}!getSewageProduction@{getSewageProduction}}
+\index{getSewageProduction@{getSewageProduction}!BuildingState@{BuildingState}}
+\doxysubsubsection{\texorpdfstring{getSewageProduction()}{getSewageProduction()}}
+{\footnotesize\ttfamily \label{class_building_state_a260627b2e6a32b68bb8f157e0ff2f2d5} 
+virtual int Building\+State\+::get\+Sewage\+Production (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{building}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Calculate sewage production in current state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the \doxylink{class_building}{Building} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{class_sewage}{Sewage} production units for current state 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_complete_state_a345bfdd9f5a2090a5c6eb3b7a423073c}{Complete\+State}}, \mbox{\hyperlink{class_demolished_state_a9a60ec67cb52e8733ac90339cae744a9}{Demolished\+State}}, \mbox{\hyperlink{class_placed_state_aa1b859123c4dec9c725abb6fb6982d18}{Placed\+State}}, and \mbox{\hyperlink{class_under_construction_state_a5e0d9992e3e2d7999931efd918d7231e}{Under\+Construction\+State}}.
+
+\Hypertarget{class_building_state_aa20dff8fd6e1b913d88cebac79318faf}\index{BuildingState@{BuildingState}!getStateName@{getStateName}}
+\index{getStateName@{getStateName}!BuildingState@{BuildingState}}
+\doxysubsubsection{\texorpdfstring{getStateName()}{getStateName()}}
+{\footnotesize\ttfamily \label{class_building_state_aa20dff8fd6e1b913d88cebac79318faf} 
+virtual string Building\+State\+::get\+State\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the name of the current state. 
+
+\begin{DoxyReturn}{Returns}
+String identifier of the state 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_complete_state_afbae2e9ac372499394a2805b73114b0d}{Complete\+State}}, \mbox{\hyperlink{class_demolished_state_aec1b1e4765d40ae1ee07a897fd54358e}{Demolished\+State}}, \mbox{\hyperlink{class_placed_state_a58ca9f61ad82b20452d25383775e7373}{Placed\+State}}, and \mbox{\hyperlink{class_under_construction_state_a373a135793ce41c642f56101e98c91a4}{Under\+Construction\+State}}.
+
+\Hypertarget{class_building_state_ac9dd72e59636c8b89f452c97ff25941a}\index{BuildingState@{BuildingState}!getWasteProduction@{getWasteProduction}}
+\index{getWasteProduction@{getWasteProduction}!BuildingState@{BuildingState}}
+\doxysubsubsection{\texorpdfstring{getWasteProduction()}{getWasteProduction()}}
+{\footnotesize\ttfamily \label{class_building_state_ac9dd72e59636c8b89f452c97ff25941a} 
+virtual int Building\+State\+::get\+Waste\+Production (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{building}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Calculate waste production in current state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the \doxylink{class_building}{Building} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{class_waste}{Waste} production units for current state 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_complete_state_a11f5eb9f68b52dd6e61d5b45d5aa4f75}{Complete\+State}}, \mbox{\hyperlink{class_demolished_state_a71d5c99dd77775db147942fcc4313b61}{Demolished\+State}}, \mbox{\hyperlink{class_placed_state_ae33b92d68f533c70c5f06b45bfbe220c}{Placed\+State}}, and \mbox{\hyperlink{class_under_construction_state_a8c3f44ee8a59ced46b0880522c60434c}{Under\+Construction\+State}}.
+
+\Hypertarget{class_building_state_a7eb831a140143d08e491d8fca3dec0a7}\index{BuildingState@{BuildingState}!getWaterConsumption@{getWaterConsumption}}
+\index{getWaterConsumption@{getWaterConsumption}!BuildingState@{BuildingState}}
+\doxysubsubsection{\texorpdfstring{getWaterConsumption()}{getWaterConsumption()}}
+{\footnotesize\ttfamily \label{class_building_state_a7eb831a140143d08e491d8fca3dec0a7} 
+virtual int Building\+State\+::get\+Water\+Consumption (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{building}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Calculate water consumption in current state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the \doxylink{class_building}{Building} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{class_water}{Water} consumption units for current state 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_complete_state_a0edc697df07296d12c7d680fcc82dd6a}{Complete\+State}}, \mbox{\hyperlink{class_demolished_state_aa4cbd31483ad87150608b6eef4c3bc67}{Demolished\+State}}, \mbox{\hyperlink{class_placed_state_a8071b89e9cc11ac3f2c2f0bc8ea00dda}{Placed\+State}}, and \mbox{\hyperlink{class_under_construction_state_a389fe2cde85d0b387a158e2b7a568e50}{Under\+Construction\+State}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Building\+State.\+h\end{DoxyCompactItemize}

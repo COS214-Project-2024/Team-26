@@ -1,0 +1,284 @@
+\doxysection{Under\+Construction\+State Class Reference}
+\hypertarget{class_under_construction_state}{}\label{class_under_construction_state}\index{UnderConstructionState@{UnderConstructionState}}
+
+
+Represents a building in the process of being constructed.  
+
+
+
+
+{\ttfamily \#include $<$Under\+Construction\+State.\+h$>$}
+
+Inheritance diagram for Under\+Construction\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_under_construction_state}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_under_construction_state_a373a135793ce41c642f56101e98c91a4}{get\+State\+Name}} () override
+\begin{DoxyCompactList}\small\item\em Gets the name of the state. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_under_construction_state_ab7139e8dbaf38d94ff0ce462d8dc3914}{get\+Money\+Cost}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}building) override
+\begin{DoxyCompactList}\small\item\em Gets the monetary cost associated with the building in its under construction state. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_under_construction_state_a46ca11653e7a1067b11d46029379806a}{get\+Resource\+Cost}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}building) override
+\begin{DoxyCompactList}\small\item\em Gets the resource cost associated with the building in its under construction state. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_under_construction_state_a7e31326489ce7e777dcb1f284f00120b}{get\+Power\+Consumption}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}building) override
+\begin{DoxyCompactList}\small\item\em Gets the power consumption of the building in its under construction state. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_under_construction_state_a389fe2cde85d0b387a158e2b7a568e50}{get\+Water\+Consumption}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}building) override
+\begin{DoxyCompactList}\small\item\em Gets the water consumption of the building in its under construction state. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_under_construction_state_a1ca39f448bfa890adc7a9ccbec2fd3af}{get\+Occupancy}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}building) override
+\begin{DoxyCompactList}\small\item\em Gets the occupancy level of the building in its under construction state. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_under_construction_state_a5e0d9992e3e2d7999931efd918d7231e}{get\+Sewage\+Production}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}building) override
+\begin{DoxyCompactList}\small\item\em Gets the sewage production of the building in its under construction state. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_under_construction_state_a8c3f44ee8a59ced46b0880522c60434c}{get\+Waste\+Production}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}building) override
+\begin{DoxyCompactList}\small\item\em Gets the waste production of the building in its under construction state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_building_state}{Building\+State}}}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_building_state}{Building\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries state\+Name}
+\begin{DoxyCompactList}\small\item\em Name identifier for the current state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a building in the process of being constructed. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_under_construction_state_ab7139e8dbaf38d94ff0ce462d8dc3914}\index{UnderConstructionState@{UnderConstructionState}!getMoneyCost@{getMoneyCost}}
+\index{getMoneyCost@{getMoneyCost}!UnderConstructionState@{UnderConstructionState}}
+\doxysubsubsection{\texorpdfstring{getMoneyCost()}{getMoneyCost()}}
+{\footnotesize\ttfamily \label{class_under_construction_state_ab7139e8dbaf38d94ff0ce462d8dc3914} 
+int Under\+Construction\+State\+::get\+Money\+Cost (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{building}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the monetary cost associated with the building in its under construction state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the \doxylink{class_building}{Building} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The monetary cost.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the \doxylink{class_building}{Building} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The monetary cost associated with construction. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_building_state_ab5d844279c9eaf9f0cd39e7aa9482293}{Building\+State}}.
+
+\Hypertarget{class_under_construction_state_a1ca39f448bfa890adc7a9ccbec2fd3af}\index{UnderConstructionState@{UnderConstructionState}!getOccupancy@{getOccupancy}}
+\index{getOccupancy@{getOccupancy}!UnderConstructionState@{UnderConstructionState}}
+\doxysubsubsection{\texorpdfstring{getOccupancy()}{getOccupancy()}}
+{\footnotesize\ttfamily \label{class_under_construction_state_a1ca39f448bfa890adc7a9ccbec2fd3af} 
+int Under\+Construction\+State\+::get\+Occupancy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{building}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the occupancy level of the building in its under construction state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the \doxylink{class_building}{Building} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The occupancy level.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the \doxylink{class_building}{Building} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The occupancy level, which should be zero. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_building_state_a7d7049ccef7a0aa20fe78f15c31bc918}{Building\+State}}.
+
+\Hypertarget{class_under_construction_state_a7e31326489ce7e777dcb1f284f00120b}\index{UnderConstructionState@{UnderConstructionState}!getPowerConsumption@{getPowerConsumption}}
+\index{getPowerConsumption@{getPowerConsumption}!UnderConstructionState@{UnderConstructionState}}
+\doxysubsubsection{\texorpdfstring{getPowerConsumption()}{getPowerConsumption()}}
+{\footnotesize\ttfamily \label{class_under_construction_state_a7e31326489ce7e777dcb1f284f00120b} 
+int Under\+Construction\+State\+::get\+Power\+Consumption (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{building}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the power consumption of the building in its under construction state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the \doxylink{class_building}{Building} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The power consumption.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the \doxylink{class_building}{Building} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The power consumption, possibly minimal. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_building_state_a1d10579e75a29b636653f883edc96e4d}{Building\+State}}.
+
+\Hypertarget{class_under_construction_state_a46ca11653e7a1067b11d46029379806a}\index{UnderConstructionState@{UnderConstructionState}!getResourceCost@{getResourceCost}}
+\index{getResourceCost@{getResourceCost}!UnderConstructionState@{UnderConstructionState}}
+\doxysubsubsection{\texorpdfstring{getResourceCost()}{getResourceCost()}}
+{\footnotesize\ttfamily \label{class_under_construction_state_a46ca11653e7a1067b11d46029379806a} 
+int Under\+Construction\+State\+::get\+Resource\+Cost (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{building}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the resource cost associated with the building in its under construction state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the \doxylink{class_building}{Building} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The resource cost.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the \doxylink{class_building}{Building} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The resource cost associated with construction. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_building_state_a0037827fbc9375a397e014226b9c83da}{Building\+State}}.
+
+\Hypertarget{class_under_construction_state_a5e0d9992e3e2d7999931efd918d7231e}\index{UnderConstructionState@{UnderConstructionState}!getSewageProduction@{getSewageProduction}}
+\index{getSewageProduction@{getSewageProduction}!UnderConstructionState@{UnderConstructionState}}
+\doxysubsubsection{\texorpdfstring{getSewageProduction()}{getSewageProduction()}}
+{\footnotesize\ttfamily \label{class_under_construction_state_a5e0d9992e3e2d7999931efd918d7231e} 
+int Under\+Construction\+State\+::get\+Sewage\+Production (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{building}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the sewage production of the building in its under construction state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the \doxylink{class_building}{Building} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The sewage production.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the \doxylink{class_building}{Building} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The sewage production, likely zero. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_building_state_a260627b2e6a32b68bb8f157e0ff2f2d5}{Building\+State}}.
+
+\Hypertarget{class_under_construction_state_a373a135793ce41c642f56101e98c91a4}\index{UnderConstructionState@{UnderConstructionState}!getStateName@{getStateName}}
+\index{getStateName@{getStateName}!UnderConstructionState@{UnderConstructionState}}
+\doxysubsubsection{\texorpdfstring{getStateName()}{getStateName()}}
+{\footnotesize\ttfamily \label{class_under_construction_state_a373a135793ce41c642f56101e98c91a4} 
+std\+::string Under\+Construction\+State\+::get\+State\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the name of the state. 
+
+\begin{DoxyReturn}{Returns}
+The name of the state as a string.
+
+The name "{}\+Under Construction"{} as a string. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_building_state_aa20dff8fd6e1b913d88cebac79318faf}{Building\+State}}.
+
+\Hypertarget{class_under_construction_state_a8c3f44ee8a59ced46b0880522c60434c}\index{UnderConstructionState@{UnderConstructionState}!getWasteProduction@{getWasteProduction}}
+\index{getWasteProduction@{getWasteProduction}!UnderConstructionState@{UnderConstructionState}}
+\doxysubsubsection{\texorpdfstring{getWasteProduction()}{getWasteProduction()}}
+{\footnotesize\ttfamily \label{class_under_construction_state_a8c3f44ee8a59ced46b0880522c60434c} 
+int Under\+Construction\+State\+::get\+Waste\+Production (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{building}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the waste production of the building in its under construction state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the \doxylink{class_building}{Building} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The waste production.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the \doxylink{class_building}{Building} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The waste production, likely zero. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_building_state_ac9dd72e59636c8b89f452c97ff25941a}{Building\+State}}.
+
+\Hypertarget{class_under_construction_state_a389fe2cde85d0b387a158e2b7a568e50}\index{UnderConstructionState@{UnderConstructionState}!getWaterConsumption@{getWaterConsumption}}
+\index{getWaterConsumption@{getWaterConsumption}!UnderConstructionState@{UnderConstructionState}}
+\doxysubsubsection{\texorpdfstring{getWaterConsumption()}{getWaterConsumption()}}
+{\footnotesize\ttfamily \label{class_under_construction_state_a389fe2cde85d0b387a158e2b7a568e50} 
+int Under\+Construction\+State\+::get\+Water\+Consumption (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{building}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the water consumption of the building in its under construction state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the \doxylink{class_building}{Building} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The water consumption.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the \doxylink{class_building}{Building} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The water consumption, possibly minimal. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_building_state_a7eb831a140143d08e491d8fca3dec0a7}{Building\+State}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/\mbox{\hyperlink{_under_construction_state_8h}{Under\+Construction\+State.\+h}}\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/\mbox{\hyperlink{_under_construction_state_8cpp}{Under\+Construction\+State.\+cpp}}\end{DoxyCompactItemize}

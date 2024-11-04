@@ -1,0 +1,71 @@
+\doxysection{Next\+Command Class Reference}
+\hypertarget{class_next_command}{}\label{class_next_command}\index{NextCommand@{NextCommand}}
+
+
+Represents a command to advance to the next turn in the city simulation.  
+
+
+
+
+{\ttfamily \#include $<$Next\+Command.\+h$>$}
+
+Inheritance diagram for Next\+Command\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_next_command}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_next_command_af293691e6afa0656536f5b700774eb2f}{Next\+Command}} (\mbox{\hyperlink{class_turn_mediator}{Turn\+Mediator}} \texorpdfstring{$\ast$}{*}mediator=new \mbox{\hyperlink{class_turn_mediator}{Turn\+Mediator}}())
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_next_command}{Next\+Command} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_next_command_a2ac855569fac877a20165d98259eaa15}{execute}} ()
+\begin{DoxyCompactList}\small\item\em Executes the next turn command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_city_command}{City\+Command}}}
+
+
+\doxysubsection{Detailed Description}
+Represents a command to advance to the next turn in the city simulation. 
+
+The \doxylink{class_next_command}{Next\+Command} class facilitates transitioning to the next turn in the city through the use of a mediator. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_next_command_af293691e6afa0656536f5b700774eb2f}\index{NextCommand@{NextCommand}!NextCommand@{NextCommand}}
+\index{NextCommand@{NextCommand}!NextCommand@{NextCommand}}
+\doxysubsubsection{\texorpdfstring{NextCommand()}{NextCommand()}}
+{\footnotesize\ttfamily \label{class_next_command_af293691e6afa0656536f5b700774eb2f} 
+Next\+Command\+::\+Next\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_mediator}{Turn\+Mediator}} \texorpdfstring{$\ast$}{*}}]{mediator}{ = {\ttfamily new~\mbox{\hyperlink{class_turn_mediator}{Turn\+Mediator}}()}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_next_command}{Next\+Command} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mediator} & Pointer to a \doxylink{class_turn_mediator}{Turn\+Mediator} to execute the command. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_next_command_a2ac855569fac877a20165d98259eaa15}\index{NextCommand@{NextCommand}!execute@{execute}}
+\index{execute@{execute}!NextCommand@{NextCommand}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily \label{class_next_command_a2ac855569fac877a20165d98259eaa15} 
+void Next\+Command\+::execute (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Executes the next turn command. 
+
+This function calls the mediator to go to next in city simulation 
+
+Implements \mbox{\hyperlink{class_city_command_a05653ee3400ca15b7c06d300b78f5005}{City\+Command}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Next\+Command.\+h\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Next\+Command.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,369 @@
+\doxysection{Composite Class Reference}
+\hypertarget{class_composite}{}\label{class_composite}\index{Composite@{Composite}}
+Inheritance diagram for Composite\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_composite}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_composite_ad28832d957183a7f08dec72e6040db0a}{Composite}} ()
+\item 
+\Hypertarget{class_composite_a70b11701a57fdbea1c610e74b9926e0d}\label{class_composite_a70b11701a57fdbea1c610e74b9926e0d} 
+void {\bfseries clear} ()
+\begin{DoxyCompactList}\small\item\em Clears the composite function. \end{DoxyCompactList}\item 
+\Hypertarget{class_composite_a8695ff6ae306cfb07d00388d4cade6f2}\label{class_composite_a8695ff6ae306cfb07d00388d4cade6f2} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Composite} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_composite}{Composite} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_iterator}{Iterator}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_composite_a7b8f8ae5fc66fbd070413dab3a1efe84}{create\+Iterator}} ()
+\begin{DoxyCompactList}\small\item\em Create a \doxylink{class_iterator}{Iterator} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_composite_a90077feaf265ead1cef27fd8eea0f114}{add}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}building, int x, int y)
+\begin{DoxyCompactList}\small\item\em Adds a \doxylink{class_component}{Component} to the \doxylink{class_composite}{Composite} structure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_composite_aaefc837f02a2f89a2e97cd97f52b8b26}{remove}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Removes a \doxylink{class_component}{Component} from the \doxylink{class_composite}{Composite} structure. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_composite_af2715bfdbb0febf657ea366b504850e1}{get\+Component}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Get the \doxylink{class_component}{Component} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_composite_a86e9a63297e754fe91c5564fea773b4d}{get\+Total\+Power\+Consumption}} () override
+\begin{DoxyCompactList}\small\item\em Get the Total \doxylink{class_power}{Power} Consumption. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_composite_ae50c3bb5a029e173577706d897dc4438}{get\+Total\+Water\+Consumption}} () override
+\begin{DoxyCompactList}\small\item\em Get the Total \doxylink{class_water}{Water} Consumption. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_composite_a09348136f03883bc92223fcd468a8abf}{get\+Total\+Cost\+Consumption}} () override
+\begin{DoxyCompactList}\small\item\em Get the Total Cost Consumption. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_composite_aa972f7006751c4d678eed820981dfcb8}{get\+Total\+Sewage\+Consumption}} () override
+\begin{DoxyCompactList}\small\item\em Get the Total \doxylink{class_sewage}{Sewage} Consumption. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_composite_a9eb6f59cec6f6c92f4f80fda5285798a}{get\+Total\+Waste\+Consumption}} () override
+\begin{DoxyCompactList}\small\item\em Get the Total \doxylink{class_waste}{Waste} Consumption. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_composite_afc1cb49c919daaa168ec2b7e03c2b792}{get\+Total\+Power\+Production}} () override
+\begin{DoxyCompactList}\small\item\em Get the Total \doxylink{class_power}{Power} Production. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_composite_ae2a7ba6ba63a4fea58ef2b3dcadb81a4}{get\+Total\+Water\+Production}} () override
+\begin{DoxyCompactList}\small\item\em Get the Total \doxylink{class_water}{Water} Production. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_composite_a74d96bb0bc3724f78d37cea58a256605}{get\+Total\+Revenue}} () override
+\begin{DoxyCompactList}\small\item\em Get the Total Revenue. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_composite_abf1e5ae530a90ab6816c5c98e5cb3393}{get\+Total\+Sewage\+Production}} () override
+\begin{DoxyCompactList}\small\item\em Get the Total \doxylink{class_sewage}{Sewage} Production. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_composite_a0889661c4af2fbc1c17b2a1d16b04e28}{get\+Total\+Waste\+Production}} () override
+\begin{DoxyCompactList}\small\item\em Get the Total \doxylink{class_waste}{Waste} Production. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_building_state}{Building\+State}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_composite_a77fda48a4b346c4a40b8f4836d1ecbe6}{get\+And\+Set\+Next\+State}} () override
+\begin{DoxyCompactList}\small\item\em Get the And Set Next State. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_composite_a8adc653c0ed2121c6ef614789d3141ff}{lengthX}} () const
+\begin{DoxyCompactList}\small\item\em Gets the length of the X axis. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_composite_a585b40c3945fae44f1fddb662b49b7f0}{lengthY}} () const
+\begin{DoxyCompactList}\small\item\em Gets the length of the Y axis. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_composite_a9ee2dc32f4725d532d9bd27dc81dd36d}{get\+All\+Buildings}} () const
+\begin{DoxyCompactList}\small\item\em Returns an array of buildings in structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_component}{Component}}}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_composite_a8000dbb8e98ac1851dd509922f40381a}\label{class_composite_a8000dbb8e98ac1851dd509922f40381a} 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_leaf}{Leaf}} \texorpdfstring{$\ast$}{*} $>$ $>$ {\bfseries components}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_composite_ad28832d957183a7f08dec72e6040db0a}\index{Composite@{Composite}!Composite@{Composite}}
+\index{Composite@{Composite}!Composite@{Composite}}
+\doxysubsubsection{\texorpdfstring{Composite()}{Composite()}}
+{\footnotesize\ttfamily \label{class_composite_ad28832d957183a7f08dec72e6040db0a} 
+Composite\+::\+Composite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Not abstract since leaf does not implement create\+Iterator 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_composite_a90077feaf265ead1cef27fd8eea0f114}\index{Composite@{Composite}!add@{add}}
+\index{add@{add}!Composite@{Composite}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \label{class_composite_a90077feaf265ead1cef27fd8eea0f114} 
+void Composite\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{building}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Adds a \doxylink{class_component}{Component} to the \doxylink{class_composite}{Composite} structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_composite_a7b8f8ae5fc66fbd070413dab3a1efe84}\index{Composite@{Composite}!createIterator@{createIterator}}
+\index{createIterator@{createIterator}!Composite@{Composite}}
+\doxysubsubsection{\texorpdfstring{createIterator()}{createIterator()}}
+{\footnotesize\ttfamily \label{class_composite_a7b8f8ae5fc66fbd070413dab3a1efe84} 
+\mbox{\hyperlink{class_iterator}{Iterator}} \texorpdfstring{$\ast$}{*} Composite\+::create\+Iterator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Create a \doxylink{class_iterator}{Iterator} object. 
+
+\begin{DoxyReturn}{Returns}
+Iterator\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+\Hypertarget{class_composite_a9ee2dc32f4725d532d9bd27dc81dd36d}\index{Composite@{Composite}!getAllBuildings@{getAllBuildings}}
+\index{getAllBuildings@{getAllBuildings}!Composite@{Composite}}
+\doxysubsubsection{\texorpdfstring{getAllBuildings()}{getAllBuildings()}}
+{\footnotesize\ttfamily \label{class_composite_a9ee2dc32f4725d532d9bd27dc81dd36d} 
+std\+::vector$<$ \mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*} $>$ Composite\+::get\+All\+Buildings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns an array of buildings in structure. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Building\texorpdfstring{$\ast$}{*}$>$ 
+\end{DoxyReturn}
+\Hypertarget{class_composite_a77fda48a4b346c4a40b8f4836d1ecbe6}\index{Composite@{Composite}!getAndSetNextState@{getAndSetNextState}}
+\index{getAndSetNextState@{getAndSetNextState}!Composite@{Composite}}
+\doxysubsubsection{\texorpdfstring{getAndSetNextState()}{getAndSetNextState()}}
+{\footnotesize\ttfamily \label{class_composite_a77fda48a4b346c4a40b8f4836d1ecbe6} 
+\mbox{\hyperlink{class_building_state}{Building\+State}} \texorpdfstring{$\ast$}{*} Composite\+::get\+And\+Set\+Next\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the And Set Next State. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_building_state}{Building\+State} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_component}{Component}}.
+
+\Hypertarget{class_composite_af2715bfdbb0febf657ea366b504850e1}\index{Composite@{Composite}!getComponent@{getComponent}}
+\index{getComponent@{getComponent}!Composite@{Composite}}
+\doxysubsubsection{\texorpdfstring{getComponent()}{getComponent()}}
+{\footnotesize\ttfamily \label{class_composite_af2715bfdbb0febf657ea366b504850e1} 
+\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*} Composite\+::get\+Component (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Get the \doxylink{class_component}{Component} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Component\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+\Hypertarget{class_composite_a09348136f03883bc92223fcd468a8abf}\index{Composite@{Composite}!getTotalCostConsumption@{getTotalCostConsumption}}
+\index{getTotalCostConsumption@{getTotalCostConsumption}!Composite@{Composite}}
+\doxysubsubsection{\texorpdfstring{getTotalCostConsumption()}{getTotalCostConsumption()}}
+{\footnotesize\ttfamily \label{class_composite_a09348136f03883bc92223fcd468a8abf} 
+int Composite\+::get\+Total\+Cost\+Consumption (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the Total Cost Consumption. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_component}{Component}}.
+
+\Hypertarget{class_composite_a86e9a63297e754fe91c5564fea773b4d}\index{Composite@{Composite}!getTotalPowerConsumption@{getTotalPowerConsumption}}
+\index{getTotalPowerConsumption@{getTotalPowerConsumption}!Composite@{Composite}}
+\doxysubsubsection{\texorpdfstring{getTotalPowerConsumption()}{getTotalPowerConsumption()}}
+{\footnotesize\ttfamily \label{class_composite_a86e9a63297e754fe91c5564fea773b4d} 
+int Composite\+::get\+Total\+Power\+Consumption (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the Total \doxylink{class_power}{Power} Consumption. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_component}{Component}}.
+
+\Hypertarget{class_composite_afc1cb49c919daaa168ec2b7e03c2b792}\index{Composite@{Composite}!getTotalPowerProduction@{getTotalPowerProduction}}
+\index{getTotalPowerProduction@{getTotalPowerProduction}!Composite@{Composite}}
+\doxysubsubsection{\texorpdfstring{getTotalPowerProduction()}{getTotalPowerProduction()}}
+{\footnotesize\ttfamily \label{class_composite_afc1cb49c919daaa168ec2b7e03c2b792} 
+int Composite\+::get\+Total\+Power\+Production (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the Total \doxylink{class_power}{Power} Production. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_component}{Component}}.
+
+\Hypertarget{class_composite_a74d96bb0bc3724f78d37cea58a256605}\index{Composite@{Composite}!getTotalRevenue@{getTotalRevenue}}
+\index{getTotalRevenue@{getTotalRevenue}!Composite@{Composite}}
+\doxysubsubsection{\texorpdfstring{getTotalRevenue()}{getTotalRevenue()}}
+{\footnotesize\ttfamily \label{class_composite_a74d96bb0bc3724f78d37cea58a256605} 
+int Composite\+::get\+Total\+Revenue (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the Total Revenue. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_component}{Component}}.
+
+\Hypertarget{class_composite_aa972f7006751c4d678eed820981dfcb8}\index{Composite@{Composite}!getTotalSewageConsumption@{getTotalSewageConsumption}}
+\index{getTotalSewageConsumption@{getTotalSewageConsumption}!Composite@{Composite}}
+\doxysubsubsection{\texorpdfstring{getTotalSewageConsumption()}{getTotalSewageConsumption()}}
+{\footnotesize\ttfamily \label{class_composite_aa972f7006751c4d678eed820981dfcb8} 
+int Composite\+::get\+Total\+Sewage\+Consumption (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the Total \doxylink{class_sewage}{Sewage} Consumption. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_component}{Component}}.
+
+\Hypertarget{class_composite_abf1e5ae530a90ab6816c5c98e5cb3393}\index{Composite@{Composite}!getTotalSewageProduction@{getTotalSewageProduction}}
+\index{getTotalSewageProduction@{getTotalSewageProduction}!Composite@{Composite}}
+\doxysubsubsection{\texorpdfstring{getTotalSewageProduction()}{getTotalSewageProduction()}}
+{\footnotesize\ttfamily \label{class_composite_abf1e5ae530a90ab6816c5c98e5cb3393} 
+int Composite\+::get\+Total\+Sewage\+Production (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the Total \doxylink{class_sewage}{Sewage} Production. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_component}{Component}}.
+
+\Hypertarget{class_composite_a9eb6f59cec6f6c92f4f80fda5285798a}\index{Composite@{Composite}!getTotalWasteConsumption@{getTotalWasteConsumption}}
+\index{getTotalWasteConsumption@{getTotalWasteConsumption}!Composite@{Composite}}
+\doxysubsubsection{\texorpdfstring{getTotalWasteConsumption()}{getTotalWasteConsumption()}}
+{\footnotesize\ttfamily \label{class_composite_a9eb6f59cec6f6c92f4f80fda5285798a} 
+int Composite\+::get\+Total\+Waste\+Consumption (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the Total \doxylink{class_waste}{Waste} Consumption. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_component}{Component}}.
+
+\Hypertarget{class_composite_a0889661c4af2fbc1c17b2a1d16b04e28}\index{Composite@{Composite}!getTotalWasteProduction@{getTotalWasteProduction}}
+\index{getTotalWasteProduction@{getTotalWasteProduction}!Composite@{Composite}}
+\doxysubsubsection{\texorpdfstring{getTotalWasteProduction()}{getTotalWasteProduction()}}
+{\footnotesize\ttfamily \label{class_composite_a0889661c4af2fbc1c17b2a1d16b04e28} 
+int Composite\+::get\+Total\+Waste\+Production (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the Total \doxylink{class_waste}{Waste} Production. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_component}{Component}}.
+
+\Hypertarget{class_composite_ae50c3bb5a029e173577706d897dc4438}\index{Composite@{Composite}!getTotalWaterConsumption@{getTotalWaterConsumption}}
+\index{getTotalWaterConsumption@{getTotalWaterConsumption}!Composite@{Composite}}
+\doxysubsubsection{\texorpdfstring{getTotalWaterConsumption()}{getTotalWaterConsumption()}}
+{\footnotesize\ttfamily \label{class_composite_ae50c3bb5a029e173577706d897dc4438} 
+int Composite\+::get\+Total\+Water\+Consumption (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the Total \doxylink{class_water}{Water} Consumption. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_component}{Component}}.
+
+\Hypertarget{class_composite_ae2a7ba6ba63a4fea58ef2b3dcadb81a4}\index{Composite@{Composite}!getTotalWaterProduction@{getTotalWaterProduction}}
+\index{getTotalWaterProduction@{getTotalWaterProduction}!Composite@{Composite}}
+\doxysubsubsection{\texorpdfstring{getTotalWaterProduction()}{getTotalWaterProduction()}}
+{\footnotesize\ttfamily \label{class_composite_ae2a7ba6ba63a4fea58ef2b3dcadb81a4} 
+int Composite\+::get\+Total\+Water\+Production (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the Total \doxylink{class_water}{Water} Production. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_component}{Component}}.
+
+\Hypertarget{class_composite_a8adc653c0ed2121c6ef614789d3141ff}\index{Composite@{Composite}!lengthX@{lengthX}}
+\index{lengthX@{lengthX}!Composite@{Composite}}
+\doxysubsubsection{\texorpdfstring{lengthX()}{lengthX()}}
+{\footnotesize\ttfamily \label{class_composite_a8adc653c0ed2121c6ef614789d3141ff} 
+int Composite\+::lengthX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the length of the X axis. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\Hypertarget{class_composite_a585b40c3945fae44f1fddb662b49b7f0}\index{Composite@{Composite}!lengthY@{lengthY}}
+\index{lengthY@{lengthY}!Composite@{Composite}}
+\doxysubsubsection{\texorpdfstring{lengthY()}{lengthY()}}
+{\footnotesize\ttfamily \label{class_composite_a585b40c3945fae44f1fddb662b49b7f0} 
+int Composite\+::lengthY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the length of the Y axis. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\Hypertarget{class_composite_aaefc837f02a2f89a2e97cd97f52b8b26}\index{Composite@{Composite}!remove@{remove}}
+\index{remove@{remove}!Composite@{Composite}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \label{class_composite_aaefc837f02a2f89a2e97cd97f52b8b26} 
+void Composite\+::remove (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Removes a \doxylink{class_component}{Component} from the \doxylink{class_composite}{Composite} structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Composite.\+h\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Composite.\+cpp\end{DoxyCompactItemize}

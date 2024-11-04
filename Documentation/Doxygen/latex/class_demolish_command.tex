@@ -1,0 +1,75 @@
+\doxysection{Demolish\+Command Class Reference}
+\hypertarget{class_demolish_command}{}\label{class_demolish_command}\index{DemolishCommand@{DemolishCommand}}
+
+
+Represents a command to demolish a building at a specified location.  
+
+
+
+
+{\ttfamily \#include $<$Demolish\+Command.\+h$>$}
+
+Inheritance diagram for Demolish\+Command\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_demolish_command}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_demolish_command_aecdd755136282c2d79578723602b1efe}{Demolish\+Command}} (int x=0, int y=0, \mbox{\hyperlink{class_building_mediator}{Building\+Mediator}} \texorpdfstring{$\ast$}{*}mediator=new \mbox{\hyperlink{class_building_mediator}{Building\+Mediator}}())
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_demolish_command}{Demolish\+Command} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_demolish_command_a0cc21df149c69df4a2626fae4ce2824b}{execute}} ()
+\begin{DoxyCompactList}\small\item\em Executes the demolish command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_city_command}{City\+Command}}}
+
+
+\doxysubsection{Detailed Description}
+Represents a command to demolish a building at a specified location. 
+
+The \doxylink{class_demolish_command}{Demolish\+Command} class is used to specify the location of a building that needs to be demolished. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_demolish_command_aecdd755136282c2d79578723602b1efe}\index{DemolishCommand@{DemolishCommand}!DemolishCommand@{DemolishCommand}}
+\index{DemolishCommand@{DemolishCommand}!DemolishCommand@{DemolishCommand}}
+\doxysubsubsection{\texorpdfstring{DemolishCommand()}{DemolishCommand()}}
+{\footnotesize\ttfamily \label{class_demolish_command_aecdd755136282c2d79578723602b1efe} 
+Demolish\+Command\+::\+Demolish\+Command (\begin{DoxyParamCaption}\item[{int}]{x}{ = {\ttfamily 0}, }\item[{int}]{y}{ = {\ttfamily 0}, }\item[{\mbox{\hyperlink{class_building_mediator}{Building\+Mediator}} \texorpdfstring{$\ast$}{*}}]{mediator}{ = {\ttfamily new~\mbox{\hyperlink{class_building_mediator}{Building\+Mediator}}()}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_demolish_command}{Demolish\+Command} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The X coordinate of the location. \\
+\hline
+{\em y} & The Y coordinate of the location. \\
+\hline
+{\em mediator} & Pointer to a \doxylink{class_building_mediator}{Building\+Mediator} to handle the command. Defaults to a new instance of \doxylink{class_building_mediator}{Building\+Mediator}. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_demolish_command_a0cc21df149c69df4a2626fae4ce2824b}\index{DemolishCommand@{DemolishCommand}!execute@{execute}}
+\index{execute@{execute}!DemolishCommand@{DemolishCommand}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily \label{class_demolish_command_a0cc21df149c69df4a2626fae4ce2824b} 
+void Demolish\+Command\+::execute (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Executes the demolish command. 
+
+This method calls the mediator to handle the demolition at the specified location. 
+
+Implements \mbox{\hyperlink{class_city_command_a05653ee3400ca15b7c06d300b78f5005}{City\+Command}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Demolish\+Command.\+h\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Demolish\+Command.\+cpp\end{DoxyCompactItemize}

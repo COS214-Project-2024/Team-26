@@ -1,0 +1,92 @@
+\doxysection{Building\+Factory Class Reference}
+\hypertarget{class_building_factory}{}\label{class_building_factory}\index{BuildingFactory@{BuildingFactory}}
+
+
+Abstract factory class for creating building instances.  
+
+
+
+
+{\ttfamily \#include $<$Building\+Factory.\+h$>$}
+
+Inheritance diagram for Building\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.864865cm]{class_building_factory}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_building_factory_a887ffef6cc4432bb7c11a53ddb34cacc}{Building\+Factory}} (std\+::string \&building\+Type, int x, int y)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_building_factory}{Building\+Factory}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_building_factory_a53bf741d62147d8c9b107fb53c124b58}{create\+Building}} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to create a building. \end{DoxyCompactList}\item 
+\Hypertarget{class_building_factory_aac060c679bd7f05666347c86febdfef8}\label{class_building_factory_aac060c679bd7f05666347c86febdfef8} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Building\+Factory} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_building_factory_a775f62ba220c8fdc13fc0e809dea64ba}\label{class_building_factory_a775f62ba220c8fdc13fc0e809dea64ba} 
+const std\+::string \& {\bfseries BUILDING\+\_\+\+TYPE}
+\begin{DoxyCompactList}\small\item\em Type of building to create. \end{DoxyCompactList}\item 
+\Hypertarget{class_building_factory_a12fda89200a5e63b137efa37285ed5d5}\label{class_building_factory_a12fda89200a5e63b137efa37285ed5d5} 
+const int {\bfseries LOCATION\+\_\+X}
+\begin{DoxyCompactList}\small\item\em X-\/coordinate for new building. \end{DoxyCompactList}\item 
+\Hypertarget{class_building_factory_ab8bb8e8fa36e3e65ffcf0b948a71f012}\label{class_building_factory_ab8bb8e8fa36e3e65ffcf0b948a71f012} 
+const int {\bfseries LOCATION\+\_\+Y}
+\begin{DoxyCompactList}\small\item\em Y-\/coordinate for new building. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract factory class for creating building instances. 
+
+\doxylink{class_building_factory}{Building\+Factory} implements the \doxylink{class_factory}{Factory} Method pattern to create different types of buildings based on the specified building type and location. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_building_factory_a887ffef6cc4432bb7c11a53ddb34cacc}\index{BuildingFactory@{BuildingFactory}!BuildingFactory@{BuildingFactory}}
+\index{BuildingFactory@{BuildingFactory}!BuildingFactory@{BuildingFactory}}
+\doxysubsubsection{\texorpdfstring{BuildingFactory()}{BuildingFactory()}}
+{\footnotesize\ttfamily \label{class_building_factory_a887ffef6cc4432bb7c11a53ddb34cacc} 
+Building\+Factory\+::\+Building\+Factory (\begin{DoxyParamCaption}\item[{std\+::string \&}]{building\+Type}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for \doxylink{class_building_factory}{Building\+Factory}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em building\+Type} & Type of building to create \\
+\hline
+{\em x} & X-\/coordinate for new building \\
+\hline
+{\em y} & Y-\/coordinate for new building \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_building_factory_a53bf741d62147d8c9b107fb53c124b58}\index{BuildingFactory@{BuildingFactory}!createBuilding@{createBuilding}}
+\index{createBuilding@{createBuilding}!BuildingFactory@{BuildingFactory}}
+\doxysubsubsection{\texorpdfstring{createBuilding()}{createBuilding()}}
+{\footnotesize\ttfamily \label{class_building_factory_a53bf741d62147d8c9b107fb53c124b58} 
+\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*} Building\+Factory\+::create\+Building (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function to create a building. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to newly created \doxylink{class_building}{Building} instance 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_commercial_building_factory_a555ebe430b89a16d414bcd90996c208f}{Commercial\+Building\+Factory}}, \mbox{\hyperlink{class_entertainment_building_factory_aac7bd95419192573be1f7b2e39361865}{Entertainment\+Building\+Factory}}, \mbox{\hyperlink{class_industrial_building_factory_a74add84b1fc0a92d959025adb0e94d11}{Industrial\+Building\+Factory}}, \mbox{\hyperlink{class_landmark_building_factory_a6f8a940193fb1f6b1734226c180adec7}{Landmark\+Building\+Factory}}, \mbox{\hyperlink{class_plant_building_factory_a094cbc0187898b217b1c8448bc8bde8e}{Plant\+Building\+Factory}}, \mbox{\hyperlink{class_residential_building_factory_aa2388b2b06e30384b5c3c5724e956fa7}{Residential\+Building\+Factory}}, and \mbox{\hyperlink{class_service_building_factory_a9cef880562322dee51ef00b01edf601e}{Service\+Building\+Factory}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Building\+Factory.\+h\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Building\+Factory.\+cpp\end{DoxyCompactItemize}

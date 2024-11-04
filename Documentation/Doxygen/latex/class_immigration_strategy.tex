@@ -1,0 +1,107 @@
+\doxysection{Immigration\+Strategy Class Reference}
+\hypertarget{class_immigration_strategy}{}\label{class_immigration_strategy}\index{ImmigrationStrategy@{ImmigrationStrategy}}
+
+
+Concrete strategy class for handling immigration in the city.  
+
+
+
+
+{\ttfamily \#include $<$Immigration\+Strategy.\+h$>$}
+
+Inheritance diagram for Immigration\+Strategy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_immigration_strategy}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_immigration_strategy_ad3bc721ec3eac25c373c3b3e7e3b790e}{Immigration\+Strategy}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_immigration_strategy}{Immigration\+Strategy}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_immigration_strategy_a37cbc121b8beb6f57042660e3a7f4ac0}{execute}} () override
+\begin{DoxyCompactList}\small\item\em Executes the immigration strategy. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_immigration_strategy_a6f88e292f7cb295c988dc0b453fa95e3}{\texorpdfstring{$\sim$}{\string~}\+Immigration\+Strategy}} () override
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_immigration_strategy}{Immigration\+Strategy}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_population_strategy}{Population\+Strategy}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_population_strategy_ab142536bd33b4ba367ec34153b02639d}{Population\+Strategy}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_population_strategy}{Population\+Strategy}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_population_strategy_ac7cbe19097e98fe494639cc58ac9e627}{get\+Population}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current population of the city. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_population_strategy_a09da9082e760b5ea49a56dc070d3e8b2}{get\+Satisfaction}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current satisfaction level of the city\textquotesingle{}s residents. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_population_strategy_a24ba9e1257fcde03d0ebb12aaa0d44cd}{get\+Available\+Housing\+Space}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the amount of available housing space in the city. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_population_strategy_a3ad68914807caa4f70d876259af5b636}{get\+Average\+Age}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the average age of the city\textquotesingle{}s population. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_population_strategy_af579f9547cb5bc788df6c2033308e790}{get\+Immigration\+Limit}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the immigration limit set for the city. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_population_strategy_ab597d742c80c87307c9bea35ba3bc2a0}{get\+Total\+Housing\+Space}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the total housing capacity of the city. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_population_strategy_a9f6f36219ae13fe75b2baf04f7c7a52f}{\texorpdfstring{$\sim$}{\string~}\+Population\+Strategy}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_population_strategy}{Population\+Strategy}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_population_strategy}{Population\+Strategy}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_stats_mediator}{Stats\+Mediator}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_population_strategy_ab0712f3f35a60610c1ea6179d92c5282}{mediator}}
+\begin{DoxyCompactList}\small\item\em Pointer to a \doxylink{class_stats_mediator}{Stats\+Mediator} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Concrete strategy class for handling immigration in the city. 
+
+The \doxylink{class_immigration_strategy}{Immigration\+Strategy} class is derived from \doxylink{class_population_strategy}{Population\+Strategy} and implements the \doxylink{class_immigration_strategy_a37cbc121b8beb6f57042660e3a7f4ac0}{execute()} method to define how immigration should be handled in the context of population management. It calculates and returns the number of new immigrants based on available space, satisfaction, and ensuring the amount of immigrants is below the maximum ammount allowed per year. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_immigration_strategy_ad3bc721ec3eac25c373c3b3e7e3b790e}\index{ImmigrationStrategy@{ImmigrationStrategy}!ImmigrationStrategy@{ImmigrationStrategy}}
+\index{ImmigrationStrategy@{ImmigrationStrategy}!ImmigrationStrategy@{ImmigrationStrategy}}
+\doxysubsubsection{\texorpdfstring{ImmigrationStrategy()}{ImmigrationStrategy()}}
+{\footnotesize\ttfamily \label{class_immigration_strategy_ad3bc721ec3eac25c373c3b3e7e3b790e} 
+Immigration\+Strategy\+::\+Immigration\+Strategy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor for \doxylink{class_immigration_strategy}{Immigration\+Strategy}. 
+
+Initializes a new \doxylink{class_immigration_strategy}{Immigration\+Strategy} instance to calculate and manage immigration related population changes in the city. \Hypertarget{class_immigration_strategy_a6f88e292f7cb295c988dc0b453fa95e3}\index{ImmigrationStrategy@{ImmigrationStrategy}!````~ImmigrationStrategy@{\texorpdfstring{$\sim$}{\string~}ImmigrationStrategy}}
+\index{````~ImmigrationStrategy@{\texorpdfstring{$\sim$}{\string~}ImmigrationStrategy}!ImmigrationStrategy@{ImmigrationStrategy}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ImmigrationStrategy()}{\string~ImmigrationStrategy()}}
+{\footnotesize\ttfamily \label{class_immigration_strategy_a6f88e292f7cb295c988dc0b453fa95e3} 
+Immigration\+Strategy\+::\texorpdfstring{$\sim$}{\string~}\+Immigration\+Strategy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Destructor for \doxylink{class_immigration_strategy}{Immigration\+Strategy}. 
+
+As this class overrides a virtual destructor, it ensures safe deletion of resources in derived classes. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_immigration_strategy_a37cbc121b8beb6f57042660e3a7f4ac0}\index{ImmigrationStrategy@{ImmigrationStrategy}!execute@{execute}}
+\index{execute@{execute}!ImmigrationStrategy@{ImmigrationStrategy}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily \label{class_immigration_strategy_a37cbc121b8beb6f57042660e3a7f4ac0} 
+int Immigration\+Strategy\+::execute (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Executes the immigration strategy. 
+
+This method determines the number of new immigrants to add to the city’s population. It uses factors such as available housing, satisfaction levels, and ensuring the immigrants do not exceed the limit.
+
+\begin{DoxyReturn}{Returns}
+int -\/ The number of new immigrants added to the population. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_population_strategy_ae2fdfc4da2dfa60d524459d66c48ba17}{Population\+Strategy}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Immigration\+Strategy.\+h\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Immigration\+Strategy.\+cpp\end{DoxyCompactItemize}

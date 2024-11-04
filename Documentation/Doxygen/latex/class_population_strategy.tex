@@ -1,0 +1,202 @@
+\doxysection{Population\+Strategy Class Reference}
+\hypertarget{class_population_strategy}{}\label{class_population_strategy}\index{PopulationStrategy@{PopulationStrategy}}
+
+
+Abstract base class defining a strategy for population-\/related operations in the city simulation.  
+
+
+
+
+{\ttfamily \#include $<$Population\+Strategy.\+h$>$}
+
+Inheritance diagram for Population\+Strategy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_population_strategy}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_population_strategy_ab142536bd33b4ba367ec34153b02639d}{Population\+Strategy}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_population_strategy}{Population\+Strategy}. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_population_strategy_ae2fdfc4da2dfa60d524459d66c48ba17}{execute}} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to execute the population strategy. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_population_strategy_ac7cbe19097e98fe494639cc58ac9e627}{get\+Population}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current population of the city. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_population_strategy_a09da9082e760b5ea49a56dc070d3e8b2}{get\+Satisfaction}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current satisfaction level of the city\textquotesingle{}s residents. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_population_strategy_a24ba9e1257fcde03d0ebb12aaa0d44cd}{get\+Available\+Housing\+Space}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the amount of available housing space in the city. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_population_strategy_a3ad68914807caa4f70d876259af5b636}{get\+Average\+Age}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the average age of the city\textquotesingle{}s population. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_population_strategy_af579f9547cb5bc788df6c2033308e790}{get\+Immigration\+Limit}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the immigration limit set for the city. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_population_strategy_ab597d742c80c87307c9bea35ba3bc2a0}{get\+Total\+Housing\+Space}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the total housing capacity of the city. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_population_strategy_a9f6f36219ae13fe75b2baf04f7c7a52f}{\texorpdfstring{$\sim$}{\string~}\+Population\+Strategy}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_population_strategy}{Population\+Strategy}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_stats_mediator}{Stats\+Mediator}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_population_strategy_ab0712f3f35a60610c1ea6179d92c5282}{mediator}}
+\begin{DoxyCompactList}\small\item\em Pointer to a \doxylink{class_stats_mediator}{Stats\+Mediator} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class defining a strategy for population-\/related operations in the city simulation. 
+
+The \doxylink{class_population_strategy}{Population\+Strategy} class provides a base interface for strategies that affect the city\textquotesingle{}s population. Derived classes implement strategies by overriding the \doxylink{class_population_strategy_ae2fdfc4da2dfa60d524459d66c48ba17}{execute()} method. This class also provides helper methods to access relevant population statistics through the \doxylink{class_stats_mediator}{Stats\+Mediator}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_population_strategy_ab142536bd33b4ba367ec34153b02639d}\index{PopulationStrategy@{PopulationStrategy}!PopulationStrategy@{PopulationStrategy}}
+\index{PopulationStrategy@{PopulationStrategy}!PopulationStrategy@{PopulationStrategy}}
+\doxysubsubsection{\texorpdfstring{PopulationStrategy()}{PopulationStrategy()}}
+{\footnotesize\ttfamily \label{class_population_strategy_ab142536bd33b4ba367ec34153b02639d} 
+Population\+Strategy\+::\+Population\+Strategy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor for \doxylink{class_population_strategy}{Population\+Strategy}. 
+
+Initializes a new \doxylink{class_population_strategy}{Population\+Strategy} by creating a new mediator for accessing the statistics. \Hypertarget{class_population_strategy_a9f6f36219ae13fe75b2baf04f7c7a52f}\index{PopulationStrategy@{PopulationStrategy}!````~PopulationStrategy@{\texorpdfstring{$\sim$}{\string~}PopulationStrategy}}
+\index{````~PopulationStrategy@{\texorpdfstring{$\sim$}{\string~}PopulationStrategy}!PopulationStrategy@{PopulationStrategy}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}PopulationStrategy()}{\string~PopulationStrategy()}}
+{\footnotesize\ttfamily \label{class_population_strategy_a9f6f36219ae13fe75b2baf04f7c7a52f} 
+Population\+Strategy\+::\texorpdfstring{$\sim$}{\string~}\+Population\+Strategy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual destructor for \doxylink{class_population_strategy}{Population\+Strategy}. 
+
+Ensures proper cleanup in derived classes. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_population_strategy_ae2fdfc4da2dfa60d524459d66c48ba17}\index{PopulationStrategy@{PopulationStrategy}!execute@{execute}}
+\index{execute@{execute}!PopulationStrategy@{PopulationStrategy}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily \label{class_population_strategy_ae2fdfc4da2dfa60d524459d66c48ba17} 
+virtual int Population\+Strategy\+::execute (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function to execute the population strategy. 
+
+This method must be implemented by derived classes to define a specific population strategy, such as calculating birth rates and death rates. The method returns an integer representing the outcome of the strategy.
+
+\begin{DoxyReturn}{Returns}
+int -\/ Result of the strategy\textquotesingle{}s execution, which can represent a population adjustment. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_birth_rate_strategy_a5a6388049b7c2751ab7b6b95f01cb95c}{Birth\+Rate\+Strategy}}, \mbox{\hyperlink{class_death_rate_strategy_a83ebd0c86412ee7fe5468846e033d80c}{Death\+Rate\+Strategy}}, and \mbox{\hyperlink{class_immigration_strategy_a37cbc121b8beb6f57042660e3a7f4ac0}{Immigration\+Strategy}}.
+
+\Hypertarget{class_population_strategy_a24ba9e1257fcde03d0ebb12aaa0d44cd}\index{PopulationStrategy@{PopulationStrategy}!getAvailableHousingSpace@{getAvailableHousingSpace}}
+\index{getAvailableHousingSpace@{getAvailableHousingSpace}!PopulationStrategy@{PopulationStrategy}}
+\doxysubsubsection{\texorpdfstring{getAvailableHousingSpace()}{getAvailableHousingSpace()}}
+{\footnotesize\ttfamily \label{class_population_strategy_a24ba9e1257fcde03d0ebb12aaa0d44cd} 
+int Population\+Strategy\+::get\+Available\+Housing\+Space (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the amount of available housing space in the city. 
+
+This method uses the mediator to access the number of available housing units. It can be used to check if there is space for an increase in population.
+
+\begin{DoxyReturn}{Returns}
+int -\/ The number of available housing spaces in the city. 
+\end{DoxyReturn}
+\Hypertarget{class_population_strategy_a3ad68914807caa4f70d876259af5b636}\index{PopulationStrategy@{PopulationStrategy}!getAverageAge@{getAverageAge}}
+\index{getAverageAge@{getAverageAge}!PopulationStrategy@{PopulationStrategy}}
+\doxysubsubsection{\texorpdfstring{getAverageAge()}{getAverageAge()}}
+{\footnotesize\ttfamily \label{class_population_strategy_a3ad68914807caa4f70d876259af5b636} 
+int Population\+Strategy\+::get\+Average\+Age (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the average age of the city\textquotesingle{}s population. 
+
+This method uses the mediator to access the average age, which may be useful for strategies that depend on demographic factors.
+
+\begin{DoxyReturn}{Returns}
+int -\/ The average age of residents. 
+\end{DoxyReturn}
+\Hypertarget{class_population_strategy_af579f9547cb5bc788df6c2033308e790}\index{PopulationStrategy@{PopulationStrategy}!getImmigrationLimit@{getImmigrationLimit}}
+\index{getImmigrationLimit@{getImmigrationLimit}!PopulationStrategy@{PopulationStrategy}}
+\doxysubsubsection{\texorpdfstring{getImmigrationLimit()}{getImmigrationLimit()}}
+{\footnotesize\ttfamily \label{class_population_strategy_af579f9547cb5bc788df6c2033308e790} 
+int Population\+Strategy\+::get\+Immigration\+Limit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the immigration limit set for the city. 
+
+This method uses the mediator to access the current immigration cap, determining how many immigrants are allowed per year.
+
+\begin{DoxyReturn}{Returns}
+int -\/ The maximum allowed number of immigrants. 
+\end{DoxyReturn}
+\Hypertarget{class_population_strategy_ac7cbe19097e98fe494639cc58ac9e627}\index{PopulationStrategy@{PopulationStrategy}!getPopulation@{getPopulation}}
+\index{getPopulation@{getPopulation}!PopulationStrategy@{PopulationStrategy}}
+\doxysubsubsection{\texorpdfstring{getPopulation()}{getPopulation()}}
+{\footnotesize\ttfamily \label{class_population_strategy_ac7cbe19097e98fe494639cc58ac9e627} 
+int Population\+Strategy\+::get\+Population (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the current population of the city. 
+
+This method uses the mediator to access the current population count for the city.
+
+\begin{DoxyReturn}{Returns}
+int -\/ The current city population. 
+\end{DoxyReturn}
+\Hypertarget{class_population_strategy_a09da9082e760b5ea49a56dc070d3e8b2}\index{PopulationStrategy@{PopulationStrategy}!getSatisfaction@{getSatisfaction}}
+\index{getSatisfaction@{getSatisfaction}!PopulationStrategy@{PopulationStrategy}}
+\doxysubsubsection{\texorpdfstring{getSatisfaction()}{getSatisfaction()}}
+{\footnotesize\ttfamily \label{class_population_strategy_a09da9082e760b5ea49a56dc070d3e8b2} 
+int Population\+Strategy\+::get\+Satisfaction (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the current satisfaction level of the city\textquotesingle{}s residents. 
+
+This method uses the mediator to access satisfaction. It is a score out of 100.
+
+\begin{DoxyReturn}{Returns}
+int -\/ The satisfaction level of city residents. 
+\end{DoxyReturn}
+\Hypertarget{class_population_strategy_ab597d742c80c87307c9bea35ba3bc2a0}\index{PopulationStrategy@{PopulationStrategy}!getTotalHousingSpace@{getTotalHousingSpace}}
+\index{getTotalHousingSpace@{getTotalHousingSpace}!PopulationStrategy@{PopulationStrategy}}
+\doxysubsubsection{\texorpdfstring{getTotalHousingSpace()}{getTotalHousingSpace()}}
+{\footnotesize\ttfamily \label{class_population_strategy_ab597d742c80c87307c9bea35ba3bc2a0} 
+int Population\+Strategy\+::get\+Total\+Housing\+Space (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the total housing capacity of the city. 
+
+This method uses the mediator to access the total number of housing, regardless of occupancy, indicating the city\textquotesingle{}s maximum housing potential.
+
+\begin{DoxyReturn}{Returns}
+int -\/ The total housing space available in the city. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_population_strategy_ab0712f3f35a60610c1ea6179d92c5282}\index{PopulationStrategy@{PopulationStrategy}!mediator@{mediator}}
+\index{mediator@{mediator}!PopulationStrategy@{PopulationStrategy}}
+\doxysubsubsection{\texorpdfstring{mediator}{mediator}}
+{\footnotesize\ttfamily \label{class_population_strategy_ab0712f3f35a60610c1ea6179d92c5282} 
+\mbox{\hyperlink{class_stats_mediator}{Stats\+Mediator}}\texorpdfstring{$\ast$}{*} Population\+Strategy\+::mediator\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Pointer to a \doxylink{class_stats_mediator}{Stats\+Mediator} object. 
+
+The mediator allows the strategy to access statistics in the city used for the different strategies. This supports the Strategy design pattern by decoupling strategy behaviors from the data they operate on. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Population\+Strategy.\+h\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Population\+Strategy.\+cpp\end{DoxyCompactItemize}

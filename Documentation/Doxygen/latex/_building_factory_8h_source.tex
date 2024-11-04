@@ -1,0 +1,28 @@
+\doxysection{Building\+Factory.\+h}
+\hypertarget{_building_factory_8h_source}{}\label{_building_factory_8h_source}\index{C:/Users/ericb/Desktop/2nd year/Semester 2/COS 214/Project/The\_7/System/BuildingFactory.h@{C:/Users/ericb/Desktop/2nd year/Semester 2/COS 214/Project/The\_7/System/BuildingFactory.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BUILDINGFACTORY\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BUILDINGFACTORY\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Building.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_building_factory}{BuildingFactory}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{class_building_factory_a775f62ba220c8fdc13fc0e809dea64ba}{BUILDING\_TYPE}};\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_building_factory_a12fda89200a5e63b137efa37285ed5d5}{LOCATION\_X}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_building_factory_ab8bb8e8fa36e3e65ffcf0b948a71f012}{LOCATION\_Y}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_building_factory_a887ffef6cc4432bb7c11a53ddb34cacc}{BuildingFactory}}(std::string\ \&buildingType,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_building_factory_a775f62ba220c8fdc13fc0e809dea64ba}{BUILDING\_TYPE}}(buildingType),\ \mbox{\hyperlink{class_building_factory_a12fda89200a5e63b137efa37285ed5d5}{LOCATION\_X}}(x),\ \mbox{\hyperlink{class_building_factory_ab8bb8e8fa36e3e65ffcf0b948a71f012}{LOCATION\_Y}}(y)\ \{\}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_building}{Building}}\ *\mbox{\hyperlink{class_building_factory_a53bf741d62147d8c9b107fb53c124b58}{createBuilding}}()\ =\ 0;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_building_factory_aac060c679bd7f05666347c86febdfef8}{\string~BuildingFactory}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

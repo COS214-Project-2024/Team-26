@@ -1,0 +1,106 @@
+\doxysection{Building\+Mediator Class Reference}
+\hypertarget{class_building_mediator}{}\label{class_building_mediator}\index{BuildingMediator@{BuildingMediator}}
+
+
+Manages building creation, modification, and demolition within the city.  
+
+
+
+
+{\ttfamily \#include $<$Building\+Mediator.\+h$>$}
+
+Inheritance diagram for Building\+Mediator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_building_mediator}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_building_mediator_a3d5e1324852ce093198c86b2bb88715b}\label{class_building_mediator_a3d5e1324852ce093198c86b2bb88715b} 
+{\bfseries Building\+Mediator} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_building_mediator}{Building\+Mediator} object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_building_mediator_a163910c60569566295de048459f7de90}{build}} (std\+::string building\+Name, int locationX, int locationY, \mbox{\hyperlink{class_building_state}{Building\+State}} \texorpdfstring{$\ast$}{*}state=nullptr)
+\begin{DoxyCompactList}\small\item\em Builds a new building with the specified parameters. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_building_mediator_ac8aab5fb0297a25be0d8ee2204ce76d5}{demolish}} (int locationX, int locationY)
+\begin{DoxyCompactList}\small\item\em Demolishes a building at the specified location if one exists. \end{DoxyCompactList}\item 
+\Hypertarget{class_building_mediator_a11b9a45ee911c5e008df959c7b5522d4}\label{class_building_mediator_a11b9a45ee911c5e008df959c7b5522d4} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Building\+Mediator} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_building_mediator}{Building\+Mediator}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_city_mediator}{City\+Mediator}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries City\+Mediator} ()=default
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_city_mediator}{City\+Mediator} object. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+City\+Mediator} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_city_mediator}{City\+Mediator}, cleans up the buildings iterator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_city_mediator}{City\+Mediator}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_iterator}{Iterator}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_city_mediator_ab0bd607b2172fa1bfa541e1940c02247}{get\+Buildings}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the buildings iterator, initializing it if necessary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_city_mediator}{City\+Mediator}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_iterator}{Iterator}} \texorpdfstring{$\ast$}{*} {\bfseries buildings} = nullptr
+\begin{DoxyCompactList}\small\item\em Static iterator for accessing buildings within the city. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages building creation, modification, and demolition within the city. 
+
+The \doxylink{class_building_mediator}{Building\+Mediator} class serves as an intermediary for handling building-\/related operations, such as construction and demolition, utilizing various building factories. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_building_mediator_a163910c60569566295de048459f7de90}\index{BuildingMediator@{BuildingMediator}!build@{build}}
+\index{build@{build}!BuildingMediator@{BuildingMediator}}
+\doxysubsubsection{\texorpdfstring{build()}{build()}}
+{\footnotesize\ttfamily \label{class_building_mediator_a163910c60569566295de048459f7de90} 
+std\+::string Building\+Mediator\+::build (\begin{DoxyParamCaption}\item[{std\+::string}]{building\+Name}{, }\item[{int}]{locationX}{, }\item[{int}]{locationY}{, }\item[{\mbox{\hyperlink{class_building_state}{Building\+State}} \texorpdfstring{$\ast$}{*}}]{state}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})}
+
+
+
+Builds a new building with the specified parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em building\+Name} & The name of the building to be created. \\
+\hline
+{\em locationX} & The X-\/coordinate of the building\textquotesingle{}s location. \\
+\hline
+{\em locationY} & The Y-\/coordinate of the building\textquotesingle{}s location. \\
+\hline
+{\em state} & Optional pointer to the initial state of the building. Defaults to nullptr.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string representing the building\textquotesingle{}s details. 
+\end{DoxyReturn}
+\Hypertarget{class_building_mediator_ac8aab5fb0297a25be0d8ee2204ce76d5}\index{BuildingMediator@{BuildingMediator}!demolish@{demolish}}
+\index{demolish@{demolish}!BuildingMediator@{BuildingMediator}}
+\doxysubsubsection{\texorpdfstring{demolish()}{demolish()}}
+{\footnotesize\ttfamily \label{class_building_mediator_ac8aab5fb0297a25be0d8ee2204ce76d5} 
+std\+::string Building\+Mediator\+::demolish (\begin{DoxyParamCaption}\item[{int}]{locationX}{, }\item[{int}]{locationY}{}\end{DoxyParamCaption})}
+
+
+
+Demolishes a building at the specified location if one exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em locationX} & The X-\/coordinate of the building\textquotesingle{}s location. \\
+\hline
+{\em locationY} & The Y-\/coordinate of the building\textquotesingle{}s location.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string indicating the status of the demolition process or the building\textquotesingle{}s details. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Building\+Mediator.\+h\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Building\+Mediator.\+cpp\end{DoxyCompactItemize}
