@@ -25,7 +25,7 @@ void testGovernment()
     CHECK(government->getAverageAge() == 26);
     government->collectIncomeTax();
     CHECK(government->getTaxFundsCollected() == 72000);
-    government->increaseCitizenAge(2);
+    government->ageAll(2);
     CHECK(government->getAverageAge() == 28);
     government->collectPropertyTax();
 
