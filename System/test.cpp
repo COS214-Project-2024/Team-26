@@ -66,13 +66,12 @@ TEST_CASE("Phillip se testing")
 
 
 
-TEST_CASE("Testing GovernMent")
+TEST_CASE("Testing Government")
 {
     testGovernment();
 }
 
 TEST_CASE("Testing Citizens")
 {
-    // testCommands();
     testCitizen();
 }
