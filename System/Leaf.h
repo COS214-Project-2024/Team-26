@@ -96,6 +96,13 @@ class Leaf : public Component {
 		 * @return BuildingState 
 		 */
 		BuildingState* getAndSetNextState() override;
+
+		/**
+		 * @brief Get the Building object
+		 * 
+		 * @return Building* 
+		 */
+		Building* getBuilding();
 };
 
 #endif // LEAF_H

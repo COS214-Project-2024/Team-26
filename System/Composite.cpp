@@ -1,7 +1,7 @@
 #include "Composite.h"
 
 Composite::Composite() : Component() {
-    this->components = std::vector<std::vector<Building*>>();
+    this->components = std::vector<std::vector<Leaf*>>();
     this->components.resize(MAXX);
     for (auto& row : this->components) {
         row.resize(MAXY);
@@ -12,7 +12,7 @@ Iterator* Composite::createIterator() {
     Iterator* it = new Iterator();
     for (int i = 0; i < static_cast<int>(components.size()); i++) {
         for (int j = 0; j < static_cast<int>(components[i].size()); j++) {
-            it->add(components[i][j], i, j);
+            it->add(components[i][j]->getBuilding(), i, j);
         }
     }
     return it;
@@ -22,7 +22,7 @@ void Composite::add(Building* component, int x, int y) {
     if (x > MAXX || y > MAXY) {
         return;
     } else {
-        components[x][y] = component;
+        components[x][y] = new Leaf(component);
     }
 }
 
@@ -34,7 +34,7 @@ void Composite::remove(int x, int y) {
 
 Building* Composite::getComponent(int x, int y) {
     if (x < static_cast<int>(components.size()) && y < static_cast<int>(components.size())) {
-        return components[x][y];
+        return components[x][y]->getBuilding();
     }
     return nullptr;
 }
@@ -44,7 +44,7 @@ int Composite::getTotalPowerConsumption() {
     for (int i = 0; i < static_cast<int>(components.size()); i++) {
         for (int j = 0; j < static_cast<int>(components[i].size()); j++) {
             if (components[i][j] != nullptr) {
-                totalPowerConsumption += components[i][j]->getPowerConsumption();
+                totalPowerConsumption += components[i][j]->getTotalPowerConsumption();
             }
         }
     }
@@ -56,7 +56,7 @@ int Composite::getTotalWaterConsumption() {
     for (int i = 0; i < static_cast<int>(components.size()); i++) {
         for (int j = 0; j < static_cast<int>(components[i].size()); j++) {
             if (components[i][j] != nullptr) {
-                totalWaterConsumption += components[i][j]->getWaterConsumption();
+                totalWaterConsumption += components[i][j]->getTotalWaterConsumption();
             }
         }
     }
@@ -68,7 +68,7 @@ int Composite::getTotalCostConsumption() {
     for (int i = 0; i < static_cast<int>(components.size()); i++) {
         for (int j = 0; j < static_cast<int>(components[i].size()); j++) {
             if (components[i][j] != nullptr) {
-                totalCostConsumption += components[i][j]->getCostConsumption();
+                totalCostConsumption += components[i][j]->getTotalCostConsumption();
             }
         }
     }
@@ -82,7 +82,7 @@ int Composite::getTotalSewageConsumption() {
             Building* building = components[i][j];
             if (building != nullptr) {
                 if (Sewage* sewageBuilding = dynamic_cast<Sewage*>(building)) {
-                    totalSewageConsumption += sewageBuilding->getSewageProduction();
+                    totalSewageConsumption += sewageBuilding->getTotalSewageProduction();
                 }
             }
         }
@@ -97,7 +97,7 @@ int Composite::getTotalWasteConsumption() {
             Building* building = components[i][j];
             if (building != nullptr) {
                 if (Waste* wasteBuilding = dynamic_cast<Waste*>(building)) {
-                    totalWasteConsumption += wasteBuilding->getSewageProduction();
+                    totalWasteConsumption += wasteBuilding->getTotalWasteProduction();
                 }
             }
         }
@@ -112,7 +112,7 @@ int Composite::getTotalPowerProduction() {
             Building* building = components[i][j];
             if (building != nullptr) {
                 if (Power* powerBuilding = dynamic_cast<Power*>(building)) {
-                    totalPowerProduction += powerBuilding->getPowerProduction();
+                    totalPowerProduction += powerBuilding->getTotalPowerProduction();
                 }
             }
         }
@@ -127,7 +127,7 @@ int Composite::getTotalWaterProduction() {
             Building* building = components[i][j];
             if (building != nullptr) {
                 if (Water* waterBuilding = dynamic_cast<Water*>(building)) {
-                    totalWaterProduction += waterBuilding->getWaterProduction();
+                    totalWaterProduction += waterBuilding->getTotalWaterProduction();
                 }
             }
         }
@@ -140,7 +140,7 @@ int Composite::getTotalRevenue() {
     for (int i = 0; i < static_cast<int>(components.size()); i++) {
         for (int j = 0; j < static_cast<int>(components[i].size()); j++) {
             if (components[i][j] != nullptr) {
-                totalRevenue += components[i][j]->getRevenue();
+                totalRevenue += components[i][j]->getTotalRevenue();
             }
         }
     }
@@ -152,7 +152,7 @@ int Composite::getTotalSewageProduction() {
     for (int i = 0; i < static_cast<int>(components.size()); i++) {
         for (int j = 0; j < static_cast<int>(components[i].size()); j++) {
             if (components[i][j] != nullptr) {
-                totalSewageProduction += components[i][j]->getSewageProduction();
+                totalSewageProduction += components[i][j]->getTotalSewageProduction();
             }
         }
     }
@@ -164,7 +164,7 @@ int Composite::getTotalWasteProduction() {
     for (int i = 0; i < static_cast<int>(components.size()); i++) {
         for (int j = 0; j < static_cast<int>(components[i].size()); j++) {
             if (components[i][j] != nullptr) {
-                totalWasteProduction += components[i][j]->getWasteProduction();
+                totalWasteProduction += components[i][j]->getTotalWasteProduction();
             }
         }
     }
