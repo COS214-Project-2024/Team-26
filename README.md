@@ -11,9 +11,9 @@ We have used a multitude of design methods in order to implement features such a
 |----------------|--------------------|-----------|
 | u23661268      | Mr. Nabegh Muhra   | Member    |
 | u22867377      | Mr. Ulrich Eichstadt | Member |
-| u23524333      | Mr. Willem Visagie | Owner     |
+| u23524333      | Mr. Willem Visagie | Member     |
 | u23616815      | Mr. Phillip Retief | Member    |
 | u05127824      | Mr. Eric Booyens   | Member    |
 | u23543834      | Mr. Emil Sutherland | Member   |
-| u22491504      | Mr. Juan Ferreira  | Member    |
+| u22491504      | Mr. Juan Ferreira  | Leader    |
 
