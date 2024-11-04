@@ -1,0 +1,105 @@
+\doxysection{Turn\+Mediator Class Reference}
+\hypertarget{class_turn_mediator}{}\label{class_turn_mediator}\index{TurnMediator@{TurnMediator}}
+
+
+Manages interactions within the city simulation, including handling population dynamics and government operations.  
+
+
+
+
+{\ttfamily \#include $<$Turn\+Mediator.\+h$>$}
+
+Inheritance diagram for Turn\+Mediator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_turn_mediator}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_turn_mediator_a8fa58d2cde808507096ea5621be9e56f}\label{class_turn_mediator_a8fa58d2cde808507096ea5621be9e56f} 
+{\bfseries Turn\+Mediator} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_turn_mediator}{Turn\+Mediator} object and initializes required components. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_turn_mediator_abec26e7dcf81162324a7500351342750}{next\+Round}} ()
+\begin{DoxyCompactList}\small\item\em Advances the simulation to the next round. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_turn_mediator_ad0a9e4d5ace1662b4fa460a6ce1745d2}{handle\+Population}} ()
+\begin{DoxyCompactList}\small\item\em Updates the city\textquotesingle{}s population based on birth, death, and immigration rates. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_turn_mediator_ac53a75700fcaa9e26377771d088a5d91}{change\+Tax\+Rates}} (int new\+Rate)
+\begin{DoxyCompactList}\small\item\em Changes the tax rate within the government. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_city_mediator}{City\+Mediator}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries City\+Mediator} ()=default
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_city_mediator}{City\+Mediator} object. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+City\+Mediator} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_city_mediator}{City\+Mediator}, cleans up the buildings iterator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_city_mediator}{City\+Mediator}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_iterator}{Iterator}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_city_mediator_ab0bd607b2172fa1bfa541e1940c02247}{get\+Buildings}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the buildings iterator, initializing it if necessary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_city_mediator}{City\+Mediator}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_iterator}{Iterator}} \texorpdfstring{$\ast$}{*} {\bfseries buildings} = nullptr
+\begin{DoxyCompactList}\small\item\em Static iterator for accessing buildings within the city. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages interactions within the city simulation, including handling population dynamics and government operations. 
+
+The \doxylink{class_turn_mediator}{Turn\+Mediator} class coordinates various aspects of city management in each round of the simulation, such as updating the population, adjusting tax rates, and managing government decisions. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_turn_mediator_ac53a75700fcaa9e26377771d088a5d91}\index{TurnMediator@{TurnMediator}!changeTaxRates@{changeTaxRates}}
+\index{changeTaxRates@{changeTaxRates}!TurnMediator@{TurnMediator}}
+\doxysubsubsection{\texorpdfstring{changeTaxRates()}{changeTaxRates()}}
+{\footnotesize\ttfamily \label{class_turn_mediator_ac53a75700fcaa9e26377771d088a5d91} 
+int Turn\+Mediator\+::change\+Tax\+Rates (\begin{DoxyParamCaption}\item[{int}]{new\+Rate}{}\end{DoxyParamCaption})}
+
+
+
+Changes the tax rate within the government. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Rate} & The new tax rate to be applied. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The updated tax rate. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_mediator_ad0a9e4d5ace1662b4fa460a6ce1745d2}\index{TurnMediator@{TurnMediator}!handlePopulation@{handlePopulation}}
+\index{handlePopulation@{handlePopulation}!TurnMediator@{TurnMediator}}
+\doxysubsubsection{\texorpdfstring{handlePopulation()}{handlePopulation()}}
+{\footnotesize\ttfamily \label{class_turn_mediator_ad0a9e4d5ace1662b4fa460a6ce1745d2} 
+int Turn\+Mediator\+::handle\+Population (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Updates the city\textquotesingle{}s population based on birth, death, and immigration rates. 
+
+\begin{DoxyReturn}{Returns}
+The updated population count. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_mediator_abec26e7dcf81162324a7500351342750}\index{TurnMediator@{TurnMediator}!nextRound@{nextRound}}
+\index{nextRound@{nextRound}!TurnMediator@{TurnMediator}}
+\doxysubsubsection{\texorpdfstring{nextRound()}{nextRound()}}
+{\footnotesize\ttfamily \label{class_turn_mediator_abec26e7dcf81162324a7500351342750} 
+int Turn\+Mediator\+::next\+Round (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Advances the simulation to the next round. 
+
+\begin{DoxyReturn}{Returns}
+An integer representing the status of the round update. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Turn\+Mediator.\+h\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Turn\+Mediator.\+cpp\end{DoxyCompactItemize}

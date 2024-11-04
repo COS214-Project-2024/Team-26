@@ -1,0 +1,121 @@
+\doxysection{Concrete\+Government Class Reference}
+\hypertarget{class_concrete_government}{}\label{class_concrete_government}\index{ConcreteGovernment@{ConcreteGovernment}}
+
+
+Singleton class that represents a specific type of \doxylink{class_government}{Government}.  
+
+
+
+
+{\ttfamily \#include $<$Concrete\+Government.\+h$>$}
+
+Inheritance diagram for Concrete\+Government\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_concrete_government}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_concrete_government_af336f1620aff3e8f2330ea993ccd2267}{Concrete\+Government}} (double income\+Tax\+Rate, double property\+Tax\+Rate)
+\begin{DoxyCompactList}\small\item\em Private constructor for the singleton instance of \doxylink{class_concrete_government}{Concrete\+Government}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_government}{Government}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_government_a2fad59b7195a8b3286928f4be18499b3}{Government}} (double income\+Tax\+Rate, double property\+Tax\+Rate)
+\begin{DoxyCompactList}\small\item\em Constructor to initialize the government with specific tax rates. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_government_ad53b4d0caeeb1e70d0e437a06f1c5de4}{add\+Citizen}} (\mbox{\hyperlink{class_citizen}{Citizen}} \texorpdfstring{$\ast$}{*}citizen, \mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}house=nullptr, \mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}job=nullptr)
+\begin{DoxyCompactList}\small\item\em Adds a citizen to the government\textquotesingle{}s jurisdiction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_government_a7068f19941a93a596f699270acb178d9}{remove\+Citizen}} (\mbox{\hyperlink{class_citizen}{Citizen}} \texorpdfstring{$\ast$}{*}citizen)
+\begin{DoxyCompactList}\small\item\em Removes a citizen from the government\textquotesingle{}s jurisdiction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_government_a723bbd5ba0f73025e6d3e4f738aa335d}{set\+Income\+Tax\+Rate}} (double tax\+Rate)
+\begin{DoxyCompactList}\small\item\em Sets a new income tax rate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_government_a6b3b25a412b1673519fe4a74e6e4115b}{set\+Property\+Tax\+Rate}} (double tax\+Rate)
+\begin{DoxyCompactList}\small\item\em Sets a new property tax rate. \end{DoxyCompactList}\item 
+void {\bfseries notify\+Tax\+Change} ()
+\begin{DoxyCompactList}\small\item\em Notifies citizens of a change in tax rates. \end{DoxyCompactList}\item 
+void {\bfseries collect\+Income\+Tax} ()
+\begin{DoxyCompactList}\small\item\em Collects income tax from all citizens. \end{DoxyCompactList}\item 
+void {\bfseries collect\+Property\+Tax} ()
+\begin{DoxyCompactList}\small\item\em Collects property tax from property owners. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_government_ab90b240ef281170e68cd4849339f3b39}{get\+Tax\+Funds\+Collected}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current tac funds collected. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_government_aa0500d2a69bb145fed8321a90ebdcf4a}{get\+Income\+Tax\+Rate}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current income tax rate. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_government_a21df80afa816b7f3b70a94885c8da49a}{get\+Property\+Tax\+Rate}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current property tax rate. \end{DoxyCompactList}\item 
+void {\bfseries allocate\+Tax\+Funds} ()
+\begin{DoxyCompactList}\small\item\em Allocates the collected tax funds for government spending. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_citizen}{Citizen}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_government_a502273087abddd435c304e6e20b9ce14}{get\+Random\+Citizen}} (bool related=true)
+\begin{DoxyCompactList}\small\item\em Gets a random citizen from the government’s jurisdiction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_government_aa05f6e09d9712c9b1c5e9a0260dd062f}{evict\+Citizens}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}building)
+\begin{DoxyCompactList}\small\item\em Evicts citizens from a specific building. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_government_ae398c5429a064202821daa1b4a64a122}{eliminate\+Citizens}} (int number\+Of\+Citizens)
+\begin{DoxyCompactList}\small\item\em Eliminates a specified number of citizens from the government\textquotesingle{}s jurisdiction. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_government_a30fd949be24f19808b3efe49b463b99e}{get\+Population}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current population size. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_government_a120af5af563c57bf9f868f77e19bcbe3}{get\+Average\+Satisfaction}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the average satisfaction of all citizens. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_government_a6d3b92c3929ffdeecf457bab6ff7e7ed}{get\+Average\+Age}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the average age of all citizens. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_government_a0a66492ad78cd55401ef40ff13e2097f}{age\+All}} (int amount=1)
+\begin{DoxyCompactList}\small\item\em Ages all current citizens. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_concrete_government}{Concrete\+Government}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_concrete_government_a823bb142fb4f0dd4cfbb71ab84575d18}{instance}} ()
+\begin{DoxyCompactList}\small\item\em Provides access to the singleton instance of \doxylink{class_concrete_government}{Concrete\+Government}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_concrete_government_ad291eb57ea0333f4d9456fe3439ce162}\label{class_concrete_government_ad291eb57ea0333f4d9456fe3439ce162} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Concrete\+Government} ()
+\begin{DoxyCompactList}\small\item\em Protected destructor for the singleton instance of \doxylink{class_concrete_government}{Concrete\+Government}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Singleton class that represents a specific type of \doxylink{class_government}{Government}. 
+
+\doxylink{class_concrete_government}{Concrete\+Government} is a subclass of \doxylink{class_government}{Government}, enforcing a singleton pattern to ensure only one instance exists. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_concrete_government_af336f1620aff3e8f2330ea993ccd2267}\index{ConcreteGovernment@{ConcreteGovernment}!ConcreteGovernment@{ConcreteGovernment}}
+\index{ConcreteGovernment@{ConcreteGovernment}!ConcreteGovernment@{ConcreteGovernment}}
+\doxysubsubsection{\texorpdfstring{ConcreteGovernment()}{ConcreteGovernment()}}
+{\footnotesize\ttfamily \label{class_concrete_government_af336f1620aff3e8f2330ea993ccd2267} 
+Concrete\+Government\+::\+Concrete\+Government (\begin{DoxyParamCaption}\item[{double}]{income\+Tax\+Rate}{, }\item[{double}]{property\+Tax\+Rate}{}\end{DoxyParamCaption})}
+
+
+
+Private constructor for the singleton instance of \doxylink{class_concrete_government}{Concrete\+Government}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em income\+Tax\+Rate} & Initial income tax rate. \\
+\hline
+{\em property\+Tax\+Rate} & Initial property tax rate. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_concrete_government_a823bb142fb4f0dd4cfbb71ab84575d18}\index{ConcreteGovernment@{ConcreteGovernment}!instance@{instance}}
+\index{instance@{instance}!ConcreteGovernment@{ConcreteGovernment}}
+\doxysubsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily \label{class_concrete_government_a823bb142fb4f0dd4cfbb71ab84575d18} 
+\mbox{\hyperlink{class_concrete_government}{Concrete\+Government}} \texorpdfstring{$\ast$}{*} Concrete\+Government\+::instance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Provides access to the singleton instance of \doxylink{class_concrete_government}{Concrete\+Government}. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the singleton instance of \doxylink{class_concrete_government}{Concrete\+Government}. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Concrete\+Government.\+h\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Concrete\+Government.\+cpp\end{DoxyCompactItemize}

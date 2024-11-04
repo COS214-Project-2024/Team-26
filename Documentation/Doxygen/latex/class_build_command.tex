@@ -1,0 +1,77 @@
+\doxysection{Build\+Command Class Reference}
+\hypertarget{class_build_command}{}\label{class_build_command}\index{BuildCommand@{BuildCommand}}
+
+
+Represents a command to construct a building at a specific location.  
+
+
+
+
+{\ttfamily \#include $<$Build\+Command.\+h$>$}
+
+Inheritance diagram for Build\+Command\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_build_command}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_build_command_aa5e6e1dddc30282292b27f59efe0d542}{Build\+Command}} (const std\+::string \&building\+Type="{}"{}, int x=0, int y=0, \mbox{\hyperlink{class_building_mediator}{Building\+Mediator}} \texorpdfstring{$\ast$}{*}mediator=new \mbox{\hyperlink{class_building_mediator}{Building\+Mediator}}())
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_build_command}{Build\+Command} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_build_command_adac71335554fc606400ddb43f92eae67}{execute}} ()
+\begin{DoxyCompactList}\small\item\em Executes the build command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_city_command}{City\+Command}}}
+
+
+\doxysubsection{Detailed Description}
+Represents a command to construct a building at a specific location. 
+
+The \doxylink{class_build_command}{Build\+Command} class specifies the type of building to be constructed and the location (coordinates) where it should be built. It uses a mediator to communicate and execution of the building process. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_build_command_aa5e6e1dddc30282292b27f59efe0d542}\index{BuildCommand@{BuildCommand}!BuildCommand@{BuildCommand}}
+\index{BuildCommand@{BuildCommand}!BuildCommand@{BuildCommand}}
+\doxysubsubsection{\texorpdfstring{BuildCommand()}{BuildCommand()}}
+{\footnotesize\ttfamily \label{class_build_command_aa5e6e1dddc30282292b27f59efe0d542} 
+Build\+Command\+::\+Build\+Command (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{building\+Type}{ = {\ttfamily "{}"{}}, }\item[{int}]{x}{ = {\ttfamily 0}, }\item[{int}]{y}{ = {\ttfamily 0}, }\item[{\mbox{\hyperlink{class_building_mediator}{Building\+Mediator}} \texorpdfstring{$\ast$}{*}}]{mediator}{ = {\ttfamily new~\mbox{\hyperlink{class_building_mediator}{Building\+Mediator}}()}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_build_command}{Build\+Command} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em building\+Type} & The type of building to construct. \\
+\hline
+{\em x} & The X coordinate of the location. \\
+\hline
+{\em y} & The Y coordinate of the location. \\
+\hline
+{\em mediator} & Pointer to a \doxylink{class_building_mediator}{Building\+Mediator} to facilitate the command. Defaults to a new instance of \doxylink{class_building_mediator}{Building\+Mediator} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_build_command_adac71335554fc606400ddb43f92eae67}\index{BuildCommand@{BuildCommand}!execute@{execute}}
+\index{execute@{execute}!BuildCommand@{BuildCommand}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily \label{class_build_command_adac71335554fc606400ddb43f92eae67} 
+void Build\+Command\+::execute (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Executes the build command. 
+
+This method invokes the mediator to construct the specified building at the provided location. 
+
+Implements \mbox{\hyperlink{class_city_command_a05653ee3400ca15b7c06d300b78f5005}{City\+Command}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Build\+Command.\+h\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Build\+Command.\+cpp\end{DoxyCompactItemize}

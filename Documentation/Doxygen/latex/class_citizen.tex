@@ -1,0 +1,319 @@
+\doxysection{Citizen Class Reference}
+\hypertarget{class_citizen}{}\label{class_citizen}\index{Citizen@{Citizen}}
+
+
+Represents a citizen with attributes such as satisfaction, income, age, and associations with a house and job.  
+
+
+
+
+{\ttfamily \#include $<$Citizen.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_citizen_a98b2a0447aa909e7374382afbfd7d30d}{Citizen}} (double \mbox{\hyperlink{class_citizen_ab3ae36c5add549a298a51717a35b9908}{income}}, int \mbox{\hyperlink{class_citizen_a9906c606bdbac44dcf4dc384c3a9d211}{age}})
+\begin{DoxyCompactList}\small\item\em Constructor to initialize a \doxylink{class_citizen}{Citizen} with income and age. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_citizen}{Citizen}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_citizen_ad00e4cbfacb8dab563b224c65722bf0f}{clone\+Child}} ()
+\begin{DoxyCompactList}\small\item\em Creates a clone of the citizen representing a child. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_citizen}{Citizen}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_citizen_a411147bdf154704c57dc9935b1c29bf3}{clone\+Related}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_citizen_ad8809b5264187ac0d20a71635b47179a}{job}})
+\begin{DoxyCompactList}\small\item\em Creates a clone of the citizen with the specified job. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_citizen}{Citizen}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_citizen_a9b2d5d7360efdda8a42561137540261b}{clone\+Unrelated}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_citizen_ad8809b5264187ac0d20a71635b47179a}{job}}, \mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_citizen_ac8e2f05e7e765c9489493ffacabef49d}{house}})
+\begin{DoxyCompactList}\small\item\em Creates a clone of the citizen with a specified job and house. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_citizen_a01e5fd48ea807c7116513204e7f2e364}{tax\+Change}} (double new\+Tax\+Rate, double Current\+Tax\+Rate)
+\begin{DoxyCompactList}\small\item\em Adjusts the citizen\textquotesingle{}s income based on a tax rate change. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_citizen_ad8980e18ff4dfeb24fef7b5194446d65}{assign\+House}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_citizen_ac8e2f05e7e765c9489493ffacabef49d}{house}})
+\begin{DoxyCompactList}\small\item\em Assigns a house to the citizen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_citizen_a9a3143302577bbbe52cdf7196dc8b0b9}{assign\+Job}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}building)
+\begin{DoxyCompactList}\small\item\em Assigns a job to the citizen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_citizen_ae9149d78637f54c1405cc3ab78d96500}{increase\+Age}} (int increase\+Amount)
+\begin{DoxyCompactList}\small\item\em Increases the age of the citizen by a specified amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_citizen_abe019a89b344b463a66981d484bcf732}{set\+Income}} (int \mbox{\hyperlink{class_citizen_ab3ae36c5add549a298a51717a35b9908}{income}})
+\begin{DoxyCompactList}\small\item\em Sets the income of the citizen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_citizen_a09f842da6371891c1aa70e330f2674ec}{get\+Satisfaction}} ()
+\begin{DoxyCompactList}\small\item\em Gets the satisfaction level of the citizen. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_citizen_ac3b7c4cf6587b6bab86fb5097f857818}{get\+House}} ()
+\begin{DoxyCompactList}\small\item\em Gets the citizen\textquotesingle{}s house. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_citizen_a2ca95e3a3e956a67c5078fd2c772dad3}{get\+Job}} ()
+\begin{DoxyCompactList}\small\item\em Gets the citizen\textquotesingle{}s job. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_citizen_a5cacff992b6e1ebf98cac3742839254d}{get\+Income}} ()
+\begin{DoxyCompactList}\small\item\em Gets the income of the citizen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_citizen_a96e445dc5c4468d9c85faa49475c329a}{get\+Age}} ()
+\begin{DoxyCompactList}\small\item\em Gets the age of the citizen. \end{DoxyCompactList}\item 
+\Hypertarget{class_citizen_a5232bf42d9a211d81ce3e5e3cefcf04c}\label{class_citizen_a5232bf42d9a211d81ce3e5e3cefcf04c} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Citizen} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{class_citizen}{Citizen} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_citizen_a88f2baf1386474a2216360f253951e39}{satisfaction}}
+\item 
+\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_citizen_ac8e2f05e7e765c9489493ffacabef49d}{house}}
+\item 
+\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_citizen_ad8809b5264187ac0d20a71635b47179a}{job}}
+\item 
+double \mbox{\hyperlink{class_citizen_ab3ae36c5add549a298a51717a35b9908}{income}}
+\item 
+int \mbox{\hyperlink{class_citizen_a9906c606bdbac44dcf4dc384c3a9d211}{age}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a citizen with attributes such as satisfaction, income, age, and associations with a house and job. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_citizen_a98b2a0447aa909e7374382afbfd7d30d}\index{Citizen@{Citizen}!Citizen@{Citizen}}
+\index{Citizen@{Citizen}!Citizen@{Citizen}}
+\doxysubsubsection{\texorpdfstring{Citizen()}{Citizen()}}
+{\footnotesize\ttfamily \label{class_citizen_a98b2a0447aa909e7374382afbfd7d30d} 
+Citizen\+::\+Citizen (\begin{DoxyParamCaption}\item[{double}]{income}{, }\item[{int}]{age}{}\end{DoxyParamCaption})}
+
+
+
+Constructor to initialize a \doxylink{class_citizen}{Citizen} with income and age. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em income} & Initial income of the citizen. \\
+\hline
+{\em age} & Initial age of the citizen. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_citizen_ad8980e18ff4dfeb24fef7b5194446d65}\index{Citizen@{Citizen}!assignHouse@{assignHouse}}
+\index{assignHouse@{assignHouse}!Citizen@{Citizen}}
+\doxysubsubsection{\texorpdfstring{assignHouse()}{assignHouse()}}
+{\footnotesize\ttfamily \label{class_citizen_ad8980e18ff4dfeb24fef7b5194446d65} 
+void Citizen\+::assign\+House (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{house}{}\end{DoxyParamCaption})}
+
+
+
+Assigns a house to the citizen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em house} & Pointer to the building to be assigned as the citizen\textquotesingle{}s house. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_citizen_a9a3143302577bbbe52cdf7196dc8b0b9}\index{Citizen@{Citizen}!assignJob@{assignJob}}
+\index{assignJob@{assignJob}!Citizen@{Citizen}}
+\doxysubsubsection{\texorpdfstring{assignJob()}{assignJob()}}
+{\footnotesize\ttfamily \label{class_citizen_a9a3143302577bbbe52cdf7196dc8b0b9} 
+void Citizen\+::assign\+Job (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{building}{}\end{DoxyParamCaption})}
+
+
+
+Assigns a job to the citizen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the building to be assigned as the citizen\textquotesingle{}s job. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_citizen_ad00e4cbfacb8dab563b224c65722bf0f}\index{Citizen@{Citizen}!cloneChild@{cloneChild}}
+\index{cloneChild@{cloneChild}!Citizen@{Citizen}}
+\doxysubsubsection{\texorpdfstring{cloneChild()}{cloneChild()}}
+{\footnotesize\ttfamily \label{class_citizen_ad00e4cbfacb8dab563b224c65722bf0f} 
+\mbox{\hyperlink{class_citizen}{Citizen}} \texorpdfstring{$\ast$}{*} Citizen\+::clone\+Child (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Creates a clone of the citizen representing a child. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to a new \doxylink{class_citizen}{Citizen} object. 
+\end{DoxyReturn}
+\Hypertarget{class_citizen_a411147bdf154704c57dc9935b1c29bf3}\index{Citizen@{Citizen}!cloneRelated@{cloneRelated}}
+\index{cloneRelated@{cloneRelated}!Citizen@{Citizen}}
+\doxysubsubsection{\texorpdfstring{cloneRelated()}{cloneRelated()}}
+{\footnotesize\ttfamily \label{class_citizen_a411147bdf154704c57dc9935b1c29bf3} 
+\mbox{\hyperlink{class_citizen}{Citizen}} \texorpdfstring{$\ast$}{*} Citizen\+::clone\+Related (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{job}{}\end{DoxyParamCaption})}
+
+
+
+Creates a clone of the citizen with the specified job. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em job} & Pointer to the building where the cloned citizen will work. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to a new \doxylink{class_citizen}{Citizen} object. 
+\end{DoxyReturn}
+\Hypertarget{class_citizen_a9b2d5d7360efdda8a42561137540261b}\index{Citizen@{Citizen}!cloneUnrelated@{cloneUnrelated}}
+\index{cloneUnrelated@{cloneUnrelated}!Citizen@{Citizen}}
+\doxysubsubsection{\texorpdfstring{cloneUnrelated()}{cloneUnrelated()}}
+{\footnotesize\ttfamily \label{class_citizen_a9b2d5d7360efdda8a42561137540261b} 
+\mbox{\hyperlink{class_citizen}{Citizen}} \texorpdfstring{$\ast$}{*} Citizen\+::clone\+Unrelated (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{job}{, }\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{house}{}\end{DoxyParamCaption})}
+
+
+
+Creates a clone of the citizen with a specified job and house. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em job} & Pointer to the building where the cloned citizen will work. \\
+\hline
+{\em house} & Pointer to the building where the cloned citizen will live. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to a new \doxylink{class_citizen}{Citizen} object. 
+\end{DoxyReturn}
+\Hypertarget{class_citizen_a96e445dc5c4468d9c85faa49475c329a}\index{Citizen@{Citizen}!getAge@{getAge}}
+\index{getAge@{getAge}!Citizen@{Citizen}}
+\doxysubsubsection{\texorpdfstring{getAge()}{getAge()}}
+{\footnotesize\ttfamily \label{class_citizen_a96e445dc5c4468d9c85faa49475c329a} 
+int Citizen\+::get\+Age (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the age of the citizen. 
+
+\begin{DoxyReturn}{Returns}
+The age of the citizen. 
+\end{DoxyReturn}
+\Hypertarget{class_citizen_ac3b7c4cf6587b6bab86fb5097f857818}\index{Citizen@{Citizen}!getHouse@{getHouse}}
+\index{getHouse@{getHouse}!Citizen@{Citizen}}
+\doxysubsubsection{\texorpdfstring{getHouse()}{getHouse()}}
+{\footnotesize\ttfamily \label{class_citizen_ac3b7c4cf6587b6bab86fb5097f857818} 
+\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*} Citizen\+::get\+House (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the citizen\textquotesingle{}s house. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the building where the citizen lives. 
+\end{DoxyReturn}
+\Hypertarget{class_citizen_a5cacff992b6e1ebf98cac3742839254d}\index{Citizen@{Citizen}!getIncome@{getIncome}}
+\index{getIncome@{getIncome}!Citizen@{Citizen}}
+\doxysubsubsection{\texorpdfstring{getIncome()}{getIncome()}}
+{\footnotesize\ttfamily \label{class_citizen_a5cacff992b6e1ebf98cac3742839254d} 
+double Citizen\+::get\+Income (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the income of the citizen. 
+
+\begin{DoxyReturn}{Returns}
+The income of the citizen. 
+\end{DoxyReturn}
+\Hypertarget{class_citizen_a2ca95e3a3e956a67c5078fd2c772dad3}\index{Citizen@{Citizen}!getJob@{getJob}}
+\index{getJob@{getJob}!Citizen@{Citizen}}
+\doxysubsubsection{\texorpdfstring{getJob()}{getJob()}}
+{\footnotesize\ttfamily \label{class_citizen_a2ca95e3a3e956a67c5078fd2c772dad3} 
+\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*} Citizen\+::get\+Job (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the citizen\textquotesingle{}s job. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the building where the citizen works. 
+\end{DoxyReturn}
+\Hypertarget{class_citizen_a09f842da6371891c1aa70e330f2674ec}\index{Citizen@{Citizen}!getSatisfaction@{getSatisfaction}}
+\index{getSatisfaction@{getSatisfaction}!Citizen@{Citizen}}
+\doxysubsubsection{\texorpdfstring{getSatisfaction()}{getSatisfaction()}}
+{\footnotesize\ttfamily \label{class_citizen_a09f842da6371891c1aa70e330f2674ec} 
+int Citizen\+::get\+Satisfaction (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the satisfaction level of the citizen. 
+
+\begin{DoxyReturn}{Returns}
+The satisfaction level. 
+\end{DoxyReturn}
+\Hypertarget{class_citizen_ae9149d78637f54c1405cc3ab78d96500}\index{Citizen@{Citizen}!increaseAge@{increaseAge}}
+\index{increaseAge@{increaseAge}!Citizen@{Citizen}}
+\doxysubsubsection{\texorpdfstring{increaseAge()}{increaseAge()}}
+{\footnotesize\ttfamily \label{class_citizen_ae9149d78637f54c1405cc3ab78d96500} 
+int Citizen\+::increase\+Age (\begin{DoxyParamCaption}\item[{int}]{increase\+Amount}{}\end{DoxyParamCaption})}
+
+
+
+Increases the age of the citizen by a specified amount. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em increase\+Amount} & The amount by which the age will be increased. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new age of the citizen. 
+\end{DoxyReturn}
+\Hypertarget{class_citizen_abe019a89b344b463a66981d484bcf732}\index{Citizen@{Citizen}!setIncome@{setIncome}}
+\index{setIncome@{setIncome}!Citizen@{Citizen}}
+\doxysubsubsection{\texorpdfstring{setIncome()}{setIncome()}}
+{\footnotesize\ttfamily \label{class_citizen_abe019a89b344b463a66981d484bcf732} 
+void Citizen\+::set\+Income (\begin{DoxyParamCaption}\item[{int}]{income}{}\end{DoxyParamCaption})}
+
+
+
+Sets the income of the citizen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em income} & The new income to be set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_citizen_a01e5fd48ea807c7116513204e7f2e364}\index{Citizen@{Citizen}!taxChange@{taxChange}}
+\index{taxChange@{taxChange}!Citizen@{Citizen}}
+\doxysubsubsection{\texorpdfstring{taxChange()}{taxChange()}}
+{\footnotesize\ttfamily \label{class_citizen_a01e5fd48ea807c7116513204e7f2e364} 
+void Citizen\+::tax\+Change (\begin{DoxyParamCaption}\item[{double}]{new\+Tax\+Rate}{, }\item[{double}]{Current\+Tax\+Rate}{}\end{DoxyParamCaption})}
+
+
+
+Adjusts the citizen\textquotesingle{}s income based on a tax rate change. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Tax\+Rate} & The new tax rate to be applied. \\
+\hline
+{\em Current\+Tax\+Rate} & The current tax rate before the change. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_citizen_a9906c606bdbac44dcf4dc384c3a9d211}\index{Citizen@{Citizen}!age@{age}}
+\index{age@{age}!Citizen@{Citizen}}
+\doxysubsubsection{\texorpdfstring{age}{age}}
+{\footnotesize\ttfamily \label{class_citizen_a9906c606bdbac44dcf4dc384c3a9d211} 
+int Citizen\+::age\hspace{0.3cm}{\ttfamily [protected]}}
+
+Age of the citizen. \Hypertarget{class_citizen_ac8e2f05e7e765c9489493ffacabef49d}\index{Citizen@{Citizen}!house@{house}}
+\index{house@{house}!Citizen@{Citizen}}
+\doxysubsubsection{\texorpdfstring{house}{house}}
+{\footnotesize\ttfamily \label{class_citizen_ac8e2f05e7e765c9489493ffacabef49d} 
+\mbox{\hyperlink{class_building}{Building}}\texorpdfstring{$\ast$}{*} Citizen\+::house\hspace{0.3cm}{\ttfamily [protected]}}
+
+Pointer to the building where the citizen lives. \Hypertarget{class_citizen_ab3ae36c5add549a298a51717a35b9908}\index{Citizen@{Citizen}!income@{income}}
+\index{income@{income}!Citizen@{Citizen}}
+\doxysubsubsection{\texorpdfstring{income}{income}}
+{\footnotesize\ttfamily \label{class_citizen_ab3ae36c5add549a298a51717a35b9908} 
+double Citizen\+::income\hspace{0.3cm}{\ttfamily [protected]}}
+
+Income level of the citizen. \Hypertarget{class_citizen_ad8809b5264187ac0d20a71635b47179a}\index{Citizen@{Citizen}!job@{job}}
+\index{job@{job}!Citizen@{Citizen}}
+\doxysubsubsection{\texorpdfstring{job}{job}}
+{\footnotesize\ttfamily \label{class_citizen_ad8809b5264187ac0d20a71635b47179a} 
+\mbox{\hyperlink{class_building}{Building}}\texorpdfstring{$\ast$}{*} Citizen\+::job\hspace{0.3cm}{\ttfamily [protected]}}
+
+Pointer to the building where the citizen works. \Hypertarget{class_citizen_a88f2baf1386474a2216360f253951e39}\index{Citizen@{Citizen}!satisfaction@{satisfaction}}
+\index{satisfaction@{satisfaction}!Citizen@{Citizen}}
+\doxysubsubsection{\texorpdfstring{satisfaction}{satisfaction}}
+{\footnotesize\ttfamily \label{class_citizen_a88f2baf1386474a2216360f253951e39} 
+int Citizen\+::satisfaction\hspace{0.3cm}{\ttfamily [protected]}}
+
+Satisfaction level of the citizen. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Citizen.\+h\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Citizen.\+cpp\end{DoxyCompactItemize}

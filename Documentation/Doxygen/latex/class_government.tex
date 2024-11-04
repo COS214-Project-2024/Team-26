@@ -1,0 +1,290 @@
+\doxysection{Government Class Reference}
+\hypertarget{class_government}{}\label{class_government}\index{Government@{Government}}
+
+
+Manages citizens, buildings, and tax policies, including tax collection and fund allocation.  
+
+
+
+
+{\ttfamily \#include $<$Government.\+h$>$}
+
+Inheritance diagram for Government\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_government}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_government_a2fad59b7195a8b3286928f4be18499b3}{Government}} (double income\+Tax\+Rate, double property\+Tax\+Rate)
+\begin{DoxyCompactList}\small\item\em Constructor to initialize the government with specific tax rates. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_government_ad53b4d0caeeb1e70d0e437a06f1c5de4}{add\+Citizen}} (\mbox{\hyperlink{class_citizen}{Citizen}} \texorpdfstring{$\ast$}{*}citizen, \mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}house=nullptr, \mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}job=nullptr)
+\begin{DoxyCompactList}\small\item\em Adds a citizen to the government\textquotesingle{}s jurisdiction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_government_a7068f19941a93a596f699270acb178d9}{remove\+Citizen}} (\mbox{\hyperlink{class_citizen}{Citizen}} \texorpdfstring{$\ast$}{*}citizen)
+\begin{DoxyCompactList}\small\item\em Removes a citizen from the government\textquotesingle{}s jurisdiction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_government_a723bbd5ba0f73025e6d3e4f738aa335d}{set\+Income\+Tax\+Rate}} (double tax\+Rate)
+\begin{DoxyCompactList}\small\item\em Sets a new income tax rate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_government_a6b3b25a412b1673519fe4a74e6e4115b}{set\+Property\+Tax\+Rate}} (double tax\+Rate)
+\begin{DoxyCompactList}\small\item\em Sets a new property tax rate. \end{DoxyCompactList}\item 
+\Hypertarget{class_government_aa53f796cf02ee53b833b45ecf03a5f51}\label{class_government_aa53f796cf02ee53b833b45ecf03a5f51} 
+void {\bfseries notify\+Tax\+Change} ()
+\begin{DoxyCompactList}\small\item\em Notifies citizens of a change in tax rates. \end{DoxyCompactList}\item 
+\Hypertarget{class_government_acb1597f9f9a04ff27724d92c5553e3ad}\label{class_government_acb1597f9f9a04ff27724d92c5553e3ad} 
+void {\bfseries collect\+Income\+Tax} ()
+\begin{DoxyCompactList}\small\item\em Collects income tax from all citizens. \end{DoxyCompactList}\item 
+\Hypertarget{class_government_a58acf8b66dc0a9c3f9e66fde6af13826}\label{class_government_a58acf8b66dc0a9c3f9e66fde6af13826} 
+void {\bfseries collect\+Property\+Tax} ()
+\begin{DoxyCompactList}\small\item\em Collects property tax from property owners. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_government_ab90b240ef281170e68cd4849339f3b39}{get\+Tax\+Funds\+Collected}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current tac funds collected. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_government_aa0500d2a69bb145fed8321a90ebdcf4a}{get\+Income\+Tax\+Rate}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current income tax rate. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_government_a21df80afa816b7f3b70a94885c8da49a}{get\+Property\+Tax\+Rate}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current property tax rate. \end{DoxyCompactList}\item 
+\Hypertarget{class_government_a7ead184adb1f9151b714cffd9e946c90}\label{class_government_a7ead184adb1f9151b714cffd9e946c90} 
+void {\bfseries allocate\+Tax\+Funds} ()
+\begin{DoxyCompactList}\small\item\em Allocates the collected tax funds for government spending. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_citizen}{Citizen}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_government_a502273087abddd435c304e6e20b9ce14}{get\+Random\+Citizen}} (bool related=true)
+\begin{DoxyCompactList}\small\item\em Gets a random citizen from the government’s jurisdiction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_government_aa05f6e09d9712c9b1c5e9a0260dd062f}{evict\+Citizens}} (\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}building)
+\begin{DoxyCompactList}\small\item\em Evicts citizens from a specific building. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_government_ae398c5429a064202821daa1b4a64a122}{eliminate\+Citizens}} (int number\+Of\+Citizens)
+\begin{DoxyCompactList}\small\item\em Eliminates a specified number of citizens from the government\textquotesingle{}s jurisdiction. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_government_a30fd949be24f19808b3efe49b463b99e}{get\+Population}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current population size. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_government_a120af5af563c57bf9f868f77e19bcbe3}{get\+Average\+Satisfaction}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the average satisfaction of all citizens. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_government_a6d3b92c3929ffdeecf457bab6ff7e7ed}{get\+Average\+Age}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the average age of all citizens. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_government_a0a66492ad78cd55401ef40ff13e2097f}{age\+All}} (int amount=1)
+\begin{DoxyCompactList}\small\item\em Ages all current citizens. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages citizens, buildings, and tax policies, including tax collection and fund allocation. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_government_a2fad59b7195a8b3286928f4be18499b3}\index{Government@{Government}!Government@{Government}}
+\index{Government@{Government}!Government@{Government}}
+\doxysubsubsection{\texorpdfstring{Government()}{Government()}}
+{\footnotesize\ttfamily \label{class_government_a2fad59b7195a8b3286928f4be18499b3} 
+Government\+::\+Government (\begin{DoxyParamCaption}\item[{double}]{income\+Tax\+Rate}{, }\item[{double}]{property\+Tax\+Rate}{}\end{DoxyParamCaption})}
+
+
+
+Constructor to initialize the government with specific tax rates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em income\+Tax\+Rate} & Initial income tax rate. \\
+\hline
+{\em property\+Tax\+Rate} & Initial property tax rate. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_government_ad53b4d0caeeb1e70d0e437a06f1c5de4}\index{Government@{Government}!addCitizen@{addCitizen}}
+\index{addCitizen@{addCitizen}!Government@{Government}}
+\doxysubsubsection{\texorpdfstring{addCitizen()}{addCitizen()}}
+{\footnotesize\ttfamily \label{class_government_ad53b4d0caeeb1e70d0e437a06f1c5de4} 
+void Government\+::add\+Citizen (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_citizen}{Citizen}} \texorpdfstring{$\ast$}{*}}]{citizen}{, }\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{house}{ = {\ttfamily nullptr}, }\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{job}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})}
+
+
+
+Adds a citizen to the government\textquotesingle{}s jurisdiction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em citizen} & Pointer to the citizen to be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_government_a0a66492ad78cd55401ef40ff13e2097f}\index{Government@{Government}!ageAll@{ageAll}}
+\index{ageAll@{ageAll}!Government@{Government}}
+\doxysubsubsection{\texorpdfstring{ageAll()}{ageAll()}}
+{\footnotesize\ttfamily \label{class_government_a0a66492ad78cd55401ef40ff13e2097f} 
+void Government\+::age\+All (\begin{DoxyParamCaption}\item[{int}]{amount}{ = {\ttfamily 1}}\end{DoxyParamCaption})}
+
+
+
+Ages all current citizens. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & Number of years to age by, default is 1. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_government_ae398c5429a064202821daa1b4a64a122}\index{Government@{Government}!eliminateCitizens@{eliminateCitizens}}
+\index{eliminateCitizens@{eliminateCitizens}!Government@{Government}}
+\doxysubsubsection{\texorpdfstring{eliminateCitizens()}{eliminateCitizens()}}
+{\footnotesize\ttfamily \label{class_government_ae398c5429a064202821daa1b4a64a122} 
+void Government\+::eliminate\+Citizens (\begin{DoxyParamCaption}\item[{int}]{number\+Of\+Citizens}{}\end{DoxyParamCaption})}
+
+
+
+Eliminates a specified number of citizens from the government\textquotesingle{}s jurisdiction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number\+Of\+Citizens} & The number of citizens to be removed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_government_aa05f6e09d9712c9b1c5e9a0260dd062f}\index{Government@{Government}!evictCitizens@{evictCitizens}}
+\index{evictCitizens@{evictCitizens}!Government@{Government}}
+\doxysubsubsection{\texorpdfstring{evictCitizens()}{evictCitizens()}}
+{\footnotesize\ttfamily \label{class_government_aa05f6e09d9712c9b1c5e9a0260dd062f} 
+void Government\+::evict\+Citizens (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_building}{Building}} \texorpdfstring{$\ast$}{*}}]{building}{}\end{DoxyParamCaption})}
+
+
+
+Evicts citizens from a specific building. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em building} & Pointer to the building from which citizens are to be evicted. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_government_a6d3b92c3929ffdeecf457bab6ff7e7ed}\index{Government@{Government}!getAverageAge@{getAverageAge}}
+\index{getAverageAge@{getAverageAge}!Government@{Government}}
+\doxysubsubsection{\texorpdfstring{getAverageAge()}{getAverageAge()}}
+{\footnotesize\ttfamily \label{class_government_a6d3b92c3929ffdeecf457bab6ff7e7ed} 
+int Government\+::get\+Average\+Age (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the average age of all citizens. 
+
+\begin{DoxyReturn}{Returns}
+The average age of citizens. 
+\end{DoxyReturn}
+\Hypertarget{class_government_a120af5af563c57bf9f868f77e19bcbe3}\index{Government@{Government}!getAverageSatisfaction@{getAverageSatisfaction}}
+\index{getAverageSatisfaction@{getAverageSatisfaction}!Government@{Government}}
+\doxysubsubsection{\texorpdfstring{getAverageSatisfaction()}{getAverageSatisfaction()}}
+{\footnotesize\ttfamily \label{class_government_a120af5af563c57bf9f868f77e19bcbe3} 
+double Government\+::get\+Average\+Satisfaction (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the average satisfaction of all citizens. 
+
+\begin{DoxyReturn}{Returns}
+The average satisfaction level of citizens. 
+\end{DoxyReturn}
+\Hypertarget{class_government_aa0500d2a69bb145fed8321a90ebdcf4a}\index{Government@{Government}!getIncomeTaxRate@{getIncomeTaxRate}}
+\index{getIncomeTaxRate@{getIncomeTaxRate}!Government@{Government}}
+\doxysubsubsection{\texorpdfstring{getIncomeTaxRate()}{getIncomeTaxRate()}}
+{\footnotesize\ttfamily \label{class_government_aa0500d2a69bb145fed8321a90ebdcf4a} 
+double Government\+::get\+Income\+Tax\+Rate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the current income tax rate. 
+
+\begin{DoxyReturn}{Returns}
+The current income tax rate. 
+\end{DoxyReturn}
+\Hypertarget{class_government_a30fd949be24f19808b3efe49b463b99e}\index{Government@{Government}!getPopulation@{getPopulation}}
+\index{getPopulation@{getPopulation}!Government@{Government}}
+\doxysubsubsection{\texorpdfstring{getPopulation()}{getPopulation()}}
+{\footnotesize\ttfamily \label{class_government_a30fd949be24f19808b3efe49b463b99e} 
+int Government\+::get\+Population (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the current population size. 
+
+\begin{DoxyReturn}{Returns}
+The total number of citizens. 
+\end{DoxyReturn}
+\Hypertarget{class_government_a21df80afa816b7f3b70a94885c8da49a}\index{Government@{Government}!getPropertyTaxRate@{getPropertyTaxRate}}
+\index{getPropertyTaxRate@{getPropertyTaxRate}!Government@{Government}}
+\doxysubsubsection{\texorpdfstring{getPropertyTaxRate()}{getPropertyTaxRate()}}
+{\footnotesize\ttfamily \label{class_government_a21df80afa816b7f3b70a94885c8da49a} 
+double Government\+::get\+Property\+Tax\+Rate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the current property tax rate. 
+
+\begin{DoxyReturn}{Returns}
+The current property tax rate. 
+\end{DoxyReturn}
+\Hypertarget{class_government_a502273087abddd435c304e6e20b9ce14}\index{Government@{Government}!getRandomCitizen@{getRandomCitizen}}
+\index{getRandomCitizen@{getRandomCitizen}!Government@{Government}}
+\doxysubsubsection{\texorpdfstring{getRandomCitizen()}{getRandomCitizen()}}
+{\footnotesize\ttfamily \label{class_government_a502273087abddd435c304e6e20b9ce14} 
+\mbox{\hyperlink{class_citizen}{Citizen}} \texorpdfstring{$\ast$}{*} Government\+::get\+Random\+Citizen (\begin{DoxyParamCaption}\item[{bool}]{related}{ = {\ttfamily true}}\end{DoxyParamCaption})}
+
+
+
+Gets a random citizen from the government’s jurisdiction. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to a randomly selected \doxylink{class_citizen}{Citizen}. 
+\end{DoxyReturn}
+\Hypertarget{class_government_ab90b240ef281170e68cd4849339f3b39}\index{Government@{Government}!getTaxFundsCollected@{getTaxFundsCollected}}
+\index{getTaxFundsCollected@{getTaxFundsCollected}!Government@{Government}}
+\doxysubsubsection{\texorpdfstring{getTaxFundsCollected()}{getTaxFundsCollected()}}
+{\footnotesize\ttfamily \label{class_government_ab90b240ef281170e68cd4849339f3b39} 
+double Government\+::get\+Tax\+Funds\+Collected (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the current tac funds collected. 
+
+\begin{DoxyReturn}{Returns}
+The current Tax\+Funds\+Collected. 
+\end{DoxyReturn}
+\Hypertarget{class_government_a7068f19941a93a596f699270acb178d9}\index{Government@{Government}!removeCitizen@{removeCitizen}}
+\index{removeCitizen@{removeCitizen}!Government@{Government}}
+\doxysubsubsection{\texorpdfstring{removeCitizen()}{removeCitizen()}}
+{\footnotesize\ttfamily \label{class_government_a7068f19941a93a596f699270acb178d9} 
+void Government\+::remove\+Citizen (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_citizen}{Citizen}} \texorpdfstring{$\ast$}{*}}]{citizen}{}\end{DoxyParamCaption})}
+
+
+
+Removes a citizen from the government\textquotesingle{}s jurisdiction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em citizen} & Pointer to the citizen to be removed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_government_a723bbd5ba0f73025e6d3e4f738aa335d}\index{Government@{Government}!setIncomeTaxRate@{setIncomeTaxRate}}
+\index{setIncomeTaxRate@{setIncomeTaxRate}!Government@{Government}}
+\doxysubsubsection{\texorpdfstring{setIncomeTaxRate()}{setIncomeTaxRate()}}
+{\footnotesize\ttfamily \label{class_government_a723bbd5ba0f73025e6d3e4f738aa335d} 
+void Government\+::set\+Income\+Tax\+Rate (\begin{DoxyParamCaption}\item[{double}]{tax\+Rate}{}\end{DoxyParamCaption})}
+
+
+
+Sets a new income tax rate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tax\+Rate} & The new income tax rate to be set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_government_a6b3b25a412b1673519fe4a74e6e4115b}\index{Government@{Government}!setPropertyTaxRate@{setPropertyTaxRate}}
+\index{setPropertyTaxRate@{setPropertyTaxRate}!Government@{Government}}
+\doxysubsubsection{\texorpdfstring{setPropertyTaxRate()}{setPropertyTaxRate()}}
+{\footnotesize\ttfamily \label{class_government_a6b3b25a412b1673519fe4a74e6e4115b} 
+void Government\+::set\+Property\+Tax\+Rate (\begin{DoxyParamCaption}\item[{double}]{tax\+Rate}{}\end{DoxyParamCaption})}
+
+
+
+Sets a new property tax rate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tax\+Rate} & The new property tax rate to be set. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Government.\+h\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/Government.\+cpp\end{DoxyCompactItemize}

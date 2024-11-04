@@ -1,0 +1,47 @@
+\doxysection{City\+Command Class Reference}
+\hypertarget{class_city_command}{}\label{class_city_command}\index{CityCommand@{CityCommand}}
+
+
+An abstract base class for commands. The \doxylink{class_city_command}{City\+Command} class serves as an interface for various commands. Derived classes must implement the \doxylink{class_city_command_a05653ee3400ca15b7c06d300b78f5005}{execute()} method to define specific actions.  
+
+
+
+
+{\ttfamily \#include $<$City\+Command.\+h$>$}
+
+Inheritance diagram for City\+Command\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.777778cm]{class_city_command}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_city_command_a05653ee3400ca15b7c06d300b78f5005}{execute}} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to execute a command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An abstract base class for commands. The \doxylink{class_city_command}{City\+Command} class serves as an interface for various commands. Derived classes must implement the \doxylink{class_city_command_a05653ee3400ca15b7c06d300b78f5005}{execute()} method to define specific actions. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_city_command_a05653ee3400ca15b7c06d300b78f5005}\index{CityCommand@{CityCommand}!execute@{execute}}
+\index{execute@{execute}!CityCommand@{CityCommand}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily \label{class_city_command_a05653ee3400ca15b7c06d300b78f5005} 
+virtual void City\+Command\+::execute (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function to execute a command. 
+
+This function will be overridden by derived classes to specify the command behavior. 
+
+Implemented in \mbox{\hyperlink{class_build_command_adac71335554fc606400ddb43f92eae67}{Build\+Command}}, \mbox{\hyperlink{class_demolish_command_a0cc21df149c69df4a2626fae4ce2824b}{Demolish\+Command}}, \mbox{\hyperlink{class_next_command_a2ac855569fac877a20165d98259eaa15}{Next\+Command}}, \mbox{\hyperlink{class_stats_command_a2265dc7d281fbe1b2595a7a964197e02}{Stats\+Command}}, and \mbox{\hyperlink{class_tax_command_a1f6236d06e5c445e51283744efb50f79}{Tax\+Command}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/ericb/\+Desktop/2nd year/\+Semester 2/\+COS 214/\+Project/\+The\+\_\+7/\+System/City\+Command.\+h\end{DoxyCompactItemize}
