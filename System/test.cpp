@@ -8,6 +8,7 @@
 #include "Shop.h"
 #include "ResidentialBuilding.h"
 #include "CommercialBuilding.h"
+#include "BuildingMediator.h"
 #include <iostream>
 
 #include "Iterator.h"
@@ -179,4 +180,59 @@ TEST_CASE("Iterator class functionality") {
         iterator.add(shop, 6, 6);
         CHECK(iterator.getJob() == shop);
     }*/
+}
+
+TEST_CASE("Testing Mediator") {
+
+    BuildingMediator* buildingA = new BuildingMediator();
+    BuildingState* state = new PlacedState();
+
+    
+    
+    
+     SUBCASE("Invalid location - already occupied") {
+    //     BuildingMediator* buildingA = new BuildingMediator();
+         BuildingState* state1 = new PlacedState();
+         BuildingState* state2 = new PlacedState();
+        
+    // Build first building
+         buildingA->build("House", 50, 50, state1);
+        
+    //     // Try to build second building in same location
+         std::string result = buildingA->build("House", 50, 50, state2);
+        
+         CHECK_FALSE(result.empty());  // Should return error message
+        
+        delete buildingA;
+     }
+    
+
+
+   SUBCASE("X coordinate out of bounds") {
+        std::string result = buildingA->build("House", 51, 25, state);
+        CHECK(result == "X co-ordinate out of city bounds");
+        
+        result = buildingA->build("House", -1, 25, state);
+        CHECK(result == "X co-ordinate out of city bounds");
+    }
+
+
+     SUBCASE("Y coordinate out of bounds") {
+        std::string result = buildingA->build("House", 25, 51, state);
+        CHECK(result == "Y co-ordinate out of city bounds");
+        
+        result = buildingA->build("House", 25, -1, state);
+        CHECK(result == "Y co-ordinate out of city bounds");
+    }
+
+     SUBCASE("Invalid building names") {
+        std::string result = buildingA->build("Hause", 25, 25, state);  // Misspelled "House"
+        CHECK(result == "Invalid building type");
+        
+        result = buildingA->build("APPartment", 25, 25, state);  // Incorrect capitalization
+        CHECK(result == "Invalid building type");
+    }
+
+
+   
 }
