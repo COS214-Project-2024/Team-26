@@ -14,14 +14,15 @@ class ConcreteGovernment : public Government
 private:
     static ConcreteGovernment *instancePtr; /**< Pointer to the single instance of ConcreteGovernment. */
 
-    /**
+   
+
+public:
+ /**
      * @brief Private constructor for the singleton instance of ConcreteGovernment.
      * @param incomeTaxRate Initial income tax rate.
      * @param propertyTaxRate Initial property tax rate.
      */
     ConcreteGovernment(double incomeTaxRate, double propertyTaxRate);
-
-public:
     /**
      * @brief Provides access to the singleton instance of ConcreteGovernment.
      * @return Pointer to the singleton instance of ConcreteGovernment.
