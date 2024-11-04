@@ -35,7 +35,7 @@ void testGovernment()
 
     CHECK(government->getPopulation()==6);
     government->eliminateCitizens(3);
-    
+    CHECK(government->getPopulation()==3);
    
     
     // CHECK(government->getTaxFundsCollected()==?);
