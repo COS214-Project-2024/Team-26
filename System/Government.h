@@ -118,6 +118,12 @@ public:
      * @return The average age of citizens.
      */
     int getAverageAge();
+
+    /**
+     * @brief Ages all current citizens
+     * @param amount Number of years to age by, default is 1.
+     */
+    void ageAll(int amount = 1);
 };
 
 #endif

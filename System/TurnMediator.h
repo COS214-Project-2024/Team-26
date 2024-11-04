@@ -24,8 +24,6 @@ public:
 
 	int handlePopulation();
 
-	void updateStats();
-
 	int changeTaxRates(int newRate);
 
 	virtual ~TurnMediator();

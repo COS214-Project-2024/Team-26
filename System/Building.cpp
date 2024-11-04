@@ -12,6 +12,8 @@ Building::Building(std::string name, int x, int y) {
     LOCATION_Y = y;
     state = new PlacedState();
 
+    occupancy = 0; // default value
+
     if (name == "House") {
         SPACE = rand() % 9 + 2;
     } else if (name == "TownHouse") {
@@ -50,9 +52,6 @@ BuildingState* Building::getAndSetNextState() {
     }
     else if (typeid(*state) == typeid(UnderConstructionState)) {
         nextState = new CompleteState();
-    }
-    else if (typeid(*state) == typeid(CompleteState)) {
-        nextState = new DemolishedState();
     }
     else if (typeid(*state) == typeid(DemolishedState)) {
         // No next state after demolished
@@ -148,7 +147,7 @@ bool Building::updateOccupancy(int i)
  */
 int Building::getAvailableSpace()
 {
-    if (state->getStateName() == "Completed")
+    if (state->getStateName() == "Complete")
         return SPACE - occupancy;
     else 
         return 0;

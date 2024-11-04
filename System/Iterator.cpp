@@ -11,9 +11,9 @@ Iterator::~Iterator() {
 }
 
 void Iterator::add(Building* building, int x, int y) {
-	if (x >= this->composite->lengthX() || y >= this->composite->lengthY() || x < 0 || y < 0) {
-		return; // Out of bounds
-	}
+	// if (x >= this->composite->lengthX() || y >= this->composite->lengthY() || x < 0 || y < 0) {
+	// 	return; // Out of bounds
+	// }
 	if (this->composite->getComponent(x, y) == nullptr) {
 		this->composite->add(building, x, y);
 	}

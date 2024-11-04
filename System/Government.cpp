@@ -18,8 +18,10 @@ void Government::addCitizen(Citizen *citizen, Building* house, Building* job)
 	}
 
 	this->citizens.push_back(citizen);
-	citizen->assignHouse(house);
-	citizen->assignJob(job);
+	if (house)
+		citizen->assignHouse(house);
+	if (job)
+		citizen->assignJob(job);
 }
 
 void Government::removeCitizen(Citizen *citizen)
@@ -108,12 +110,12 @@ Citizen *Government::getRandomCitizen()
 			if (citizens.at(i)->getHouse()->getAvailableSpace()>=1)//check the space of the house
 			{
 				result=citizens.at(i);
-				break;
+				return result;
 			}
 		}
 	}
 
-	return result;
+	return nullptr;
 }
 
 void Government::evictCitizens(Building *building)
@@ -161,6 +163,9 @@ int Government::getPopulation()
 }
 double Government::getAverageSatisfaction()
 {
+	if (citizens.size() == 0)
+		return 0;
+	
 	double averageSatisfaction = 0;
 	for (size_t i = 0; i < this->citizens.size(); i++)
 	{
@@ -171,6 +176,9 @@ double Government::getAverageSatisfaction()
 }
 int Government::getAverageAge()
 {
+	if (citizens.size() == 0)
+		return 0;
+
 	double averageAge = 0;
 	for (size_t i = 0; i < this->citizens.size(); i++)
 	{
@@ -178,4 +186,11 @@ int Government::getAverageAge()
 	}
 	averageAge=averageAge/citizens.size();
 	return averageAge;
+}
+
+void Government::ageAll(int amount) {
+	for (size_t i = 0; i < this->citizens.size(); i++)
+	{
+		this->citizens.at(i)->increaseAge(amount);
+	}
 }

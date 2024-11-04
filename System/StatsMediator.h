@@ -2,6 +2,7 @@
 #define STATSMEDIATOR_H
 
 #include <iostream>
+#include <string>
 
 #include "CityMediator.h"
 
@@ -27,7 +28,14 @@ public:
 
     int getTotalHousingSpace();
 
-    void printBuildings();
+    // stats for command
+    std::string getAllStats();
+
+    std::string buildingDetails();
+
+    std::string populationDetails();
+
+    std::string resourceDetails();
 
 	virtual ~StatsMediator() = default;
 };

@@ -14,8 +14,13 @@
 
 #include "Iterator.h"
 
-// #include "Government.h"
-	#include "ConcreteGovernment.h"
+#include "ConcreteGovernment.h"
+
+#include "BuildingState.h"
+	#include"PlacedState.h"
+	#include "UnderConstructionState.h"
+	#include "CompleteState.h"
+	#include "DemolishedState.h"
 
 class BuildingMediator : public CityMediator {
 
@@ -27,8 +32,26 @@ private:
 public:
 	BuildingMediator();
 
-	std::string build(std::string& buildingName, int locationX, int locationY);
+	/**
+	 * @brief Builds a new building with the specified parameters.
+	 * 
+	 * @param buildingName The name of the building to be created.
+	 * @param locationX The X-coordinate of the building's location.
+	 * @param locationY The Y-coordinate of the building's location.
+	 * @param state Optional pointer to the initial state of the building. Defaults to nullptr.
+	 * 
+	 * @return A string representing the building's details.
+	 */
+	std::string build(std::string buildingName, int locationX, int locationY, BuildingState* state = nullptr);
 
+	/**
+	 * @brief Demolishes a building with the specified location if there is one.
+	 * 
+	 * @param locationX The X-coordinate of the building's location.
+	 * @param locationY The Y-coordinate of the building's location.
+	 * 
+	 * @return A string representing the building's details.
+	 */
 	std::string demolish(int locationX, int locationY);
 
 	~BuildingMediator();
