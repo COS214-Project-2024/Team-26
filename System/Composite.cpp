@@ -31,13 +31,19 @@ Iterator* Composite::createIterator() {
 }
 
 void Composite::add(Building* component, int x, int y) {
-    if (x >= MAXX || y >= MAXY || x < 0 || y < 0) {
-        return;
-    } else {
-        if (this->components[x][y] == nullptr) {
-            this->components[x][y] = new Leaf(component);
-        }
+    // if (x >= MAXX || y >= MAXY || x < 0 || y < 0) {
+        // return;
+    // } else {
+    // if (this->components[x][y] == nullptr) {
+    //     this->components[x][y] = new Leaf(component);
+    // }
+    if (x >= components.size()) {
+        components.resize(x + 1); // Resize
     }
+    if (y >= static_cast<int>(components[x].size())) {
+        components[x].resize(y + 1, nullptr); // Resize
+    }
+    components[x][y] = new Leaf(component);
 }
 
 void Composite::remove(int x, int y) {

@@ -93,7 +93,7 @@ public:
      * @brief Gets a random citizen from the government’s jurisdiction.
      * @return Pointer to a randomly selected Citizen.
      */
-    Citizen *getRandomCitizen();
+    Citizen *getRandomCitizen(bool related = true);
 
     /**
      * @brief Evicts citizens from a specific building.

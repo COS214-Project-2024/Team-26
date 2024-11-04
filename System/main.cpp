@@ -16,7 +16,6 @@
 int main() {
     // input manager
     CityManager* manager = new CityManager();
-
     // commands
         // next
     CityCommand* next = new NextCommand();
@@ -32,9 +31,8 @@ int main() {
     manager->registerCommand("demolish", demolish);
         // tax
 
-
     // set up
-    BuildingMediator* building = new BuildingMediator();
+    BuildingMediator* building = new BuildingMediator();    
     building->build("House", 0, 0, new CompleteState());
 
     building = new BuildingMediator();
@@ -54,7 +52,7 @@ int main() {
         std::string input;
         std::getline(std::cin, input);
         std::transform(input.begin(), input.end(), input.begin(), [](unsigned char c){ return std::tolower(c); });
-
+        
         if (input == "q" || input == "quit") {
             break;
         } else if (input == "") {

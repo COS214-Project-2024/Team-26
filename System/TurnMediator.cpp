@@ -62,9 +62,10 @@ int TurnMediator::handlePopulation() {
 			Building* house = getBuildings()->getHouse();
 			Building* job = getBuildings()->getJob();
 			government->addCitizen((government->getRandomCitizen())->cloneUnrelated(house, job));
+			std::cout << "4.1\n";
 		}
 	}
-
+	
 	return births + immigrations - deaths;
 }
 

@@ -106,7 +106,7 @@ void Government::allocateTaxFunds()
 	// do something here with mediator
 }
 
-Citizen *Government::getRandomCitizen()
+Citizen *Government::getRandomCitizen(bool related)
 {
 	Citizen*result;
 
@@ -114,10 +114,14 @@ Citizen *Government::getRandomCitizen()
 	{
 		if (citizens.at(i)->getHouse()!=nullptr)//firts check if they even have a house
 		{
-			if (citizens.at(i)->getHouse()->getAvailableSpace()>=1)//check the space of the house
-			{
-				result=citizens.at(i);
-				return result;
+			if (related) {
+				if (citizens.at(i)->getHouse()->getAvailableSpace()>=1)//check the space of the house
+				{
+					result=citizens.at(i);
+					return result;
+				}
+			} else {
+				
 			}
 		}
 	}

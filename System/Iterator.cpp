@@ -162,7 +162,6 @@ Building* Iterator::getHouse() {
 
 Building* Iterator::getJob() {
 	std::vector<Building*> buildings = composite->getAllBuildings();
-	std::cout << buildings.size() << std::endl;
     for (size_t i = 0; i < buildings.size(); i++) {
         Building* building = buildings[i];
         if (building && building->getAvailableSpace() > 0) {
