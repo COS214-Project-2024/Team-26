@@ -51,7 +51,9 @@ int StatsMediator::getTotalHousingSpace() {
 std::string StatsMediator::getAllStats() {
     std::string result = "";
     result += "-Population Details\n" + populationDetails();
+    result += "-Tax Details\n" + std::to_string(getTax());
     result += "-Building Details\n" + buildingDetails();
+    result += "-Resource Details\n" + resourceDetails();
 
     return result;
 }

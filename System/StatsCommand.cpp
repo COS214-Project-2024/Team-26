@@ -15,7 +15,7 @@ void StatsCommand::execute() {
         } else if (input == "buildings") {
             std::cout << "Buildings:\n" << mediator->buildingDetails();
         } else if (input == "population") {
-            std::cout << "Total housing space:\t" << mediator->getTotalHousingSpace() << std::endl;
+            std::cout << "Total housing space:\t" << mediator->populationDetails() << std::endl;
         } else if (input == "resources") {
             std::cout << "Resource (Consumption vs Production):\n" << mediator->resourceDetails() << std::endl;
         } else if (input == "tax") {
