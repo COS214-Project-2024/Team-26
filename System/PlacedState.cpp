@@ -1,3 +1,7 @@
+/**
+ * @file PlacedState.cpp
+ * @brief Implementation of the PlacedState class
+ */
 #include "PlacedState.h"
 #include "Building.h"
 
@@ -14,9 +18,9 @@ int PlacedState::getResourceCost(Building* building) {
 }
 
 int PlacedState::getPowerConsumption(Building* building) {
-    return 0;
+    return 0; // No power consumption in placed state
 }
 
 int PlacedState::getWaterConsumption(Building* building) {
-    return 0;
+    return 0; // No water consumption in placed state
 }
