@@ -1,53 +1,77 @@
+/**
+ * @file DemolishedState.h
+ * @brief Declaration of the DemolishedState class, representing the demolished state of a building.
+ */
+
 #ifndef DEMOLISHED_STATE_H
 #define DEMOLISHED_STATE_H
 
 #include "BuildingState.h"
 
 /**
- * @brief Represents a building in the process of demolition
- *
- * In the DemolishedState, the building:
- * - Cannot be occupied
- * - Incurs half the original construction costs for demolition
- * - Has no power or water consumption
- * - Generates no revenue
- * This is the final state in the building's lifecycle.
+ * @class DemolishedState
+ * @brief Represents a building that has been demolished.
+ * 
+ * The DemolishedState class implements the BuildingState interface, defining the 
+ * characteristics of a building when it is in a demolished state. All costs, consumption, 
+ * and production values are set to zero, as the building is not operational.
  */
 class DemolishedState : public BuildingState {
 public:
     /**
-     * @brief Get the name of this state
-     * @return String "Demolished"
+     * @brief Gets the name of the state.
+     * @return The name of the state as "Demolished".
      */
     std::string getStateName() override;
 
     /**
-     * @brief Calculate monetary cost for demolition
-     * @param building Pointer to the Building object
-     * @return Half of the original construction cost
+     * @brief Gets the monetary cost of the building in this state.
+     * @param building Pointer to the building instance.
+     * @return Monetary cost, which is zero in the demolished state.
      */
     int getMoneyCost(Building* building) override;
 
     /**
-     * @brief Calculate resource cost for demolition
-     * @param building Pointer to the Building object
-     * @return Half of the original resource cost
+     * @brief Gets the resource cost of the building in this state.
+     * @param building Pointer to the building instance.
+     * @return Resource cost, which is zero in the demolished state.
      */
     int getResourceCost(Building* building) override;
 
     /**
-     * @brief Get power consumption during demolition
-     * @param building Pointer to the Building object
-     * @return 0 (no power consumption during demolition)
+     * @brief Gets the power consumption of the building in this state.
+     * @param building Pointer to the building instance.
+     * @return Power consumption, which is zero in the demolished state.
      */
     int getPowerConsumption(Building* building) override;
 
     /**
-     * @brief Get water consumption during demolition
-     * @param building Pointer to the Building object
-     * @return 0 (no water consumption during demolition)
+     * @brief Gets the water consumption of the building in this state.
+     * @param building Pointer to the building instance.
+     * @return Water consumption, which is zero in the demolished state.
      */
     int getWaterConsumption(Building* building) override;
+
+    /**
+     * @brief Gets the occupancy of the building in this state.
+     * @param building Pointer to the building instance.
+     * @return Occupancy, which is zero in the demolished state.
+     */
+    int getOccupancy(Building* building) override;
+
+    /**
+     * @brief Gets the sewage production of the building in this state.
+     * @param building Pointer to the building instance.
+     * @return Sewage production, which is zero in the demolished state.
+     */
+    int getSewageProduction(Building* building) override;
+
+    /**
+     * @brief Gets the waste production of the building in this state.
+     * @param building Pointer to the building instance.
+     * @return Waste production, which is zero in the demolished state.
+     */
+    int getWasteProduction(Building* building) override;
 };
 
-#endif // DEMOLISHED_STATE_H
+#endif

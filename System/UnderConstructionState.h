@@ -1,52 +1,73 @@
+/**
+ * @file UnderConstructionState.h
+ * @brief Header file for the UnderConstructionState class, representing a building under construction.
+ */
+
 #ifndef UNDER_CONSTRUCTION_STATE_H
 #define UNDER_CONSTRUCTION_STATE_H
 
 #include "BuildingState.h"
 
 /**
- * @brief Represents a building during construction phase
- *
- * In the UnderConstructionState, the building:
- * - Consumes power and water for construction
- * - Has no monetary or resource costs (already paid in placed state)
- * - Cannot be occupied during construction
- * This state follows PlacedState and precedes CompleteState.
+ * @class UnderConstructionState
+ * @brief Represents a building in the process of being constructed.
  */
 class UnderConstructionState : public BuildingState {
 public:
     /**
-     * @brief Get the name of this state
-     * @return String "Under Construction"
+     * @brief Gets the name of the state.
+     * @return The name of the state as a string.
      */
     std::string getStateName() override;
 
     /**
-     * @brief Calculate monetary cost during construction
-     * @param building Pointer to the Building object
-     * @return 0 (no additional monetary cost during construction)
+     * @brief Gets the monetary cost associated with the building in its under construction state.
+     * @param building Pointer to the Building object.
+     * @return The monetary cost.
      */
     int getMoneyCost(Building* building) override;
 
     /**
-     * @brief Calculate resource cost during construction
-     * @param building Pointer to the Building object
-     * @return 0 (no additional resource cost during construction)
+     * @brief Gets the resource cost associated with the building in its under construction state.
+     * @param building Pointer to the Building object.
+     * @return The resource cost.
      */
     int getResourceCost(Building* building) override;
 
     /**
-     * @brief Calculate power consumption during construction
-     * @param building Pointer to the Building object
-     * @return Power units consumed during construction phase
+     * @brief Gets the power consumption of the building in its under construction state.
+     * @param building Pointer to the Building object.
+     * @return The power consumption.
      */
     int getPowerConsumption(Building* building) override;
 
     /**
-     * @brief Calculate water consumption during construction
-     * @param building Pointer to the Building object
-     * @return Water units consumed during construction phase
+     * @brief Gets the water consumption of the building in its under construction state.
+     * @param building Pointer to the Building object.
+     * @return The water consumption.
      */
     int getWaterConsumption(Building* building) override;
+
+    /**
+     * @brief Gets the occupancy level of the building in its under construction state.
+     * @param building Pointer to the Building object.
+     * @return The occupancy level.
+     */
+    int getOccupancy(Building* building) override;
+
+    /**
+     * @brief Gets the sewage production of the building in its under construction state.
+     * @param building Pointer to the Building object.
+     * @return The sewage production.
+     */
+    int getSewageProduction(Building* building) override;
+
+    /**
+     * @brief Gets the waste production of the building in its under construction state.
+     * @param building Pointer to the Building object.
+     * @return The waste production.
+     */
+    int getWasteProduction(Building* building) override;
 };
 
 #endif // UNDER_CONSTRUCTION_STATE_H

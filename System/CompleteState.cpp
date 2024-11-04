@@ -1,26 +1,78 @@
 /**
  * @file CompleteState.cpp
- * @brief Implementation of the CompletedState class
+ * @brief Implementation of the CompleteState class, representing a completed building.
  */
+
 #include "CompleteState.h"
 #include "Building.h"
 
-std::string CompletedState::getStateName() {
-    return "Completed";
+/**
+ * @brief Gets the name of the state.
+ * @return The name "Complete" as a string.
+ */
+std::string CompleteState::getStateName() {
+    return "Complete";
 }
 
-int CompletedState::getMoneyCost(Building* building) {
-    return 0; // No additional costs in completed state
+/**
+ * @brief Gets the monetary cost associated with the building in its complete state.
+ * @param building Pointer to the Building object.
+ * @return The monetary cost, typically operational cost.
+ */
+int CompleteState::getMoneyCost(Building* building) {
+    return building->getCostConsumption(); // Example: could be an operational cost method
 }
 
-int CompletedState::getResourceCost(Building* building) {
-    return 0; // No additional resource costs in completed state
+/**
+ * @brief Gets the resource cost associated with the building in its complete state.
+ * @param building Pointer to the Building object.
+ * @return The resource cost associated with operation.
+ */
+int CompleteState::getResourceCost(Building* building) {
+    return building->getResourceConsumption(); // Use the method defined in Building
 }
 
-int CompletedState::getPowerConsumption(Building* building) {
-    return building->getPowerConsumption() / 2; // Optimized power usage
+/**
+ * @brief Gets the power consumption of the building in its complete state.
+ * @param building Pointer to the Building object.
+ * @return The power consumption during operation.
+ */
+int CompleteState::getPowerConsumption(Building* building) {
+    return building->getPowerConsumption(); // Use the method defined in Building
 }
 
-int CompletedState::getWaterConsumption(Building* building) {
-    return building->getWaterConsumption() / 2; // Optimized water usage
+/**
+ * @brief Gets the water consumption of the building in its complete state.
+ * @param building Pointer to the Building object.
+ * @return The water consumption during operation.
+ */
+int CompleteState::getWaterConsumption(Building* building) {
+    return building->getWaterConsumption(); // Use the method defined in Building
+}
+
+/**
+ * @brief Gets the occupancy level of the building in its complete state.
+ * @param building Pointer to the Building object.
+ * @return The occupancy level as defined by the building.
+ */
+int CompleteState::getOccupancy(Building* building) {
+    return building->getOccupancy(); // Use the method defined in Building
+}
+
+/**
+ * @brief Gets the sewage production of the building in its complete state.
+ * @param building Pointer to the Building object.
+ * @return The sewage production during operation.
+ */
+int CompleteState::getSewageProduction(Building* building) {
+    return building->getSewageProduction(); // Use the method defined in Building
+}
+
+/**
+ * @brief Gets the waste production of the building in its complete state.
+ * @param building Pointer to the Building object.
+ * @return The waste production during operation.
+ */
+int CompleteState::getWasteProduction(Building* building) {
+    return building->getWasteProduction(); // Use the method defined in Building
 }

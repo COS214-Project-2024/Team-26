@@ -1,53 +1,73 @@
-#ifndef COMPLETED_STATE_H
-#define COMPLETED_STATE_H
+/**
+ * @file CompleteState.h
+ * @brief Header file for the CompleteState class, representing a completed building.
+ */
+
+#ifndef COMPLETE_STATE_H
+#define COMPLETE_STATE_H
 
 #include "BuildingState.h"
 
 /**
- * @brief Represents a fully constructed and operational building
- *
- * In the CompletedState, the building:
- * - Is fully operational and can be occupied
- * - Consumes half the normal power and water (optimized usage)
- * - Has no additional monetary or resource costs
- * - Can generate revenue and produce waste/sewage
- * This is the main operational state after construction is finished.
+ * @class CompleteState
+ * @brief Represents a building that has been completed and is fully operational.
  */
-class CompletedState : public BuildingState {
+class CompleteState : public BuildingState {
 public:
     /**
-     * @brief Get the name of this state
-     * @return String "Completed"
+     * @brief Gets the name of the state.
+     * @return The name of the state as a string.
      */
     std::string getStateName() override;
 
     /**
-     * @brief Calculate monetary cost for completed building
-     * @param building Pointer to the Building object
-     * @return 0 (construction costs already paid)
+     * @brief Gets the monetary cost associated with the building in its complete state.
+     * @param building Pointer to the Building object.
+     * @return The monetary cost.
      */
     int getMoneyCost(Building* building) override;
 
     /**
-     * @brief Calculate resource cost for completed building
-     * @param building Pointer to the Building object
-     * @return 0 (construction resources already used)
+     * @brief Gets the resource cost associated with the building in its complete state.
+     * @param building Pointer to the Building object.
+     * @return The resource cost.
      */
     int getResourceCost(Building* building) override;
 
     /**
-     * @brief Calculate optimized power consumption for operational building
-     * @param building Pointer to the Building object
-     * @return Half of the base power consumption (optimized usage)
+     * @brief Gets the power consumption of the building in its complete state.
+     * @param building Pointer to the Building object.
+     * @return The power consumption.
      */
     int getPowerConsumption(Building* building) override;
 
     /**
-     * @brief Calculate optimized water consumption for operational building
-     * @param building Pointer to the Building object
-     * @return Half of the base water consumption (optimized usage)
+     * @brief Gets the water consumption of the building in its complete state.
+     * @param building Pointer to the Building object.
+     * @return The water consumption.
      */
     int getWaterConsumption(Building* building) override;
+
+    /**
+     * @brief Gets the occupancy level of the building in its complete state.
+     * @param building Pointer to the Building object.
+     * @return The occupancy level.
+     */
+    int getOccupancy(Building* building) override;
+
+    /**
+     * @brief Gets the sewage production of the building in its complete state.
+     * @param building Pointer to the Building object.
+     * @return The sewage production.
+     */
+    int getSewageProduction(Building* building) override;
+
+    /**
+     * @brief Gets the waste production of the building in its complete state.
+     * @param building Pointer to the Building object.
+     * @return The waste production.
+     */
+    int getWasteProduction(Building* building) override;
 };
 
-#endif // COMPLETED_STATE_H
+#endif // COMPLETE_STATE_H
