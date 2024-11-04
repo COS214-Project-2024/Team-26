@@ -8,6 +8,9 @@ private:
 	int wasteConsumption;
 
 public:
+	Waste();
+	int getWasteProduction();
+	int getWasteConsumption();
 };
 
 #endif

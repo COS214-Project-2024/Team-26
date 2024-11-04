@@ -79,6 +79,7 @@ Building* Iterator::previous() {
 			}
 		}
 	}
+	return nullptr;
 }
 
 bool Iterator::remove(int locationX, int locationY) {
