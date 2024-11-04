@@ -73,6 +73,7 @@ int CompleteState::getSewageProduction(Building* building) {
  * @param building Pointer to the Building object.
  * @return The waste production during operation.
  */
-int CompleteState::getWasteProduction(Building* building) {
-    return building->getWasteProduction(); // Use the method defined in Building
+int DemolishedState::getWasteProduction(Building* building) {
+    return building->getWasteProduction() / 2;
 }
+

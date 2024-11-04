@@ -17,9 +17,6 @@ Composite::~Composite() {
             }
         }  
     }
-    // Initialize components as a 50x50 grid with nullptrs
-    // this->components = std::vector<std::vector<Building*>>(50, std::vector<Building*>(50, nullptr));
-    // this->components = std::vector<std::vector<Building*>>();
 }
 
 Iterator* Composite::createIterator() {
@@ -41,7 +38,7 @@ void Composite::add(Building* component, int x, int y) {
     if (x >= components.size()) {
         components.resize(x + 1); // Resize
     }
-    if (y >= components[x].size()) {
+    if (y >= static_cast<int>(components[x].size())) {
         components[x].resize(y + 1, nullptr); // Resize
     }
     components[x][y] = new Leaf(component);
@@ -56,7 +53,7 @@ void Composite::remove(int x, int y) {
 Building* Composite::getComponent(int x, int y) {
     if (components.empty()) {
         return nullptr;
-    } else if (x < components.size() && y < components[x].size()) {
+    } else if (x < static_cast<int>(components.size()) && y < static_cast<int>(components[x].size())) {
         return components[x][y]->building;
     } else {
         return nullptr;

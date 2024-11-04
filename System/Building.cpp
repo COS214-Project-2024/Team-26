@@ -15,11 +15,11 @@ Building::Building(std::string name, int x, int y) {
     occupancy = 0; // default value
 
     if (name == "House") {
-        SPACE = rand() % 9 + 2;
+        SPACE = rand() % 10 + 2;
     } else if (name == "TownHouse") {
-        SPACE = rand() % 13 + 2;
+        SPACE = rand() % 15 + 2;
     } else if (name == "Apartment") {
-        SPACE = rand() % 31 + 2;
+        SPACE = rand() % 30 + 2;
     } else {
         SPACE = 0;
     }
@@ -47,10 +47,12 @@ BuildingState* Building::getAndSetNextState() {
     BuildingState* nextState = nullptr;
     
     // Determine next state based on current state
-    if (typeid(*state) == typeid(PlacedState)) {
+    if (typeid(*state) == typeid(PlacedState)) 
+    {
         nextState = new UnderConstructionState();
     }
-    else if (typeid(*state) == typeid(UnderConstructionState)) {
+    else if (typeid(*state) == typeid(UnderConstructionState)) 
+    {
         nextState = new CompleteState();
     }
     else if (typeid(*state) == typeid(DemolishedState)) {
@@ -59,7 +61,8 @@ BuildingState* Building::getAndSetNextState() {
     }
     
     // Clean up old state and set new state
-    if (nextState != nullptr) {
+    if (nextState != nullptr) 
+    {
         delete state;
         state = nextState;
     }

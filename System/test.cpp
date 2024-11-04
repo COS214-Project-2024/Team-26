@@ -1,76 +1,77 @@
-// #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-// #include "doctest.h"
-// #include <iostream>
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+#include "Government.h"
+#include "ConcreteGovernment.h"
+#include "Citizen.h"
+#include "Building.h"
+#include "House.h"
+#include "Shop.h"
+#include <iostream>
 
+void testGovernment()
+{
+    // Get the singleton instance
+    // ConcreteGovernment *government = new ConcreteGovernment(100,23);
+    ConcreteGovernment *government = ConcreteGovernment::instance();
+    std::cout << "Government instance created." << std::endl;
 
-// void test1()
-// {
-//     // Lights *firstLight = new Lights();
-//     // firstLight->toggleOn();
-//     // firstLight->toggleOff();
+    government->getAverageAge();
 
-//     // SmartDevice *first = new Lights();
-//     // Command *firstCommand = new LightsOnCommand(new Lights());
-//     // firstCommand->execute();
-
-//     // MacroRoutine *routine = new MacroRoutine();
-
-//     // std::cout << std::endl
-//     //           << "Testing Routine:" << std::endl;
-//     // routine->addProcedure(new LightsOnCommand(new Lights()));
-//     // routine->addProcedure(new LightsOffCommand(new Lights()));
-//     // routine->addProcedure(new ThermoStatOffCommand(new ThermoStat()));
-//     // routine->addProcedure(new ThermoStatOnCommand(new ThermoStat()));
-//     // routine->addProcedure(new DoorsUnlockCommand(new Doors()));
-//     // routine->addProcedure(new DoorsLockCommand(new Doors()));
-//     // routine->addProcedure(new LegacyThermoStatOnCommand(new SmartThermoStatIntegrator(new LegacyThermoStat())));
-//     // routine->addProcedure(new LegacyThermoStatOffCommand(new SmartThermoStatIntegrator(new LegacyThermoStat())));
-//     // routine->execute();
-//     // std::cout << std::endl;
-
-//     // std::cout << "Testing sensor:" << std::endl;
-//     // std::string Action = "You are exiting a room";
-
-//     // Sensor *firstSensor = new Sensor();
-//     // firstSensor->addDevice(new Lights());
-//     // firstSensor->addDevice(new Doors());
-//     // firstSensor->addDevice(new ThermoStat());
-
-//     // firstSensor->notifyDevices(Action);
-//     // firstSensor->removeDevice(0);
-//     // firstSensor->removeDevice(0);
-//     // firstSensor->notifyDevices(Action);
-
-//     // std::vector<SmartDevice *> smartDeviceList;
-
-//     // smartDeviceList.push_back(new Doors());
-//     // smartDeviceList.push_back(new Lights());
-//     // smartDeviceList.push_back(new ThermoStat());
-//     // smartDeviceList.push_back(new SmartThermoStatIntegrator(new LegacyThermoStat()));
-
-//     // for (int i = 0; i < smartDeviceList.size(); i++)
-//     // {
-//     //     smartDeviceList.at(i)->performAction("on");
-//     //     smartDeviceList.at(i)->performAction("off");
-//     // }
-
-//     // SmartDevice *TEST = new SmartThermoStatIntegrator(new LegacyThermoStat());
-//     // TEST->getDeviceType();
-//     // TEST->getStatus();
-//     // TEST->performAction("on");
-//     // TEST->performAction("off");
-//     // TEST->notified("Test");
-// }
+    // Example usage of government instance
+}
 
 
 
-// TEST_CASE("Testing GovernMent")
-// {
-//     // testSmartDevices();
-// }
 
-// TEST_CASE("Testing Citizens")
-// {
-//     // testCommands();
-// }
+void testCitizen()
+{
+    Citizen *first = new Citizen(100, 56);
+    CHECK(first->getAge()==56);
+    CHECK(first->getIncome()==100);
 
+    House*testHouse=new House(3,6);
+    Shop*testJob=new Shop(1,2);
+    first->assignHouse(testHouse);
+    first->assignJob(testJob);
+    CHECK(first->getHouse()==testHouse);
+    CHECK(first->getJob()==testJob);
+
+}
+
+
+TEST_CASE("Phillip se testing")
+{
+    CommercialBuilding shop("Shop", 10, 20);
+
+    // Initially in PlacedState
+    CHECK(shop.getState()->getStateName() == "Placed");
+    CHECK(shop.getRevenue() == 0);  //0
+
+    // Transition to UnderConstructionState
+    shop.getAndSetNextState();
+    CHECK(shop.getState()->getStateName() == "Under Construction");
+
+    // Transition to CompletedState
+    shop.getAndSetNextState();
+    CHECK(shop.getState()->getStateName() == "Complete");
+
+    // Transition to DemolishedState and check resource consumption drops
+    shop.getAndSetNextState();
+    CHECK(shop.getState()->getStateName() == "Demolished");
+    CHECK(shop.getCostConsumption() == 0);
+    CHECK(shop.getPowerConsumption() == 0);
+}
+
+
+
+
+
+TEST_CASE("Testing Government")
+{
+    testGovernment();
+}
+
+TEST_CASE("Testing Citizens")
+{
+    testCitizen();
+}
