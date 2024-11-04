@@ -66,6 +66,12 @@ public:
      */
     void collectPropertyTax(); // Implement with mediator
 
+ /**
+     * @brief Gets the current tac funds collected.
+     * @return The current TaxFundsCollected.
+     */
+    double getTaxFundsCollected();
+
     /**
      * @brief Gets the current income tax rate.
      * @return The current income tax rate.
@@ -124,6 +130,10 @@ public:
      * @param amount Number of years to age by, default is 1.
      */
     void ageAll(int amount = 1);
+     /**
+     * @brief increases the age of the Citizens
+     * @return increase Citizen age.
+     */
 };
 
 #endif

@@ -46,6 +46,7 @@ void Government::setIncomeTaxRate(double taxRate)
 	}
 
 	std::cout << "taxRate should be between 0 and 1" << std::endl;
+	notifyTaxChange();
 }
 
 void Government::setPropertyTaxRate(double taxRate)
@@ -57,6 +58,7 @@ void Government::setPropertyTaxRate(double taxRate)
 	}
 
 	std::cout << "taxRate should be between 0 and 1" << std::endl;
+	notifyTaxChange();
 }
 
 void Government::notifyTaxChange()
@@ -82,6 +84,11 @@ void Government::collectIncomeTax()
 void Government::collectPropertyTax()
 {
 	// Emil must do PropertyTax with mediator
+}
+
+double Government::getTaxFundsCollected()
+{
+	return this->taxFundsCollected;
 }
 
 double Government::getIncomeTaxRate()
