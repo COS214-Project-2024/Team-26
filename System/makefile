@@ -25,6 +25,10 @@ test: $(OBJS_NO_MAIN) test.o
 	$(CXX) $(CXXFLAGS) $(OBJS_NO_MAIN) test.o -o test
 	./test
 
+run:$(TARGET)
+	./main
+
+
 # Clean up
 clean:
 	rm -f $(OBJS) $(TARGET) test test.o

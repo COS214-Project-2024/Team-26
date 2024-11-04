@@ -41,8 +41,8 @@ int ImmigrationStrategy::execute() {
 		housingFactor = 20;
 	}
 
-	fImmig = (this->getPopulation() / 1000 * housingFactor) * (sat / 50);  // formula
-	iImmig = round(fImmig);
+	fImmig = (this->getPopulation() / 100.0f * housingFactor) * (sat / 50.0f);  // formula
+	iImmig = static_cast<int>(ceil(fImmig));
 
     // make sure number of immigrants don't exceed the limit
 	if (iImmig > limit) {

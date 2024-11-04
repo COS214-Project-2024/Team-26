@@ -37,7 +37,7 @@ int DeathRateStrategy::execute() {
 		reverseSat = 10;
 	}
 
-	fDeathRate = (this->getPopulation() / 1000 * avgAgeFactor) * (reverseSat / 50); // fDeathRate won't be larger than population size
+	fDeathRate = (this->getPopulation() / 1000.0f * avgAgeFactor) * (reverseSat / 50.0f); // fDeathRate won't be larger than population size
 	iDeathRate = round(fDeathRate); // number of deaths per year
 
 	return iDeathRate;

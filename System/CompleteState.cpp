@@ -74,5 +74,5 @@ int CompleteState::getSewageProduction(Building* building) {
  * @return The waste production during operation.
  */
 int CompleteState::getWasteProduction(Building* building) {
-    return building->getWasteProduction(); // Use the method defined in Building
+    return 20 ; // Use the method defined in Building
 }

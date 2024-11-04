@@ -6,7 +6,7 @@ BuildingMediator::BuildingMediator() : CityMediator() {
 	government = ConcreteGovernment::instance();
 }
 
-std::string BuildingMediator::build(std::string& buildingName, int locationX, int locationY) {
+std::string BuildingMediator::build(std::string buildingName, int locationX, int locationY, BuildingState* state) {
 	// create relevant factory
 	if (buildingName == "House" || buildingName == "TownHouse" || buildingName == "Apartment") {
 		factory = new ResidentialBuildingFactory(buildingName, locationX, locationY);
@@ -33,7 +33,10 @@ std::string BuildingMediator::build(std::string& buildingName, int locationX, in
 	} else if (locationY >= 50 || locationY < 0) {
 		return "Y co-ordinate out of city bounds";
 	} else if (getBuildings()->slotAvailable(locationX, locationY)) {
-		getBuildings()->add(factory->createBuilding(), locationX, locationY);
+		Building* building = factory->createBuilding();
+		if (state)
+			building->setState(state);
+		getBuildings()->add(building, locationX, locationY);
 		return "";
 	} else {
 		return "Slot occupied";

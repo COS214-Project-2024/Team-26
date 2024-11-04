@@ -13,7 +13,7 @@ int BirthRateStrategy::execute()
 	int iBirthRate;
 	float avgAgeFactor;
 
-	int remainingSpace = this->getAvailableHousingSpace() - this->getPopulation();
+	int remainingSpace = this->getAvailableHousingSpace();
 	int avgAge = this->getAverageAge();
 
 	// different age groups will contirbute differently to birth rates.
@@ -36,8 +36,8 @@ int BirthRateStrategy::execute()
 	}
 
 	// calculate the birth rate per year.
-	fBirthRate = (this->getPopulation() / 1000 * avgAgeFactor) * (this->getSatisfaction() / 50);
-	iBirthRate = round(fBirthRate); // number of babies
+	fBirthRate = (this->getPopulation() / 100.0f * avgAgeFactor) * (this->getSatisfaction() / 50.0f);
+	iBirthRate = static_cast<int>(ceil(fBirthRate)); // number of babies
 
 	int newRemainingSpace = remainingSpace - iBirthRate;
 
@@ -47,7 +47,7 @@ int BirthRateStrategy::execute()
 		iBirthRate = remainingSpace; // kill the babies
 	}
 
-	return iBirthRate;
+	return abs(iBirthRate);
 }
 
 BirthRateStrategy::~BirthRateStrategy()

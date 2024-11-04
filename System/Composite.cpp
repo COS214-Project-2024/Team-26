@@ -3,16 +3,10 @@
 
 Composite::Composite() : Component() {
     this->components = std::vector<std::vector<Leaf*>>();
-    this->components.resize(MAXX);
-    for (auto& row : this->components) {
-        row.resize(MAXY);
-    }
-
-    for (int i = 0; i < static_cast<int>(this->components.size()); i++) {
-        for (int j = 0; j < static_cast<int>(this->components[i].size()); j++) {
-            this->components[i][j] = nullptr;
-        }
-    }
+    // this->components.resize(MAXX);
+    // for (auto& row : this->components) {
+    //     row.resize(MAXY);
+    // }
 }
 
 Composite::~Composite() {
@@ -64,10 +58,10 @@ Building* Composite::getComponent(int x, int y) {
 
 int Composite::getTotalPowerConsumption() {
     int totalPowerConsumption = 0;
-    for (int i = 0; i < static_cast<int>(components.size()); i++) {
-        for (int j = 0; j < static_cast<int>(components[i].size()); j++) {
-            if (components[i][j] != nullptr) {
-                totalPowerConsumption += components[i][j]->getTotalPowerConsumption();
+    for (const auto& row : components) {
+        for (Leaf* building : row) {
+            if (building != nullptr) {
+                totalPowerConsumption += building->building->getPowerConsumption();
             }
         }
     }
@@ -76,10 +70,10 @@ int Composite::getTotalPowerConsumption() {
 
 int Composite::getTotalWaterConsumption() {
     int totalWaterConsumption = 0;
-    for (int i = 0; i < static_cast<int>(components.size()); i++) {
-        for (int j = 0; j < static_cast<int>(components[i].size()); j++) {
-            if (components[i][j] != nullptr) {
-                totalWaterConsumption += components[i][j]->getTotalWaterConsumption();
+    for (const auto& row : components) {
+        for (Leaf* building : row) {
+            if (building != nullptr) {
+                totalWaterConsumption += building->building->getWaterConsumption();
             }
         }
     }
@@ -100,16 +94,13 @@ int Composite::getTotalCostConsumption() {
 
 int Composite::getTotalSewageConsumption() {
     int totalSewageConsumption = 0;
-    /*for (int i = 0; i < static_cast<int>(components.size()); i++) {
-        for (int j = 0; j < static_cast<int>(components[i].size()); j++) {
-            Building* building = components[i][j];
-            if (building != nullptr) {
-                if (Sewage* sewageBuilding = dynamic_cast<Sewage*>(building)) {
-                    totalSewageConsumption += sewageBuilding->getTotalSewageProduction();
-                }
-            }
-        }
-    }*/
+    // for (const auto& row : components) {
+    //     for (Leaf* building : row) {
+    //         if (building != nullptr) {
+    //             totalSewageConsumption += building->building
+    //         }
+    //     }
+    // }
     return totalSewageConsumption;
 }
 
