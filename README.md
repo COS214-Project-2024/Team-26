@@ -8,11 +8,16 @@ In **The-7 City Builder**, we used several design methods and patterns to create
 - **Revenue Generation**: Allow government entities to collect taxes or generate revenue through various buildings.
 - **Resource Management**: Enable special buildings to produce resources, which contribute to the city's growth and functionality.
 - **Dynamic City Growth**: Let the simulation adjust city metrics based on population, infrastructure, and available resources.
-
+---
 ### Project Structure
 - **Compilation**: Use `make` to compile the project. A `Makefile` with wildcards has been created to compile all files automatically.
   - **Compile**: `make` 
   - **Run**: `make run`
+  - There wil be input choices available to showcase the game
+  - After each input character press enter and watch the game evolve
+  - You can build buildings all the way to printing the city stats
+  - Available Commands:
+  - build  demolish  next  stats  tax
   - **Test**: `make test`
 - **Directory Structure**:
   - All C++ source files are located in the `system` folder.
