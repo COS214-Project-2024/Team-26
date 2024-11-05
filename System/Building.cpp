@@ -60,7 +60,7 @@ Building::Building(std::string name, int x, int y) : name(name), LOCATION_X(x), 
     } else if (name == "Apartment") {
         SPACE = rand() % 30 + 2;
     } else {
-        SPACE = 0;
+        SPACE = 10;
     }
 }
 

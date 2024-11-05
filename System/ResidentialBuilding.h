@@ -2,6 +2,7 @@
 #define RESIDENTIALBUILDING_H
 
 #include "Building.h"
+#include <cstdlib>
 
 /**
  * @brief A class representing residential buildings in the city
@@ -12,7 +13,7 @@ class ResidentialBuilding : public Building
 {
 private:
 	/** @brief The amount of waste produced by the residential building */
-	int wasteProduction;
+	int wasteProduction = rand() % 10;
 
 public:
 	ResidentialBuilding(std::string name, int x, int y) : Building(name, x, y) {}
@@ -33,7 +34,12 @@ public:
 	 * @brief Gets the waste production of the residential building
 	 * @return The waste production value as an integer
 	 */
-	virtual int getWasteProduction() override;
+	virtual int getWasteProduction() override {
+		if (getState()->getStateName() == "Complete")
+			return wasteProduction;
+		else
+			return 0;
+	}
 };
 
 #endif

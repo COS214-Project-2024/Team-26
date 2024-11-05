@@ -205,6 +205,8 @@ class Iterator{
 		int getWasteConsumption();
 
 		int getWasteProduction();
+
+		int getCostConsumption();
 };
 
 #endif //CONCRETEITERATOR_H

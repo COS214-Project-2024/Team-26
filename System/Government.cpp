@@ -204,3 +204,16 @@ void Government::ageAll(int amount) {
 		this->citizens.at(i)->increaseAge(amount);
 	}
 }
+
+void Government::satisfactionChange(int change) {
+	for (size_t i = 0; i < this->citizens.size(); i++)
+	{
+		this->citizens.at(i)->satisfactionChange(change);
+	}
+}
+
+void Government::useTaxFunds(int amount) {
+	taxFundsCollected -= amount;
+	if (taxFundsCollected < 0)
+		taxFundsCollected = 0;
+}

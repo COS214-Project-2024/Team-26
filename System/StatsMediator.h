@@ -100,6 +100,8 @@ public:
 
     double getTax();
 
+    double getTaxFunds();
+
     /**
      * @brief Default destructor for StatsMediator.
      */

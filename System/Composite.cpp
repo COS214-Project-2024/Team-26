@@ -47,7 +47,8 @@ void Composite::add(Building* component, int x, int y) {
 }
 
 void Composite::remove(int x, int y) {
-    if (x < static_cast<int>(components.size()) && y < static_cast<int>(components.size())) {
+    if (x >= 0 && x < components.size() && 
+        y >= 0 && y < components[x].size()) {
         components[x][y] = nullptr;
     }
 }
@@ -88,13 +89,16 @@ int Composite::getTotalWaterConsumption() {
 
 int Composite::getTotalCostConsumption() {
     int totalCostConsumption = 0;
-    // for (int i = 0; i < static_cast<int>(components.size()); i++) {
-    //     for (int j = 0; j < static_cast<int>(components[i].size()); j++) {
-    //         if (components[i][j] != nullptr) {
-    //             totalCostConsumption += components[i][j]->getTotalCostConsumption(false);
-    //         }
-    //     }
-    // }
+    for (const auto& row : components) {
+        for (Leaf* building : row) {
+            if (building != nullptr) {
+                if (building->building->getName() == "Hospital" || building->building->getName() == "Police" || building->building->getName() == "FireDepartment")
+                    totalCostConsumption += static_cast<ServiceBuilding*>(building->building)->getCostConsumption();
+                if (building->building->getName() == "Park" || building->building->getName() == "Monument")
+                    totalCostConsumption += static_cast<LandmarkBuilding*>(building->building)->getCostConsumption();
+            }
+        }
+    }
     return totalCostConsumption;
 }
 
@@ -176,10 +180,10 @@ int Composite::getTotalSewageProduction() {
 
 int Composite::getTotalWasteProduction() {
     int totalWasteProduction = 0;
-    for (int i = 0; i < static_cast<int>(components.size()); i++) {
-        for (int j = 0; j < static_cast<int>(components[i].size()); j++) {
-            if (components[i][j] != nullptr) {
-                totalWasteProduction += components[i][j]->getTotalWasteProduction();
+    for (const auto& row : components) {
+        for (Leaf* building : row) {
+            if (building != nullptr) {
+                totalWasteProduction += building->building->getWasteProduction();
             }
         }
     }
@@ -192,7 +196,7 @@ BuildingState* Composite::getAndSetNextState() {
 }
 
 int Composite::lengthX() const {
-    return static_cast<int>(components.size());
+    return 50;
 }
 
 void Composite::clear(){
@@ -204,7 +208,7 @@ void Composite::clear(){
 }
 
 int Composite::lengthY() const {
-    return static_cast<int>(components[0].size());
+    return 50;
 }
 
 std::vector<Building*> Composite::getAllBuildings() const {

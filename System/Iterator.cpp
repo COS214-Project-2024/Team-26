@@ -207,3 +207,7 @@ int Iterator::getSewageConsumption() {
 int Iterator::getSewageProduction() {
 	return composite->getTotalSewageProduction();
 }
+
+int Iterator::getCostConsumption() {
+	return composite->getTotalCostConsumption();
+}

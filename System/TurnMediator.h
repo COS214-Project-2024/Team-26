@@ -56,6 +56,10 @@ public:
      */
 	int changeTaxRates(double newRate);
 
+     void handleResources();
+
+     void handleSatisfaction();
+
 	virtual ~TurnMediator();
 };
 

@@ -37,15 +37,13 @@ int main() {
     // set up
     BuildingMediator* building = new BuildingMediator();    
     building->build("House", 0, 0, new CompleteState());
-
-    building = new BuildingMediator();
     building->build("Apartment", 1, 0, new CompleteState());
-
-    building = new BuildingMediator();
     building->build("Office", 2, 2, new CompleteState());
-
-    building = new BuildingMediator();
     building->build("Shop", 2, 3, new CompleteState());
+    building->build("Power", 3, 3, new CompleteState());
+    building->build("Water", 3, 4, new CompleteState());
+    building->build("Waste", 3, 5, new CompleteState());
+    building->build("Sewage", 3, 6, new CompleteState());
 
     std::cout << "Available Commands:" << std::endl;
     std::cout << manager->handleUserInput("h") << std::endl;

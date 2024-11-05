@@ -134,6 +134,9 @@ public:
      * @brief increases the age of the Citizens
      * @return increase Citizen age.
      */
+
+    void satisfactionChange(int change);
+    void useTaxFunds(int amount);
 };
 
 #endif

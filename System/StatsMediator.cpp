@@ -9,7 +9,7 @@ int StatsMediator::getPopulation() {
 }
     
 int StatsMediator::getSatisfaction() {
-    government->getAverageSatisfaction();
+    return government->getAverageSatisfaction();
 }
 
 int StatsMediator::getAverageAge() {
@@ -51,7 +51,7 @@ int StatsMediator::getTotalHousingSpace() {
 std::string StatsMediator::getAllStats() {
     std::string result = "";
     result += "-Population Details\n" + populationDetails();
-    result += "-Tax Details\n" + std::to_string(getTax());
+    result += "-Tax Details\n" + std::to_string(getTax()) + "\n$ " + std::to_string(government->getTaxFundsCollected()) + "\n";
     result += "-Building Details\n" + buildingDetails();
     result += "-Resource Details\n" + resourceDetails();
 
@@ -84,11 +84,17 @@ std::string StatsMediator::resourceDetails() {
     std::string result = "Power:\t" + std::to_string(getBuildings()->getPowerConsumption()) + " - " + std::to_string(getBuildings()->getPowerProduction()) + "\n";
     result += "Water:\t" + std::to_string(getBuildings()->getWaterConsumption()) + " - " + std::to_string(getBuildings()->getWaterProduction()) + "\n";
     result += "Sewage:\t" + std::to_string(getBuildings()->getSewageConsumption()) + " - " + std::to_string(getBuildings()->getSewageProduction()) + "\n";
-    // result += "Waste:\t" + std::to_string(getBuildings()->getWasteConsumption()) + " - " + std::to_string(getBuildings()->getWasteProduction()) + "\n";
+    result += "Waste:\t" + std::to_string(getBuildings()->getWasteConsumption()) + " - " + std::to_string(getBuildings()->getWasteProduction()) + "\n";
+    // result += "Cost:\t" + std::to_string(getBuildings()->getWasteConsumption()) + " - " + std::to_string(getBuildings()->getWasteProduction()) + "\n";
+    result += "Tax:\t" + std::to_string(government->getTaxFundsCollected()) + " - " + std::to_string(getBuildings()->getCostConsumption()) + "\n";
 
     return result;
 }
 
 double StatsMediator::getTax() {
     return government->getIncomeTaxRate();
+}
+
+double StatsMediator::getTaxFunds() {
+    return government->getTaxFundsCollected();
 }

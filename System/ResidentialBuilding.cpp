@@ -7,7 +7,3 @@ int ResidentialBuilding::getCostConsumption() {
 int ResidentialBuilding::getRevenue() {
 	return 0;
 }
-
-int ResidentialBuilding::getWasteProduction() {
-	return wasteProduction;
-}

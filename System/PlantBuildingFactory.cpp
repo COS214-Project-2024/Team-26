@@ -17,5 +17,7 @@ Building *PlantBuildingFactory::createBuilding()
 	else if (this->BUILDING_TYPE == "Waste")
 	{
 		return new Waste(LOCATION_X, LOCATION_Y);
+	} else {
+		return nullptr;
 	}
 }

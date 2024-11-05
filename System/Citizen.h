@@ -2,6 +2,7 @@
 #define Citizen_H
 
 #include "Building.h"
+#include <cstdlib>
 
 /**
  * @class Citizen
@@ -13,7 +14,7 @@ protected:
     int satisfaction;       /**< Satisfaction level of the citizen. */
     Building *house;        /**< Pointer to the building where the citizen lives. */
     Building *job;          /**< Pointer to the building where the citizen works. */
-    double income;          /**< Income level of the citizen. */
+    double income = rand() % 1000;          /**< Income level of the citizen. */
     int age;                /**< Age of the citizen. */
 
 public:
@@ -106,6 +107,8 @@ public:
      * @return The age of the citizen.
      */
     int getAge();
+
+    int satisfactionChange(int change);
 
     /**
      * @brief Destructor for the Citizen class.

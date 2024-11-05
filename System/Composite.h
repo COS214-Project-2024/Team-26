@@ -7,6 +7,10 @@
 #include "Iterator.h"
 #include "Leaf.h"
 
+#include "Building.h"
+	#include "ServiceBuilding.h"
+	#include "LandmarkBuilding.h"
+
 class Iterator;
 
 class Composite : public Component {

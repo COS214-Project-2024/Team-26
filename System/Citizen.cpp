@@ -178,3 +178,15 @@ Citizen::~Citizen()
 	
 	}
 }
+
+int Citizen::satisfactionChange(int change) {
+	satisfaction *= (1 + change/100.0);
+
+	if (satisfaction > 100)
+		satisfaction = 100;
+	
+	if (satisfaction < 0)
+		satisfaction = 0;
+
+	return satisfaction;
+}

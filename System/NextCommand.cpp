@@ -8,7 +8,8 @@ NextCommand::NextCommand(TurnMediator* mediator) {
 
 void NextCommand::execute() {
 	if (mediator) {
-        std::cout << "Population increase: " << mediator->nextRound() << std::endl;
+        int pop = mediator->nextRound();
+        std::cout << "Population increase: " << pop << std::endl;
     } else{
 		std::cout<<"Mediator not available"<<std::endl;
 	}

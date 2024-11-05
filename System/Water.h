@@ -14,7 +14,7 @@
 class Water : public PlantBuilding
 {
 private:
-	int waterProduction; /**< The amount of water produced by the plant */
+	int waterProduction = 250; /**< The amount of water produced by the plant */
 
 public:
 	Water(int x, int y) : PlantBuilding("Water", x, y) {}
